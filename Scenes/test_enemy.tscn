@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://bqwqxi3atc7sc"]
+
+[ext_resource type="Texture2D" uid="uid://co044it4tq73x" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png" id="1_ymh8f"]
+[ext_resource type="Texture2D" uid="uid://fwip6kyjf64t" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png" id="2_cvapq"]
+[ext_resource type="Script" uid="uid://bhxe5kxxjl2wi" path="res://Scripts/Enemy.gd" id="3_ngp1l"]
+[ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="4_ag7nl"]
+[ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="5_yojx0"]
+[ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="6_6kygu"]
+[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="7_0hxvo"]
+[ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="8_cvapq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gdc5"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35bf0"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w08t"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drxrn"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8j30"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(384, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w134b"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(480, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tgui"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(576, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5p76"]
+atlas = ExtResource("1_ymh8f")
+region = Rect2(672, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmbcg"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uajly"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyaa0"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnibh"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ithbu"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(384, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf01m"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(480, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_macjn"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(576, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndehm"]
+atlas = ExtResource("2_cvapq")
+region = Rect2(672, 0, 96, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccakx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gdc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35bf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w08t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drxrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8j30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w134b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tgui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5p76")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmbcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uajly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyaa0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnibh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ithbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf01m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_macjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndehm")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[sub_resource type="Resource" id="Resource_lm5xo"]
+resource_local_to_scene = true
+script = ExtResource("5_yojx0")
+actionName = "Attack!"
+weight = 75
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_3sp1v"]
+script = ExtResource("7_0hxvo")
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_yn0oc"]
+resource_local_to_scene = true
+script = ExtResource("6_6kygu")
+statusEffect = SubResource("Resource_3sp1v")
+actionName = "Block!"
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cvapq"]
+viewport_path = NodePath("HealthViewPort")
+
+[node name="TestEnemy" type="AnimatedSprite3D" unique_id=249674596]
+pixel_size = 0.04
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ccakx")
+animation = &"Attack"
+autoplay = "Idle"
+script = ExtResource("3_ngp1l")
+possibleActions = Array[ExtResource("4_ag7nl")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")])
+maxHp = 25
+metadata/_custom_type_script = "uid://bhxe5kxxjl2wi"
+
+[node name="StatusEffectComponent" type="Node" parent="." unique_id=1498906395]
+script = ExtResource("8_cvapq")
+metadata/_custom_type_script = "uid://dgseikyr6yiej"
+
+[node name="HealthViewPort" type="SubViewport" parent="." unique_id=58337975]
+size = Vector2i(200, 20)
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort" unique_id=1360462256]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthBarSprite" type="Sprite3D" parent="." unique_id=1374277308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_cvapq")

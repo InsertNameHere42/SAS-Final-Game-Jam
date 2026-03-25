@@ -1,0 +1,51 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1774404023
+icon.svg::CompressedTexture2D::5589711903263656629::1774057975::1774058764::1::::<><><>0<>0<>041658a5c4f05cc7539d3ad0360adde6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
+::res://Assets/::1774059136
+::res://Assets/Placeholders/::1774059210
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/::1774059210
+License.txt::TextFile::-1::1774059210::0::1::::<><><>0<>0<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/::1774059210
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/::1774060067
+attack1_down.png::CompressedTexture2D::2829689274635892656::1774059210::1774059211::1::::<><><>0<>0<>f5a87d2fc8d617ce2c8e471bbf55d67a<>res://.godot/imported/attack1_down.png-87f84ae5ce351b82aad3b6aa6c6be45e.ctex::
+attack1_left.png::CompressedTexture2D::4617111514532699523::1774059210::1774059211::1::::<><><>0<>0<>ea7a1c9cc0c1c61f1a1b59070b21b8e8<>res://.godot/imported/attack1_left.png-2dae3849691dd8979dc2fda47f9a8cc2.ctex::
+attack1_right.png::CompressedTexture2D::6709192772066391736::1774059210::1774060067::1::::<><><>0<>0<>fe1232b98f459443a42abde049b4232a<>res://.godot/imported/attack1_right.png-bc49eea5125a06a93a88879722331974.s3tc.ctex::
+attack1_up.png::CompressedTexture2D::1024622191582545353::1774059210::1774059211::1::::<><><>0<>0<>b5a0100c2d28d3a2fd503f22d91a438f<>res://.godot/imported/attack1_up.png-f1a48b2b965633f912fd4d337ae09d4f.ctex::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/::1774338436
+attack2_down.png::CompressedTexture2D::8417021744764643304::1774059210::1774059211::1::::<><><>0<>0<>1dd99548addcf2c33518d2c5fc02c1f8<>res://.godot/imported/attack2_down.png-f1f96d5ce050cc794ffdf371fb14427c.ctex::
+attack2_left.png::CompressedTexture2D::5808907653865388895::1774059210::1774338436::1::::<><><>0<>0<>73dd7e506975217a5897a3e7ef791d15<>res://.godot/imported/attack2_left.png-8c667a3b8a2d5a8116e986ba436b15ba.s3tc.ctex::
+attack2_right.png::CompressedTexture2D::3266677615417910185::1774059210::1774059211::1::::<><><>0<>0<>dcba872afea68a009e74ea7c9ed92db1<>res://.godot/imported/attack2_right.png-9d49f995b3bebb907b5ce951ed1e01ef.ctex::
+attack2_up.png::CompressedTexture2D::5304238155624681075::1774059210::1774059211::1::::<><><>0<>0<>185c194ee5c99190bc032485adf6af8f<>res://.godot/imported/attack2_up.png-58e7f1166d0b499d5d6acdbff7aa00f1.ctex::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/::1774338398
+idle_down.png::CompressedTexture2D::8487136397927577748::1774059210::1774059211::1::::<><><>0<>0<>fc50911fe6c6d043c5c5b83ab4008257<>res://.godot/imported/idle_down.png-1ba3b6ad12e080f0ae583356002245ea.ctex::
+idle_left.png::CompressedTexture2D::396874696404791329::1774059210::1774338398::1::::<><><>0<>0<>da3d3bd98f63703defa38eac66a43986<>res://.godot/imported/idle_left.png-e7e4c3b3a21fff8280a7fbc1dc2e5330.s3tc.ctex::
+idle_right.png::CompressedTexture2D::7797315826728838824::1774059210::1774059324::1::::<><><>0<>0<>eee8fff7e939cd53745e5cc896a78c5f<>res://.godot/imported/idle_right.png-b58ad1305dcd7d41c1346e6d07d98a56.s3tc.ctex::
+idle_up.png::CompressedTexture2D::5562150221825407267::1774059210::1774059211::1::::<><><>0<>0<>d7cc5af3f510fbf723e95af56481b5eb<>res://.godot/imported/idle_up.png-763be4b7135fc98777c96d25a4302126.ctex::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/::1774059211
+run_down.png::CompressedTexture2D::1912367101208958902::1774059210::1774059211::1::::<><><>0<>0<>99b1e4415e545a6da2cb1df7bcbb7cf4<>res://.godot/imported/run_down.png-db3e07c23cf120bd37b9c18e4ac5c999.ctex::
+run_left.png::CompressedTexture2D::7213702745545960920::1774059210::1774059211::1::::<><><>0<>0<>871b512a09f38f51343b46554817b4f1<>res://.godot/imported/run_left.png-2a106da86de15605657e92a9d8fe8fee.ctex::
+run_right.png::CompressedTexture2D::4132090873780743266::1774059210::1774059211::1::::<><><>0<>0<>107b9d5d32096cef8ef461697e54d808<>res://.godot/imported/run_right.png-7c31c0771e325feb22e6b70d49dabf4a.ctex::
+run_up.png::CompressedTexture2D::4645141910606622675::1774059210::1774059211::1::::<><><>0<>0<>dff57faaac1cc27c3a061918b1c415c8<>res://.godot/imported/run_up.png-27c441a8c97ad344783ed02d0384d762.ctex::
+::res://Scenes/::1774404023
+combat_encounter.tscn::PackedScene::7187223859673992923::1774404029::0::1::::<><><>0<>0<><>::uid://l1luvgct8ln6::::res://Scenes/player.tscn<>uid://c3cvy2ns2b3la::::res://Scripts/CombatEncounter.gd<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://c2b41aqxdkkuu::::res://Scripts/PlayerTurn.gd<>uid://dy82oouww6sgr::::res://Scripts/enemy_manager.gd<>uid://8l3l6bf2nrs6::::res://Scenes/EnemyTurn.gd<>uid://bqwqxi3atc7sc::::res://Scenes/test_enemy.tscn<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd
+EnemyTurn.gd::GDScript::2340661344912589375::1774357894::0::1::::EnemyTurn<>State<><>0<>0<><>::
+player.tscn::PackedScene::826455816799190397::1774402091::0::1::::<><><>0<>0<><>::uid://c2t8oo8u18ram::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/attack1_right.png<>uid://djdcwgipke6h5::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_right.png<>uid://dcwsl1unn7brr::::res://Scripts/player.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd
+test_enemy.tscn::PackedScene::3555871501101841702::1774402096::0::1::::<><><>0<>0<><>::uid://co044it4tq73x::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://bhxe5kxxjl2wi::::res://Scripts/Enemy.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd
+::res://Scripts/::1774404023
+CombatEncounter.gd::GDScript::6743577099727943710::1774357746::0::1::::CombatEncounter<>Node3D<><>0<>0<><>::
+Damagable.gd::GDScript::537089873778302789::1774401861::0::1::::Damagable<>AnimatedSprite3D<><>1<>0<><>::
+Enemy.gd::GDScript::2925520281112424424::1774401587::0::1::::Enemy<>Damagable<><>0<>0<><>::
+enemy_manager.gd::GDScript::8913583891448624573::1774402247::0::1::::EnemyManager<>Node<><>0<>0<><>::
+player.gd::GDScript::7346169995659917639::1774401739::0::1::::Player<>Damagable<><>0<>0<><>::
+::res://Scripts/Actions/::1774358163
+BasicAttackAction.gd::GDScript::2031875507417972303::1774355698::0::1::::BasicAttackAction<>EnemyAction<><>0<>0<><>::
+BasicStatusAction.gd::GDScript::4446566842118370800::1774358163::0::1::::BasicStatusAction<>EnemyAction<><>0<>0<><>::
+EnemyAction.gd::GDScript::1529394151355576972::1774338742::0::1::::EnemyAction<>Resource<><>1<>0<><>::
+::res://Scripts/States/::1774404023
+PlayerTurn.gd::GDScript::6671811772565190724::1774401016::0::1::::PlayerTurn<>State<><>0<>0<><>::
+State.gd::GDScript::3725784205204899530::1774070967::0::1::::State<>Node<><>1<>0<><>::
+state_machine.gd::GDScript::5960592219839947940::1774357503::0::1::::StateMachine<>Node<><>0<>0<><>::
+::res://Scripts/StatusEffects/::1774338849
+BlockEffect.gd::GDScript::7838882392407921126::1774338849::0::1::::BlockEffect<>StatusEffect<><>0<>0<><>::
+StatusEffect.gd::GDScript::7620850727808220295::1774159455::0::1::::StatusEffect<>Resource<><>1<>0<><>::
+StatusEffectComponent.gd::GDScript::7617811629926467201::1774159554::0::1::::StatusEffectComponent<>Node<><>0<>0<><>::

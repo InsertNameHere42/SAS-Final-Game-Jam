@@ -1,0 +1,8 @@
+res://Scenes/player.tscn
+res://Scripts/PlayerTurn.gd
+res://Scripts/player.gd
+res://Scripts/Damagable.gd
+res://Scenes/combat_encounter.tscn
+res://Scenes/test_enemy.tscn
+res://Scripts/Enemy.gd
+res://Scripts/enemy_manager.gd

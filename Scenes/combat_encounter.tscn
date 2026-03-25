@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://dansr6dmqv388"]
+
+[ext_resource type="PackedScene" uid="uid://l1luvgct8ln6" path="res://Scenes/player.tscn" id="1_fgnj0"]
+[ext_resource type="Script" uid="uid://c3cvy2ns2b3la" path="res://Scripts/CombatEncounter.gd" id="1_xrg0s"]
+[ext_resource type="Script" uid="uid://cq6mc27rx1ktw" path="res://Scripts/States/state_machine.gd" id="2_gjjj1"]
+[ext_resource type="Script" uid="uid://c2b41aqxdkkuu" path="res://Scripts/States/PlayerTurn.gd" id="4_qejd4"]
+[ext_resource type="Script" uid="uid://dy82oouww6sgr" path="res://Scripts/enemy_manager.gd" id="5_0riav"]
+[ext_resource type="Script" uid="uid://8l3l6bf2nrs6" path="res://Scenes/EnemyTurn.gd" id="5_41ndn"]
+[ext_resource type="PackedScene" uid="uid://bqwqxi3atc7sc" path="res://Scenes/test_enemy.tscn" id="6_4ubpl"]
+[ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="7_6e54m"]
+[ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="8_368b0"]
+[ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="9_6jyan"]
+[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="10_46d6v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fgnj0"]
+sky_horizon_color = Color(0.4865678, 0.4994743, 0.5693337, 1)
+ground_bottom_color = Color(0.017386192, 1.2080818e-05, 0.18344969, 1)
+ground_horizon_color = Color(0.4865678, 0.4994743, 0.5693337, 1)
+
+[sub_resource type="Sky" id="Sky_gjjj1"]
+sky_material = SubResource("ProceduralSkyMaterial_fgnj0")
+
+[sub_resource type="Environment" id="Environment_xrg0s"]
+background_mode = 2
+sky = SubResource("Sky_gjjj1")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ux6h8"]
+albedo_color = Color(0.47788018, 0.47788012, 0.47788012, 1)
+
+[sub_resource type="Resource" id="Resource_4ubpl"]
+resource_local_to_scene = true
+script = ExtResource("8_368b0")
+actionName = "Attack!"
+weight = 75
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_3sp1v"]
+script = ExtResource("10_46d6v")
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_6e54m"]
+resource_local_to_scene = true
+script = ExtResource("9_6jyan")
+statusEffect = SubResource("Resource_3sp1v")
+actionName = "Block!"
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[sub_resource type="Resource" id="Resource_368b0"]
+resource_local_to_scene = true
+script = ExtResource("8_368b0")
+actionName = "Attack!"
+weight = 75
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_6jyan"]
+resource_local_to_scene = true
+script = ExtResource("9_6jyan")
+statusEffect = SubResource("Resource_3sp1v")
+actionName = "Block!"
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[sub_resource type="Resource" id="Resource_46d6v"]
+resource_local_to_scene = true
+script = ExtResource("8_368b0")
+actionName = "Attack!"
+weight = 75
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_ifegt"]
+resource_local_to_scene = true
+script = ExtResource("9_6jyan")
+statusEffect = SubResource("Resource_3sp1v")
+actionName = "Block!"
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[node name="CombatEncounter" type="Node3D" unique_id=1662274057]
+script = ExtResource("1_xrg0s")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1801435214]
+environment = SubResource("Environment_xrg0s")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1976263510]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.56295747, 0.4588514, 0.9626358, 1)
+light_energy = 0.75
+shadow_enabled = true
+
+[node name="MainCamera" type="Camera3D" parent="." unique_id=1484108620]
+transform = Transform3D(1, 0, 0, 0, 0.8919633, 0.45210788, 0, -0.45210788, 0.8919633, 0, 3.216209, 5.1436663)
+
+[node name="Map" type="Node" parent="." unique_id=1633596671]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map" unique_id=1109802356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24754173, 0.035339355)
+size = Vector3(39.80298, 0.5, 9.858032)
+material = SubResource("StandardMaterial3D_ux6h8")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map" unique_id=1080667052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5870306, -4.5485687)
+size = Vector3(39.57788, 7.234192, 0.69021606)
+material = SubResource("StandardMaterial3D_ux6h8")
+
+[node name="Player" parent="." unique_id=1364375232 instance=ExtResource("1_fgnj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.013317, 0.9227694, -0.019296646)
+frame = 5
+frame_progress = 0.24486433
+maxHp = 90
+
+[node name="StateMachine" type="Node" parent="." unique_id=1698063966 node_paths=PackedStringArray("initialState")]
+script = ExtResource("2_gjjj1")
+initialState = NodePath("PlayerTurn")
+
+[node name="PlayerTurn" type="Node" parent="StateMachine" unique_id=740057445 node_paths=PackedStringArray("encounter")]
+script = ExtResource("4_qejd4")
+encounter = NodePath("../..")
+
+[node name="EnemyTurn" type="Node" parent="StateMachine" unique_id=1123237277 node_paths=PackedStringArray("encounter")]
+script = ExtResource("5_41ndn")
+encounter = NodePath("../..")
+
+[node name="EnemyManager" type="Node" parent="." unique_id=932958172 node_paths=PackedStringArray("encounter")]
+script = ExtResource("5_0riav")
+encounter = NodePath("..")
+
+[node name="TestEnemy" parent="EnemyManager" unique_id=249674596 instance=ExtResource("6_4ubpl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.7761328, 1.6272604)
+possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_4ubpl"), SubResource("Resource_6e54m")])
+
+[node name="TestEnemy2" parent="EnemyManager" unique_id=247382047 instance=ExtResource("6_4ubpl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.7761328, -1.0681763)
+possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_368b0"), SubResource("Resource_6jyan")])
+
+[node name="TestEnemy3" parent="EnemyManager" unique_id=910269805 instance=ExtResource("6_4ubpl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4846907, 0.7761328, 0.012077332)
+possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_46d6v"), SubResource("Resource_ifegt")])
