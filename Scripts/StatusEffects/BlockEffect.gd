@@ -1,6 +1,6 @@
 class_name BlockEffect extends StatusEffect
 
-
+@export var percentBlockKept: float = 0.0
 
 func _init() -> void:
 	effectName = "Block"
@@ -12,5 +12,5 @@ func onDamageTaken(_target, _damage: int) -> int:
 	return _damage-blocked
 
 func onTurnStart(_target):
-	stacks = 0
+	stacks = int(stacks*percentBlockKept)
 	

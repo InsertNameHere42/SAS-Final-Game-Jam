@@ -2,6 +2,7 @@ class_name EnemyTurn extends State
 
 func enter():
 	await encounter.enemyManager.enemiesTakeTurn()
+	encounter.player.turnStart()
 	transitioned.emit(self, "playerturn")
 func exit():
 	pass

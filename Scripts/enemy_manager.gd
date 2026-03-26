@@ -17,8 +17,15 @@ func start() -> void:
 
 func enemiesTakeTurn() -> void:
 	for enemy in enemies.duplicate():
+		if not is_instance_valid(enemy):
+			continue
+		enemy.status_effect_component.tickAllStart()
+		if not is_instance_valid(enemy): #just incase enemy dies from a turn start DOT
+			continue
 		enemy.takeTurn(_get_targets(enemy))
-		enemy.chooseAction()
+		if is_instance_valid(enemy):
+			enemy.chooseAction()
+			enemy.status_effect_component.tickAllEnd()
 		await get_tree().create_timer(turnDelay).timeout
 
 func _get_targets(enemy: Enemy) -> Array[Damagable]:

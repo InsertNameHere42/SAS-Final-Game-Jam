@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://iau2exhr7xdm"]
+
+[ext_resource type="Script" uid="uid://cv7xefiekcxkv" path="res://Scripts/status_effect_icon.gd" id="1_y7ena"]
+
+[node name="StatusEffectIcon" type="HBoxContainer" unique_id=523617326]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_y7ena")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1011480868]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=970950484]
+layout_mode = 2

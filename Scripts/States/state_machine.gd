@@ -12,7 +12,6 @@ func start() -> void:
 	if initialState:
 		initialState.enter()
 		currentState = initialState
-	print(states)
 
 func _process(delta):
 	if currentState:

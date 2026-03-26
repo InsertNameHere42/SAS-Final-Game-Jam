@@ -1,6 +1,6 @@
 class_name Enemy extends Damagable
 
-
+@onready var status_effect_component: StatusEffectComponent = $StatusEffectComponent
 @export var possibleActions: Array[EnemyAction]
 var nextAction: EnemyAction
 

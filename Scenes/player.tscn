@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://c2t8oo8u18ram" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/attack1_right.png" id="1_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://djdcwgipke6h5" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_right.png" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://dcwsl1unn7brr" path="res://Scripts/player.gd" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://chtoa60ppvq1h" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_up.png" id="2_fkybt"]
 [ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="4_vgqql"]
+[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="5_3smsa"]
+[ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="6_8erm5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
 atlas = ExtResource("1_6t5aa")
@@ -35,6 +38,38 @@ region = Rect2(576, 0, 96, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qqcod"]
 atlas = ExtResource("1_6t5aa")
+region = Rect2(672, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
+atlas = ExtResource("2_fkybt")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs7ks"]
+atlas = ExtResource("2_fkybt")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6n3p"]
+atlas = ExtResource("2_fkybt")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olqyp"]
+atlas = ExtResource("2_fkybt")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpjfl"]
+atlas = ExtResource("2_fkybt")
+region = Rect2(384, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bi64h"]
+atlas = ExtResource("2_fkybt")
+region = Rect2(480, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ijsl"]
+atlas = ExtResource("2_fkybt")
+region = Rect2(576, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1odr"]
+atlas = ExtResource("2_fkybt")
 region = Rect2(672, 0, 96, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
@@ -102,6 +137,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_igrcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs7ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6n3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olqyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpjfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bi64h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ijsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1odr")
+}],
+"loop": false,
+"name": &"Block",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_cvnsp")
 }, {
 "duration": 1.0,
@@ -130,6 +194,14 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Resource" id="Resource_f1ek2"]
+resource_local_to_scene = true
+script = ExtResource("5_3smsa")
+effectName = "Block!"
+stacks = 7
+texture = ExtResource("6_8erm5")
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_vgqql"]
 viewport_path = NodePath("HealthViewPort")
 
@@ -138,26 +210,34 @@ pixel_size = 0.05
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-animation = &"Attack"
+animation = &"Block"
 autoplay = "Idle"
-frame = 7
-frame_progress = 1.0
 script = ExtResource("2_cvnsp")
+baseBlock = SubResource("Resource_f1ek2")
 
 [node name="StatusEffectComponent" type="Node" parent="." unique_id=804039735]
 script = ExtResource("4_vgqql")
 metadata/_custom_type_script = "uid://dgseikyr6yiej"
 
 [node name="HealthViewPort" type="SubViewport" parent="." unique_id=899400093]
-size = Vector2i(200, 20)
+transparent_bg = true
+size = Vector2i(200, 60)
 
-[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort" unique_id=1755686815]
+[node name="VBoxContainer" type="VBoxContainer" parent="HealthViewPort" unique_id=1899323314]
+clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort/VBoxContainer" unique_id=1755686815]
+layout_mode = 2
 value = 50.0
+allow_lesser = true
+
+[node name="StatusEffectRow" type="HBoxContainer" parent="HealthViewPort/VBoxContainer" unique_id=1824165989]
+layout_mode = 2
 
 [node name="HealthBarSprite" type="Sprite3D" parent="." unique_id=786735293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7896948, 0)

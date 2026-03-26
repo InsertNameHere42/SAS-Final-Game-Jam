@@ -1,5 +1,6 @@
 class_name StatusEffectComponent extends Node
 
+signal effectsChanged
 var activeEffects: Array[StatusEffect] = []
 
 func applyEffect(newEffect: StatusEffect):
@@ -14,15 +15,20 @@ func applyEffect(newEffect: StatusEffect):
 		var effect = newEffect.duplicate()
 		activeEffects.append(effect)
 		effect.onApply(owner)
+	effectsChanged.emit()
+
 	
 func triggerDamageTaken(damage: int) -> int:
 	for effect in activeEffects:
 		damage = effect.onDamageTaken(owner, damage)
+	effectsChanged.emit()
 	return damage
+	
 
 func triggerAttack():
 	for effect in activeEffects:
 		effect.onAttack(owner)
+	effectsChanged.emit()
 
 func _findEffect(searchName: String) -> StatusEffect:
 	for effect in activeEffects: if effect.effectName == searchName: return effect
@@ -32,17 +38,17 @@ func tickAllEnd():
 	for effect in activeEffects:
 		effect.onTurnEnd(owner)
 	activeEffects = activeEffects.filter(func(e): return e.stacks > 0)
+	effectsChanged.emit()
 
 func tickAllStart():
 	for effect in activeEffects:
 		effect.onTurnStart(owner)
 	activeEffects = activeEffects.filter(func(e): return e.stacks > 0)
+	effectsChanged.emit()
 
 func removeEffect(effect: StatusEffect):
 	effect.onRemove(owner)
 	activeEffects.erase(effect)
+	effectsChanged.emit()
 
-	
-	
-	
 	
