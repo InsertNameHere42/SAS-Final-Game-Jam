@@ -6,7 +6,8 @@ signal playerDied
 @export var baseCritChance: float = 0.1
 @export var baseCritDamageMultiplier: float = 1.5
 @export var baseBlock: BlockEffect
-var currentEnergy: int
+var maxEnergy: int = 1
+var usedEnergy: int = 0
 
 @export var maxUpgradeSlots: int = 6
 var upgradeSlots: Array[Upgrade] = []
@@ -31,7 +32,7 @@ func attack() -> AttackContext:
 	var context := AttackContext.new(baseDamage, baseCritChance, baseCritDamageMultiplier)
 	play("Attack")
 	for upgrade in upgradeSlots:
-		if upgrade:
+		if upgrade and upgrade.isOn:
 			upgrade.modifyAttack(context)
 	return context
 
@@ -40,7 +41,7 @@ func defend() -> DefendContext:
 	turnEnd()
 	var context := DefendContext.new(baseBlock)
 	for upgrade in upgradeSlots:
-		if upgrade:
+		if upgrade and upgrade.isOn:
 			upgrade.modifyDefend(context)
 	return context
 
@@ -48,8 +49,23 @@ func returnToIdle() -> void:
 	play("Idle")
 func turnStart() -> void:
 	returnToIdle()
-	currentEnergy = baseMaxEnergy
+	maxEnergy += 1
 	statusEffectComponent.tickAllStart()
 
 func turnEnd() -> void:
 	statusEffectComponent.tickAllEnd()
+	
+func getRemainingEnergy() -> int:
+	return maxEnergy - usedEnergy
+
+func toggleUpgrade(upgrade: Upgrade) -> bool:
+	if upgrade.isOn:
+		upgrade.isOn = false
+		usedEnergy -= upgrade.energyCost
+		return true
+	elif getRemainingEnergy() >= upgrade.energyCost:
+		upgrade.isOn = true
+		usedEnergy += upgrade.energyCost
+		return true
+	return false
+	

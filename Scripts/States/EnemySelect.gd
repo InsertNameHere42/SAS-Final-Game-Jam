@@ -28,7 +28,8 @@ func update(_delta: float) -> void:
 		var attackContext := encounter.player.attack()
 		for i in attackContext.hitCount:
 			if selectedTarget and is_instance_valid(selectedTarget):
-				selectedTarget.takeDamage(attackContext.calculateDamage())
+				var result := attackContext.calculateDamage()
+				selectedTarget.takeDamage(result.damage, result.type)
 				for effect in attackContext.effectsToApplyEnemy:
 					selectedTarget.status_effect_component.applyEffect(effect)
 				for effect in attackContext.effectsToApplyPlayer:
@@ -44,6 +45,7 @@ func physicsUpdate(_delta: float) -> void:
 func _highlightTarget() -> void:
 	var enemies: Array[Enemy] = encounter.enemyManager.enemies
 	if enemies.is_empty(): return
+	currentIndex = clamp(currentIndex, 0, enemies.size() - 1)
 	
 	for enemy in enemies:
 		enemy.modulate = Color.WHITE

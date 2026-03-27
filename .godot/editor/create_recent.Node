@@ -1,4 +1,5 @@
 Node
+Label3D
 Label
 TextureRect
 HBoxContainer
@@ -11,4 +12,3 @@ Enemy
 AnimatedSprite2D
 AnimatedSprite3D
 CSGBox3D
-Camera3D

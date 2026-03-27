@@ -12,16 +12,18 @@ func _init(damage: int, inpCritChance: float, inpCritDamage: float) -> void:
 	critChance = inpCritChance
 	critDamageMultiplier = inpCritDamage
 
-func calculateDamage() -> int:
+func calculateDamage() -> Dictionary:
 	var damage: int = finalDamage
-	var rng = RandomNumberGenerator.new()
+	var type := "normal"
+	var roll := randf()
 	if critChance >= 0:
-		if critChance >= rng.randf_range(0.0, 1.0):
+		if critChance >= roll:
 			damage = int(damage*critDamageMultiplier)
-			print("Crit!")
+			type = "crit"
 	else: #negative critical strikes
 		critChance*=-1
-		if critChance >= rng.randf_range(0.0, 1.0):
+		if critChance >= roll:
 			damage = int(damage*(1.0/critDamageMultiplier))
-			print("Negative Crit!")
-	return damage
+			type = "negcrit"
+	if damage == 0: damage = 1
+	return {"damage": damage, "type": type}

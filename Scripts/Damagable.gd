@@ -1,11 +1,13 @@
 @abstract
 class_name Damagable extends AnimatedSprite3D
 
+
 @onready var vBox: VBoxContainer = $HealthViewPort/VBoxContainer
 @onready var statusEffectComponent: StatusEffectComponent = $StatusEffectComponent
 @onready var statusEffectRow: HBoxContainer = $HealthViewPort/VBoxContainer/StatusEffectRow
 @onready var healthBar: ProgressBar = $HealthViewPort/VBoxContainer/ProgressBar
 @export var maxHp: int
+@export var damageNumberManager: DamageNumberManager
 var currentHp: int
 const statusEffectIcon = preload("res://Scenes/UI/status_effect_icon.tscn")
 
@@ -23,8 +25,9 @@ func _ready() -> void:
 	
 	statusEffectComponent.effectsChanged.connect(updateStatusEffects)
 
-func takeDamage(damage: int) -> void:
+func takeDamage(damage: int, type: String = "normal") -> void:
 	damage = $StatusEffectComponent.triggerDamageTaken(damage)
+	damageNumberManager.spawn(damage, type, global_position)
 	currentHp-=damage
 	healthBar.value = currentHp
 	if currentHp<=0:

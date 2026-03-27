@@ -6,12 +6,10 @@
 [ext_resource type="Script" uid="uid://c2b41aqxdkkuu" path="res://Scripts/States/PlayerTurn.gd" id="4_qejd4"]
 [ext_resource type="Script" uid="uid://dy82oouww6sgr" path="res://Scripts/enemy_manager.gd" id="5_0riav"]
 [ext_resource type="Script" uid="uid://8l3l6bf2nrs6" path="res://Scripts/States/EnemyTurn.gd" id="5_41ndn"]
-[ext_resource type="Script" uid="uid://bd5knqm4ul66" path="res://Scripts/Upgrades/Upgrade.gd" id="5_v1vco"]
 [ext_resource type="PackedScene" uid="uid://bqwqxi3atc7sc" path="res://Scenes/test_enemy.tscn" id="6_4ubpl"]
 [ext_resource type="Script" uid="uid://dpnurkj20dddp" path="res://Scripts/States/EnemySelect.gd" id="6_6e54m"]
 [ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="7_6e54m"]
 [ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="8_368b0"]
-[ext_resource type="Script" uid="uid://dxl66dv5mtw1b" path="res://Scripts/Upgrades/Fuzz.gd" id="8_f2mse"]
 [ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="9_6jyan"]
 [ext_resource type="Script" uid="uid://s3ox4l2p2476" path="res://Scripts/States/ModifyState.gd" id="9_46d6v"]
 [ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="10_46d6v"]
@@ -35,7 +33,7 @@ glow_enabled = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ux6h8"]
 albedo_color = Color(0.47788018, 0.47788012, 0.47788012, 1)
 
-[sub_resource type="Resource" id="Resource_46d6v"]
+[sub_resource type="Resource" id="Resource_ifegt"]
 resource_local_to_scene = true
 script = ExtResource("10_46d6v")
 effectName = "Block!"
@@ -43,77 +41,30 @@ stacks = 7
 texture = ExtResource("13_368b0")
 metadata/_custom_type_script = "uid://djxhiomxyr7hq"
 
-[sub_resource type="Resource" id="Resource_6druc"]
-script = ExtResource("8_f2mse")
-metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
-
-[sub_resource type="Resource" id="Resource_jch5a"]
-script = ExtResource("8_f2mse")
-metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
-
-[sub_resource type="Resource" id="Resource_05w66"]
-script = ExtResource("8_f2mse")
-metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
-
-[sub_resource type="Resource" id="Resource_l4e85"]
-script = ExtResource("8_f2mse")
-metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
-
-[sub_resource type="Resource" id="Resource_herig"]
-script = ExtResource("8_f2mse")
-metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
-
-[sub_resource type="Resource" id="Resource_8mcgc"]
-script = ExtResource("8_f2mse")
-metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
-
-[sub_resource type="Resource" id="Resource_ifegt"]
+[sub_resource type="Resource" id="Resource_51ncy"]
 resource_local_to_scene = true
 script = ExtResource("8_368b0")
 actionName = "Attack!"
 weight = 75
 animationName = "Attack"
 metadata/_custom_type_script = "uid://37ixs2yas0a2"
-
-[sub_resource type="Resource" id="Resource_51ncy"]
-resource_local_to_scene = true
-script = ExtResource("10_46d6v")
-effectName = "Block"
-stacks = 4
-texture = ExtResource("13_368b0")
-metadata/_custom_type_script = "uid://djxhiomxyr7hq"
 
 [sub_resource type="Resource" id="Resource_v1vco"]
 resource_local_to_scene = true
-script = ExtResource("9_6jyan")
-statusEffect = SubResource("Resource_51ncy")
-actionName = "Block!"
-metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+script = ExtResource("10_46d6v")
+effectName = "Block"
+stacks = 4
+texture = ExtResource("13_368b0")
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
 
 [sub_resource type="Resource" id="Resource_f2mse"]
 resource_local_to_scene = true
-script = ExtResource("8_368b0")
-actionName = "Attack!"
-weight = 75
-animationName = "Attack"
-metadata/_custom_type_script = "uid://37ixs2yas0a2"
-
-[sub_resource type="Resource" id="Resource_0tpvm"]
-resource_local_to_scene = true
-script = ExtResource("10_46d6v")
-effectName = "Block"
-stacks = 4
-texture = ExtResource("13_368b0")
-metadata/_custom_type_script = "uid://djxhiomxyr7hq"
-
-[sub_resource type="Resource" id="Resource_v54pp"]
-resource_local_to_scene = true
 script = ExtResource("9_6jyan")
-statusEffect = SubResource("Resource_0tpvm")
+statusEffect = SubResource("Resource_v1vco")
 actionName = "Block!"
 metadata/_custom_type_script = "uid://b4l7koanb5qxc"
 
-[sub_resource type="Resource" id="Resource_th2xw"]
+[sub_resource type="Resource" id="Resource_0tpvm"]
 resource_local_to_scene = true
 script = ExtResource("8_368b0")
 actionName = "Attack!"
@@ -121,7 +72,7 @@ weight = 75
 animationName = "Attack"
 metadata/_custom_type_script = "uid://37ixs2yas0a2"
 
-[sub_resource type="Resource" id="Resource_rj8mx"]
+[sub_resource type="Resource" id="Resource_v54pp"]
 resource_local_to_scene = true
 script = ExtResource("10_46d6v")
 effectName = "Block"
@@ -129,10 +80,33 @@ stacks = 4
 texture = ExtResource("13_368b0")
 metadata/_custom_type_script = "uid://djxhiomxyr7hq"
 
-[sub_resource type="Resource" id="Resource_ts4o4"]
+[sub_resource type="Resource" id="Resource_th2xw"]
 resource_local_to_scene = true
 script = ExtResource("9_6jyan")
-statusEffect = SubResource("Resource_rj8mx")
+statusEffect = SubResource("Resource_v54pp")
+actionName = "Block!"
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[sub_resource type="Resource" id="Resource_rj8mx"]
+resource_local_to_scene = true
+script = ExtResource("8_368b0")
+actionName = "Attack!"
+weight = 75
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_ts4o4"]
+resource_local_to_scene = true
+script = ExtResource("10_46d6v")
+effectName = "Block"
+stacks = 4
+texture = ExtResource("13_368b0")
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_6druc"]
+resource_local_to_scene = true
+script = ExtResource("9_6jyan")
+statusEffect = SubResource("Resource_ts4o4")
 actionName = "Block!"
 metadata/_custom_type_script = "uid://b4l7koanb5qxc"
 
@@ -163,14 +137,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5870306, -4.5485687)
 size = Vector3(39.57788, 7.234192, 0.69021606)
 material = SubResource("StandardMaterial3D_ux6h8")
 
-[node name="Player" parent="." unique_id=1364375232 node_paths=PackedStringArray("damageNumberManager") instance=ExtResource("1_fgnj0")]
+[node name="Player" parent="." unique_id=1364375232 instance=ExtResource("1_fgnj0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.013317, 0.9227694, -0.019296646)
 frame = 5
 frame_progress = 0.24486433
-baseBlock = SubResource("Resource_46d6v")
-upgradeSlots = Array[ExtResource("5_v1vco")]([SubResource("Resource_6druc"), SubResource("Resource_jch5a"), SubResource("Resource_05w66"), SubResource("Resource_l4e85"), SubResource("Resource_herig"), SubResource("Resource_8mcgc")])
+baseBlock = SubResource("Resource_ifegt")
 maxHp = 90
-damageNumberManager = NodePath("../DamageNumberManager")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1698063966 node_paths=PackedStringArray("initialState")]
 script = ExtResource("2_gjjj1")
@@ -196,20 +168,16 @@ script = ExtResource("9_46d6v")
 script = ExtResource("5_0riav")
 encounter = NodePath("..")
 
-[node name="TestEnemy" parent="EnemyManager" unique_id=249674596 node_paths=PackedStringArray("damageNumberManager") instance=ExtResource("6_4ubpl")]
+[node name="TestEnemy" parent="EnemyManager" unique_id=249674596 instance=ExtResource("6_4ubpl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.7761328, 1.6272604)
-possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_ifegt"), SubResource("Resource_v1vco")])
-maxHp = 100
-damageNumberManager = NodePath("../../DamageNumberManager")
+possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_51ncy"), SubResource("Resource_f2mse")])
 
-[node name="TestEnemy2" parent="EnemyManager" unique_id=247382047 node_paths=PackedStringArray("damageNumberManager") instance=ExtResource("6_4ubpl")]
+[node name="TestEnemy2" parent="EnemyManager" unique_id=247382047 instance=ExtResource("6_4ubpl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.7761328, -1.0681763)
-possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_f2mse"), SubResource("Resource_v54pp")])
-damageNumberManager = NodePath("../../DamageNumberManager")
+possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_0tpvm"), SubResource("Resource_th2xw")])
 
-[node name="TestEnemy3" parent="EnemyManager" unique_id=910269805 node_paths=PackedStringArray("damageNumberManager") instance=ExtResource("6_4ubpl")]
+[node name="TestEnemy3" parent="EnemyManager" unique_id=910269805 instance=ExtResource("6_4ubpl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4846907, 0.7761328, 0.012077332)
-possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_th2xw"), SubResource("Resource_ts4o4")])
-damageNumberManager = NodePath("../../DamageNumberManager")
+possibleActions = Array[ExtResource("7_6e54m")]([SubResource("Resource_rj8mx"), SubResource("Resource_6druc")])
 
 [node name="DamageNumberManager" parent="." unique_id=1727658338 instance=ExtResource("15_46d6v")]

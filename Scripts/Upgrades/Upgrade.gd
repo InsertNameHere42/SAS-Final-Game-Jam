@@ -4,6 +4,8 @@ class_name Upgrade extends Resource
 @export var upgradeName: String = ""
 @export var description: String = ""
 @export var icon: Texture2D
+@export var energyCost: int = 1
+var isOn: bool = true
 
 func _init() -> void:
 	resource_local_to_scene = true
