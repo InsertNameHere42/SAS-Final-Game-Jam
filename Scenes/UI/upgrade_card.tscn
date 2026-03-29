@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://btd4tvrnp34jq"]
+
+[ext_resource type="Script" uid="uid://3f6wpqhioje1" path="res://Scripts/UIScripts/UpgradeCard.gd" id="1_yvd15"]
+
+[node name="UpgradeCard" type="TextureButton" unique_id=1332372780]
+offset_right = 40.0
+offset_bottom = 40.0
+toggle_mode = true
+script = ExtResource("1_yvd15")
+
+[node name="CostLabel" type="Label" parent="." unique_id=207448680]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

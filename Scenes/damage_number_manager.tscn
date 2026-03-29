@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://q1hlktc7oobw"]
 
-[ext_resource type="Script" uid="uid://dl4k4fv081oqs" path="res://Scripts/DamageNumberManager.gd" id="1_ivk75"]
+[ext_resource type="Script" uid="uid://dl4k4fv081oqs" path="res://Scripts/UIScripts/DamageNumberManager.gd" id="1_ivk75"]
 
 [node name="DamageNumberManager" type="Node" unique_id=1727658338]
 script = ExtResource("1_ivk75")

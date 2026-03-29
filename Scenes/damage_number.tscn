@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c06g5hkcmso7y"]
 
-[ext_resource type="Script" uid="uid://52u0foyg56u7" path="res://Scripts/DamageNumber.gd" id="1_n4jia"]
+[ext_resource type="Script" uid="uid://52u0foyg56u7" path="res://Scripts/UIScripts/DamageNumber.gd" id="1_n4jia"]
 
 [node name="DamageNumber" type="Label3D" unique_id=834679598]
 script = ExtResource("1_n4jia")

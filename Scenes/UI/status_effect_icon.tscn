@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://iau2exhr7xdm"]
 
-[ext_resource type="Script" uid="uid://cv7xefiekcxkv" path="res://Scripts/status_effect_icon.gd" id="1_y7ena"]
+[ext_resource type="Script" uid="uid://cv7xefiekcxkv" path="res://Scripts/UIScripts/status_effect_icon.gd" id="1_y7ena"]
 
 [node name="StatusEffectIcon" type="HBoxContainer" unique_id=523617326]
 offset_right = 40.0
