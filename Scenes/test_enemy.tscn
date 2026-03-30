@@ -160,6 +160,9 @@ metadata/_custom_type_script = "uid://b4l7koanb5qxc"
 [sub_resource type="ViewportTexture" id="ViewportTexture_cvapq"]
 viewport_path = NodePath("HealthViewPort")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngp1l"]
+size = Vector3(0.9682007, 1.3206787, 1)
+
 [node name="TestEnemy" type="AnimatedSprite3D" unique_id=249674596]
 pixel_size = 0.04
 billboard = 1
@@ -201,3 +204,21 @@ allow_lesser = true
 
 [node name="StatusEffectRow" type="HBoxContainer" parent="HealthViewPort/VBoxContainer" unique_id=1661662862]
 layout_mode = 2
+
+[node name="HoverDetector" type="Area3D" parent="." unique_id=1152561922]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HoverDetector" unique_id=1942544340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0)
+shape = SubResource("BoxShape3D_ngp1l")
+
+[node name="NextActionTooltip" type="Label3D" parent="." unique_id=298325944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0)
+billboard = 1
+no_depth_test = true
+texture_filter = 2
+outline_modulate = Color(0.5058824, 0, 0, 1)
+text = "This Enemy Intends To"
+font_size = 48
+outline_size = 4
+autowrap_mode = 2
+width = 600.0

@@ -49,7 +49,11 @@ func _highlightTarget() -> void:
 	
 	for enemy in enemies:
 		enemy.modulate = Color.WHITE
+		if !enemy.hovered:
+			enemy.selected(false)
 	enemies[currentIndex].modulate = Color.RED
+	if !enemies[currentIndex].hovered:
+		enemies[currentIndex].selected(true)
 
 func _clearHighlight() -> void:
 	for enemy in encounter.enemyManager.enemies:

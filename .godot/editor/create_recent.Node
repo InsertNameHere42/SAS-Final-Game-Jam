@@ -1,5 +1,8 @@
-HBoxContainer
+Label3D
 Label
+CollisionShape3D
+Area3D
+HBoxContainer
 VBoxContainer
 PanelContainer
 TextureRect
@@ -8,7 +11,4 @@ Panel
 CanvasLayer
 TextureButton
 Node
-Label3D
 Sprite3D
-ProgressBar
-SubViewport

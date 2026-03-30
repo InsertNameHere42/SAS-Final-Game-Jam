@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774790258
+::res://::1774875527
 icon.svg::CompressedTexture2D::5589711903263656629::1774057975::1774058764::1::::<><><>0<>0<>041658a5c4f05cc7539d3ad0360adde6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
 LICENSE.md::TextFile::-1::1774405523::0::1::::<><><>0<>0<><>::
 ::res://addons/::1774405523
@@ -80,28 +80,28 @@ run_down.png::CompressedTexture2D::1912367101208958902::1774059210::1774059211::
 run_left.png::CompressedTexture2D::7213702745545960920::1774059210::1774059211::1::::<><><>0<>0<>871b512a09f38f51343b46554817b4f1<>res://.godot/imported/run_left.png-2a106da86de15605657e92a9d8fe8fee.ctex::
 run_right.png::CompressedTexture2D::4132090873780743266::1774059210::1774059211::1::::<><><>0<>0<>107b9d5d32096cef8ef461697e54d808<>res://.godot/imported/run_right.png-7c31c0771e325feb22e6b70d49dabf4a.ctex::
 run_up.png::CompressedTexture2D::4645141910606622675::1774059210::1774059211::1::::<><><>0<>0<>dff57faaac1cc27c3a061918b1c415c8<>res://.godot/imported/run_up.png-27c441a8c97ad344783ed02d0384d762.ctex::
-::res://Scenes/::1774706485
-combat_encounter.tscn::PackedScene::7187223859673992923::1774706485::0::1::::<><><>0<>0<><>::uid://l1luvgct8ln6::::res://Scenes/player.tscn<>uid://c3cvy2ns2b3la::::res://Scripts/CombatEncounter.gd<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://c2b41aqxdkkuu::::res://Scripts/States/PlayerTurn.gd<>uid://dy82oouww6sgr::::res://Scripts/enemy_manager.gd<>uid://8l3l6bf2nrs6::::res://Scripts/States/EnemyTurn.gd<>uid://bqwqxi3atc7sc::::res://Scenes/test_enemy.tscn<>uid://dpnurkj20dddp::::res://Scripts/States/EnemySelect.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://s3ox4l2p2476::::res://Scripts/States/ModifyState.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://clvx0dtjjh6xd::::res://icon.svg<>uid://q1hlktc7oobw::::res://Scenes/damage_number_manager.tscn<>uid://dnejqew27q7ns::::res://Scenes/UI/upgrade_toggle_screen.tscn
+::res://Scenes/::1774875502
+combat_encounter.tscn::PackedScene::7187223859673992923::1774875374::0::1::::<><><>0<>0<><>::uid://l1luvgct8ln6::::res://Scenes/player.tscn<>uid://c3cvy2ns2b3la::::res://Scripts/CombatEncounter.gd<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://c2b41aqxdkkuu::::res://Scripts/States/PlayerTurn.gd<>uid://dy82oouww6sgr::::res://Scripts/enemy_manager.gd<>uid://8l3l6bf2nrs6::::res://Scripts/States/EnemyTurn.gd<>uid://bqwqxi3atc7sc::::res://Scenes/test_enemy.tscn<>uid://dpnurkj20dddp::::res://Scripts/States/EnemySelect.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://s3ox4l2p2476::::res://Scripts/States/ModifyState.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://clvx0dtjjh6xd::::res://icon.svg<>uid://q1hlktc7oobw::::res://Scenes/damage_number_manager.tscn<>uid://dnejqew27q7ns::::res://Scenes/UI/upgrade_toggle_screen.tscn
 damage_number.tscn::PackedScene::6591976427705737248::1774590220::0::1::::<><><>0<>0<><>::uid://52u0foyg56u7::::res://Scripts/UIScripts/DamageNumber.gd
 damage_number_manager.tscn::PackedScene::1177140537215376864::1774590230::0::1::::<><><>0<>0<><>::uid://dl4k4fv081oqs::::res://Scripts/UIScripts/DamageNumberManager.gd
 player.tscn::PackedScene::826455816799190397::1774682481::0::1::::<><><>0<>0<><>::uid://c2t8oo8u18ram::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/attack1_right.png<>uid://djdcwgipke6h5::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_right.png<>uid://dcwsl1unn7brr::::res://Scripts/player.gd<>uid://chtoa60ppvq1h::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_up.png<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
-test_enemy.tscn::PackedScene::3555871501101841702::1774505753::0::1::::<><><>0<>0<><>::uid://co044it4tq73x::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://bhxe5kxxjl2wi::::res://Scripts/Enemy.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
+test_enemy.tscn::PackedScene::3555871501101841702::1774875502::0::1::::<><><>0<>0<><>::uid://co044it4tq73x::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://bhxe5kxxjl2wi::::res://Scripts/Enemy.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
 ::res://Scenes/UI/::1774703638
 status_effect_icon.tscn::PackedScene::562773551360972798::1774590209::0::1::::<><><>0<>0<><>::uid://cv7xefiekcxkv::::res://Scripts/UIScripts/status_effect_icon.gd
 upgrade_card.tscn::PackedScene::3727997698816184166::1774682441::0::1::::<><><>0<>0<><>::uid://3f6wpqhioje1::::res://Scripts/UIScripts/UpgradeCard.gd
 upgrade_toggle_screen.tscn::PackedScene::8080549800376623020::1774703638::0::1::::<><><>0<>0<><>::uid://c5o8rssnq6475::::res://Scripts/UIScripts/UpgradeToggleScreen.gd
-::res://Scripts/::1774705626
+::res://Scripts/::1774875325
 CombatEncounter.gd::GDScript::6743577099727943710::1774679136::0::1::::CombatEncounter<>Node3D<><>0<>0<><>::
 Damagable.gd::GDScript::537089873778302789::1774540334::0::1::::Damagable<>AnimatedSprite3D<><>1<>0<><>::
-Enemy.gd::GDScript::2925520281112424424::1774409990::0::1::::Enemy<>Damagable<><>0<>0<><>::
+Enemy.gd::GDScript::2925520281112424424::1774875324::0::1::::Enemy<>Damagable<><>0<>0<><>::
 enemy_manager.gd::GDScript::8913583891448624573::1774416057::0::1::::EnemyManager<>Node<><>0<>0<><>::
 player.gd::GDScript::7346169995659917639::1774705626::0::1::::Player<>Damagable<><>0<>0<><>::
 ::res://Scripts/Actions/::1774358163
 BasicAttackAction.gd::GDScript::2031875507417972303::1774355698::0::1::::BasicAttackAction<>EnemyAction<><>0<>0<><>::
 BasicStatusAction.gd::GDScript::4446566842118370800::1774358163::0::1::::BasicStatusAction<>EnemyAction<><>0<>0<><>::
 EnemyAction.gd::GDScript::1529394151355576972::1774338742::0::1::::EnemyAction<>Resource<><>1<>0<><>::
-::res://Scripts/States/::1774705139
-EnemySelect.gd::GDScript::8240176855201306057::1774541048::0::1::::EnemySelect<>State<><>0<>0<><>::
+::res://Scripts/States/::1774875038
+EnemySelect.gd::GDScript::8240176855201306057::1774875038::0::1::::EnemySelect<>State<><>0<>0<><>::
 EnemyTurn.gd::GDScript::2340661344912589375::1774425203::0::1::::EnemyTurn<>State<><>0<>0<><>::
 ModifyState.gd::GDScript::1322094415174699835::1774681843::0::1::::ModifyState<>State<><>0<>0<><>::
 PlayerTurn.gd::GDScript::6671811772565190724::1774705139::0::1::::PlayerTurn<>State<><>0<>0<><>::
