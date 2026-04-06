@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ccy3vgufakxi6"]
+
+[ext_resource type="PackedScene" uid="uid://d1puerho1u7id" path="res://Assets/GoodAssets/MusicShop2.blend" id="1_jcn7y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xqqtb"]
+size = Vector3(13.1779785, 8.411484, 8.374165)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3in67"]
+size = Vector3(13.30542, 0.5439453, 8.9552)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ql1mu"]
+size = Vector3(2.9904785, 0.5864258, 0.9937134)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7bfcp"]
+size = Vector3(2.9726563, 1, 0.505249)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qw1a0"]
+size = Vector3(0.1352539, 1.2442627, 1.1685791)
+
+[node name="MusicShop" type="StaticBody3D" unique_id=1980457355]
+
+[node name="MusicShop2" parent="." unique_id=966380417 instance=ExtResource("1_jcn7y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=220802199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.202873, -0.06433344)
+shape = SubResource("BoxShape3D_xqqtb")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1530131105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0008544922, 0.22802734, 0.0037231445)
+shape = SubResource("BoxShape3D_3in67")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1371572909]
+transform = Transform3D(1, 0, 0, 0, 0.92553383, -0.37866473, 0, 0.37866473, 0.92553383, -2.0104218, 0.049527735, 5.121758)
+shape = SubResource("BoxShape3D_ql1mu")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=830889306]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -2.0107422, 0.25268376, 4.2753983)
+shape = SubResource("BoxShape3D_7bfcp")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=957049263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57433265, 0.732515, 5.013855)
+shape = SubResource("BoxShape3D_qw1a0")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=1437754888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4471962, 0.732515, 5.013855)
+shape = SubResource("BoxShape3D_qw1a0")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=2005816825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76564, 3.9002533, 4.069578)
+modulate = Color(1, 1, 0.5568628, 1)
+text = "Swee Water"
+font_size = 64
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=845567321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7740368, 3.6017284, 4.069578)
+text = "MUSIC                         CO."
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=1309924578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7740368, 4.1744533, 4.069578)
+text = "EST.                           2026"
