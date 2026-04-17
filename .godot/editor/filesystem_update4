@@ -2,3 +2,4 @@ res://Scenes/UI/shop_item.tscn
 res://Scripts/UIScripts/ShopItem.gd
 res://Scripts/PlayerData.gd
 res://Scenes/UI/shop_screen.tscn
+res://Scripts/UIScripts/ShopScreen.gd
