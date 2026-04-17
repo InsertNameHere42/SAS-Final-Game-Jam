@@ -1,3 +1,10 @@
+Button
+Label
+TextureRect
+VBoxContainer
+PanelContainer
+BoxContainer
+HBoxContainer
 Node3D
 Label3D
 CollisionShape3D
@@ -6,9 +13,3 @@ Camera3D
 AnimatedSprite3D
 Sprite3D
 CharacterBody3D
-GridMap
-Label
-Area3D
-HBoxContainer
-VBoxContainer
-PanelContainer

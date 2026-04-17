@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c6bv0apsop2ma"]
+
+[ext_resource type="Script" uid="uid://dccaug0lplah5" path="res://Scripts/UIScripts/ShopItem.gd" id="1_gd3nv"]
+
+[node name="ShopItem" type="PanelContainer" unique_id=343833532]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gd3nv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1332132470]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer" unique_id=2021921301]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="HBoxContainer" unique_id=730434153]
+layout_mode = 2
+
+[node name="CostLabel" type="Label" parent="HBoxContainer" unique_id=937169401]
+layout_mode = 2

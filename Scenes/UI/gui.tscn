@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://2r584vecyq7e"]
+
+[ext_resource type="Script" uid="uid://cgwhdkaydlhv8" path="res://Scripts/UIScripts/MainGUI.gd" id="1_q081c"]
+[ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="1_vqpta"]
+
+[node name="GUI" type="CanvasLayer" unique_id=594084238]
+script = ExtResource("1_q081c")
+
+[node name="GUITexture" type="TextureRect" parent="." unique_id=1451828861]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="EnergyDisplay" type="HBoxContainer" parent="." unique_id=557261499]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="EnergyPip" type="Sprite2D" parent="EnergyDisplay" unique_id=311511711]
+texture = ExtResource("1_vqpta")
+
+[node name="EnergyUsedLabel" type="Label" parent="EnergyDisplay" unique_id=1715058616]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.20392157, 1, 1, 1)

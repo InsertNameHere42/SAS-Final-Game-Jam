@@ -1,2 +1,4 @@
-res://Scenes/Meshes/music_shop.tscn
-res://Scenes/roaming.tscn
+res://Scenes/UI/shop_item.tscn
+res://Scripts/UIScripts/ShopItem.gd
+res://Scripts/PlayerData.gd
+res://Scenes/UI/shop_screen.tscn

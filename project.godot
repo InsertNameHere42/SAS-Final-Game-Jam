@@ -14,9 +14,17 @@ config/name="SAS Final Jam"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerData="*uid://cm6yv3rcddgcg"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 
