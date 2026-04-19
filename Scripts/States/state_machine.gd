@@ -17,7 +17,7 @@ func _process(delta):
 	if currentState:
 		currentState.update(delta)
 
-func physicsUpdate(delta):
+func _physics_process(delta):
 	if currentState:
 		currentState.physicsUpdate(delta)
 
@@ -31,5 +31,10 @@ func onChildTransition(state: State, newStateName: String):
 	newState.enter()
 	currentState = newState
 		
-		
+func openShop(shop: ShopScreen) -> void:
+	var shopState := states.get("shopstate") as ShopState
+	if shopState:
+		shopState.setShop(shop)
+		onChildTransition(currentState, "shopstate")
+	
 		

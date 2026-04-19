@@ -1,7 +1,7 @@
 class_name ShopItem extends PanelContainer
 
 var upgrade: Upgrade
-@export var iconSize: int = 32
+@export var iconSize: int = 48
 
 @onready var icon: TextureRect = $HBoxContainer/Icon
 @onready var nameLabel: Label = $HBoxContainer/NameLabel

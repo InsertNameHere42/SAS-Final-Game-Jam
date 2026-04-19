@@ -6,7 +6,7 @@ class_name PlayerRoaming extends CharacterBody3D
 @onready var playerSprite: AnimatedSprite3D = $AnimatedSprite3D
 var lastDirection: Vector2 = Vector2.RIGHT
 
-func _physics_process(delta: float) -> void:
+func handleMovement(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

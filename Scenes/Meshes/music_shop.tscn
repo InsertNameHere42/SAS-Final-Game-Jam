@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ccy3vgufakxi6"]
 
 [ext_resource type="PackedScene" uid="uid://d1puerho1u7id" path="res://Assets/GoodAssets/MusicShop2.blend" id="1_jcn7y"]
+[ext_resource type="Script" uid="uid://iywjbeiing0l" path="res://Scripts/RoamingScripts/MusicShop.gd" id="1_xqqtb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xqqtb"]
 size = Vector3(13.1779785, 8.411484, 8.374165)
@@ -17,7 +18,11 @@ size = Vector3(2.9726563, 1, 0.505249)
 [sub_resource type="BoxShape3D" id="BoxShape3D_qw1a0"]
 size = Vector3(0.1352539, 1.2442627, 1.1685791)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jcn7y"]
+size = Vector3(3.2841797, 2.5505066, 1)
+
 [node name="MusicShop" type="StaticBody3D" unique_id=1980457355]
+script = ExtResource("1_xqqtb")
 
 [node name="MusicShop2" parent="." unique_id=966380417 instance=ExtResource("1_jcn7y")]
 
@@ -58,3 +63,10 @@ text = "MUSIC                         CO."
 [node name="Label3D3" type="Label3D" parent="." unique_id=1309924578]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7740368, 4.1744533, 4.069578)
 text = "EST.                           2026"
+
+[node name="ShopTrigger" type="Area3D" parent="." unique_id=1800860762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1319764, 0, 3.6750083)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShopTrigger" unique_id=593990840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7610321, 0)
+shape = SubResource("BoxShape3D_jcn7y")

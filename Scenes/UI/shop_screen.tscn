@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bjkpjpmrri65g"]
 
 [ext_resource type="Script" uid="uid://b8aa78rggssag" path="res://Scripts/UIScripts/ShopScreen.gd" id="1_vrl6t"]
+[ext_resource type="Texture2D" uid="uid://c146t6o3o5oa" path="res://Assets/Placeholders/shopPlaceholderImage.jpeg" id="2_45h0x"]
 
 [node name="ShopScreen" type="Control" unique_id=1474026120]
 layout_mode = 3
@@ -15,35 +16,54 @@ script = ExtResource("1_vrl6t")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_45h0x")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=659140389]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+offset_right = 204.0
+offset_bottom = 93.0
 
 [node name="ItemList" type="VBoxContainer" parent="HBoxContainer" unique_id=899833395]
 layout_mode = 2
 
 [node name="RightPanel" type="VBoxContainer" parent="HBoxContainer" unique_id=1220632111]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 
 [node name="TooltipPanel" type="PanelContainer" parent="HBoxContainer/RightPanel" unique_id=824195502]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanel/TooltipPanel" unique_id=760259528]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightPanel/TooltipPanel" unique_id=1798446296]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer" unique_id=760259528]
 layout_mode = 2
 
-[node name="TooltipTexture" type="TextureRect" parent="HBoxContainer/RightPanel/TooltipPanel/VBoxContainer" unique_id=314349293]
+[node name="TooltipTexture" type="TextureRect" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=314349293]
 layout_mode = 2
+size_flags_horizontal = 4
+stretch_mode = 2
 
-[node name="TooltipName" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/VBoxContainer" unique_id=1079857411]
+[node name="TooltipName" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=1079857411]
+custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="TooltipDesc" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/VBoxContainer" unique_id=1730797248]
+[node name="TooltipDesc" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=1730797248]
+custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="TooltipCost" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/VBoxContainer" unique_id=73064155]
+[node name="TooltipCost" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=73064155]
 layout_mode = 2
+horizontal_alignment = 1
 
-[node name="BuyButton" type="Button" parent="HBoxContainer/RightPanel/TooltipPanel/VBoxContainer" unique_id=926976341]
+[node name="BuyButton" type="Button" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=926976341]
 layout_mode = 2

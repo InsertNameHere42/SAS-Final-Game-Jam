@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776403252
+::res://::1776496231
 icon.svg::CompressedTexture2D::5589711903263656629::1774854903::1775539640::1::::<><><>0<>0<>041658a5c4f05cc7539d3ad0360adde6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
 LICENSE.md::TextFile::-1::1774854902::0::1::::<><><>0<>0<><>::
 ::res://addons/::1774854902
@@ -56,8 +56,9 @@ blip.wav::AudioStreamWAV::4311277633861190701::1774854903::1775539640::1::::<><>
 typewriter.wav::AudioStreamWAV::1929326941576686422::1774854903::1775539640::1::::<><><>0<>0<>980ac43b117ec3dafb16c086bf9a1237<>res://.godot/imported/typewriter.wav-bbc316c6bf7b5199ec8fff5ba60ba0a4.sample::
 ::res://Assets/::1775538361
 ::res://Assets/GoodAssets/::1775538361
-::res://Assets/Placeholders/::1775539639
+::res://Assets/Placeholders/::1776497669
 button UI.png::CompressedTexture2D::3428185660686014926::1774854902::1775539639::1::::<><><>0<>0<>c9a5fb7e034b2332bdc160dd90d05c3e<>res://.godot/imported/button UI.png-9ae2151df6e9a46667b2c05863c788ee.ctex::
+shopPlaceholderImage.jpeg::CompressedTexture2D::195868707789586564::1776497636::1776497675::1::::<><><>0<>0<>07d9f988c542be3fa5273d88b8e1606d<>res://.godot/imported/shopPlaceholderImage.jpeg-fb1309a0d75be1e7ecfe93f6074a8273.ctex::
 ::res://Assets/Placeholders/3d city pack/::1775539643
 BG.fbx::PackedScene::1243180311459412116::1775538361::1775539642::1::::<><><>0<>0<>348d9a8e0f4bdafe6e7920b0c49bb75a<>res://.godot/imported/BG.fbx-e14558733593062de2dd3589c67add48.scn::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
 Car_03.fbx::PackedScene::7486950446414138077::1775538361::1775539642::1::::<><><>0<>0<>b0e1bedabc646ddb3f531a89dd2e2773<>res://.godot/imported/Car_03.fbx-76059d68bdf9552a9d508bc04636f06c.scn::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
@@ -108,18 +109,20 @@ short_house.tscn::PackedScene::6816717659099420596::1775538361::0::1::::<><><>0<
 street_lamp.tscn::PackedScene::2636563291731079303::1775538361::0::1::::<><><>0<>0<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
 tall_house.tscn::PackedScene::8639657582596314163::1775538361::0::1::::<><><>0<>0<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
 TrashCan.tscn::PackedScene::2777921904963987194::1775538361::0::1::::<><><>0<>0<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
-::res://Scenes/UI/::1776403252
+::res://Scenes/UI/::1776497573
 gui.tscn::PackedScene::1932075196831170212::1775109746::0::1::::<><><>0<>0<><>::uid://cgwhdkaydlhv8::::res://Scripts/UIScripts/MainGUI.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
-shop_item.tscn::PackedScene::6952079623624217692::1776403223::0::1::::<><><>0<>0<><>::
+shop_item.tscn::PackedScene::6952079623624217692::1776404950::0::1::::<><><>0<>0<><>::uid://dccaug0lplah5::::res://Scripts/UIScripts/ShopItem.gd
+shop_screen.tscn::PackedScene::3039691688196007662::1776497573::0::1::::<><><>0<>0<><>::uid://b8aa78rggssag::::res://Scripts/UIScripts/ShopScreen.gd
 status_effect_icon.tscn::PackedScene::562773551360972798::1774854902::0::1::::<><><>0<>0<><>::uid://cv7xefiekcxkv::::res://Scripts/UIScripts/status_effect_icon.gd
 upgrade_card.tscn::PackedScene::3727997698816184166::1774854902::0::1::::<><><>0<>0<><>::uid://3f6wpqhioje1::::res://Scripts/UIScripts/UpgradeCard.gd
 upgrade_toggle_screen.tscn::PackedScene::8080549800376623020::1774854902::0::1::::<><><>0<>0<><>::uid://c5o8rssnq6475::::res://Scripts/UIScripts/UpgradeToggleScreen.gd
-::res://Scripts/::1776403244
+::res://Scripts/::1776404895
 CombatEncounter.gd::GDScript::6743577099727943710::1775538358::0::1::::CombatEncounter<>Node3D<><>0<>0<><>::
 Damagable.gd::GDScript::537089873778302789::1774854902::0::1::::Damagable<>AnimatedSprite3D<><>1<>0<><>::
 Enemy.gd::GDScript::2925520281112424424::1774921558::0::1::::Enemy<>Damagable<><>0<>0<><>::
 enemy_manager.gd::GDScript::8913583891448624573::1774854902::0::1::::EnemyManager<>Node<><>0<>0<><>::
 player.gd::GDScript::7346169995659917639::1774854902::0::1::::Player<>Damagable<><>0<>0<><>::
+PlayerData.gd::GDScript::5680599407927325610::1776404895::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/Actions/::1774854902
 BasicAttackAction.gd::GDScript::2031875507417972303::1774854902::0::1::::BasicAttackAction<>EnemyAction<><>0<>0<><>::
 BasicStatusAction.gd::GDScript::4446566842118370800::1774854902::0::1::::BasicStatusAction<>EnemyAction<><>0<>0<><>::
@@ -137,15 +140,16 @@ state_machine.gd::GDScript::5960592219839947940::1774854902::0::1::::StateMachin
 BlockEffect.gd::GDScript::7838882392407921126::1774854902::0::1::::BlockEffect<>StatusEffect<><>0<>0<><>::
 StatusEffect.gd::GDScript::7620850727808220295::1774854902::0::1::::StatusEffect<>Resource<><>1<>0<><>::
 StatusEffectComponent.gd::GDScript::7617811629926467201::1774854902::0::1::::StatusEffectComponent<>Node<><>0<>0<><>::
-::res://Scripts/UIScripts/::1775538358
+::res://Scripts/UIScripts/::1776497573
 DamageNumber.gd::GDScript::2162662778547233556::1774854902::0::1::::DamageNumber<>Label3D<><>0<>0<><>::
 DamageNumberManager.gd::GDScript::7991865540154966314::1774854902::0::1::::DamageNumberManager<>Node<><>0<>0<><>::
 MainGUI.gd::GDScript::5239821642463193231::1775109746::0::1::::<>CanvasLayer<><>0<>0<><>::
-ShopItem.gd::GDScript::7303804564022063988::1776403244::0::1::::<>PanelContainer<><>0<>0<><>::
+ShopItem.gd::GDScript::7303804564022063988::1776404950::0::1::::ShopItem<>PanelContainer<><>0<>0<><>::
+ShopScreen.gd::GDScript::4702711428966715070::1776497573::0::1::::ShopScreen<>Control<><>0<>0<><>::
 status_effect_icon.gd::GDScript::6314271081094439925::1774854902::0::1::::StatusEffectIcon<>HBoxContainer<><>0<>0<><>::
 UpgradeCard.gd::GDScript::1977531837773296022::1774854902::0::1::::UpgradeCard<>TextureButton<><>0<>0<><>::
 UpgradeToggleScreen.gd::GDScript::6909442958181764074::1775538358::0::1::::UpgradeToggleScreen<>CanvasLayer<><>0<>0<><>::
-::res://Scripts/Upgrades/::1774854902
+::res://Scripts/Upgrades/::1776496977
 AttackContext.gd::GDScript::5488243661669110741::1774854902::0::1::::AttackContext<>RefCounted<><>0<>0<><>::
 Boost.gd::GDScript::5785046214523199112::1774854902::0::1::::BoostUpgrade<>Upgrade<><>0<>0<><>::
 DefendContext.gd::GDScript::1446470261335599120::1774854902::0::1::::DefendContext<>RefCounted<><>0<>0<><>::
@@ -157,4 +161,4 @@ Limiter.gd::GDScript::411148114128898205::1774854902::0::1::::LimiterUpgrade<>Up
 NoiseGate.gd::GDScript::5454547487082309758::1774854902::0::1::::NoiseGateUpgrade<>Upgrade<><>0<>0<><>::
 Overdrive.gd::GDScript::5350636120153589745::1774854902::0::1::::OverdriveUpgrade<>Upgrade<><>0<>0<><>::
 Reverb.gd::GDScript::8480217875954702009::1774854902::0::1::::ReverbUpgrade<>Upgrade<><>0<>0<><>::
-Upgrade.gd::GDScript::78222052727455833::1774854902::0::1::::Upgrade<>Resource<><>1<>0<><>::
+Upgrade.gd::GDScript::78222052727455833::1776496977::0::1::::Upgrade<>Resource<><>1<>0<><>::

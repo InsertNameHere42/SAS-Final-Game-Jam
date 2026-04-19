@@ -3,7 +3,6 @@ class_name EnemySelect extends State
 @export var enemyHitTicks: float = 0.05
 @export var playerToEnemyTurnDelay: float = 0.5
 var currentIndex: int = 0
-
 func enter() -> void:
 	_highlightTarget()
 
@@ -11,7 +10,7 @@ func exit() -> void:
 	_clearHighlight()
 
 func update(_delta: float) -> void:
-	var enemies := encounter.enemyManager.enemies
+	var enemies: Array[Enemy] = environment.enemyManager.enemies
 	
 	if enemies.is_empty() or Input.is_action_just_pressed("UI Cancel"):
 		transitioned.emit(self, "playerturn")
@@ -24,8 +23,8 @@ func update(_delta: float) -> void:
 		_highlightTarget()
 	
 	if Input.is_action_just_pressed("UI Accept"):
-		var selectedTarget: Enemy = encounter.enemyManager.enemies[currentIndex]
-		var attackContext := encounter.player.attack()
+		var selectedTarget: Enemy = environment.enemyManager.enemies[currentIndex]
+		var attackContext: AttackContext = environment.player.attack()
 		for i in attackContext.hitCount:
 			if selectedTarget and is_instance_valid(selectedTarget):
 				var result := attackContext.calculateDamage()
@@ -33,7 +32,7 @@ func update(_delta: float) -> void:
 				for effect in attackContext.effectsToApplyEnemy:
 					selectedTarget.status_effect_component.applyEffect(effect)
 				for effect in attackContext.effectsToApplyPlayer:
-					encounter.player.statusEffectComponent.applyEffect(effect)
+					environment.player.statusEffectComponent.applyEffect(effect)
 			await get_tree().create_timer(enemyHitTicks).timeout
 		_clearHighlight()
 		await get_tree().create_timer(playerToEnemyTurnDelay).timeout
@@ -43,7 +42,7 @@ func physicsUpdate(_delta: float) -> void:
 	pass
 
 func _highlightTarget() -> void:
-	var enemies: Array[Enemy] = encounter.enemyManager.enemies
+	var enemies: Array[Enemy] = environment.enemyManager.enemies
 	if enemies.is_empty(): return
 	currentIndex = clamp(currentIndex, 0, enemies.size() - 1)
 	
@@ -56,5 +55,5 @@ func _highlightTarget() -> void:
 		enemies[currentIndex].selected(true)
 
 func _clearHighlight() -> void:
-	for enemy in encounter.enemyManager.enemies:
+	for enemy in environment.enemyManager.enemies:
 		enemy.modulate = Color.WHITE

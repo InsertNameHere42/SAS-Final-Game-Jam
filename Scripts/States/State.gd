@@ -1,7 +1,7 @@
 @abstract
 class_name State extends Node
 
-@export var encounter: CombatEncounter
+@export var environment: Node
 signal transitioned
 
 @abstract

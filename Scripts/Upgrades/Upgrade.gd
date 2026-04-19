@@ -6,6 +6,7 @@ class_name Upgrade extends Resource
 @export var offSprite: Texture2D
 @export var onSprite: Texture2D
 @export var energyCost: int = 1
+@export var cost: int = 5
 var isOn: bool = false
 
 func _init() -> void:

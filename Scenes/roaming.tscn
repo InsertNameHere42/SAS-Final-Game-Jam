@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d0pe2qxfpjolf"]
 
+[ext_resource type="Script" uid="uid://5sdmx7e2rmkv" path="res://Scripts/RoamingScripts/Roaming.gd" id="1_3nnlx"]
 [ext_resource type="PackedScene" uid="uid://c82hfjooscae4" path="res://Scenes/Meshes/3dCityPack/road_straight.tscn" id="1_x3wg5"]
 [ext_resource type="PackedScene" uid="uid://csypadqcwlgjm" path="res://Scenes/Meshes/3dCityPack/road_angled.tscn" id="2_eh23o"]
 [ext_resource type="PackedScene" uid="uid://c4eclxtb6jatw" path="res://Scenes/Meshes/3dCityPack/short_house.tscn" id="3_abxf0"]
@@ -16,6 +17,18 @@
 [ext_resource type="Texture2D" uid="uid://by4u6ysbvjnhi" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_right.png" id="14_srmo2"]
 [ext_resource type="Texture2D" uid="uid://b7ge2q0mt8c7t" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png" id="15_xj767"]
 [ext_resource type="PackedScene" uid="uid://ccy3vgufakxi6" path="res://Scenes/Meshes/music_shop.tscn" id="16_qwyxc"]
+[ext_resource type="Script" uid="uid://cq6mc27rx1ktw" path="res://Scripts/States/state_machine.gd" id="17_3xqub"]
+[ext_resource type="PackedScene" uid="uid://bjkpjpmrri65g" path="res://Scenes/UI/shop_screen.tscn" id="18_4dv2k"]
+[ext_resource type="Script" uid="uid://cuy7dhd4kencs" path="res://Scripts/States/RoamingState.gd" id="18_fkogr"]
+[ext_resource type="Script" uid="uid://cmtdgooj582ks" path="res://Scripts/States/ShopState.gd" id="19_boewr"]
+[ext_resource type="Script" uid="uid://bd5knqm4ul66" path="res://Scripts/Upgrades/Upgrade.gd" id="19_yyx54"]
+[ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="20_3h328"]
+[ext_resource type="Texture2D" uid="uid://bo3vym2xhrnhu" path="res://Assets/Placeholders/button UI.png" id="21_2qdxi"]
+[ext_resource type="Script" uid="uid://cwwg52uumuvu8" path="res://Scripts/Upgrades/Distortion.gd" id="22_5k7bd"]
+[ext_resource type="Script" uid="uid://cih5gvuu7jr0t" path="res://Scripts/Upgrades/Overdrive.gd" id="23_f668u"]
+[ext_resource type="Script" uid="uid://bhkc0g15m8xn2" path="res://Scripts/Upgrades/Delay.gd" id="24_a2iyh"]
+[ext_resource type="Script" uid="uid://cook4pbgv2f3u" path="res://Scripts/Upgrades/Boost.gd" id="25_6va1x"]
+[ext_resource type="Script" uid="uid://dqwgxh6gfsb15" path="res://Scripts/Upgrades/EQ.gd" id="26_dbvsx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_66wqt"]
 size = Vector3(1, 1.3480225, 1)
@@ -525,7 +538,56 @@ sky = SubResource("Sky_gjjj1")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="Resource" id="Resource_4dv2k"]
+script = ExtResource("22_5k7bd")
+upgradeName = "Boss DS-2"
+description = "A distortion pedal increasing damage by 50%"
+offSprite = ExtResource("20_3h328")
+onSprite = ExtResource("21_2qdxi")
+metadata/_custom_type_script = "uid://cwwg52uumuvu8"
+
+[sub_resource type="Resource" id="Resource_yyx54"]
+script = ExtResource("23_f668u")
+critDamageBoost = 2.0
+upgradeName = "Earthquaker Plumes"
+description = "An overdrive pedal increasing crit damage by 200%"
+offSprite = ExtResource("20_3h328")
+onSprite = ExtResource("21_2qdxi")
+metadata/_custom_type_script = "uid://cih5gvuu7jr0t"
+
+[sub_resource type="Resource" id="Resource_3h328"]
+script = ExtResource("24_a2iyh")
+damageBoostPercent = 0.2
+additionalHits = 9
+upgradeName = "Walrus Fathom"
+description = "A delay pedal which increases the number of hits in an attack by 9, but decreases damage by 80%"
+offSprite = ExtResource("20_3h328")
+onSprite = ExtResource("21_2qdxi")
+cost = 25
+metadata/_custom_type_script = "uid://bhkc0g15m8xn2"
+
+[sub_resource type="Resource" id="Resource_2qdxi"]
+script = ExtResource("25_6va1x")
+damageBoostAmount = 4
+upgradeName = "Boss BP-1W"
+description = "A Boost pedal increasing damage by 4"
+offSprite = ExtResource("20_3h328")
+onSprite = ExtResource("21_2qdxi")
+cost = 10
+metadata/_custom_type_script = "uid://cook4pbgv2f3u"
+
+[sub_resource type="Resource" id="Resource_5k7bd"]
+script = ExtResource("26_dbvsx")
+critChanceBoost = 0.3
+upgradeName = "Boss GE-7"
+description = "An EQ pedal increasing crit chance by 30%"
+offSprite = ExtResource("20_3h328")
+onSprite = ExtResource("21_2qdxi")
+cost = 7
+metadata/_custom_type_script = "uid://dqwgxh6gfsb15"
+
 [node name="Roaming" type="Node3D" unique_id=1428682443]
+script = ExtResource("1_3nnlx")
 
 [node name="MapMesh" type="Node3D" parent="." unique_id=2093296678]
 
@@ -724,5 +786,24 @@ shadow_enabled = true
 
 [node name="POIs" type="Node3D" parent="." unique_id=388906221]
 
-[node name="MusicShop" parent="POIs" unique_id=1980457355 instance=ExtResource("16_qwyxc")]
+[node name="MusicShop" parent="POIs" unique_id=1980457355 node_paths=PackedStringArray("shopScreen", "stateMachine") instance=ExtResource("16_qwyxc")]
 transform = Transform3D(-2.4041263e-08, 0, -0.55, 0, 0.55, 0, 0.55, 0, -2.4041263e-08, 7.682707, 0.07362008, -17.115124)
+shopScreen = NodePath("ShopScreen")
+stateMachine = NodePath("../../StateMachine")
+
+[node name="ShopScreen" parent="POIs/MusicShop" unique_id=1474026120 instance=ExtResource("18_4dv2k")]
+visible = false
+availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd")])
+
+[node name="StateMachine" type="Node" parent="." unique_id=954152002 node_paths=PackedStringArray("initialState")]
+script = ExtResource("17_3xqub")
+initialState = NodePath("RoamingState")
+metadata/_custom_type_script = "uid://cq6mc27rx1ktw"
+
+[node name="ShopState" type="Node" parent="StateMachine" unique_id=306566986 node_paths=PackedStringArray("environment")]
+script = ExtResource("19_boewr")
+environment = NodePath("../..")
+
+[node name="RoamingState" type="Node" parent="StateMachine" unique_id=334030325 node_paths=PackedStringArray("environment")]
+script = ExtResource("18_fkogr")
+environment = NodePath("../..")

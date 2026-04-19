@@ -164,6 +164,7 @@ environment = NodePath("../..")
 [node name="EnemySelect" type="Node" parent="StateMachine" unique_id=1011097799 node_paths=PackedStringArray("environment")]
 script = ExtResource("6_6e54m")
 enemyHitTicks = 0.1
+playerToEnemyTurnDelay = null
 environment = NodePath("../..")
 
 [node name="ModifyState" type="Node" parent="StateMachine" unique_id=2104523360 node_paths=PackedStringArray("environment")]

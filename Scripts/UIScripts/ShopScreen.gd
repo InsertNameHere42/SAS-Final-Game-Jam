@@ -3,18 +3,18 @@ class_name ShopScreen extends Control
 const ITEM_SCENE := preload("res://Scenes/UI/shop_item.tscn")
 
 @export var availableUpgrades: Array[Upgrade] = []
-
 @onready var itemList: VBoxContainer = $HBoxContainer/ItemList
-@onready var tooltipIcon: TextureRect = $HBoxContainer/RightPanel/TooltipPanel/VBoxContainer/TooltipIcon
-@onready var tooltipName: Label = $HBoxContainer/RightPanel/TooltipPanel/VBoxContainer/TooltipName
-@onready var tooltipDesc: Label = $HBoxContainer/RightPanel/TooltipPanel/VBoxContainer/TooltipDesc
-@onready var tooltipCost: Label = $HBoxContainer/RightPanel/TooltipPanel/VBoxContainer/TooltipCost
-@onready var buyButton: Button = $HBoxContainer/RightPanel/TooltipPanel/VBoxContainer/BuyButton
+@onready var tooltipIcon: TextureRect = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipTexture
+@onready var tooltipName: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipName
+@onready var tooltipDesc: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipDesc
+@onready var tooltipCost: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipCost
+@onready var buyButton: Button = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/BuyButton
 
 var items: Array[ShopItem] = []
 var currentIndex: int = 0
 
 func _ready() -> void:
+	buyButton.pressed.connect(_buySelected)
 	_buildList()
 	_updateTooltip()
 	
@@ -39,9 +39,29 @@ func _input(event: InputEvent) -> void:
 		_buySelected()
 		
 func _updateTooltip() -> void:
-	pass
+	for i in items.size():
+		items[i].setSelected(i == currentIndex)
+	var upgrade: Upgrade = items[currentIndex].upgrade
+	tooltipIcon.texture = upgrade.offSprite
+	tooltipName.text = upgrade.upgradeName
+	tooltipDesc.text = upgrade.description
+	tooltipCost.text = "%d gold" % upgrade.cost
+	var owned := PlayerData.ownsUpgrade(upgrade)
+	buyButton.disabled = owned or PlayerData.doubloons < upgrade.cost
+	buyButton.text = "owned" if owned else "buy"
 
 func _buySelected() -> void:
-	pass
+	var upgrade: Upgrade = items[currentIndex].upgrade
+	if PlayerData.ownsUpgrade(upgrade) or PlayerData.doubloons < upgrade.cost:
+		print("Invalid Purchase")
+		return
+	PlayerData.doubloons -= upgrade.cost
+	PlayerData.inventory.append(upgrade)
+	items[currentIndex]._refresh()
+	_updateTooltip()
+	
+	
+	
+	
 		
 		
