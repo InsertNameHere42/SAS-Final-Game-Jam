@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dansr6dmqv388"]
+
+[ext_resource type="Script" uid="uid://c3cvy2ns2b3la" path="res://Scripts/CombatScripts/CombatEncounter.gd" id="1_3a8fh"]
+[ext_resource type="PackedScene" uid="uid://l1luvgct8ln6" path="res://Scenes/player.tscn" id="2_hsurt"]
+[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="3_whduv"]
+[ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="4_p7r7d"]
+[ext_resource type="Script" uid="uid://cq6mc27rx1ktw" path="res://Scripts/States/state_machine.gd" id="5_g0ooy"]
+[ext_resource type="Script" uid="uid://c2b41aqxdkkuu" path="res://Scripts/States/PlayerTurn.gd" id="6_gqhqx"]
+[ext_resource type="Script" uid="uid://8l3l6bf2nrs6" path="res://Scripts/States/EnemyTurn.gd" id="7_2qd3w"]
+[ext_resource type="Script" uid="uid://dpnurkj20dddp" path="res://Scripts/States/EnemySelect.gd" id="8_1kx1r"]
+[ext_resource type="Script" uid="uid://s3ox4l2p2476" path="res://Scripts/States/ModifyState.gd" id="9_gvlx6"]
+[ext_resource type="Script" uid="uid://dy82oouww6sgr" path="res://Scripts/CombatScripts/enemy_manager.gd" id="10_kun2r"]
+[ext_resource type="PackedScene" uid="uid://q1hlktc7oobw" path="res://Scenes/damage_number_manager.tscn" id="15_2nsrb"]
+[ext_resource type="PackedScene" uid="uid://dnejqew27q7ns" path="res://Scenes/UI/upgrade_toggle_screen.tscn" id="16_kgebq"]
+
+[sub_resource type="Resource" id="Resource_7go44"]
+resource_local_to_scene = true
+script = ExtResource("3_whduv")
+effectName = "Block!"
+stacks = 7
+texture = ExtResource("4_p7r7d")
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[node name="CombatEncounter" type="Node3D" unique_id=1662274057]
+visible = false
+script = ExtResource("1_3a8fh")
+enemyStepX = 1.5
+enemyStepZ = 1.0
+
+[node name="CombatCamera" type="Camera3D" parent="." unique_id=166819940]
+fov = 80.0
+
+[node name="Player" parent="." unique_id=1364375232 node_paths=PackedStringArray("damageNumberManager") instance=ExtResource("2_hsurt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9697075, 0, -0.019)
+frame = 5
+frame_progress = 0.24486433
+baseBlock = SubResource("Resource_7go44")
+maxHp = 90
+damageNumberManager = NodePath("../DamageNumberManager")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1698063966 node_paths=PackedStringArray("initialState")]
+script = ExtResource("5_g0ooy")
+initialState = NodePath("PlayerTurn")
+
+[node name="PlayerTurn" type="Node" parent="StateMachine" unique_id=740057445 node_paths=PackedStringArray("environment")]
+script = ExtResource("6_gqhqx")
+environment = NodePath("../..")
+
+[node name="EnemyTurn" type="Node" parent="StateMachine" unique_id=1123237277 node_paths=PackedStringArray("environment")]
+script = ExtResource("7_2qd3w")
+environment = NodePath("../..")
+
+[node name="EnemySelect" type="Node" parent="StateMachine" unique_id=1011097799 node_paths=PackedStringArray("environment")]
+script = ExtResource("8_1kx1r")
+enemyHitTicks = 0.1
+environment = NodePath("../..")
+
+[node name="ModifyState" type="Node" parent="StateMachine" unique_id=2104523360 node_paths=PackedStringArray("environment")]
+script = ExtResource("9_gvlx6")
+environment = NodePath("../..")
+
+[node name="EnemyManager" type="Node" parent="." unique_id=932958172 node_paths=PackedStringArray("encounter")]
+script = ExtResource("10_kun2r")
+encounter = NodePath("..")
+
+[node name="DamageNumberManager" parent="." unique_id=1727658338 instance=ExtResource("15_2nsrb")]
+
+[node name="UpgradeToggleScreen" parent="." unique_id=1629356387 node_paths=PackedStringArray("encounter") instance=ExtResource("16_kgebq")]
+encounter = NodePath("..")

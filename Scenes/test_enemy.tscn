@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://co044it4tq73x" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png" id="1_ymh8f"]
 [ext_resource type="Texture2D" uid="uid://fwip6kyjf64t" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png" id="2_cvapq"]
-[ext_resource type="Script" uid="uid://bhxe5kxxjl2wi" path="res://Scripts/Enemy.gd" id="3_ngp1l"]
+[ext_resource type="Script" uid="uid://bhxe5kxxjl2wi" path="res://Scripts/CombatScripts/Enemy.gd" id="3_ngp1l"]
 [ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="4_ag7nl"]
 [ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="5_yojx0"]
 [ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="6_6kygu"]
@@ -166,6 +166,7 @@ size = Vector3(0.9682007, 1.3206787, 1)
 [node name="TestEnemy" type="AnimatedSprite3D" unique_id=249674596]
 pixel_size = 0.04
 billboard = 1
+alpha_cut = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_ccakx")
 animation = &"Attack"

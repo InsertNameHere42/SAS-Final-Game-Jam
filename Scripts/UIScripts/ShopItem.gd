@@ -14,7 +14,7 @@ func setup(u: Upgrade) -> void:
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	nameLabel.text = u.upgradeName
-	costLabel.text = str(u.cost)
+	costLabel.text = "$" + str(u.cost)
 	_refresh()
 	
 func _refresh() -> void:

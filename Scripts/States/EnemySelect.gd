@@ -8,6 +8,7 @@ func enter() -> void:
 
 func exit() -> void:
 	_clearHighlight()
+	environment.resetCameraToDefault()
 
 func update(_delta: float) -> void:
 	var enemies: Array[Enemy] = environment.enemyManager.enemies
@@ -53,6 +54,8 @@ func _highlightTarget() -> void:
 	enemies[currentIndex].modulate = Color.RED
 	if !enemies[currentIndex].hovered:
 		enemies[currentIndex].selected(true)
+	
+	environment.focusEnemy(enemies[currentIndex])
 
 func _clearHighlight() -> void:
 	for enemy in environment.enemyManager.enemies:

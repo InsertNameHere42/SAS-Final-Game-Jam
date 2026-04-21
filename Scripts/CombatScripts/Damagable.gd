@@ -1,7 +1,6 @@
 @abstract
 class_name Damagable extends AnimatedSprite3D
 
-
 @onready var vBox: VBoxContainer = $HealthViewPort/VBoxContainer
 @onready var statusEffectComponent: StatusEffectComponent = $StatusEffectComponent
 @onready var statusEffectRow: HBoxContainer = $HealthViewPort/VBoxContainer/StatusEffectRow

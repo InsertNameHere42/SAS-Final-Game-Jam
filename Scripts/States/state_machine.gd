@@ -36,5 +36,11 @@ func openShop(shop: ShopScreen) -> void:
 	if shopState:
 		shopState.setShop(shop)
 		onChildTransition(currentState, "shopstate")
-	
+
+func startCombat(encounter: CombatEncounter) -> void:
+	print("State Machine combat start")
+	var combatState := states.get("combatstate") as CombatState
+	if combatState:
+		combatState.setEncounter(encounter)
+		onChildTransition(currentState, "combatstate")
 		

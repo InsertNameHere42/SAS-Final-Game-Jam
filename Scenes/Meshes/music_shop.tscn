@@ -70,3 +70,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1319764, 0, 3.6750083)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ShopTrigger" unique_id=593990840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7610321, 0)
 shape = SubResource("BoxShape3D_jcn7y")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2107679475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.6, 4)
+light_color = Color(1, 1, 0.3764706, 1)
+light_energy = 2.0
+light_size = 1.0
+light_bake_mode = 1

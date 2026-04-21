@@ -1,7 +1,7 @@
 class_name EnemyManager extends Node
 
 @export var encounter: CombatEncounter
-@export var maxEnemies: int = 3
+@export var maxEnemies: int = 5
 @export var turnDelay: float = 0.5
 var enemies: Array[Enemy] = []
 
@@ -38,3 +38,19 @@ func _get_targets(enemy: Enemy) -> Array[Damagable]:
 func resetEnemyAnimations() -> void:
 	for enemy in enemies:
 		enemy.play("Idle")
+
+func spawnEnemies(scenes: Array[PackedScene]) -> void:
+	print("Attempting to spawn enemies")
+	for scene in scenes:
+		print("Enemy Spawned")
+		var enemy: Enemy = scene.instantiate() as Enemy
+		add_child(enemy)
+		enemy.damageNumberManager = encounter.damageNumberManager
+
+func cleanup() -> void:
+	for enemy in enemies:
+		if is_instance_valid(enemy):
+			enemy.queue_free()
+	enemies.clear()
+	
+	

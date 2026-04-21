@@ -1,7 +1,6 @@
 class_name Player extends Damagable
 
 signal playerDied
-@export var baseMaxEnergy: int = 3
 @export var baseDamage: int = 5
 @export var baseCritChance: float = 0.1
 @export var baseCritDamageMultiplier: float = 1.5
@@ -13,6 +12,10 @@ var usedEnergy: int = 0
 @export var maxUpgradeSlots: int = 6
 @export var upgradeSlots: Array[Upgrade] = []
 
+func startCombat():
+	maxHp = PlayerData.maxHp
+	currentHp = PlayerData.currentHp
+	maxEnergy = PlayerData.startingMaxEnergy
 
 func _process(_delta: float) -> void:
 	pass
@@ -25,6 +28,7 @@ func _ready() -> void:
 
 		
 func die() -> void:
+	print("Player Died")
 	emit_signal("playerDied")
 	
 #this will play an attack animation and calculate the damage done
