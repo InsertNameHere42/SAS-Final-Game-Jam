@@ -1,9 +1,11 @@
 class_name PlayerRoaming extends CharacterBody3D
 
+@onready var playerSprite: AnimatedSprite3D = $AnimatedSprite3D
+@onready var interactArea: Area3D = $InteractArea
 
+@export var interactOffset: float = 1.0
 @export var moveSpeed: float = 5.0
 
-@onready var playerSprite: AnimatedSprite3D = $AnimatedSprite3D
 var lastDirection: Vector2 = Vector2.RIGHT
 
 func handleMovement(delta: float) -> void:
@@ -25,6 +27,15 @@ func handleMovement(delta: float) -> void:
 
 	move_and_slide()
 	
+func _updateInteractArea(direction: Vector3) -> void:
+	interactArea.position = direction * interactOffset
+
+func tryInteract() -> void:
+	for body in interactArea.get_overlapping_areas():
+		if body is Interactable:
+			body.interact()
+			return
+
 func playRunAnimation(input_dir: Vector2) -> void:
 	if abs(input_dir.x) >= abs(input_dir.y):
 		if input_dir.x > 0:

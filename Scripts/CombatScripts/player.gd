@@ -9,12 +9,12 @@ signal playerDied
 var maxEnergy: int = 0
 var usedEnergy: int = 0
 
-@export var maxUpgradeSlots: int = 6
 @export var upgradeSlots: Array[Upgrade] = []
 
 func startCombat():
 	maxHp = PlayerData.maxHp
 	currentHp = PlayerData.currentHp
+	upgradeSlots = PlayerData.equippedUpgrades
 	maxEnergy = PlayerData.startingMaxEnergy
 
 func _process(_delta: float) -> void:

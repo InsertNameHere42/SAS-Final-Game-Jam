@@ -1,5 +1,6 @@
-res://Scripts/CombatScripts/
 res://Scripts/States/
+res://Scenes/Roaming/
+res://Scripts/CombatScripts/
 res://Scripts/RoamingScripts/
 res://Scripts/UIScripts/
 res://Scenes/UI/

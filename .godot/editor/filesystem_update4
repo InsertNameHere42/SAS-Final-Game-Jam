@@ -1,1 +1,13 @@
-res://Scenes/Combat/combat_camera.tscn
+res://Scenes/roaming.tscn
+res://Scenes/Roaming/player_roaming.tscn
+res://Scripts/RoamingScripts/PlayerRoaming.gd
+res://Scripts/RoamingScripts/Interactable.gd
+res://Scripts/PlayerData.gd
+res://Scripts/CombatScripts/player.gd
+res://Scripts/States/RoamingState.gd
+res://Scripts/RoamingScripts/SaveRoomInteractable.gd
+res://Scripts/States/save_room_state.gd
+res://Scripts/States/state_machine.gd
+res://Scenes/UI/shop_screen.tscn
+res://Scripts/UIScripts/ShopScreen.gd
+res://Scripts/UIScripts/SaveRoomScreen.gd

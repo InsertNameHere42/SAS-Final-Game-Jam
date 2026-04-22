@@ -1,10 +1,10 @@
-Camera3D
+Node
 CollisionShape3D
 Area3D
+Camera3D
 Sprite3D
 AreaCombatTrigger
 CombatTrigger
-Node
 CombatEncounter
 Panel
 OmniLight3D

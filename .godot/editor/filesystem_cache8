@@ -1,0 +1,177 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1776833318
+icon.svg::CompressedTexture2D::5589711903263656629::1774854903::1776833318::1::::<><>::
+LICENSE.md::TextFile::-1::1774854902::0::1::::<><>::
+::res://addons/::1774854902
+::res://addons/ridiculous_coding/::1776833318
+font.tres::FontFile::3906615943650166882::1774854902::0::1::::<><>::uid://coiaqb8xwuaic::::res://addons/ridiculous_coding/gravity_bold_8.ttf
+gravity_bold_8.ttf::FontFile::5772028877630708402::1774854902::1776833318::1::::<><>::
+plugin.cfg::TextFile::-1::1774854902::0::1::::<><>::
+plugin.gd::GDScript::-1::1774854902::0::1::::<>EditorPlugin<>::
+stats.gd::GDScript::-1::1774854903::0::1::::StatsDataRC<>Resource<>::
+themes.gd::GDScript::-1::1774854903::0::1::::ThemeDataRc<>Resource<>::
+::res://addons/ridiculous_coding/images/::1776833319
+blip.png::CompressedTexture2D::9023907321475517740::1774854902::1776833318::1::::<><>::
+boom.png::CompressedTexture2D::7999229798388025044::1774854902::1776833318::1::::<><>::
+chat-info.png::CompressedTexture2D::5113465995450136220::1774854902::1776833318::1::::<><>::
+information-sign.png::CompressedTexture2D::4889017631624759097::1774854902::1776833318::1::::<><>::
+levelUp.png::CompressedTexture2D::4106552702831304868::1774854902::1776833318::1::::<><>::
+newline.png::CompressedTexture2D::4255520078947183939::1774854902::1776833318::1::::<><>::
+progress.png::CompressedTexture2D::8314659574235486316::1774854902::1776833318::1::::<><>::
+reset.png::CompressedTexture2D::2931469271038709955::1774854902::1776833318::1::::<><>::
+settings.png::CompressedTexture2D::3749993350802175966::1774854902::1776833318::1::::<><>::
+under.png::CompressedTexture2D::7586647404456456032::1774854902::1776833318::1::::<><>::
+undo.png::CompressedTexture2D::4568792092947957512::1774854902::1776833318::1::::<><>::
+::res://addons/ridiculous_coding/resources/::1774854903
+::res://addons/ridiculous_coding/resources/effects/::1774854902
+base_effect.gd::GDScript::-1::1774854902::0::1::::RcBaseEffect<>Node2D<>::
+blip.gd::GDScript::-1::1774854902::0::1::::RcBlip<>RcBaseEffect<>::
+blip.tscn::PackedScene::6538322640718417285::1774854902::0::1::::<><>::res://addons/ridiculous_coding/resources/effects/blip.gd<>uid://d1tio2ceqgm7m::::res://addons/ridiculous_coding/images/blip.png
+boom.gd::GDScript::-1::1774854902::0::1::::RcBoom<>RcBaseEffect<>::
+boom.tscn::PackedScene::6843633465002788314::1774854902::0::1::::<><>::res://addons/ridiculous_coding/resources/effects/boom.gd<>uid://dl75e74oom1i3::::res://addons/ridiculous_coding/images/boom.png
+key.gd::GDScript::-1::1774854902::0::1::::RcKey<>RcBaseEffect<>::
+key.tscn::PackedScene::4747846546553054308::1774854902::0::1::::<><>::uid://bvwnnnja1ur2i::::res://addons/ridiculous_coding/font.tres<>res://addons/ridiculous_coding/resources/effects/key.gd
+newline.gd::GDScript::-1::1774854902::0::1::::RcNewline<>RcBaseEffect<>::
+newline.tscn::PackedScene::1552142951839160889::1774854902::0::1::::<><>::res://addons/ridiculous_coding/resources/effects/newline.gd<>uid://b1vn1823wqae2::::res://addons/ridiculous_coding/images/newline.png
+sound.gd::GDScript::-1::1774854902::0::1::::RcSound<>Node<>::
+sound.tscn::PackedScene::5526483143768793324::1774854902::0::1::::<><>::res://addons/ridiculous_coding/resources/effects/sound.gd
+::res://addons/ridiculous_coding/resources/interfaces/::1774854903
+dock.gd::GDScript::-1::1774854902::0::1::::RidiculousCodingDock<>Control<>::
+dock.tscn::PackedScene::4697758706199453878::1774854902::0::1::::<><>::res://addons/ridiculous_coding/resources/interfaces/dock.gd<>uid://bvwnnnja1ur2i::::res://addons/ridiculous_coding/font.tres<>uid://dgda8elabipl5::::res://addons/ridiculous_coding/images/under.png<>uid://dqpxh1bccjaae::::res://addons/ridiculous_coding/images/progress.png<>uid://btor3wb23ou3g::::res://addons/ridiculous_coding/images/settings.png<>uid://bh1a4uodo8icx::::res://addons/ridiculous_coding/images/reset.png<>uid://b6dflrbbwhrrk::::res://addons/ridiculous_coding/images/undo.png<>uid://byrik8o2aqyc7::::res://addons/ridiculous_coding/images/levelUp.png
+settings_window.gd::GDScript::-1::1774854903::0::1::::RcWindow<>Window<>::
+settings_window.tscn::PackedScene::5289670239959004345::1774854903::0::1::::<><>::res://addons/ridiculous_coding/resources/interfaces/settings_window.gd<>uid://bvwnnnja1ur2i::::res://addons/ridiculous_coding/font.tres
+skill_window.gd::GDScript::-1::1774854903::0::1::::RcSkillWindow<>Window<>::
+skill_window.tscn::PackedScene::1190745948966489829::1774854903::0::1::::<><>::res://addons/ridiculous_coding/resources/interfaces/skill_window.gd<>uid://byrik8o2aqyc7::::res://addons/ridiculous_coding/images/levelUp.png<>uid://cbwjn2pj8aimr::::res://addons/ridiculous_coding/images/information-sign.png<>uid://bvwnnnja1ur2i::::res://addons/ridiculous_coding/font.tres<>uid://bh1a4uodo8icx::::res://addons/ridiculous_coding/images/reset.png
+::res://addons/ridiculous_coding/resources/others/::1774854903
+xp_calculator.gd::GDScript::-1::1774854903::0::1::::RcXpCalculator<>Node<>::
+::res://addons/ridiculous_coding/sounds/::1774854903
+::res://addons/ridiculous_coding/sounds/deletion/::1776833319
+boom.wav::AudioStreamWAV::4632206838498822877::1774854903::1776833319::1::::<><>::
+::res://addons/ridiculous_coding/sounds/others/::1776833319
+fireworks.wav::AudioStreamWAV::8862151449780033529::1774854903::1776833319::1::::<><>::
+::res://addons/ridiculous_coding/sounds/typing/::1776833319
+blip.wav::AudioStreamWAV::4311277633861190701::1774854903::1776833319::1::::<><>::
+typewriter.wav::AudioStreamWAV::1929326941576686422::1774854903::1776833319::1::::<><>::
+::res://Assets/::1775538361
+::res://Assets/GoodAssets/::1775538361
+::res://Assets/Placeholders/::1776833332
+assmobile.fbx::PackedScene::3321910542493559711::1776747151::1776833322::1::::<><>::uid://kphblhpv3h40::::res://Assets/Placeholders/texass.png
+button UI.png::CompressedTexture2D::3428185660686014926::1774854902::1776833318::1::::<><>::
+shopPlaceholderImage.jpeg::CompressedTexture2D::195868707789586564::1776497636::1776833319::1::::<><>::
+texass.png::CompressedTexture2D::733281496715677151::1776747202::1776833333::1::::<><>::
+::res://Assets/Placeholders/3d city pack/::1776833332
+BG.fbx::PackedScene::1243180311459412116::1775538361::1776833320::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Car_03.fbx::PackedScene::7486950446414138077::1775538361::1776833321::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+House_01.fbx::PackedScene::8559073131307913958::1775538361::1776833321::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+House_16.fbx::PackedScene::525158049101292601::1775538361::1776833322::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Light_01.fbx::PackedScene::8355117661037539952::1775538361::1776833324::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Road_02.fbx::PackedScene::1678673126380441694::1775538361::1776833325::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Road_10.fbx::PackedScene::5070080326370159913::1775538361::1776833324::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Texture_01.png::CompressedTexture2D::5705397850951956414::1775538361::1776833333::1::::<><>::
+Trash_01.fbx::PackedScene::6512335885839503429::1775538361::1776833323::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Wheel_01.fbx::PackedScene::926401544698451103::1775538361::1776833323::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/::1774854902
+License.txt::TextFile::-1::1774854902::0::1::::<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/::1774854902
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/::1776833318
+attack1_down.png::CompressedTexture2D::2829689274635892656::1774854902::1776833318::1::::<><>::
+attack1_left.png::CompressedTexture2D::4617111514532699523::1774854902::1776833318::1::::<><>::
+attack1_right.png::CompressedTexture2D::6709192772066391736::1774854902::1776833318::1::::<><>::
+attack1_up.png::CompressedTexture2D::1024622191582545353::1774854902::1776833318::1::::<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/::1776833318
+attack2_down.png::CompressedTexture2D::8417021744764643304::1774854902::1776833318::1::::<><>::
+attack2_left.png::CompressedTexture2D::5808907653865388895::1774854902::1776833318::1::::<><>::
+attack2_right.png::CompressedTexture2D::3266677615417910185::1774854902::1776833318::1::::<><>::
+attack2_up.png::CompressedTexture2D::5304238155624681075::1774854902::1776833318::1::::<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/::1776833318
+idle_down.png::CompressedTexture2D::8487136397927577748::1774854902::1776833318::1::::<><>::
+idle_left.png::CompressedTexture2D::396874696404791329::1774854902::1776833318::1::::<><>::
+idle_right.png::CompressedTexture2D::7797315826728838824::1774854902::1776833318::1::::<><>::
+idle_up.png::CompressedTexture2D::5562150221825407267::1774854902::1776833318::1::::<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/::1776833318
+run_down.png::CompressedTexture2D::1912367101208958902::1774854902::1776833318::1::::<><>::
+run_left.png::CompressedTexture2D::7213702745545960920::1774854902::1776833318::1::::<><>::
+run_right.png::CompressedTexture2D::4132090873780743266::1774854902::1776833318::1::::<><>::
+run_up.png::CompressedTexture2D::4645141910606622675::1774854902::1776833318::1::::<><>::
+::res://Scenes/::1776833276
+damage_number.tscn::PackedScene::6591976427705737248::1774854902::0::1::::<><>::uid://52u0foyg56u7::::res://Scripts/UIScripts/DamageNumber.gd
+damage_number_manager.tscn::PackedScene::1177140537215376864::1774854902::0::1::::<><>::uid://dl4k4fv081oqs::::res://Scripts/UIScripts/DamageNumberManager.gd
+player.tscn::PackedScene::826455816799190397::1776833276::0::1::::<><>::uid://c2t8oo8u18ram::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/attack1_right.png<>uid://djdcwgipke6h5::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_right.png<>uid://dcwsl1unn7brr::::res://Scripts/CombatScripts/player.gd<>uid://chtoa60ppvq1h::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_up.png<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
+roaming.tscn::PackedScene::8945240768899203787::1776833276::0::1::::<><>::uid://5sdmx7e2rmkv::::res://Scripts/RoamingScripts/Roaming.gd<>uid://c82hfjooscae4::::res://Scenes/Meshes/3dCityPack/road_straight.tscn<>uid://csypadqcwlgjm::::res://Scenes/Meshes/3dCityPack/road_angled.tscn<>uid://c4eclxtb6jatw::::res://Scenes/Meshes/3dCityPack/short_house.tscn<>uid://dvdd5shsgxksp::::res://Scenes/Meshes/3dCityPack/tall_house.tscn<>uid://bdtf2u6a6c6f8::::res://Scenes/Meshes/3dCityPack/street_lamp.tscn<>uid://bftv7557bqaoo::::res://Scenes/Meshes/3dCityPack/TrashCan.tscn<>uid://1msrtxr0667l::::res://Scripts/RoamingScripts/PlayerRoaming.gd<>uid://ds6h5qls2yl1e::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_down.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://djdcwgipke6h5::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_right.png<>uid://clil2isw4w0d0::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_up.png<>uid://2imn3hfp0exa::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_down.png<>uid://da1mvouxf57jg::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_left.png<>uid://by4u6ysbvjnhi::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_right.png<>uid://b7ge2q0mt8c7t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png<>uid://ccy3vgufakxi6::::res://Scenes/Meshes/music_shop.tscn<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://bjkpjpmrri65g::::res://Scenes/UI/shop_screen.tscn<>uid://cuy7dhd4kencs::::res://Scripts/States/RoamingState.gd<>uid://cmtdgooj582ks::::res://Scripts/States/ShopState.gd<>uid://bd5knqm4ul66::::res://Scripts/Upgrades/Upgrade.gd<>uid://clvx0dtjjh6xd::::res://icon.svg<>uid://bo3vym2xhrnhu::::res://Assets/Placeholders/button UI.png<>uid://cwwg52uumuvu8::::res://Scripts/Upgrades/Distortion.gd<>uid://cih5gvuu7jr0t::::res://Scripts/Upgrades/Overdrive.gd<>uid://bhkc0g15m8xn2::::res://Scripts/Upgrades/Delay.gd<>uid://cook4pbgv2f3u::::res://Scripts/Upgrades/Boost.gd<>uid://dqwgxh6gfsb15::::res://Scripts/Upgrades/EQ.gd<>uid://hmv5fvdvkdvs::::res://Scripts/States/combat_state.gd<>uid://ct8120htle6mr::::res://Scripts/RoamingScripts/AreaCombatTrigger.gd<>uid://bqwqxi3atc7sc::::res://Scenes/test_enemy.tscn<>uid://dansr6dmqv388::::res://Scenes/Combat/combat_encounter.tscn
+test_enemy.tscn::PackedScene::3555871501101841702::1776833276::0::1::::<><>::uid://co044it4tq73x::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://bhxe5kxxjl2wi::::res://Scripts/CombatScripts/Enemy.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
+::res://Scenes/Combat/::1776833276
+combat_camera.tscn::PackedScene::3639050613360105251::1776833276::0::1::::<><>::uid://c8jblcdnte5jc::::res://Scripts/CombatScripts/combat_camera.gd
+combat_encounter.tscn::PackedScene::7187223859673992923::1776833276::0::1::::<><>::uid://c3cvy2ns2b3la::::res://Scripts/CombatScripts/CombatEncounter.gd<>uid://l1luvgct8ln6::::res://Scenes/player.tscn<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://clvx0dtjjh6xd::::res://icon.svg<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://c2b41aqxdkkuu::::res://Scripts/States/PlayerTurn.gd<>uid://8l3l6bf2nrs6::::res://Scripts/States/EnemyTurn.gd<>uid://dpnurkj20dddp::::res://Scripts/States/EnemySelect.gd<>uid://s3ox4l2p2476::::res://Scripts/States/ModifyState.gd<>uid://dy82oouww6sgr::::res://Scripts/CombatScripts/enemy_manager.gd<>uid://q1hlktc7oobw::::res://Scenes/damage_number_manager.tscn<>uid://dnejqew27q7ns::::res://Scenes/UI/upgrade_toggle_screen.tscn
+::res://Scenes/Meshes/::1776833276
+music_shop.tscn::PackedScene::4964502044492951547::1776833276::0::1::::<><>::uid://d1puerho1u7id::::res://Assets/GoodAssets/MusicShop2.blend<>uid://iywjbeiing0l::::res://Scripts/RoamingScripts/MusicShop.gd
+van.tscn::PackedScene::3141299819598970828::1776748110::0::1::::<><>::uid://dhcy5so7c7fpt::::res://Assets/Placeholders/texass.png
+::res://Scenes/Meshes/3dCityPack/::1775538361
+road_angled.tscn::PackedScene::6086696556267347534::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+road_straight.tscn::PackedScene::7145245849717416341::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+short_house.tscn::PackedScene::6816717659099420596::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+street_lamp.tscn::PackedScene::2636563291731079303::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+tall_house.tscn::PackedScene::8639657582596314163::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+TrashCan.tscn::PackedScene::2777921904963987194::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+::res://Scenes/UI/::1776503950
+gui.tscn::PackedScene::1932075196831170212::1775109746::0::1::::<><>::uid://cgwhdkaydlhv8::::res://Scripts/UIScripts/MainGUI.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
+shop_item.tscn::PackedScene::6952079623624217692::1776503023::0::1::::<><>::uid://dccaug0lplah5::::res://Scripts/UIScripts/ShopItem.gd
+shop_screen.tscn::PackedScene::3039691688196007662::1776503950::0::1::::<><>::uid://b8aa78rggssag::::res://Scripts/UIScripts/ShopScreen.gd<>uid://c146t6o3o5oa::::res://Assets/Placeholders/shopPlaceholderImage.jpeg
+status_effect_icon.tscn::PackedScene::562773551360972798::1774854902::0::1::::<><>::uid://cv7xefiekcxkv::::res://Scripts/UIScripts/status_effect_icon.gd
+upgrade_card.tscn::PackedScene::3727997698816184166::1774854902::0::1::::<><>::uid://3f6wpqhioje1::::res://Scripts/UIScripts/UpgradeCard.gd
+upgrade_toggle_screen.tscn::PackedScene::8080549800376623020::1774854902::0::1::::<><>::uid://c5o8rssnq6475::::res://Scripts/UIScripts/UpgradeToggleScreen.gd
+::res://Scripts/::1776833276
+PlayerData.gd::GDScript::-1::1776833276::0::1::::<>Node<>::
+::res://Scripts/Actions/::1774854902
+BasicAttackAction.gd::GDScript::-1::1774854902::0::1::::BasicAttackAction<>EnemyAction<>::
+BasicStatusAction.gd::GDScript::-1::1774854902::0::1::::BasicStatusAction<>EnemyAction<>::
+EnemyAction.gd::GDScript::-1::1774854902::0::1::::EnemyAction<>Resource<>::
+::res://Scripts/CombatScripts/::1776833276
+CombatEncounter.gd::GDScript::-1::1776833276::0::1::::CombatEncounter<>Node3D<>::
+combat_camera.gd::GDScript::-1::1776833276::0::1::::CombatCamera<>Camera3D<>::
+Damagable.gd::GDScript::-1::1776833276::0::1::::Damagable<>AnimatedSprite3D<>::
+Enemy.gd::GDScript::-1::1776833276::0::1::::Enemy<>Damagable<>::
+enemy_manager.gd::GDScript::-1::1776833276::0::1::::EnemyManager<>Node<>::
+player.gd::GDScript::-1::1776833276::0::1::::Player<>Damagable<>::
+::res://Scripts/RoamingScripts/::1776833276
+AreaCombatTrigger.gd::GDScript::-1::1776833276::0::1::::AreaCombatTrigger<>CombatTrigger<>::
+CombatTrigger.gd::GDScript::-1::1776833276::0::1::::CombatTrigger<>Node3D<>::
+MusicShop.gd::GDScript::-1::1776500002::0::1::::MusicShop<>StaticBody3D<>::
+PlayerRoaming.gd::GDScript::-1::1776501091::0::1::::PlayerRoaming<>CharacterBody3D<>::
+Roaming.gd::GDScript::-1::1776833276::0::1::::<>Node3D<>::
+van.gd::GDScript::-1::1776747612::0::1::::<>MeshInstance3D<>::
+::res://Scripts/States/::1776833276
+combat_state.gd::GDScript::-1::1776833276::0::1::::CombatState<>State<>::
+EnemySelect.gd::GDScript::-1::1776833276::0::1::::EnemySelect<>State<>::
+EnemyTurn.gd::GDScript::-1::1776833276::0::1::::EnemyTurn<>State<>::
+ModifyState.gd::GDScript::-1::1776501222::0::1::::ModifyState<>State<>::
+PlayerTurn.gd::GDScript::-1::1776498650::0::1::::PlayerTurn<>State<>::
+RoamingState.gd::GDScript::-1::1776501918::0::1::::RoamingState<>State<>::
+ShopState.gd::GDScript::-1::1776502663::0::1::::ShopState<>State<>::
+State.gd::GDScript::-1::1776498426::0::1::::State<>Node<>::
+state_machine.gd::GDScript::-1::1776833276::0::1::::StateMachine<>Node<>::
+::res://Scripts/StatusEffects/::1774854902
+BlockEffect.gd::GDScript::-1::1774854902::0::1::::BlockEffect<>StatusEffect<>::
+StatusEffect.gd::GDScript::-1::1774854902::0::1::::StatusEffect<>Resource<>::
+StatusEffectComponent.gd::GDScript::-1::1774854902::0::1::::StatusEffectComponent<>Node<>::
+::res://Scripts/UIScripts/::1776833276
+DamageNumber.gd::GDScript::-1::1774854902::0::1::::DamageNumber<>Label3D<>::
+DamageNumberManager.gd::GDScript::-1::1774854902::0::1::::DamageNumberManager<>Node<>::
+MainGUI.gd::GDScript::-1::1775109746::0::1::::<>CanvasLayer<>::
+ShopItem.gd::GDScript::-1::1776833276::0::1::::ShopItem<>PanelContainer<>::
+ShopScreen.gd::GDScript::-1::1776503950::0::1::::ShopScreen<>Control<>::
+status_effect_icon.gd::GDScript::-1::1774854902::0::1::::StatusEffectIcon<>HBoxContainer<>::
+UpgradeCard.gd::GDScript::-1::1774854902::0::1::::UpgradeCard<>TextureButton<>::
+UpgradeToggleScreen.gd::GDScript::-1::1775538358::0::1::::UpgradeToggleScreen<>CanvasLayer<>::
+::res://Scripts/Upgrades/::1776496977
+AttackContext.gd::GDScript::-1::1774854902::0::1::::AttackContext<>RefCounted<>::
+Boost.gd::GDScript::-1::1774854902::0::1::::BoostUpgrade<>Upgrade<>::
+DefendContext.gd::GDScript::-1::1774854902::0::1::::DefendContext<>RefCounted<>::
+Delay.gd::GDScript::-1::1774854902::0::1::::DelayUpgrade<>Upgrade<>::
+Distortion.gd::GDScript::-1::1774854902::0::1::::DistortionUpgrade<>Upgrade<>::
+EQ.gd::GDScript::-1::1774854902::0::1::::EQUpgrade<>Upgrade<>::
+Fuzz.gd::GDScript::-1::1774854902::0::1::::FuzzUpgrade<>Upgrade<>::
+Limiter.gd::GDScript::-1::1774854902::0::1::::LimiterUpgrade<>Upgrade<>::
+NoiseGate.gd::GDScript::-1::1774854902::0::1::::NoiseGateUpgrade<>Upgrade<>::
+Overdrive.gd::GDScript::-1::1774854902::0::1::::OverdriveUpgrade<>Upgrade<>::
+Reverb.gd::GDScript::-1::1774854902::0::1::::ReverbUpgrade<>Upgrade<>::
+Upgrade.gd::GDScript::-1::1776496977::0::1::::Upgrade<>Resource<>::

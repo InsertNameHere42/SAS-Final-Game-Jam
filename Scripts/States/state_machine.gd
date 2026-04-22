@@ -37,6 +37,12 @@ func openShop(shop: ShopScreen) -> void:
 		shopState.setShop(shop)
 		onChildTransition(currentState, "shopstate")
 
+func openSaveRoom(saveRoom: SaveRoomScreen) -> void:
+	var saveRoomState := states.get("saveroomstate") as SaveRoomState
+	if saveRoomState:
+		saveRoomState.openRoom(saveRoom)
+		onChildTransition(currentState, "saveroomstate")
+
 func startCombat(encounter: CombatEncounter) -> void:
 	print("State Machine combat start")
 	var combatState := states.get("combatstate") as CombatState

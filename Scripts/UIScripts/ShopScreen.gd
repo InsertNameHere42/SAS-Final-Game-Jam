@@ -46,7 +46,7 @@ func _updateTooltip() -> void:
 	tooltipName.text = upgrade.upgradeName
 	tooltipDesc.text = upgrade.description
 	tooltipCost.text = "%d gold" % upgrade.cost
-	var owned := PlayerData.ownsUpgrade(upgrade)
+	var owned: bool = PlayerData.ownsUpgrade(upgrade)
 	buyButton.disabled = owned or PlayerData.doubloons < upgrade.cost
 	buyButton.text = "owned" if owned else "buy"
 
