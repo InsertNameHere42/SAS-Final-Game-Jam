@@ -33,7 +33,7 @@ func _buildCards() -> void:
 			card.toggledUpgrade.connect(_onToggled)
 			card.custom_minimum_size = Vector2(64, 64)
 			upgradeRow.add_child(card)
-			card.setup(upgrade, encounter.player.getRemainingEnergy())
+			card.setup(upgrade, encounter.player.getRemainingEnergy(), true)
 			cards.append(card)
 		else:
 			var placeholder := Control.new()
@@ -42,7 +42,7 @@ func _buildCards() -> void:
 		
 func _rebuildCards() -> void:
 	for i in cards.size():
-		cards[i].setup(cards[i].upgrade, encounter.player.getRemainingEnergy())
+		cards[i].setup(cards[i].upgrade, encounter.player.getRemainingEnergy(), true)
 
 func navigateLeft() -> void:
 	currentIndex = (currentIndex - 1 + cards.size()) % cards.size()

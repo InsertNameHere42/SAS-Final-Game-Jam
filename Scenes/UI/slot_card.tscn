@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bl5hnqncssex0"]
+
+[node name="SlotCard" type="PanelContainer" unique_id=104653077]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1868513737]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer" unique_id=714458839]
+layout_mode = 2
