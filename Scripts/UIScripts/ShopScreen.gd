@@ -28,15 +28,16 @@ func _buildList() -> void:
 		item.setup(upgrade)
 		items.append(item)
 		
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("UI Move Up"):
-		currentIndex = (currentIndex - 1 + items.size()) % items.size()
-		_updateTooltip()
-	if event.is_action_pressed("UI Move Down"):
-		currentIndex = (currentIndex + 1) % items.size()
-		_updateTooltip()
-	if event.is_action_pressed("UI Accept"):
-		_buySelected()
+func _navigate(event: InputEvent) -> void:
+	if visible:
+		if event.is_action_pressed("UI Move Up"):
+			currentIndex = (currentIndex - 1 + items.size()) % items.size()
+			_updateTooltip()
+		if event.is_action_pressed("UI Move Down"):
+			currentIndex = (currentIndex + 1) % items.size()
+			_updateTooltip()
+		if event.is_action_pressed("UI Accept"):
+			_buySelected()
 		
 func _updateTooltip() -> void:
 	for i in items.size():
@@ -57,6 +58,7 @@ func _buySelected() -> void:
 		return
 	PlayerData.doubloons -= upgrade.cost
 	PlayerData.inventory.append(upgrade)
+	print("Inventory: " + str(PlayerData.inventory))
 	items[currentIndex]._refresh()
 	_updateTooltip()
 	

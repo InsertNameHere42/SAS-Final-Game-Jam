@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dnejqew27q7ns"]
 
 [ext_resource type="Script" uid="uid://c5o8rssnq6475" path="res://Scripts/UIScripts/UpgradeToggleScreen.gd" id="1_8a25k"]
+[ext_resource type="Texture2D" uid="uid://cmquae0pwqnie" path="res://Assets/Placeholders/pedalboard.png" id="2_dmq8x"]
 
 [node name="UpgradeToggleScreen" type="CanvasLayer" unique_id=1629356387]
 visible = false
@@ -9,6 +10,7 @@ script = ExtResource("1_8a25k")
 [node name="PedalboardTexture" type="TextureRect" parent="." unique_id=2704268]
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_dmq8x")
 
 [node name="TooltipPanel" type="PanelContainer" parent="." unique_id=1029625069]
 offset_right = 40.0

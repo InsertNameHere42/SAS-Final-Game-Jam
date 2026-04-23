@@ -17,11 +17,10 @@ func equipUpgrade(upgrade: Upgrade, slotIndex: int) -> bool:
 	equippedUpgrades[slotIndex] = upgrade
 	return true
 	
-func unequipUpgrade(slotIndex: int) -> bool:
-	if equippedUpgrades[slotIndex]:
-		equippedUpgrades[slotIndex] = null
-		return true
-	return false
+func unequipUpgrade(upgrade: Upgrade) -> void:
+	var idx := equippedUpgrades.find(upgrade)
+	if idx != -1:
+		equippedUpgrades[idx] = null
 	
 func isEquipped(upgrade: Upgrade) -> bool:
 	return equippedUpgrades.has(upgrade)

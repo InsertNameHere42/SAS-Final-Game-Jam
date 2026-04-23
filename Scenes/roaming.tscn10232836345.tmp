@@ -16,14 +16,13 @@
 [ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="20_3h328"]
 [ext_resource type="Texture2D" uid="uid://bo3vym2xhrnhu" path="res://Assets/Placeholders/button UI.png" id="21_2qdxi"]
 [ext_resource type="Script" uid="uid://cwwg52uumuvu8" path="res://Scripts/Upgrades/Distortion.gd" id="22_5k7bd"]
-[ext_resource type="Script" uid="uid://jbt8nk1iqjyi" path="res://Scripts/States/save_room_state.gd" id="22_hkv6x"]
+[ext_resource type="Script" path="res://Scripts/States/save_room_state.gd" id="22_hkv6x"]
 [ext_resource type="Script" uid="uid://cih5gvuu7jr0t" path="res://Scripts/Upgrades/Overdrive.gd" id="23_f668u"]
 [ext_resource type="Script" uid="uid://bhkc0g15m8xn2" path="res://Scripts/Upgrades/Delay.gd" id="24_a2iyh"]
 [ext_resource type="PackedScene" uid="uid://1b3mx7conklb" path="res://Scenes/Roaming/player_roaming.tscn" id="25_4iuui"]
 [ext_resource type="Script" uid="uid://cook4pbgv2f3u" path="res://Scripts/Upgrades/Boost.gd" id="25_6va1x"]
 [ext_resource type="Script" uid="uid://dqwgxh6gfsb15" path="res://Scripts/Upgrades/EQ.gd" id="26_dbvsx"]
 [ext_resource type="PackedScene" uid="uid://dkrmnheblry4i" path="res://Scenes/Roaming/van_save_spot.tscn" id="27_q72wc"]
-[ext_resource type="PackedScene" uid="uid://cpluxdg1cxgl0" path="res://Scenes/UI/save_room_screen.tscn" id="28_dtn4b"]
 [ext_resource type="Script" uid="uid://hmv5fvdvkdvs" path="res://Scripts/States/combat_state.gd" id="30_yyx54"]
 [ext_resource type="Script" uid="uid://ct8120htle6mr" path="res://Scripts/RoamingScripts/AreaCombatTrigger.gd" id="31_3h328"]
 [ext_resource type="PackedScene" uid="uid://bqwqxi3atc7sc" path="res://Scenes/test_enemy.tscn" id="32_2qdxi"]
@@ -299,9 +298,8 @@ environment = NodePath("../..")
 script = ExtResource("30_yyx54")
 environment = NodePath("../..")
 
-[node name="SaveRoomState" type="Node" parent="StateMachine" unique_id=816320934 node_paths=PackedStringArray("environment")]
+[node name="SaveRoomState" type="Node" parent="StateMachine" unique_id=816320934]
 script = ExtResource("22_hkv6x")
-environment = NodePath("../..")
 
 [node name="AreaCombatTrigger" type="Node3D" parent="." unique_id=398848777 node_paths=PackedStringArray("encounter", "stateMachine")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72312903, -17.449348)
@@ -348,10 +346,5 @@ environment = NodePath("../..")
 [node name="PlayerRoaming" parent="." unique_id=183741771 instance=ExtResource("25_4iuui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.84274244, -23.456345)
 
-[node name="VanSaveSpot" parent="." unique_id=141963415 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
+[node name="VanSaveSpot" parent="." unique_id=141963415 instance=ExtResource("27_q72wc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.039001)
-stateMachine = NodePath("../StateMachine")
-saveRoomScreen = NodePath("SaveRoomScreen")
-
-[node name="SaveRoomScreen" parent="VanSaveSpot" unique_id=231300043 instance=ExtResource("28_dtn4b")]
-visible = false

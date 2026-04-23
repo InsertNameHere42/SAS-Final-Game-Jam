@@ -1,7 +1,8 @@
 class_name SaveRoomInteractable extends Interactable
 
-@export var stateMachine: StateMachine
-@export var saveRoomScreen: SaveRoomScreen
+var stateMachine: StateMachine
+var saveRoomScreen: SaveRoomScreen
 
 func interact() -> void:
+	print("Interacted")
 	stateMachine.openSaveRoom(saveRoomScreen)

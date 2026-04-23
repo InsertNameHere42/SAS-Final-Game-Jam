@@ -20,6 +20,10 @@ func update(_delta: float) -> void:
 		print("Shop Attemp Exit")
 		transitioned.emit(self, "roamingstate")
 
+func _input(event: InputEvent) -> void:
+	if currentShop:
+		currentShop._navigate(event)
+
 func physicsUpdate(_delta: float) -> void:
 	pass
 

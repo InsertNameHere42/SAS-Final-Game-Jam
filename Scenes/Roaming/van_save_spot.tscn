@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dkrmnheblry4i"]
+
+[ext_resource type="Script" uid="uid://ctsj4woyayc1x" path="res://Scripts/RoamingScripts/SaveRoomInteractable.gd" id="1_irsyk"]
+[ext_resource type="Script" uid="uid://vi823a0ew467" path="res://Scripts/RoamingScripts/VanSaveSpot.gd" id="1_q1mhr"]
+[ext_resource type="PackedScene" uid="uid://bnlfm71r2cgx0" path="res://Assets/Placeholders/assmobile.fbx" id="2_q1mhr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dabmv"]
+size = Vector3(1, 1.2193604, 2.559082)
+
+[node name="VanSaveSpot" type="StaticBody3D" unique_id=141963415]
+script = ExtResource("1_q1mhr")
+
+[node name="assmobile" parent="." unique_id=131466930 instance=ExtResource("2_q1mhr")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=409106386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4043746, 0.021601439)
+shape = SubResource("BoxShape3D_dabmv")
+
+[node name="InteractDetector" type="Area3D" parent="." unique_id=1054602547]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_irsyk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractDetector" unique_id=1794403900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4043746, 0.021601439)
+shape = SubResource("BoxShape3D_dabmv")

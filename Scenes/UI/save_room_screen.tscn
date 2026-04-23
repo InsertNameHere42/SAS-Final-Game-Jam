@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cpluxdg1cxgl0"]
 
 [ext_resource type="Script" uid="uid://00qnrg2np8op" path="res://Scripts/UIScripts/SaveRoomScreen.gd" id="1_6qajr"]
+[ext_resource type="Texture2D" uid="uid://difkumkyqjgb6" path="res://Assets/Placeholders/vaninside.jpg" id="2_st57v"]
+[ext_resource type="Texture2D" uid="uid://cmquae0pwqnie" path="res://Assets/Placeholders/pedalboard.png" id="3_4lof4"]
 
 [node name="SaveRoomScreen" type="Control" unique_id=231300043]
 layout_mode = 3
@@ -10,12 +12,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6qajr")
-maxSlots = null
 
 [node name="Background" type="TextureRect" parent="." unique_id=305105024]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_st57v")
 
 [node name="ExitButton" type="Button" parent="." unique_id=327963956]
 layout_mode = 1
@@ -37,44 +39,62 @@ layout_mode = 2
 [node name="NameLabel" type="Label" parent="TooltipPanel/VBoxContainer" unique_id=1261540838]
 layout_mode = 2
 
-[node name="DescriptionLabel" type="Label" parent="TooltipPanel/VBoxContainer" unique_id=1394207970]
+[node name="DescLabel" type="Label" parent="TooltipPanel/VBoxContainer" unique_id=1394207970]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TooltipPanel" unique_id=1348689304]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1348689304]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -151.0
+offset_right = 299.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="PedalboardTexture" type="TextureRect" parent="HBoxContainer" unique_id=986340775]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_4lof4")
+
+[node name="EquippedPanel" type="PanelContainer" parent="HBoxContainer" unique_id=958686142]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/EquippedPanel" unique_id=2034627864]
 layout_mode = 2
 
-[node name="PedalboardTexture" type="TextureRect" parent="TooltipPanel/HBoxContainer" unique_id=986340775]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer" unique_id=1849556958]
 layout_mode = 2
 
-[node name="EquippedPanel" type="PanelContainer" parent="TooltipPanel/HBoxContainer" unique_id=958686142]
+[node name="SlotsLabel" type="Label" parent="HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=454454528]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="TooltipPanel/HBoxContainer/EquippedPanel" unique_id=2034627864]
+[node name="SlotsRow" type="HBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=101997353]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TooltipPanel/HBoxContainer/EquippedPanel/MarginContainer" unique_id=1849556958]
+[node name="InventoryPanel" type="PanelContainer" parent="HBoxContainer" unique_id=1081730672]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/InventoryPanel" unique_id=519893795]
 layout_mode = 2
 
-[node name="SlotsLabel" type="Label" parent="TooltipPanel/HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=454454528]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer" unique_id=1574846083]
 layout_mode = 2
 
-[node name="SlotsRow" type="HBoxContainer" parent="TooltipPanel/HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=101997353]
+[node name="InventoryLabel" type="Label" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=972479483]
+layout_mode = 2
+text = "Inventory:"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=2016026511]
 layout_mode = 2
 
-[node name="InventoryPanel" type="PanelContainer" parent="TooltipPanel/HBoxContainer" unique_id=1081730672]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="TooltipPanel/HBoxContainer/InventoryPanel" unique_id=519893795]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TooltipPanel/HBoxContainer/InventoryPanel/MarginContainer" unique_id=1574846083]
-layout_mode = 2
-
-[node name="InventoryLabel" type="Label" parent="TooltipPanel/HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=972479483]
-layout_mode = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="TooltipPanel/HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=2016026511]
-layout_mode = 2
-
-[node name="InventoryList" type="VBoxContainer" parent="TooltipPanel/HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=214651332]
+[node name="InventoryList" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=214651332]
 layout_mode = 2

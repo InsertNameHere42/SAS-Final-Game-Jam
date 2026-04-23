@@ -19,6 +19,7 @@ func handleMovement(delta: float) -> void:
 		velocity.x = direction.x * moveSpeed
 		velocity.z = direction.z * moveSpeed
 		lastDirection = input_dir
+		_updateInteractArea(direction)
 		playRunAnimation(input_dir)
 	else:
 		velocity.x = move_toward(velocity.x, 0, moveSpeed)
