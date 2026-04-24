@@ -19,6 +19,66 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_st57v")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1348689304]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -424.0
+offset_top = -151.0
+offset_right = 424.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="EquippedPanel" type="PanelContainer" parent="HBoxContainer" unique_id=958686142]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/EquippedPanel" unique_id=2034627864]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer" unique_id=1849556958]
+layout_mode = 2
+
+[node name="SlotsLabel" type="Label" parent="HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=454454528]
+layout_mode = 2
+
+[node name="SlotsRow" type="HBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=101997353]
+layout_mode = 2
+
+[node name="PedalboardTexture" type="TextureRect" parent="HBoxContainer/EquippedPanel" unique_id=986340775]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_4lof4")
+
+[node name="InventoryPanel" type="PanelContainer" parent="HBoxContainer" unique_id=1081730672]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/InventoryPanel" unique_id=519893795]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer" unique_id=1574846083]
+layout_mode = 2
+
+[node name="InventoryLabel" type="Label" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=972479483]
+layout_mode = 2
+text = "Inventory:"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=2016026511]
+clip_contents = false
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="InventoryList" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=214651332]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [node name="ExitButton" type="Button" parent="." unique_id=327963956]
 layout_mode = 1
 anchors_preset = 1
@@ -40,61 +100,4 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="DescLabel" type="Label" parent="TooltipPanel/VBoxContainer" unique_id=1394207970]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1348689304]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -299.0
-offset_top = -151.0
-offset_right = 299.0
-offset_bottom = 151.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-
-[node name="PedalboardTexture" type="TextureRect" parent="HBoxContainer" unique_id=986340775]
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("3_4lof4")
-
-[node name="EquippedPanel" type="PanelContainer" parent="HBoxContainer" unique_id=958686142]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/EquippedPanel" unique_id=2034627864]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer" unique_id=1849556958]
-layout_mode = 2
-
-[node name="SlotsLabel" type="Label" parent="HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=454454528]
-layout_mode = 2
-
-[node name="SlotsRow" type="HBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=101997353]
-layout_mode = 2
-
-[node name="InventoryPanel" type="PanelContainer" parent="HBoxContainer" unique_id=1081730672]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/InventoryPanel" unique_id=519893795]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer" unique_id=1574846083]
-layout_mode = 2
-
-[node name="InventoryLabel" type="Label" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=972479483]
-layout_mode = 2
-text = "Inventory:"
-horizontal_alignment = 1
-
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=2016026511]
-layout_mode = 2
-
-[node name="InventoryList" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=214651332]
 layout_mode = 2

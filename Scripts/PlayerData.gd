@@ -8,6 +8,9 @@ var maxUpgrades: int = 6
 var doubloons: int = 10
 var startingMaxEnergy: int = 1
 
+func _ready() -> void:
+	equippedUpgrades.resize(maxUpgrades)
+
 func restoreHp():
 	currentHp = maxHp
 

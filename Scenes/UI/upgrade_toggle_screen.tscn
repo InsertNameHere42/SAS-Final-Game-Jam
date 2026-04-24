@@ -8,8 +8,19 @@ visible = false
 script = ExtResource("1_8a25k")
 
 [node name="PedalboardTexture" type="TextureRect" parent="." unique_id=2704268]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = -151.0
+offset_right = 294.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_dmq8x")
 
 [node name="TooltipPanel" type="PanelContainer" parent="." unique_id=1029625069]

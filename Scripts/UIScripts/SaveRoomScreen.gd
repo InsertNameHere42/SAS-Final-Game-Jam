@@ -1,6 +1,6 @@
 class_name SaveRoomScreen extends Control
 
-const CARD_SCENE := preload("res://Scenes/UI/upgrade_card.tscn")
+const ITEM_SCENE := preload("res://Scenes/UI/save_room_item.tscn")
 
 @export var emptySlotTexture: Texture2D
 @export var maxSlots: int = 6
@@ -18,14 +18,15 @@ var inventoryIndex: int = 0
 var slotIndex: int = 0
 var pendingUpgrade: Upgrade = null
 
-var slotCards: Array[UpgradeCard] = []
-var inventoryCards: Array[UpgradeCard] = []
+var slotCards: Array[Control] = [] #SaveRoomItem or placeholder
+var inventoryCards: Array[SaveRoomItem] = []
 
 signal closed
 
 func open() -> void:
 	PlayerData.restoreHp()
 	print("Inventory: " + str(PlayerData.inventory))
+	slotCards.resize(maxSlots)
 	currentMode = Mode.INVENTORY
 	inventoryIndex = 0
 	slotIndex = 0
@@ -40,6 +41,8 @@ func close() -> void:
 	hide()
 	
 func navigateUp() -> void:
+	if inventoryCards.size() == 0:
+		return
 	match currentMode:
 		Mode.INVENTORY:
 			inventoryIndex = (inventoryIndex - 1 + inventoryCards.size()) % inventoryCards.size()
@@ -48,6 +51,8 @@ func navigateUp() -> void:
 			pass
 			
 func navigateDown() -> void:
+	if inventoryCards.size() == 0:
+		return
 	match currentMode:
 		Mode.INVENTORY:
 			inventoryIndex = ((inventoryIndex + 1) % inventoryCards.size())
@@ -114,14 +119,13 @@ func _buildSlots() -> void:
 	for child in slotsRow.get_children():
 		child.queue_free()
 	slotCards.clear()
-	slotsRow.add_theme_constant_override("seperation", 16)
+	slotsRow.add_theme_constant_override("separation", 16)
 	for i in maxSlots:
 		var equipped: Upgrade = PlayerData.equippedUpgrades[i] if i < PlayerData.equippedUpgrades.size() else null
 		if equipped:
-			var card := CARD_SCENE.instantiate() as UpgradeCard
+			var card := ITEM_SCENE.instantiate() as SaveRoomItem
 			slotsRow.add_child(card)
-			card.setup(equipped, 999, false) #the 999 is kinda a band-aid fix because that's the remaining energy field which doesn't really apply here
-			card.modulate.a = 1.0
+			card.setup(equipped, SaveRoomItem.DisplayMode.CARD) 
 			slotCards.append(card)
 		else:
 			var placeholder := TextureRect.new()
@@ -130,31 +134,33 @@ func _buildSlots() -> void:
 			placeholder.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 			placeholder.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			slotsRow.add_child(placeholder)
-			slotCards.append(null)
+			slotCards.append(placeholder)
 	
 func _buildInventory() -> void:
 	for child in inventoryList.get_children():
 		child.queue_free()
 	inventoryCards.clear()
 	for upgrade in PlayerData.inventory:
-		var card := CARD_SCENE.instantiate() as UpgradeCard
-		inventoryList.add_child(card)
-		card.custom_minimum_size = Vector2(64, 64)
-		card.setup(upgrade, 999, false)
-		card.modulate.a = 0.4 if PlayerData.isEquipped(upgrade) else 1.0
-		inventoryCards.append(card)
+		var item := ITEM_SCENE.instantiate() as SaveRoomItem
+		inventoryList.add_child(item)
+		item.setup(upgrade, SaveRoomItem.DisplayMode.LIST)
+		inventoryCards.append(item)
+	print("Inventory List " + str(inventoryList.get_children()))
 
 func _updateSelection() -> void: #not sure if this allows empty slots to be replaced. Will have to see.
+	
 	for i in slotCards.size():
-		if slotCards[i] != null:
-			slotCards[i].modulate = Color.SKY_BLUE if (currentMode == Mode.SLOT_SELECT and i == slotIndex) else Color.WHITE
+		var isSelected := currentMode == Mode.SLOT_SELECT and i == slotIndex
+		if slotCards[i] is SaveRoomItem:
+			slotCards[i].refresh(false, isSelected)
+		else:
+			slotCards[i].modulate = Color.SKY_BLUE if isSelected else Color.WHITE
 	
 	for i in inventoryCards.size():
-		var isSelected := currentMode == Mode.INVENTORY and i == inventoryIndex
-		inventoryCards[i].modulate.a = 0.4 if PlayerData.isEquipped(inventoryCards[i].upgrade) else 1.0
-		if isSelected:
-			inventoryCards[i].modulate = Color.SKY_BLUE
-		
+		var equipped := PlayerData.isEquipped(inventoryCards[i].upgrade)
+		var selected := currentMode == Mode.INVENTORY and i == inventoryIndex
+		inventoryCards[i].refresh(equipped, selected)
+	
 	_updateTooltip()
 
 func _updateTooltip() -> void:
@@ -188,7 +194,6 @@ func _positionTooltip() -> void:
 				card.global_position.y
 			)
 		Mode.SLOT_SELECT:
-			if slotCards[slotIndex] == null: return
 			var card := slotCards[slotIndex]
 			tooltipPanel.global_position = Vector2(
 				card.global_position.x + (card.size.x / 2) - (tooltipPanel.size.x / 2),

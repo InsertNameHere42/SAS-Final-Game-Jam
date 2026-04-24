@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://q1hlktc7oobw" path="res://Scenes/damage_number_manager.tscn" id="15_2nsrb"]
 [ext_resource type="PackedScene" uid="uid://dnejqew27q7ns" path="res://Scenes/UI/upgrade_toggle_screen.tscn" id="16_kgebq"]
 
-[sub_resource type="Resource" id="Resource_7go44"]
+[sub_resource type="Resource" id="Resource_kun2r"]
 resource_local_to_scene = true
 script = ExtResource("3_whduv")
 effectName = "Block!"
@@ -34,7 +34,7 @@ fov = 80.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9697075, 0, -0.019)
 frame = 5
 frame_progress = 0.24486433
-baseBlock = SubResource("Resource_7go44")
+baseBlock = SubResource("Resource_kun2r")
 maxHp = 90
 damageNumberManager = NodePath("../DamageNumberManager")
 
