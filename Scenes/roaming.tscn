@@ -4,9 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://c82hfjooscae4" path="res://Scenes/Meshes/3dCityPack/road_straight.tscn" id="1_x3wg5"]
 [ext_resource type="PackedScene" uid="uid://csypadqcwlgjm" path="res://Scenes/Meshes/3dCityPack/road_angled.tscn" id="2_eh23o"]
 [ext_resource type="PackedScene" uid="uid://c4eclxtb6jatw" path="res://Scenes/Meshes/3dCityPack/short_house.tscn" id="3_abxf0"]
+[ext_resource type="Texture2D" uid="uid://dwg46tg6u61o2" path="res://Assets/Kenny Particle Pack/circle_05.png" id="3_yyx54"]
 [ext_resource type="PackedScene" uid="uid://dvdd5shsgxksp" path="res://Scenes/Meshes/3dCityPack/tall_house.tscn" id="4_0s272"]
+[ext_resource type="Texture2D" uid="uid://d1g63xic2c80f" path="res://Assets/shooting_star_sampler.png" id="4_3h328"]
 [ext_resource type="PackedScene" uid="uid://bdtf2u6a6c6f8" path="res://Scenes/Meshes/3dCityPack/street_lamp.tscn" id="5_2pn50"]
 [ext_resource type="PackedScene" uid="uid://bftv7557bqaoo" path="res://Scenes/Meshes/3dCityPack/TrashCan.tscn" id="6_6nsrk"]
+[ext_resource type="Shader" uid="uid://i0fv8prgv58o" path="res://Shaders/Sky.gdshader" id="8_4dv2k"]
 [ext_resource type="PackedScene" uid="uid://ccy3vgufakxi6" path="res://Scenes/Meshes/music_shop.tscn" id="16_qwyxc"]
 [ext_resource type="Script" uid="uid://cq6mc27rx1ktw" path="res://Scripts/States/state_machine.gd" id="17_3xqub"]
 [ext_resource type="PackedScene" uid="uid://bjkpjpmrri65g" path="res://Scenes/UI/shop_screen.tscn" id="18_4dv2k"]
@@ -27,21 +30,78 @@
 [ext_resource type="Script" uid="uid://hmv5fvdvkdvs" path="res://Scripts/States/combat_state.gd" id="30_yyx54"]
 [ext_resource type="Script" uid="uid://ct8120htle6mr" path="res://Scripts/RoamingScripts/AreaCombatTrigger.gd" id="31_3h328"]
 [ext_resource type="PackedScene" uid="uid://bqwqxi3atc7sc" path="res://Scenes/test_enemy.tscn" id="32_2qdxi"]
+[ext_resource type="Script" uid="uid://c5imh7qsgm7va" path="res://Scripts/RoamingScripts/RoamingCamera.gd" id="32_5k7bd"]
 [ext_resource type="PackedScene" uid="uid://dansr6dmqv388" path="res://Scenes/Combat/combat_encounter.tscn" id="33_5k7bd"]
+[ext_resource type="Script" uid="uid://bsfjo7hkmht7v" path="res://Scripts/RoamingScripts/CameraZone.gd" id="33_f668u"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fgnj0"]
-sky_horizon_color = Color(0.4865678, 0.4994743, 0.5693337, 1)
-ground_bottom_color = Color(0.017386192, 1.2080818e-05, 0.18344969, 1)
-ground_horizon_color = Color(0.4865678, 0.4994743, 0.5693337, 1)
+[sub_resource type="Curve" id="Curve_3h328"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.08719346, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8134481), 0.0, 0.0, 0, 0]
+point_count = 3
 
-[sub_resource type="Sky" id="Sky_gjjj1"]
-sky_material = SubResource("ProceduralSkyMaterial_fgnj0")
+[sub_resource type="CurveTexture" id="CurveTexture_2qdxi"]
+curve = SubResource("Curve_3h328")
 
-[sub_resource type="Environment" id="Environment_xrg0s"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5k7bd"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f668u"]
+noise = SubResource("FastNoiseLite_5k7bd")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a2iyh"]
+noise_type = 4
+offset = Vector3(283.19, 0, 0)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6va1x"]
+noise = SubResource("FastNoiseLite_a2iyh")
+seamless = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dbvsx"]
+noise = SubResource("FastNoiseLite_a2iyh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p1e56"]
+shader = ExtResource("8_4dv2k")
+shader_parameter/cloud_shape_sampler = SubResource("NoiseTexture2D_6va1x")
+shader_parameter/cloud_noise_sampler = SubResource("NoiseTexture2D_f668u")
+shader_parameter/cloud_curves = SubResource("CurveTexture_2qdxi")
+shader_parameter/clouds_samples = 32
+shader_parameter/shadow_sample = 4
+shader_parameter/clouds_density = 0.40000000596048
+shader_parameter/clouds_scale = 1.0
+shader_parameter/clouds_smoothness = 0.03999999910592
+shader_parameter/clouds_light_color = Color(1, 0.7607843, 0.6745098, 1)
+shader_parameter/clouds_shadow_intensity = 1.0
+shader_parameter/high_clouds_sampler = SubResource("NoiseTexture2D_dbvsx")
+shader_parameter/high_clouds_density = 0.20000000298024
+shader_parameter/top_color = Color(0.76058334, 0.39758012, 0.2626436, 1)
+shader_parameter/bottom_color = Color(0.7921569, 0.4745098, 0.6039216, 1)
+shader_parameter/sun_scatter = Color(0.32156864, 0.32156864, 0.32156864, 1)
+shader_parameter/astro_tint = Color(0.70980394, 0.6392157, 0.4117647, 1)
+shader_parameter/astro_sampler = ExtResource("3_yyx54")
+shader_parameter/astro_scale = 1.0000000149012
+shader_parameter/astro_intensity = 3.0
+shader_parameter/stars_intensity = 0.80000001192096
+shader_parameter/shooting_stars_intensity = 0.20000000298024
+shader_parameter/shooting_star_sampler = ExtResource("4_3h328")
+shader_parameter/shooting_star_tint = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_jg0p2"]
+sky_material = SubResource("ShaderMaterial_p1e56")
+
+[sub_resource type="Environment" id="Environment_qsmrd"]
 background_mode = 2
-sky = SubResource("Sky_gjjj1")
+background_color = Color(0.48235294, 0.49019608, 0.8862745, 1)
+sky = SubResource("Sky_jg0p2")
+ambient_light_color = Color(0.7921569, 0.4745098, 0.6039216, 1)
+ambient_light_sky_contribution = 0.1
+ambient_light_energy = 0.07
 tonemap_mode = 2
 glow_enabled = true
+fog_light_color = Color(0.7921569, 0.4745098, 0.6039216, 1)
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.005
+volumetric_fog_albedo = Color(0.70980394, 0.6392157, 0.4117647, 1)
+volumetric_fog_emission = Color(0.12298488, 0.12298488, 0.12298488, 1)
+adjustment_enabled = true
+adjustment_saturation = 1.5
 
 [sub_resource type="Resource" id="Resource_4dv2k"]
 script = ExtResource("22_5k7bd")
@@ -93,8 +153,27 @@ metadata/_custom_type_script = "uid://dqwgxh6gfsb15"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5k7bd"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_a2iyh"]
+size = Vector3(11.702637, 10.669434, 60.130493)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f668u"]
+size = Vector3(11.702637, 10.669434, 49.421204)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6va1x"]
+
 [node name="Roaming" type="Node3D" unique_id=1428682443]
 script = ExtResource("1_3nnlx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1233427650]
+transform = Transform3D(-0.30232012, -0.03702426, 0.952487, 0.86412084, 0.4111537, 0.29025465, -0.40236506, 0.9108138, -0.09230679, 0, 0, 0)
+light_color = Color(0.56295747, 0.4588514, 0.9626358, 1)
+light_energy = 5.974
+light_specular = 5.128
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=787492516]
+environment = SubResource("Environment_qsmrd")
 
 [node name="MapMesh" type="Node3D" parent="." unique_id=2093296678]
 
@@ -120,6 +199,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
 
 [node name="RoadStraight8" parent="MapMesh" unique_id=851608203 instance=ExtResource("1_x3wg5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="RoadStraight17" parent="MapMesh" unique_id=293226843 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -47.985573)
+
+[node name="RoadStraight18" parent="MapMesh" unique_id=612201221 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -41.985573)
+
+[node name="RoadStraight19" parent="MapMesh" unique_id=908334444 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.985573)
+
+[node name="RoadStraight20" parent="MapMesh" unique_id=996105193 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29.985573)
+
+[node name="RoadStraight21" parent="MapMesh" unique_id=1343155271 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -71.86485)
+
+[node name="RoadStraight22" parent="MapMesh" unique_id=1742861533 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -65.86485)
+
+[node name="RoadStraight23" parent="MapMesh" unique_id=1038825480 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -59.864853)
+
+[node name="RoadStraight24" parent="MapMesh" unique_id=1393057583 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -53.864853)
 
 [node name="RoadStraight9" parent="MapMesh" unique_id=1213258255 instance=ExtResource("1_x3wg5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33, 0, 27)
@@ -175,11 +278,32 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0
 [node name="ShortHouse6" parent="MapMesh" unique_id=1731700335 instance=ExtResource("3_abxf0")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, 4)
 
+[node name="ShortHouse8" parent="MapMesh" unique_id=1230387571 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -51.943398)
+
+[node name="ShortHouse9" parent="MapMesh" unique_id=489971922 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -58.943398)
+
+[node name="ShortHouse10" parent="MapMesh" unique_id=5971505 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -66.00186)
+
+[node name="ShortHouse11" parent="MapMesh" unique_id=1310302972 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -73.00186)
+
 [node name="TallHouse4" parent="MapMesh" unique_id=214199335 instance=ExtResource("4_0s272")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -3)
 
 [node name="TallHouse5" parent="MapMesh" unique_id=1493326518 instance=ExtResource("4_0s272")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -10)
+
+[node name="ShortHouse7" parent="MapMesh" unique_id=2098610223 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -31.046951)
+
+[node name="TallHouse7" parent="MapMesh" unique_id=483643115 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -38.04695)
+
+[node name="TallHouse8" parent="MapMesh" unique_id=974534278 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -45.04695)
 
 [node name="TallHouse6" parent="MapMesh" unique_id=532831999 instance=ExtResource("4_0s272")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -24)
@@ -259,17 +383,29 @@ transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -4, 
 [node name="TrashCan6" parent="MapMesh" unique_id=835806707 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -4, 0, 0)
 
+[node name="StreetLamp15" parent="MapMesh" unique_id=338522961 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -39.63068)
+
+[node name="StreetLamp16" parent="MapMesh" unique_id=870290100 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -30.63068)
+
+[node name="TrashCan14" parent="MapMesh" unique_id=184217461 instance=ExtResource("6_6nsrk")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -4, 0, -26.63068)
+
+[node name="StreetLamp17" parent="MapMesh" unique_id=1565984722 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -55.59812)
+
+[node name="StreetLamp18" parent="MapMesh" unique_id=1693555837 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -46.59812)
+
+[node name="TrashCan15" parent="MapMesh" unique_id=1801357718 instance=ExtResource("6_6nsrk")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -4, 0, -58.59812)
+
+[node name="TrashCan16" parent="MapMesh" unique_id=735281523 instance=ExtResource("6_6nsrk")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -4, 0, -42.59812)
+
 [node name="TrashCan7" parent="MapMesh" unique_id=616010184 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(-2.1855693e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855693e-07, -4, 0, 22)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1681045550]
-environment = SubResource("Environment_xrg0s")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1233427650]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(0.56295747, 0.4588514, 0.9626358, 1)
-light_energy = 0.75
-shadow_enabled = true
 
 [node name="POIs" type="Node3D" parent="." unique_id=388906221]
 
@@ -345,8 +481,9 @@ shape = SubResource("BoxShape3D_5k7bd")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
 environment = NodePath("../..")
 
-[node name="PlayerRoaming" parent="." unique_id=183741771 instance=ExtResource("25_4iuui")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.84274244, -23.456345)
+[node name="PlayerRoaming" parent="." unique_id=183741771 node_paths=PackedStringArray("camera") instance=ExtResource("25_4iuui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7769718, 0.84274244, -22.60845)
+camera = NodePath("../RoamingCamera")
 
 [node name="VanSaveSpot" parent="." unique_id=141963415 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.039001)
@@ -355,3 +492,50 @@ saveRoomScreen = NodePath("SaveRoomScreen")
 
 [node name="SaveRoomScreen" parent="VanSaveSpot" unique_id=231300043 instance=ExtResource("28_dtn4b")]
 visible = false
+
+[node name="RoamingCamera" type="Camera3D" parent="." unique_id=386789011 node_paths=PackedStringArray("player")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.493655, 2.4538345, -23.648527)
+current = true
+fov = 80.0
+script = ExtResource("32_5k7bd")
+player = NodePath("../PlayerRoaming")
+followAxis = Vector3(0, 0, 1)
+followSpeed = 10.0
+
+[node name="CameraZone" type="Area3D" parent="." unique_id=542014272 node_paths=PackedStringArray("camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6, 2.5, -24.391)
+script = ExtResource("33_f668u")
+followAxis = Vector3(0, 0, 1)
+camera = NodePath("../RoamingCamera")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraZone" unique_id=1930639691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.057951, 2.7202258, 27.189396)
+shape = SubResource("BoxShape3D_a2iyh")
+
+[node name="CameraZone2" type="Area3D" parent="." unique_id=1601118492 node_paths=PackedStringArray("camera")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.009, 2.5, 31.695)
+script = ExtResource("33_f668u")
+camera = NodePath("../RoamingCamera")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraZone2" unique_id=360576177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.174082, 2.9458866, 30.164492)
+shape = SubResource("BoxShape3D_f668u")
+
+[node name="AreaCombatTrigger3" type="Node3D" parent="." unique_id=1865204546 node_paths=PackedStringArray("encounter", "stateMachine")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.0312757, 0.78571737, -7.737125)
+script = ExtResource("31_3h328")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../StateMachine")
+enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi"), ExtResource("32_2qdxi")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
+
+[node name="Sprite3D" type="Sprite3D" parent="AreaCombatTrigger3" unique_id=1719930555]
+texture = ExtResource("20_3h328")
+
+[node name="Area3D" type="Area3D" parent="AreaCombatTrigger3" unique_id=1983133018]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCombatTrigger3/Area3D" unique_id=1789210740]
+shape = SubResource("BoxShape3D_6va1x")
+
+[node name="CombatEncounter" parent="AreaCombatTrigger3" unique_id=204261947 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+environment = NodePath("../..")

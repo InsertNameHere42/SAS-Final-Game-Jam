@@ -21,6 +21,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 PlayerData="*uid://cm6yv3rcddgcg"
+ScreenFade="*uid://cta4uce0mftkp"
+ScreenFreeze="*uid://dnqdgmufgqsdd"
 
 [editor_plugins]
 

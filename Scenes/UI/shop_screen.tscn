@@ -23,8 +23,33 @@ layout_mode = 1
 offset_right = 204.0
 offset_bottom = 93.0
 
-[node name="ItemList" type="VBoxContainer" parent="HBoxContainer" unique_id=899833395]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=109108080]
 layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/VBoxContainer" unique_id=1138173609]
+layout_mode = 2
+
+[node name="ShopLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/PanelContainer2" unique_id=119057370]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][color=ffff29][font_size=32][center][wave] Shop: "
+fit_content = true
+
+[node name="ItemList" type="VBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=899833395]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer" unique_id=1672962020]
+layout_mode = 2
+
+[node name="MoneyLeftLabel" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer" unique_id=108203323]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0.1254902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+text = "Cash Left: $10"
+horizontal_alignment = 1
 
 [node name="RightPanel" type="VBoxContainer" parent="HBoxContainer" unique_id=1220632111]
 custom_minimum_size = Vector2(300, 0)

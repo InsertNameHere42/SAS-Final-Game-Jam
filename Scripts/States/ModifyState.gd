@@ -1,6 +1,7 @@
 class_name ModifyState extends State
 
 func enter():
+	environment.focusPlayer()
 	environment.upgradeToggleScreen.open()
 	print(environment.player.getRemainingEnergy())
 

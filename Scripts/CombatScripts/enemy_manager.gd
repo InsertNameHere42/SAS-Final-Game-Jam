@@ -14,6 +14,7 @@ func start() -> void:
 				enemies.append(child)
 			else:
 				child.queue_free() #if there's too many enemies, just remove them
+	print("Enemies: " + str(enemies))
 
 func enemiesTakeTurn() -> void:
 	for enemy in enemies.duplicate():

@@ -8,7 +8,8 @@ func start() -> void:
 	for child in get_children():
 		if child is State:
 			states[child.name.to_lower()] = child
-			child.transitioned.connect(onChildTransition)
+			if not child.transitioned.is_connected(onChildTransition):
+				child.transitioned.connect(onChildTransition)
 	if initialState:
 		initialState.enter()
 		currentState = initialState
@@ -49,4 +50,12 @@ func startCombat(encounter: CombatEncounter) -> void:
 	if combatState:
 		combatState.setEncounter(encounter)
 		onChildTransition(currentState, "combatstate")
+
+func stopCombat() -> void:
+	for child in get_children():
+		if child is State:
+			if child.transitioned.is_connected(onChildTransition):
+				child.transitioned.disconnect(onChildTransition)
+	currentState = null
+	states.clear()
 		

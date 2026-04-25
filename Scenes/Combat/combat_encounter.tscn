@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c3cvy2ns2b3la" path="res://Scripts/CombatScripts/CombatEncounter.gd" id="1_3a8fh"]
 [ext_resource type="PackedScene" uid="uid://l1luvgct8ln6" path="res://Scenes/player.tscn" id="2_hsurt"]
+[ext_resource type="Script" uid="uid://c8jblcdnte5jc" path="res://Scripts/CombatScripts/combat_camera.gd" id="2_y4nrt"]
 [ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="3_whduv"]
 [ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="4_p7r7d"]
 [ext_resource type="Script" uid="uid://cq6mc27rx1ktw" path="res://Scripts/States/state_machine.gd" id="5_g0ooy"]
@@ -13,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://q1hlktc7oobw" path="res://Scenes/damage_number_manager.tscn" id="15_2nsrb"]
 [ext_resource type="PackedScene" uid="uid://dnejqew27q7ns" path="res://Scenes/UI/upgrade_toggle_screen.tscn" id="16_kgebq"]
 
-[sub_resource type="Resource" id="Resource_kun2r"]
+[sub_resource type="Resource" id="Resource_y4nrt"]
 resource_local_to_scene = true
 script = ExtResource("3_whduv")
 effectName = "Block!"
@@ -27,14 +28,26 @@ script = ExtResource("1_3a8fh")
 enemyStepX = 1.5
 enemyStepZ = 1.0
 
-[node name="CombatCamera" type="Camera3D" parent="." unique_id=166819940]
-fov = 80.0
+[node name="DefaultCameraPos" type="Node3D" parent="." unique_id=1410297801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 2, 5)
+
+[node name="DefaultCameraLookAt" type="Node3D" parent="." unique_id=1035833944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, -1)
+
+[node name="CombatCamera" type="Camera3D" parent="." unique_id=166819940 node_paths=PackedStringArray("encounter", "defaultPositon", "defaultLookAt", "playerTarget")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 2, 5)
+fov = 85.0
+script = ExtResource("2_y4nrt")
+encounter = NodePath("..")
+defaultPositon = NodePath("../DefaultCameraPos")
+defaultLookAt = NodePath("../DefaultCameraLookAt")
+playerTarget = NodePath("../Player")
 
 [node name="Player" parent="." unique_id=1364375232 node_paths=PackedStringArray("damageNumberManager") instance=ExtResource("2_hsurt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9697075, 0, -0.019)
 frame = 5
 frame_progress = 0.24486433
-baseBlock = SubResource("Resource_kun2r")
+baseBlock = SubResource("Resource_y4nrt")
 maxHp = 90
 damageNumberManager = NodePath("../DamageNumberManager")
 

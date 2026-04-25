@@ -3,4 +3,8 @@
 [ext_resource type="Script" uid="uid://52u0foyg56u7" path="res://Scripts/UIScripts/DamageNumber.gd" id="1_n4jia"]
 
 [node name="DamageNumber" type="Label3D" unique_id=834679598]
+billboard = 2
+no_depth_test = true
+fixed_size = true
 script = ExtResource("1_n4jia")
+floatDistance = 0.6

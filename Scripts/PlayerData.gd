@@ -5,7 +5,7 @@ var currentHp: int = 90
 var inventory: Array[Upgrade] = []
 var equippedUpgrades: Array[Upgrade] = []
 var maxUpgrades: int = 6
-var doubloons: int = 10
+var doubloons: int = 50
 var startingMaxEnergy: int = 1
 
 func _ready() -> void:

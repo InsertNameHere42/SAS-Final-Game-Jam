@@ -3,17 +3,19 @@ class_name ShopScreen extends Control
 const ITEM_SCENE := preload("res://Scenes/UI/shop_item.tscn")
 
 @export var availableUpgrades: Array[Upgrade] = []
-@onready var itemList: VBoxContainer = $HBoxContainer/ItemList
+@onready var itemList: VBoxContainer = $HBoxContainer/VBoxContainer/ItemList
 @onready var tooltipIcon: TextureRect = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipTexture
 @onready var tooltipName: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipName
 @onready var tooltipDesc: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipDesc
 @onready var tooltipCost: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipCost
 @onready var buyButton: Button = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/BuyButton
+@onready var moneyLeftLabel: Label = $HBoxContainer/VBoxContainer/PanelContainer/MoneyLeftLabel
 
 var items: Array[ShopItem] = []
 var currentIndex: int = 0
 
 func _ready() -> void:
+	moneyLeftLabel.text = "Cash Left: $" + str(PlayerData.doubloons)
 	buyButton.pressed.connect(_buySelected)
 	_buildList()
 	_updateTooltip()
@@ -57,6 +59,7 @@ func _buySelected() -> void:
 		print("Invalid Purchase")
 		return
 	PlayerData.doubloons -= upgrade.cost
+	moneyLeftLabel.text = "Cash Left: $" + str(PlayerData.doubloons)
 	PlayerData.inventory.append(upgrade)
 	print("Inventory: " + str(PlayerData.inventory))
 	items[currentIndex]._refresh()

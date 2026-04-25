@@ -12,10 +12,17 @@ var usedEnergy: int = 0
 @export var upgradeSlots: Array[Upgrade] = []
 
 func startCombat():
+	print("Combat Started Player")
 	maxHp = PlayerData.maxHp
 	currentHp = PlayerData.currentHp
 	upgradeSlots = PlayerData.equippedUpgrades
 	maxEnergy = PlayerData.startingMaxEnergy
+	maxEnergy = 1
+	usedEnergy = 0
+	for upgrade in upgradeSlots: #reset at start of combat
+		if upgrade and upgrade.isOn:
+			upgrade.isOn = false
+			print("Upgrade disabled")
 
 func _process(_delta: float) -> void:
 	pass
@@ -35,11 +42,16 @@ func die() -> void:
 func attack() -> AttackContext: 
 	turnEnd()
 	var context := AttackContext.new(baseDamage, baseCritChance, baseCritDamageMultiplier)
-	play("Attack")
 	for upgrade in upgradeSlots:
 		if upgrade and upgrade.isOn:
 			upgrade.modifyAttack(context)
 	return context
+
+func attackAnim() -> void:
+	if animation == "Attack" and is_playing():
+		frame = 1
+	else:
+		play("Attack")
 
 func defend() -> DefendContext:
 	print(baseBlock.stacks)
@@ -53,6 +65,7 @@ func defend() -> DefendContext:
 
 func returnToIdle() -> void:
 	play("Idle")
+
 func turnStart() -> void:
 	returnToIdle()
 	maxEnergy += 1

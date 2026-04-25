@@ -3,12 +3,14 @@ class_name EnemySelect extends State
 @export var enemyHitTicks: float = 0.05
 @export var playerToEnemyTurnDelay: float = 0.5
 var currentIndex: int = 0
+var attacking: bool = false
+
 func enter() -> void:
+	attacking = false
 	_highlightTarget()
 
 func exit() -> void:
 	_clearHighlight()
-	environment.resetCameraToDefault()
 
 func update(_delta: float) -> void:
 	var enemies: Array[Enemy] = environment.enemyManager.enemies
@@ -24,11 +26,22 @@ func update(_delta: float) -> void:
 		_highlightTarget()
 	
 	if Input.is_action_just_pressed("UI Accept"):
+		if attacking:
+			return
+		attacking = true
 		var selectedTarget: Enemy = environment.enemyManager.enemies[currentIndex]
 		var attackContext: AttackContext = environment.player.attack()
+		environment.playerAttacking()
+		await get_tree().create_timer(1, true, false, true).timeout
 		for i in attackContext.hitCount:
 			if selectedTarget and is_instance_valid(selectedTarget):
 				var result := attackContext.calculateDamage()
+				
+				
+				environment.player.attackAnim()
+				environment.shakeCamera(result.damage * 0.005, 0.04*pow(result.damage, 0.5)) #strength, duration
+				environment.screenFreeze(0.02*pow(result.damage, 0.5))
+				
 				selectedTarget.takeDamage(result.damage, result.type)
 				for effect in attackContext.effectsToApplyEnemy:
 					selectedTarget.status_effect_component.applyEffect(effect)
@@ -54,8 +67,8 @@ func _highlightTarget() -> void:
 	enemies[currentIndex].modulate = Color.RED
 	if !enemies[currentIndex].hovered:
 		enemies[currentIndex].selected(true)
-	
 	environment.focusEnemy(enemies[currentIndex])
+	
 
 func _clearHighlight() -> void:
 	for enemy in environment.enemyManager.enemies:

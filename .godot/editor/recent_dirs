@@ -1,11 +1,12 @@
+res://Scenes/
+res://Scripts/
+res://Scenes/Autoload/
+res://Scripts/RoamingScripts/
 res://Scenes/UI/
 res://Scripts/UIScripts/
-res://Scripts/RoamingScripts/
 res://Scenes/Roaming/
 res://Scripts/States/
 res://Scripts/CombatScripts/
-res://Scripts/
-res://Scenes/
 res://Scenes/Meshes/
 res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/
 res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/

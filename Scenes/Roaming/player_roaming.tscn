@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://by4u6ysbvjnhi" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_right.png" id="8_ngute"]
 [ext_resource type="Texture2D" uid="uid://b7ge2q0mt8c7t" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png" id="9_qrfnl"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_66wqt"]
-size = Vector3(1, 1.3480225, 1)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5e70b"]
+height = 1.2587891
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4iuui"]
 atlas = ExtResource("2_klcwy")
@@ -508,24 +508,24 @@ animations = [{
 size = Vector3(1, 1.3491211, 1)
 
 [node name="PlayerRoaming" type="CharacterBody3D" unique_id=183741771]
+wall_min_slide_angle = 0.5235988
+floor_max_angle = 1.0471976
+floor_snap_length = 0.3
 script = ExtResource("1_5e70b")
 moveSpeed = 6.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1280464037]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05731201, 0)
-shape = SubResource("BoxShape3D_66wqt")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07635498, 0)
+shape = SubResource("CapsuleShape3D_5e70b")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2079563145]
 pixel_size = 0.04
 billboard = 2
+shaded = true
 alpha_cut = 2
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_kkrb6")
 animation = &"RunLeft"
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=2043982046]
-transform = Transform3D(-4.326493e-08, 0.14255983, -0.9897862, 6.2314878e-09, 0.9897862, 0.14255983, 1, 0, -4.371139e-08, -5.7258997, 0.77009106, 0)
-current = true
 
 [node name="InteractArea" type="Area3D" parent="." unique_id=1008179527]
 collision_layer = 0

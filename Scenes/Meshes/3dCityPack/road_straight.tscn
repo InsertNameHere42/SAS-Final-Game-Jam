@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c82hfjooscae4"]
 
-[ext_resource type="Texture2D" uid="uid://bgwjmfkg348aj" path="res://Assets/Placeholders/3d city pack/Texture_01.png" id="1_4mece"]
+[ext_resource type="Texture2D" uid="uid://cnj0cl2npn6w5" path="res://Assets/Placeholders/3d city pack/Texture_01.png" id="1_4mece"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hoifb"]
 resource_name = "CityMaterial_69"
@@ -45,9 +45,6 @@ shadow_mesh = SubResource("ArrayMesh_7ym6r")
 [sub_resource type="BoxShape3D" id="BoxShape3D_4mece"]
 size = Vector3(6.38501, 0.07336426, 6.029297)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5mvn2"]
-size = Vector3(0.49438477, 0.5332031, 5.9726563)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_nxfuf"]
 size = Vector3(3.0773926, 0.29153442, 5.9814453)
 
@@ -63,14 +60,6 @@ mesh = SubResource("ArrayMesh_ahufb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1499587191]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03277588, 0)
 shape = SubResource("BoxShape3D_4mece")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2048528704]
-transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, 2.984789, -0.13167082, 0)
-shape = SubResource("BoxShape3D_5mvn2")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1149816051]
-transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, -2.9306078, -0.13167082, 0)
-shape = SubResource("BoxShape3D_5mvn2")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=581213714]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4789023, 0.07987976, 0)

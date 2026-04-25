@@ -2,6 +2,7 @@ class_name SaveRoomItem extends PanelContainer
 
 enum DisplayMode {CARD, LIST}
 
+var displayMode: DisplayMode
 var upgrade: Upgrade
 const iconSize: int = 48
 
@@ -9,6 +10,7 @@ const iconSize: int = 48
 @onready var nameLabel: Label = $HBoxContainer/NameLabel
 
 func setup(u: Upgrade, mode: DisplayMode) -> void:
+	displayMode = mode
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color(0.15, 0.15, 0.2, 1.0)  # adjust color to match your UI theme
 	add_theme_stylebox_override("panel", style)
@@ -23,8 +25,12 @@ func setup(u: Upgrade, mode: DisplayMode) -> void:
 	if mode == DisplayMode.CARD:
 		custom_minimum_size = Vector2(64, 64)
 		nameLabel.visible = false
+		icon.custom_minimum_size = Vector2(64, 64)
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		style = StyleBoxFlat.new()
+		style.bg_color = Color.TRANSPARENT
+		add_theme_stylebox_override("panel", style)
 	else:
 		custom_minimum_size = Vector2(0, 48)
 		nameLabel.visible = true
@@ -40,3 +46,5 @@ func refresh(is_equipped: bool, is_selected: bool) -> void:
 	add_theme_stylebox_override("panel", style)
 	
 	modulate = Color(1, 1, 1, 0.4) if (is_equipped and not is_selected) else Color.WHITE
+	if is_selected and displayMode == DisplayMode.CARD:
+		modulate = Color.SKY_BLUE

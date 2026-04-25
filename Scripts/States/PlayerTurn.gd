@@ -1,6 +1,9 @@
 class_name PlayerTurn extends State
 
 func enter():
+	if environment.enemyManager.enemies.is_empty():
+		environment.endCombat()
+	environment.focusDefault()
 	environment.player.returnToIdle()
 	environment.enemyManager.resetEnemyAnimations()
 func exit():

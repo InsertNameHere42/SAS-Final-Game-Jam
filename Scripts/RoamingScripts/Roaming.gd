@@ -2,7 +2,8 @@ extends Node3D
 
 @onready var playerRoaming: PlayerRoaming = $PlayerRoaming
 @onready var stateMachine: StateMachine = $StateMachine
-@onready var roamingCamera: Camera3D = $PlayerRoaming/Camera3D
+@onready var roamingCamera: RoamingCamera = $RoamingCamera
 
 func _ready() -> void:
+	await ScreenFade.fadeIn()
 	stateMachine.start()

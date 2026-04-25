@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cta4uce0mftkp"]
+
+[ext_resource type="Script" uid="uid://bliidduw1oiie" path="res://Scripts/ScreenFade.gd" id="1_e2ukh"]
+
+[node name="ScreenFade" type="CanvasLayer" unique_id=813243432]
+script = ExtResource("1_e2ukh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1560904904]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

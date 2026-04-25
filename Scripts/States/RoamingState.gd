@@ -12,3 +12,4 @@ func update(_delta: float):
 	
 func physicsUpdate(_delta: float) -> void:
 	environment.playerRoaming.handleMovement(_delta)
+	environment.roamingCamera.update(_delta)

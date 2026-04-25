@@ -11,8 +11,11 @@ func trigger() -> void:
 	if triggered:
 		return
 	triggered = true
+	await ScreenFade.fadeOut()
+	await get_tree().create_timer(1, true, false, true).timeout
 	encounter.startCombat(stateMachine, enemyScenes)
 	stateMachine.startCombat(encounter)
+	await ScreenFade.fadeIn()
 	
 func reset() -> void:
 	triggered = false

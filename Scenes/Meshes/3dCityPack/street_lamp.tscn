@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bdtf2u6a6c6f8"]
 
-[ext_resource type="Texture2D" uid="uid://bgwjmfkg348aj" path="res://Assets/Placeholders/3d city pack/Texture_01.png" id="1_ekbmg"]
+[ext_resource type="Texture2D" uid="uid://cnj0cl2npn6w5" path="res://Assets/Placeholders/3d city pack/Texture_01.png" id="1_ekbmg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6xmx"]
 resource_name = "CityMaterial_105"
@@ -52,3 +52,18 @@ mesh = SubResource("ArrayMesh_y5grh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1788680173]
 shape = SubResource("ConcavePolygonShape3D_yliae")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1674797003]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.115079, 4.5705147, 0)
+light_color = Color(1, 1, 0.31764707, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=399109868]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.115079, 4.5705147, 0)
+light_color = Color(0.89562905, 0.9415579, 0.7717478, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 1.694
+light_size = 0.2
+light_bake_mode = 1
+distance_fade_enabled = true
+spot_range = 7.4182377
+spot_angle = 90.0
