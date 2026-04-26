@@ -12,7 +12,10 @@ func setup(u: Upgrade, remainingEnergy: int, showCost: bool) -> void:
 	upgrade = u
 	texture_normal = u.offSprite
 	texture_pressed = u.onSprite
-	custom_minimum_size = Vector2(64, 64)
+	ignore_texture_size = true                                    
+	stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED 
+	custom_minimum_size = Vector2(90, 160)
+	size = Vector2(90, 160)
 	button_pressed = u.isOn
 	self_modulate.a = 1.0 if (u.isOn or remainingEnergy >= u.energyCost) else 0.4
 	modulate.a = 1.0 if (u.isOn or remainingEnergy >= u.energyCost) else 0.4

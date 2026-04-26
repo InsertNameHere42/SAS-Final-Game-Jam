@@ -11,10 +11,12 @@
 [ext_resource type="Script" uid="uid://dpnurkj20dddp" path="res://Scripts/States/EnemySelect.gd" id="8_1kx1r"]
 [ext_resource type="Script" uid="uid://s3ox4l2p2476" path="res://Scripts/States/ModifyState.gd" id="9_gvlx6"]
 [ext_resource type="Script" uid="uid://dy82oouww6sgr" path="res://Scripts/CombatScripts/enemy_manager.gd" id="10_kun2r"]
+[ext_resource type="AudioStream" uid="uid://bhbt0prnysmog" path="res://Assets/Music/CombatIntro.mp3" id="14_m1whs"]
 [ext_resource type="PackedScene" uid="uid://q1hlktc7oobw" path="res://Scenes/damage_number_manager.tscn" id="15_2nsrb"]
+[ext_resource type="AudioStream" uid="uid://be3ec24gjf30j" path="res://Assets/Music/CombatMusic.mp3" id="15_tt4gc"]
 [ext_resource type="PackedScene" uid="uid://dnejqew27q7ns" path="res://Scenes/UI/upgrade_toggle_screen.tscn" id="16_kgebq"]
 
-[sub_resource type="Resource" id="Resource_y4nrt"]
+[sub_resource type="Resource" id="Resource_4s4iv"]
 resource_local_to_scene = true
 script = ExtResource("3_whduv")
 effectName = "Block!"
@@ -43,11 +45,12 @@ defaultPositon = NodePath("../DefaultCameraPos")
 defaultLookAt = NodePath("../DefaultCameraLookAt")
 playerTarget = NodePath("../Player")
 
-[node name="Player" parent="." unique_id=1364375232 node_paths=PackedStringArray("damageNumberManager") instance=ExtResource("2_hsurt")]
+[node name="Player" parent="." unique_id=1364375232 node_paths=PackedStringArray("encounter", "damageNumberManager") instance=ExtResource("2_hsurt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9697075, 0, -0.019)
 frame = 5
 frame_progress = 0.24486433
-baseBlock = SubResource("Resource_y4nrt")
+encounter = NodePath("..")
+baseBlock = SubResource("Resource_4s4iv")
 maxHp = 90
 damageNumberManager = NodePath("../DamageNumberManager")
 
@@ -80,3 +83,13 @@ encounter = NodePath("..")
 
 [node name="UpgradeToggleScreen" parent="." unique_id=1629356387 node_paths=PackedStringArray("encounter") instance=ExtResource("16_kgebq")]
 encounter = NodePath("..")
+
+[node name="Music" type="Node" parent="." unique_id=1967783901]
+
+[node name="SongIntro" type="AudioStreamPlayer" parent="Music" unique_id=274613008]
+stream = ExtResource("14_m1whs")
+
+[node name="SongMain" type="AudioStreamPlayer" parent="Music" unique_id=557401311]
+stream = ExtResource("15_tt4gc")
+
+[connection signal="finished" from="Music/SongIntro" to="." method="_on_song_intro_finished"]

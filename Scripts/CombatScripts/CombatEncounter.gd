@@ -7,6 +7,10 @@ class_name CombatEncounter extends Node3D
 @onready var combatCamera: CombatCamera = $CombatCamera
 @onready var damageNumberManager: DamageNumberManager = $DamageNumberManager
 
+@onready var songIntro: AudioStreamPlayer = $Music/SongIntro
+@onready var songMain: AudioStreamPlayer = $Music/SongMain
+
+
 @export var enemyStepX: float = 10.0
 @export var enemyStepZ: float = 10.0
 @export var environment: Node
@@ -26,6 +30,7 @@ func playerAttacking() -> void:
 	combatCamera.attacking()
 
 func startCombat(gsm: StateMachine, enemyScenes: Array[PackedScene]) -> void:
+	songIntro.play()
 	print("Combat Started")
 	enemyManager.spawnEnemies(enemyScenes)
 	_placeEnemies()
@@ -45,6 +50,8 @@ func _placeEnemies() -> void:
 	print("total enemies placed: ", i)
 
 func endCombat() -> void:
+	songIntro.stop()
+	songMain.stop()
 	stateMachine.stopCombat()
 	await ScreenFade.fadeOut()
 	print("Combat Ended")
@@ -62,3 +69,5 @@ func screenFreeze(duration: float = 0.05):
 	
 
 	
+func _on_song_intro_finished() -> void:
+	songMain.play()

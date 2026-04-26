@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8aa78rggssag" path="res://Scripts/UIScripts/ShopScreen.gd" id="1_vrl6t"]
 [ext_resource type="Texture2D" uid="uid://c146t6o3o5oa" path="res://Assets/Placeholders/shopPlaceholderImage.jpeg" id="2_45h0x"]
+[ext_resource type="AudioStream" uid="uid://bk17v35d03ol0" path="res://Assets/Music/ShopReal.mp3" id="3_c604k"]
 
 [node name="ShopScreen" type="Control" unique_id=1474026120]
 layout_mode = 3
@@ -92,3 +93,7 @@ horizontal_alignment = 1
 
 [node name="BuyButton" type="Button" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=926976341]
 layout_mode = 2
+
+[node name="ShopMusic" type="AudioStreamPlayer" parent="." unique_id=1519043891]
+stream = ExtResource("3_c604k")
+parameters/looping = true

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cpluxdg1cxgl0"]
 
 [ext_resource type="Script" uid="uid://00qnrg2np8op" path="res://Scripts/UIScripts/SaveRoomScreen.gd" id="1_6qajr"]
+[ext_resource type="Texture2D" uid="uid://dn7ygxqsd27mu" path="res://Assets/Pedals/PedalPlaceholder.png" id="2_bywu2"]
 [ext_resource type="Texture2D" uid="uid://difkumkyqjgb6" path="res://Assets/Placeholders/vaninside.jpg" id="2_st57v"]
 [ext_resource type="Texture2D" uid="uid://cmquae0pwqnie" path="res://Assets/Placeholders/pedalboard.png" id="3_4lof4"]
 
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6qajr")
+emptySlotTexture = ExtResource("2_bywu2")
 
 [node name="Background" type="TextureRect" parent="." unique_id=305105024]
 layout_mode = 0
@@ -38,6 +40,11 @@ size_flags_horizontal = 4
 layout_mode = 2
 size_flags_horizontal = 4
 
+[node name="PedalboardTexture" type="TextureRect" parent="HBoxContainer/EquippedPanel" unique_id=986340775]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_4lof4")
+
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/EquippedPanel" unique_id=2034627864]
 layout_mode = 2
 
@@ -49,11 +56,7 @@ layout_mode = 2
 
 [node name="SlotsRow" type="HBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer" unique_id=101997353]
 layout_mode = 2
-
-[node name="PedalboardTexture" type="TextureRect" parent="HBoxContainer/EquippedPanel" unique_id=986340775]
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("3_4lof4")
+size_flags_vertical = 4
 
 [node name="InventoryPanel" type="PanelContainer" parent="HBoxContainer" unique_id=1081730672]
 layout_mode = 2

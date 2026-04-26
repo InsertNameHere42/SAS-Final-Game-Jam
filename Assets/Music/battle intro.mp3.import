@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://circrnoifpoxp"
+path="res://.godot/imported/battle intro.mp3-0db48ef047bc17283afc625d96d84868.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/battle intro.mp3"
+dest_files=["res://.godot/imported/battle intro.mp3-0db48ef047bc17283afc625d96d84868.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

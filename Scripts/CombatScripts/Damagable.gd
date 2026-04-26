@@ -24,13 +24,14 @@ func _ready() -> void:
 	
 	statusEffectComponent.effectsChanged.connect(updateStatusEffects)
 
-func takeDamage(damage: int, type: String = "normal") -> void:
+func takeDamage(damage: int, type: String = "normal") -> int: #returns damage taken
 	damage = $StatusEffectComponent.triggerDamageTaken(damage)
 	damageNumberManager.spawn(damage, type, global_position)
 	currentHp-=damage
 	healthBar.value = currentHp
 	if currentHp<=0:
 		die()
+	return damage
 
 func updateStatusEffects() -> void:
 	for child in statusEffectRow.get_children():

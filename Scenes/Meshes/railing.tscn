@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dk6puebsqpa03"]
+
+[ext_resource type="PackedScene" uid="uid://b4x66ke4eeoqd" path="res://Assets/GoodAssets/Railing.glb" id="1_l6vqv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aghi4"]
+size = Vector3(0.39746094, 1.0253677, 1.3851509)
+
+[node name="Railing" type="StaticBody3D" unique_id=173950096]
+
+[node name="Railing" parent="." unique_id=1920079793 instance=ExtResource("1_l6vqv")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1871126408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49238968, 0.6229534)
+shape = SubResource("BoxShape3D_aghi4")

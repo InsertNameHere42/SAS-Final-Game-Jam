@@ -1,6 +1,7 @@
 class_name Player extends Damagable
 
 signal playerDied
+@export var encounter: CombatEncounter
 @export var baseDamage: int = 5
 @export var baseCritChance: float = 0.1
 @export var baseCritDamageMultiplier: float = 1.5
@@ -10,6 +11,10 @@ var maxEnergy: int = 0
 var usedEnergy: int = 0
 
 @export var upgradeSlots: Array[Upgrade] = []
+
+@onready var attackSFX: AudioStreamPlayer3D = $SoundEffects/Attack
+@onready var takeDamageSFX: AudioStreamPlayer3D = $SoundEffects/TakeDamage
+
 
 func startCombat():
 	print("Combat Started Player")
@@ -32,6 +37,13 @@ func _ready() -> void:
 	super._ready()
 	turnStart()
 
+func takeDamage(damage: int, type: String = "normal") -> int:
+	takeDamageSFX.play()
+	var damageTaken: int = super(damage, type)
+	encounter.shakeCamera(damageTaken * 0.005, 0.04*pow(damageTaken, 0.5)) #strength, duration
+	encounter.screenFreeze(0.02*pow(damageTaken, 0.5))
+	return damageTaken
+	
 
 		
 func die() -> void:
@@ -48,6 +60,7 @@ func attack() -> AttackContext:
 	return context
 
 func attackAnim() -> void:
+	attackSFX.play()
 	if animation == "Attack" and is_playing():
 		frame = 1
 	else:

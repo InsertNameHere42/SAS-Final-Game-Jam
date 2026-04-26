@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="4_vgqql"]
 [ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="5_3smsa"]
 [ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="6_8erm5"]
+[ext_resource type="AudioStream" uid="uid://dmmen1giadthb" path="res://Assets/SFX/Attack.wav" id="8_8erm5"]
+[ext_resource type="AudioStream" uid="uid://cvjdj5r0du1n4" path="res://Assets/SFX/TakeDamage.wav" id="9_f1ek2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
 atlas = ExtResource("1_6t5aa")
@@ -244,5 +246,13 @@ layout_mode = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7896948, 0)
 billboard = 2
 texture = SubResource("ViewportTexture_vgqql")
+
+[node name="SoundEffects" type="Node" parent="." unique_id=1859179945]
+
+[node name="Attack" type="AudioStreamPlayer3D" parent="SoundEffects" unique_id=270923623]
+stream = ExtResource("8_8erm5")
+
+[node name="TakeDamage" type="AudioStreamPlayer3D" parent="SoundEffects" unique_id=1682501945]
+stream = ExtResource("9_f1ek2")
 
 [connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

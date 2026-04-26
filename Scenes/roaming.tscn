@@ -10,29 +10,42 @@
 [ext_resource type="PackedScene" uid="uid://bdtf2u6a6c6f8" path="res://Scenes/Meshes/3dCityPack/street_lamp.tscn" id="5_2pn50"]
 [ext_resource type="PackedScene" uid="uid://bftv7557bqaoo" path="res://Scenes/Meshes/3dCityPack/TrashCan.tscn" id="6_6nsrk"]
 [ext_resource type="Shader" uid="uid://i0fv8prgv58o" path="res://Shaders/Sky.gdshader" id="8_4dv2k"]
+[ext_resource type="Texture2D" uid="uid://c0kivst236swk" path="res://Assets/Pedals/BossDistortionOff.png" id="14_6bxja"]
+[ext_resource type="Texture2D" uid="uid://b7ie0eyv27abs" path="res://Assets/Pedals/BossDistortionOn.png" id="15_gy0pf"]
 [ext_resource type="PackedScene" uid="uid://ccy3vgufakxi6" path="res://Scenes/Meshes/music_shop.tscn" id="16_qwyxc"]
+[ext_resource type="Texture2D" uid="uid://cutjug2ws4joc" path="res://Assets/Pedals/BossOverdriveOff.png" id="17_0cqas"]
 [ext_resource type="Script" uid="uid://cq6mc27rx1ktw" path="res://Scripts/States/state_machine.gd" id="17_3xqub"]
 [ext_resource type="PackedScene" uid="uid://bjkpjpmrri65g" path="res://Scenes/UI/shop_screen.tscn" id="18_4dv2k"]
+[ext_resource type="Texture2D" uid="uid://buabldfv54o7n" path="res://Assets/Pedals/BossOverdriveOn.png" id="18_28xxc"]
 [ext_resource type="Script" uid="uid://cuy7dhd4kencs" path="res://Scripts/States/RoamingState.gd" id="18_fkogr"]
 [ext_resource type="Script" uid="uid://cmtdgooj582ks" path="res://Scripts/States/ShopState.gd" id="19_boewr"]
 [ext_resource type="Script" uid="uid://bd5knqm4ul66" path="res://Scripts/Upgrades/Upgrade.gd" id="19_yyx54"]
 [ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="20_3h328"]
-[ext_resource type="Texture2D" uid="uid://bo3vym2xhrnhu" path="res://Assets/Placeholders/button UI.png" id="21_2qdxi"]
+[ext_resource type="Texture2D" uid="uid://c1bmkpsoy6luj" path="res://Assets/Pedals/BossDelayOff.png" id="20_njlu1"]
+[ext_resource type="Texture2D" uid="uid://ejnblj570sxg" path="res://Assets/Pedals/BossDelayOn.png" id="21_vqfcb"]
 [ext_resource type="Script" uid="uid://cwwg52uumuvu8" path="res://Scripts/Upgrades/Distortion.gd" id="22_5k7bd"]
 [ext_resource type="Script" uid="uid://jbt8nk1iqjyi" path="res://Scripts/States/save_room_state.gd" id="22_hkv6x"]
+[ext_resource type="Texture2D" uid="uid://cvhulu71fpdxw" path="res://Assets/Pedals/BossBoosterOff.png" id="23_bhyo4"]
 [ext_resource type="Script" uid="uid://cih5gvuu7jr0t" path="res://Scripts/Upgrades/Overdrive.gd" id="23_f668u"]
 [ext_resource type="Script" uid="uid://bhkc0g15m8xn2" path="res://Scripts/Upgrades/Delay.gd" id="24_a2iyh"]
+[ext_resource type="Texture2D" uid="uid://ds27y1bpuo014" path="res://Assets/Pedals/BossBoosterOn.png" id="24_ylcug"]
 [ext_resource type="PackedScene" uid="uid://1b3mx7conklb" path="res://Scenes/Roaming/player_roaming.tscn" id="25_4iuui"]
 [ext_resource type="Script" uid="uid://cook4pbgv2f3u" path="res://Scripts/Upgrades/Boost.gd" id="25_6va1x"]
 [ext_resource type="Script" uid="uid://dqwgxh6gfsb15" path="res://Scripts/Upgrades/EQ.gd" id="26_dbvsx"]
+[ext_resource type="Texture2D" uid="uid://cqhlvwcxccfj3" path="res://Assets/Pedals/blankpedalOff.png" id="26_gy0pf"]
+[ext_resource type="Texture2D" uid="uid://bm1siw2v4atbn" path="res://Assets/Pedals/blankpedalOn.png" id="27_0cqas"]
 [ext_resource type="PackedScene" uid="uid://dkrmnheblry4i" path="res://Scenes/Roaming/van_save_spot.tscn" id="27_q72wc"]
 [ext_resource type="PackedScene" uid="uid://cpluxdg1cxgl0" path="res://Scenes/UI/save_room_screen.tscn" id="28_dtn4b"]
+[ext_resource type="Texture2D" uid="uid://wotavovf2ohu" path="res://Assets/Pedals/BossReverbOff.png" id="29_njlu1"]
+[ext_resource type="Texture2D" uid="uid://dfw6i16s8mvy5" path="res://Assets/Pedals/BossReverbOn.png" id="30_vqfcb"]
 [ext_resource type="Script" uid="uid://hmv5fvdvkdvs" path="res://Scripts/States/combat_state.gd" id="30_yyx54"]
 [ext_resource type="Script" uid="uid://ct8120htle6mr" path="res://Scripts/RoamingScripts/AreaCombatTrigger.gd" id="31_3h328"]
+[ext_resource type="Script" uid="uid://ds247js4bk1j6" path="res://Scripts/Upgrades/Reverb.gd" id="31_bhyo4"]
 [ext_resource type="PackedScene" uid="uid://bqwqxi3atc7sc" path="res://Scenes/test_enemy.tscn" id="32_2qdxi"]
 [ext_resource type="Script" uid="uid://c5imh7qsgm7va" path="res://Scripts/RoamingScripts/RoamingCamera.gd" id="32_5k7bd"]
 [ext_resource type="PackedScene" uid="uid://dansr6dmqv388" path="res://Scenes/Combat/combat_encounter.tscn" id="33_5k7bd"]
 [ext_resource type="Script" uid="uid://bsfjo7hkmht7v" path="res://Scripts/RoamingScripts/CameraZone.gd" id="33_f668u"]
+[ext_resource type="PackedScene" uid="uid://dk6puebsqpa03" path="res://Scenes/Meshes/railing.tscn" id="46_vqfcb"]
 
 [sub_resource type="Curve" id="Curve_3h328"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.08719346, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8134481), 0.0, 0.0, 0, 0]
@@ -107,28 +120,28 @@ adjustment_saturation = 1.5
 script = ExtResource("22_5k7bd")
 upgradeName = "Boss DS-2"
 description = "A distortion pedal increasing damage by 50%"
-offSprite = ExtResource("20_3h328")
-onSprite = ExtResource("21_2qdxi")
+offSprite = ExtResource("14_6bxja")
+onSprite = ExtResource("15_gy0pf")
 metadata/_custom_type_script = "uid://cwwg52uumuvu8"
 
 [sub_resource type="Resource" id="Resource_yyx54"]
 script = ExtResource("23_f668u")
 critDamageBoost = 2.0
-upgradeName = "Earthquaker Plumes"
+upgradeName = "Boss OD-3"
 description = "An overdrive pedal increasing crit damage by 200%"
-offSprite = ExtResource("20_3h328")
-onSprite = ExtResource("21_2qdxi")
+offSprite = ExtResource("17_0cqas")
+onSprite = ExtResource("18_28xxc")
 metadata/_custom_type_script = "uid://cih5gvuu7jr0t"
 
 [sub_resource type="Resource" id="Resource_3h328"]
 script = ExtResource("24_a2iyh")
-damageBoostPercent = 0.2
-additionalHits = 9
-upgradeName = "Walrus Fathom"
-description = "A delay pedal which increases the number of hits in an attack by 9, but decreases damage by 80%"
-offSprite = ExtResource("20_3h328")
-onSprite = ExtResource("21_2qdxi")
-cost = 25
+damageBoostPercent = 0.5
+additionalHits = 3
+upgradeName = "BossDD-3"
+description = "A delay pedal which increases the number of hits in an attack by 3, but decreases damage by 50%"
+offSprite = ExtResource("20_njlu1")
+onSprite = ExtResource("21_vqfcb")
+cost = 15
 metadata/_custom_type_script = "uid://bhkc0g15m8xn2"
 
 [sub_resource type="Resource" id="Resource_2qdxi"]
@@ -136,22 +149,30 @@ script = ExtResource("25_6va1x")
 damageBoostAmount = 4
 upgradeName = "Boss BP-1W"
 description = "A Boost pedal increasing damage by 4"
-offSprite = ExtResource("20_3h328")
-onSprite = ExtResource("21_2qdxi")
+offSprite = ExtResource("23_bhyo4")
+onSprite = ExtResource("24_ylcug")
 cost = 10
 metadata/_custom_type_script = "uid://cook4pbgv2f3u"
 
 [sub_resource type="Resource" id="Resource_5k7bd"]
 script = ExtResource("26_dbvsx")
 critChanceBoost = 0.3
-upgradeName = "Boss GE-7"
+upgradeName = "Unbranded EQ"
 description = "An EQ pedal increasing crit chance by 30%"
-offSprite = ExtResource("20_3h328")
-onSprite = ExtResource("21_2qdxi")
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
 cost = 7
 metadata/_custom_type_script = "uid://dqwgxh6gfsb15"
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5k7bd"]
+[sub_resource type="Resource" id="Resource_ylcug"]
+script = ExtResource("31_bhyo4")
+blockKept = 0.5
+upgradeName = "Boss RV-6"
+description = "A Reverb pedal causing 50% of block to be kept at the start of a turn"
+offSprite = ExtResource("29_njlu1")
+onSprite = ExtResource("30_vqfcb")
+cost = 10
+metadata/_custom_type_script = "uid://ds247js4bk1j6"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2iyh"]
 size = Vector3(11.702637, 10.669434, 60.130493)
@@ -160,6 +181,8 @@ size = Vector3(11.702637, 10.669434, 60.130493)
 size = Vector3(11.702637, 10.669434, 49.421204)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6va1x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5k7bd"]
 
 [node name="Roaming" type="Node3D" unique_id=1428682443]
 script = ExtResource("1_3nnlx")
@@ -236,6 +259,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 45, 
 [node name="RoadStraight12" parent="MapMesh" unique_id=646453297 instance=ExtResource("1_x3wg5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 51, 0, 27)
 
+[node name="RoadStraight25" parent="MapMesh" unique_id=1385644633 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.818687, 0, 27)
+
+[node name="RoadStraight26" parent="MapMesh" unique_id=241071621 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.818687, 0, 27)
+
 [node name="RoadStraight13" parent="MapMesh" unique_id=1011932152 instance=ExtResource("1_x3wg5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, 27)
 
@@ -250,6 +279,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, 
 
 [node name="RoadAngled" parent="MapMesh" unique_id=1257060483 instance=ExtResource("2_eh23o")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 27)
+
+[node name="RoadAngled2" parent="MapMesh" unique_id=1653435950 instance=ExtResource("2_eh23o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 69.86863, 0, 27)
 
 [node name="ShortHouse" parent="MapMesh" unique_id=2104847026 instance=ExtResource("3_abxf0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 18)
@@ -295,6 +327,84 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0
 
 [node name="TallHouse5" parent="MapMesh" unique_id=1493326518 instance=ExtResource("4_0s272")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -10)
+
+[node name="ShortHouse13" parent="MapMesh" unique_id=2370091 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, -5.5548058)
+
+[node name="ShortHouse15" parent="MapMesh" unique_id=1750825439 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, -12.546747)
+
+[node name="ShortHouse16" parent="MapMesh" unique_id=761269865 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, -26.554806)
+
+[node name="ShortHouse17" parent="MapMesh" unique_id=953767324 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, -33.54675)
+
+[node name="ShortHouse14" parent="MapMesh" unique_id=319075230 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, 1.4451942)
+
+[node name="ShortHouse20" parent="MapMesh" unique_id=1642943310 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, 29.445194)
+
+[node name="ShortHouse21" parent="MapMesh" unique_id=583368485 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.775393, 0, 36.079136)
+
+[node name="ShortHouse22" parent="MapMesh" unique_id=1047569640 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 39.67556, 0, 36.079136)
+
+[node name="ShortHouse23" parent="MapMesh" unique_id=533592402 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 46.67556, 0, 36.079136)
+
+[node name="ShortHouse24" parent="MapMesh" unique_id=2106152122 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 53.67556, 0, 36.079136)
+
+[node name="TallHouse9" parent="MapMesh" unique_id=2032854957 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, 8.445194)
+
+[node name="TallHouse11" parent="MapMesh" unique_id=2030048604 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, -19.45045)
+
+[node name="TallHouse12" parent="MapMesh" unique_id=1985668514 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, -40.45045)
+
+[node name="ShortHouse18" parent="MapMesh" unique_id=1268881392 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, -47.554806)
+
+[node name="ShortHouse19" parent="MapMesh" unique_id=1493228938 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, -54.54675)
+
+[node name="TallHouse13" parent="MapMesh" unique_id=1200519362 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, -61.45045)
+
+[node name="TallHouse14" parent="MapMesh" unique_id=2052727589 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, -68.450455)
+
+[node name="TallHouse15" parent="MapMesh" unique_id=386919168 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, -75.450455)
+
+[node name="TallHouse10" parent="MapMesh" unique_id=1633397136 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, 15.445194)
+
+[node name="TallHouse16" parent="MapMesh" unique_id=982417608 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, 22.445194)
+
+[node name="TallHouse17" parent="MapMesh" unique_id=860712020 instance=ExtResource("4_0s272")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.2246056, 0, 35.445194)
+
+[node name="TallHouse18" parent="MapMesh" unique_id=1396367662 instance=ExtResource("4_0s272")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.7753944, 0, 35.445194)
+
+[node name="TallHouse19" parent="MapMesh" unique_id=198574379 instance=ExtResource("4_0s272")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.775394, 0, 35.445194)
+
+[node name="TallHouse20" parent="MapMesh" unique_id=296872243 instance=ExtResource("4_0s272")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 25.748058, 0, 35.445194)
+
+[node name="TallHouse21" parent="MapMesh" unique_id=1808192756 instance=ExtResource("4_0s272")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 32.748055, 0, 35.445194)
+
+[node name="TallHouse22" parent="MapMesh" unique_id=1904722595 instance=ExtResource("4_0s272")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 60.514023, 0, 35.445194)
 
 [node name="ShortHouse7" parent="MapMesh" unique_id=2098610223 instance=ExtResource("3_abxf0")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -31.046951)
@@ -416,7 +526,7 @@ stateMachine = NodePath("../../StateMachine")
 
 [node name="ShopScreen" parent="POIs/MusicShop" unique_id=1474026120 instance=ExtResource("18_4dv2k")]
 visible = false
-availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd")])
+availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug")])
 
 [node name="StateMachine" type="Node" parent="." unique_id=954152002 node_paths=PackedStringArray("initialState")]
 script = ExtResource("17_3xqub")
@@ -439,48 +549,6 @@ environment = NodePath("../..")
 script = ExtResource("22_hkv6x")
 environment = NodePath("../..")
 
-[node name="AreaCombatTrigger" type="Node3D" parent="." unique_id=398848777 node_paths=PackedStringArray("encounter", "stateMachine")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72312903, -17.449348)
-script = ExtResource("31_3h328")
-encounter = NodePath("CombatEncounter")
-stateMachine = NodePath("../StateMachine")
-enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi"), ExtResource("32_2qdxi"), ExtResource("32_2qdxi"), ExtResource("32_2qdxi")])
-metadata/_custom_type_script = "uid://ct8120htle6mr"
-
-[node name="Sprite3D" type="Sprite3D" parent="AreaCombatTrigger" unique_id=532928888]
-billboard = 2
-texture = ExtResource("20_3h328")
-
-[node name="Area3D" type="Area3D" parent="AreaCombatTrigger" unique_id=2115431899]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCombatTrigger/Area3D" unique_id=456530825]
-shape = SubResource("BoxShape3D_5k7bd")
-
-[node name="CombatEncounter" parent="AreaCombatTrigger" unique_id=1662274057 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
-environment = NodePath("../..")
-
-[node name="AreaCombatTrigger2" type="Node3D" parent="." unique_id=669103872 node_paths=PackedStringArray("encounter", "stateMachine")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3872871, 0.72312903, -19.715061)
-script = ExtResource("31_3h328")
-encounter = NodePath("CombatEncounter")
-stateMachine = NodePath("../StateMachine")
-enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi")])
-metadata/_custom_type_script = "uid://ct8120htle6mr"
-
-[node name="Sprite3D" type="Sprite3D" parent="AreaCombatTrigger2" unique_id=1123358555]
-billboard = 2
-texture = ExtResource("20_3h328")
-
-[node name="Area3D" type="Area3D" parent="AreaCombatTrigger2" unique_id=745929115]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCombatTrigger2/Area3D" unique_id=1510732430]
-shape = SubResource("BoxShape3D_5k7bd")
-
-[node name="CombatEncounter" parent="AreaCombatTrigger2" unique_id=804076589 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
-environment = NodePath("../..")
-
 [node name="PlayerRoaming" parent="." unique_id=183741771 node_paths=PackedStringArray("camera") instance=ExtResource("25_4iuui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7769718, 0.84274244, -22.60845)
 camera = NodePath("../RoamingCamera")
@@ -490,8 +558,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.03
 stateMachine = NodePath("../StateMachine")
 saveRoomScreen = NodePath("SaveRoomScreen")
 
-[node name="SaveRoomScreen" parent="VanSaveSpot" unique_id=231300043 instance=ExtResource("28_dtn4b")]
+[node name="SaveRoomScreen" parent="VanSaveSpot" unique_id=231300043 node_paths=PackedStringArray("environment") instance=ExtResource("28_dtn4b")]
 visible = false
+environment = NodePath("../..")
 
 [node name="RoamingCamera" type="Camera3D" parent="." unique_id=386789011 node_paths=PackedStringArray("player")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.493655, 2.4538345, -23.648527)
@@ -503,13 +572,13 @@ followAxis = Vector3(0, 0, 1)
 followSpeed = 10.0
 
 [node name="CameraZone" type="Area3D" parent="." unique_id=542014272 node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6, 2.5, -24.391)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.71101, 2.5, -24.391)
 script = ExtResource("33_f668u")
 followAxis = Vector3(0, 0, 1)
 camera = NodePath("../RoamingCamera")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraZone" unique_id=1930639691]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.057951, 2.7202258, 27.189396)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.620122, 2.7202258, 27.189396)
 shape = SubResource("BoxShape3D_a2iyh")
 
 [node name="CameraZone2" type="Area3D" parent="." unique_id=1601118492 node_paths=PackedStringArray("camera")]
@@ -539,3 +608,62 @@ shape = SubResource("BoxShape3D_6va1x")
 
 [node name="CombatEncounter" parent="AreaCombatTrigger3" unique_id=204261947 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
 environment = NodePath("../..")
+
+[node name="EnemyCombatTriggers" type="Node" parent="." unique_id=906386666]
+
+[node name="AreaCombatTrigger" type="Node3D" parent="EnemyCombatTriggers" unique_id=398848777 node_paths=PackedStringArray("encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72312903, -17.449348)
+script = ExtResource("31_3h328")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../../StateMachine")
+enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi"), ExtResource("32_2qdxi"), ExtResource("32_2qdxi"), ExtResource("32_2qdxi")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
+
+[node name="Sprite3D" type="Sprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=532928888]
+billboard = 2
+texture = ExtResource("20_3h328")
+
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=2115431899]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger/Area3D" unique_id=456530825]
+shape = SubResource("BoxShape3D_5k7bd")
+
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=1662274057 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
+environment = NodePath("../../..")
+
+[node name="AreaCombatTrigger2" type="Node3D" parent="EnemyCombatTriggers" unique_id=669103872 node_paths=PackedStringArray("encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3872871, 0.72312903, -19.715061)
+script = ExtResource("31_3h328")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../../StateMachine")
+enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
+
+[node name="Sprite3D" type="Sprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=1123358555]
+billboard = 2
+texture = ExtResource("20_3h328")
+
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=745929115]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger2/Area3D" unique_id=1510732430]
+shape = SubResource("BoxShape3D_5k7bd")
+
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=804076589 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
+environment = NodePath("../../..")
+
+[node name="Railing" parent="." unique_id=173950096 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.645326, 0.17355296, -27.209717)
+
+[node name="Railing2" parent="." unique_id=819170436 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5039208, 0.17339069, -27.209717)
+
+[node name="Railing3" parent="." unique_id=48658976 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.4326873, -0.009051919, -27.209717)
+
+[node name="Railing4" parent="." unique_id=482071991 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5884685, -0.009051919, -27.209717)
+
+[node name="Railing5" parent="." unique_id=930385928 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.4731152, -0.009051919, -27.209717)

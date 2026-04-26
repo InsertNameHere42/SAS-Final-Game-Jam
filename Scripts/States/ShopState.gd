@@ -8,10 +8,12 @@ func setShop(shop: ShopScreen) -> void:
 func enter() -> void:
 	if currentShop:
 		currentShop.show()
+		currentShop.startMusic()
 
 func exit() -> void:
 	print("Shop Exited")
 	if currentShop:
+		currentShop.stopMusic()
 		currentShop.hide()
 		currentShop = null
 

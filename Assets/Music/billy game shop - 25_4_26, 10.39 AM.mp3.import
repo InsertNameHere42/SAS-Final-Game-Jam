@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfyplndmy4vyx"
+path="res://.godot/imported/billy game shop - 25_4_26, 10.39 AM.mp3-d83de917627156f8e74f6530040c8051.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/billy game shop - 25_4_26, 10.39 AM.mp3"
+dest_files=["res://.godot/imported/billy game shop - 25_4_26, 10.39 AM.mp3-d83de917627156f8e74f6530040c8051.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

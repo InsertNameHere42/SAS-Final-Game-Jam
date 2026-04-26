@@ -1,7 +1,9 @@
 class_name SaveRoomScreen extends Control
 
 const ITEM_SCENE := preload("res://Scenes/UI/save_room_item.tscn")
+const CARD_SCENE := preload("res://Scenes/UI/upgrade_card.tscn")
 
+@export var environment: Node3D
 @export var emptySlotTexture: Texture2D
 @export var maxSlots: int = 6
 
@@ -24,6 +26,7 @@ var inventoryCards: Array[SaveRoomItem] = []
 signal closed
 
 func open() -> void:
+	environment.resetCombat()
 	PlayerData.restoreHp()
 	print("Inventory: " + str(PlayerData.inventory))
 	slotCards.resize(maxSlots)
@@ -123,14 +126,15 @@ func _buildSlots() -> void:
 	for i in maxSlots:
 		var equipped: Upgrade = PlayerData.equippedUpgrades[i] if i < PlayerData.equippedUpgrades.size() else null
 		if equipped:
-			var card := ITEM_SCENE.instantiate() as SaveRoomItem
+			var card := CARD_SCENE.instantiate() as UpgradeCard
 			slotsRow.add_child(card)
-			card.setup(equipped, SaveRoomItem.DisplayMode.CARD) 
+			card.setup(equipped, 999, false) 
 			slotCards.append(card)
 		else:
 			var placeholder := TextureRect.new()
 			placeholder.texture = emptySlotTexture
-			placeholder.custom_minimum_size = Vector2(64, 64)
+			placeholder.custom_minimum_size = Vector2(90, 160)
+			placeholder.size = Vector2(90, 160)
 			placeholder.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 			placeholder.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			slotsRow.add_child(placeholder)
@@ -143,7 +147,7 @@ func _buildInventory() -> void:
 	for upgrade in PlayerData.inventory:
 		var item := ITEM_SCENE.instantiate() as SaveRoomItem
 		inventoryList.add_child(item)
-		item.setup(upgrade, SaveRoomItem.DisplayMode.LIST)
+		item.setup(upgrade)
 		inventoryCards.append(item)
 	print("Inventory List " + str(inventoryList.get_children()))
 
@@ -151,8 +155,8 @@ func _updateSelection() -> void: #not sure if this allows empty slots to be repl
 	
 	for i in slotCards.size():
 		var isSelected := currentMode == Mode.SLOT_SELECT and i == slotIndex
-		if slotCards[i] is SaveRoomItem:
-			slotCards[i].refresh(false, isSelected)
+		if slotCards[i] is UpgradeCard:
+			slotCards[i].modulate = Color.SKY_BLUE if isSelected else Color.WHITE
 		else:
 			slotCards[i].modulate = Color.SKY_BLUE if isSelected else Color.WHITE
 	

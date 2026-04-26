@@ -10,9 +10,16 @@ const ITEM_SCENE := preload("res://Scenes/UI/shop_item.tscn")
 @onready var tooltipCost: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipCost
 @onready var buyButton: Button = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/BuyButton
 @onready var moneyLeftLabel: Label = $HBoxContainer/VBoxContainer/PanelContainer/MoneyLeftLabel
+@onready var shopMusic: AudioStreamPlayer = $ShopMusic
 
 var items: Array[ShopItem] = []
 var currentIndex: int = 0
+
+func startMusic() -> void:
+	shopMusic.play()
+func stopMusic() -> void:
+	shopMusic.stop()
+
 
 func _ready() -> void:
 	moneyLeftLabel.text = "Cash Left: $" + str(PlayerData.doubloons)
@@ -46,6 +53,12 @@ func _updateTooltip() -> void:
 		items[i].setSelected(i == currentIndex)
 	var upgrade: Upgrade = items[currentIndex].upgrade
 	tooltipIcon.texture = upgrade.offSprite
+	
+	tooltipIcon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	tooltipIcon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED                               
+	tooltipIcon.custom_minimum_size = Vector2(90, 160)
+	tooltipIcon.size = Vector2(90, 160)
+	
 	tooltipName.text = upgrade.upgradeName
 	tooltipDesc.text = upgrade.description
 	tooltipCost.text = "%d gold" % upgrade.cost
