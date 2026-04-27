@@ -1,5 +1,6 @@
 extends Node
 
+
 const SAVE_PATH = "user://saves/save.json"
 
 var lastSaveRoomId: String = ""
@@ -13,6 +14,8 @@ var equippedUpgrades: Array[Upgrade] = []
 var maxUpgrades: int = 6
 var doubloons: int = 50
 var startingMaxEnergy: int = 1
+
+signal loaded
 
 func _ready() -> void:
 	equippedUpgrades.resize(maxUpgrades)
@@ -60,6 +63,7 @@ func _writeToFile() -> void:
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
 	file.close()
+	print("Save written successfully, error: ", FileAccess.get_open_error())
 
 func loadFromFile() -> void:
 	print("File Loaded")
@@ -85,7 +89,9 @@ func loadFromFile() -> void:
 	for i in data["equippedUpgrades"].size():
 		var path: String = data["equippedUpgrades"][i]
 		equippedUpgrades[i] = load(path) if path != "" else null
-		
-	ScreenFade.fadeIn()
+
+
+	loaded.emit()
+	
 	
 	

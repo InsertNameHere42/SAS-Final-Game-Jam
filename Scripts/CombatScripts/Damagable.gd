@@ -10,8 +10,7 @@ class_name Damagable extends AnimatedSprite3D
 var currentHp: int
 const statusEffectIcon = preload("res://Scenes/UI/status_effect_icon.tscn")
 
-
-func _ready() -> void:
+func startCombat():
 	currentHp = maxHp
 	vBox.set_anchors_preset(Control.PRESET_FULL_RECT)
 	
@@ -23,6 +22,9 @@ func _ready() -> void:
 	statusEffectRow.custom_minimum_size = Vector2(0, 20)
 	
 	statusEffectComponent.effectsChanged.connect(updateStatusEffects)
+
+func _ready() -> void:
+	pass
 
 func takeDamage(damage: int, type: String = "normal") -> int: #returns damage taken
 	damage = $StatusEffectComponent.triggerDamageTaken(damage)

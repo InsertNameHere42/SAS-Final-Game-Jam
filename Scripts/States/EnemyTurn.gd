@@ -3,7 +3,7 @@ class_name EnemyTurn extends State
 func enter():
 	environment.focusDefault()
 	if environment.enemyManager.enemies.is_empty():
-		environment.endCombat()
+		environment.endCombat(true)
 	else:
 		await environment.enemyManager.enemiesTakeTurn()
 		environment.player.turnStart()

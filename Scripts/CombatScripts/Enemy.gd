@@ -7,11 +7,16 @@ class_name Enemy extends Damagable
 var nextAction: EnemyAction
 var hovered: bool = false
 
-func _ready() -> void:
-	super._ready()
+
+func startCombat() -> void:
+	super.startCombat()
 	selected(false)
 	hoverDetector.mouse_entered.connect(onMouseEntered)
 	hoverDetector.mouse_exited.connect(onMouseExited)
+
+func _ready() -> void:
+	super._ready()
+	
 
 func chooseAction() -> void:
 	nextAction = _weighted_random(possibleActions)

@@ -92,4 +92,5 @@ stream = ExtResource("14_m1whs")
 [node name="SongMain" type="AudioStreamPlayer" parent="Music" unique_id=557401311]
 stream = ExtResource("15_tt4gc")
 
+[connection signal="playerDied" from="Player" to="." method="_on_player_player_died"]
 [connection signal="finished" from="Music/SongIntro" to="." method="_on_song_intro_finished"]

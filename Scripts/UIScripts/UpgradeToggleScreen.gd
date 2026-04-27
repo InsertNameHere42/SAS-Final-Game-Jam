@@ -5,7 +5,8 @@ class_name UpgradeToggleScreen extends CanvasLayer
 
 const cardScene := preload("res://Scenes/UI/upgrade_card.tscn")
 
-@onready var upgradeRow: HBoxContainer = $UpgradeRow
+@onready var energyLabel: RichTextLabel = $PanelContainer/PedalboardTexture/EnergyLabel
+@onready var upgradeRow: HBoxContainer = $PanelContainer/MarginContainer/UpgradeRow
 @onready var tooltipDesc: Label = $TooltipPanel/VBoxContainer/DescLabel
 @onready var tooltipName: Label = $TooltipPanel/VBoxContainer/NameLabel
 @onready var tooltipPanel: PanelContainer = $TooltipPanel
@@ -25,6 +26,7 @@ func _buildCards() -> void:
 	cards.clear()
 	
 	upgradeRow.add_theme_constant_override("separation", 16)
+	updateEnergy()
 	
 	
 	for upgrade in encounter.player.upgradeSlots:
@@ -43,6 +45,7 @@ func _buildCards() -> void:
 func _rebuildCards() -> void:
 	for i in cards.size():
 		cards[i].setup(cards[i].upgrade, encounter.player.getRemainingEnergy(), true)
+	updateEnergy()
 
 func navigateLeft() -> void:
 	currentIndex = (currentIndex - 1 + cards.size()) % cards.size()
@@ -77,6 +80,7 @@ func _onToggled(upgrade: Upgrade) -> void:
 	encounter.player.toggleUpgrade(upgrade)
 	_rebuildCards()
 	_updateTooltip()
+	updateEnergy()
 
 func _positionTooltip() -> void:
 	var card: UpgradeCard = cards[currentIndex]
@@ -86,7 +90,8 @@ func _positionTooltip() -> void:
 	var tooltipY := cardPos.y + card.size.y + 8
 	tooltipPanel.global_position = Vector2(tooltipX, tooltipY)
 		
-		
+func updateEnergy() -> void:
+	energyLabel.text = "[font size=32][shake][color=#FFFF00]energy: " + str(encounter.player.getRemainingEnergy()) + "/" + str(encounter.player.maxEnergy)
 		
 		
 		

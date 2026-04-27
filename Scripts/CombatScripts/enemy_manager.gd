@@ -14,7 +14,6 @@ func start() -> void:
 				enemies.append(child)
 			else:
 				child.queue_free() #if there's too many enemies, just remove them
-	print("Enemies: " + str(enemies))
 
 func enemiesTakeTurn() -> void:
 	for enemy in enemies.duplicate():
@@ -41,9 +40,7 @@ func resetEnemyAnimations() -> void:
 		enemy.play("Idle")
 
 func spawnEnemies(scenes: Array[PackedScene]) -> void:
-	print("Attempting to spawn enemies")
 	for scene in scenes:
-		print("Enemy Spawned")
 		var enemy: Enemy = scene.instantiate() as Enemy
 		add_child(enemy)
 		enemy.damageNumberManager = encounter.damageNumberManager
@@ -55,3 +52,7 @@ func cleanup() -> void:
 	enemies.clear()
 	
 	
+func startCombat() -> void:
+	for enemy in enemies:
+		if enemy:
+			enemy.startCombat()

@@ -38,6 +38,8 @@ func startCombat(gsm: StateMachine, enemyScenes: Array[PackedScene]) -> void:
 	combatCamera.make_current()
 	enemyManager.start()
 	stateMachine.start()
+	player.startCombat()
+	enemyManager.startCombat()
 
 func _placeEnemies() -> void:
 	var i: int = 0
@@ -49,7 +51,7 @@ func _placeEnemies() -> void:
 			i += 1
 	print("total enemies placed: ", i)
 
-func endCombat() -> void:
+func endCombat(win: bool) -> void:
 	songIntro.stop()
 	songMain.stop()
 	stateMachine.stopCombat()
@@ -67,7 +69,10 @@ func shakeCamera(strength: float = 0.15, duration: float = 0.05) -> void:
 func screenFreeze(duration: float = 0.05):
 	ScreenFreeze.freeze(duration)
 	
-
-	
 func _on_song_intro_finished() -> void:
 	songMain.play()
+
+
+
+func _on_player_player_died() -> void:
+	endCombat(false)

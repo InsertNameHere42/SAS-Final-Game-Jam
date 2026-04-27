@@ -8,7 +8,6 @@ func setEncounter(encounter: CombatEncounter) -> void:
 func enter() -> void:
 	if currentEncounter:
 		environment.playerRoaming.hide()
-		currentEncounter.player.startCombat()
 		currentEncounter.show()
 		
 

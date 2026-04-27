@@ -24,6 +24,11 @@ PlayerData="*uid://cm6yv3rcddgcg"
 ScreenFade="*uid://cta4uce0mftkp"
 ScreenFreeze="*uid://dnqdgmufgqsdd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")

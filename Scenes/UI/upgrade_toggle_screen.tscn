@@ -1,27 +1,59 @@
 [gd_scene format=3 uid="uid://dnejqew27q7ns"]
 
 [ext_resource type="Script" uid="uid://c5o8rssnq6475" path="res://Scripts/UIScripts/UpgradeToggleScreen.gd" id="1_8a25k"]
-[ext_resource type="Texture2D" uid="uid://cmquae0pwqnie" path="res://Assets/Placeholders/pedalboard.png" id="2_dmq8x"]
+[ext_resource type="Texture2D" uid="uid://dogo3fyg6n72k" path="res://Assets/UI/pedalboard.png" id="2_dmq8x"]
 
 [node name="UpgradeToggleScreen" type="CanvasLayer" unique_id=1629356387]
 visible = false
 script = ExtResource("1_8a25k")
 
-[node name="PedalboardTexture" type="TextureRect" parent="." unique_id=2704268]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1899962977]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -294.0
-offset_top = -151.0
-offset_right = 294.0
-offset_bottom = 151.0
+offset_left = -360.0
+offset_top = -202.5
+offset_right = 360.0
+offset_bottom = 202.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+
+[node name="PedalboardTexture" type="TextureRect" parent="PanelContainer" unique_id=2704268]
+custom_minimum_size = Vector2(720, 405)
+layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_dmq8x")
+expand_mode = 1
+
+[node name="EnergyLabel" type="RichTextLabel" parent="PanelContainer/PedalboardTexture" unique_id=632178674]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.13611111
+offset_left = 100.0
+offset_top = -20.0
+offset_right = 243.0
+offset_bottom = 87.5
+bbcode_enabled = true
+text = "[font size=32][shake][color=#FFFF00]energy: "
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1253858032]
+layout_mode = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="UpgradeRow" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1889496131]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="TooltipPanel" type="PanelContainer" parent="." unique_id=1029625069]
 offset_right = 40.0
@@ -42,12 +74,3 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[node name="UpgradeRow" type="HBoxContainer" parent="." unique_id=1889496131]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2

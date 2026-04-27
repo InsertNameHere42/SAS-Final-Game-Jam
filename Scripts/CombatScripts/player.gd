@@ -17,17 +17,19 @@ var usedEnergy: int = 0
 
 
 func startCombat():
+	super.startCombat()
 	print("Combat Started Player")
 	maxHp = PlayerData.maxHp
 	currentHp = PlayerData.currentHp
 	upgradeSlots = PlayerData.equippedUpgrades
 	maxEnergy = PlayerData.startingMaxEnergy
-	maxEnergy = 1
+	maxEnergy = 0
 	usedEnergy = 0
 	for upgrade in upgradeSlots: #reset at start of combat
 		if upgrade and upgrade.isOn:
 			upgrade.isOn = false
 			print("Upgrade disabled")
+	turnStart()
 
 func _process(_delta: float) -> void:
 	pass
@@ -35,7 +37,7 @@ func _process(_delta: float) -> void:
 
 func _ready() -> void:
 	super._ready()
-	turnStart()
+	
 
 func takeDamage(damage: int, type: String = "normal") -> int:
 	takeDamageSFX.play()

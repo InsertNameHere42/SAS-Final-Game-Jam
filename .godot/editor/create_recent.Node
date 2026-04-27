@@ -1,14 +1,14 @@
+RichTextLabel
+PanelContainer
+MarginContainer
 MeshInstance3D
 CollisionShape3D
 StaticBody3D
 AudioStreamPlayer
 Node
 AudioStreamPlayer3D
-PanelContainer
-RichTextLabel
 Label
 VBoxContainer
 Area3D
 Sprite3D
 AreaCombatTrigger
-Node3D

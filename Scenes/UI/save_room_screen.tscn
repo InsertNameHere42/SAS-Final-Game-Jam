@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://00qnrg2np8op" path="res://Scripts/UIScripts/SaveRoomScreen.gd" id="1_6qajr"]
 [ext_resource type="Texture2D" uid="uid://dn7ygxqsd27mu" path="res://Assets/Pedals/PedalPlaceholder.png" id="2_bywu2"]
 [ext_resource type="Texture2D" uid="uid://difkumkyqjgb6" path="res://Assets/Placeholders/vaninside.jpg" id="2_st57v"]
-[ext_resource type="Texture2D" uid="uid://cmquae0pwqnie" path="res://Assets/Placeholders/pedalboard.png" id="3_4lof4"]
+[ext_resource type="Texture2D" uid="uid://dogo3fyg6n72k" path="res://Assets/UI/pedalboard.png" id="4_bywu2"]
 
 [node name="SaveRoomScreen" type="Control" unique_id=231300043]
 layout_mode = 3
@@ -37,16 +37,23 @@ grow_vertical = 2
 size_flags_horizontal = 4
 
 [node name="EquippedPanel" type="PanelContainer" parent="HBoxContainer" unique_id=958686142]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="PedalboardTexture" type="TextureRect" parent="HBoxContainer/EquippedPanel" unique_id=986340775]
+custom_minimum_size = Vector2(720, 405)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("3_4lof4")
+texture = ExtResource("4_bywu2")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/EquippedPanel" unique_id=2034627864]
 layout_mode = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/EquippedPanel/MarginContainer" unique_id=1849556958]
 layout_mode = 2

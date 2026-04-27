@@ -537,6 +537,7 @@ saveRoomScreen = NodePath("SaveRoomScreen")
 visible = false
 environment = NodePath("../../..")
 saveRoomId = "TestSaveRoom"
+spawnPosition = Vector3(0.5, 0.8, -20.4)
 
 [node name="StateMachine" type="Node" parent="." unique_id=954152002 node_paths=PackedStringArray("initialState")]
 script = ExtResource("17_3xqub")
