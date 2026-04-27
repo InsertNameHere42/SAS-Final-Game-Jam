@@ -1,5 +1,11 @@
 extends Node
 
+const SAVE_PATH = "user://saves/save.json"
+
+var lastSaveRoomId: String = ""
+var lastSpawnPosition: Vector3 = Vector3.ZERO
+var lastScenePath: String = ""
+
 var maxHp: int = 90
 var currentHp: int = 90
 var inventory: Array[Upgrade] = []
@@ -31,3 +37,55 @@ func isEquipped(upgrade: Upgrade) -> bool:
 func ownsUpgrade(upgrade: Upgrade) -> bool:
 	var check := func(u): return u == upgrade
 	return inventory.any(check)
+	
+func save(saveRoom: SaveRoomScreen):
+	lastSaveRoomId = saveRoom.saveRoomId
+	lastSpawnPosition = saveRoom.spawnPosition
+	lastScenePath = saveRoom.get_tree().current_scene.scene_file_path
+	_writeToFile()
+
+func _writeToFile() -> void:
+	DirAccess.make_dir_recursive_absolute("user://saves")
+	var data := {
+		"currentHp": currentHp,
+		"maxHp": maxHp,
+		"doubloons": doubloons,
+		"startingMaxEnergy": startingMaxEnergy,
+		"lastSaveRoomId": lastSaveRoomId,
+		"lastSpawnPosition": { "x": lastSpawnPosition.x, "y": lastSpawnPosition.y, "z": lastSpawnPosition.z },
+		"lastScenePath": lastScenePath,
+		"inventory": inventory.map(func(u): return u.resource_path),
+		"equippedUpgrades": equippedUpgrades.map(func(u): return u.resource_path if u else "")
+	}
+	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	file.store_string(JSON.stringify(data))
+	file.close()
+
+func loadFromFile() -> void:
+	print("File Loaded")
+	if not FileAccess.file_exists(SAVE_PATH): return
+	var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
+	var data: Dictionary = JSON.parse_string(file.get_as_text())
+	file.close()
+	
+	currentHp = data["currentHp"]
+	maxHp = data["maxHp"]
+	doubloons = data["doubloons"]
+	startingMaxEnergy = data["startingMaxEnergy"]
+	lastSaveRoomId = data["lastSaveRoomId"]
+	lastScenePath = data["lastScenePath"]
+	var sp = data["lastSpawnPosition"]
+	lastSpawnPosition = Vector3(sp["x"], sp["y"], sp["z"])
+	
+	inventory.clear()
+	for path in data["inventory"]:
+		inventory.append(load(path))
+	
+	equippedUpgrades.resize(maxUpgrades)
+	for i in data["equippedUpgrades"].size():
+		var path: String = data["equippedUpgrades"][i]
+		equippedUpgrades[i] = load(path) if path != "" else null
+		
+	ScreenFade.fadeIn()
+	
+	

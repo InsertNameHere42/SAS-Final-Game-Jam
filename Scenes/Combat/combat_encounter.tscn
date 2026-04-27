@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://be3ec24gjf30j" path="res://Assets/Music/CombatMusic.mp3" id="15_tt4gc"]
 [ext_resource type="PackedScene" uid="uid://dnejqew27q7ns" path="res://Scenes/UI/upgrade_toggle_screen.tscn" id="16_kgebq"]
 
-[sub_resource type="Resource" id="Resource_4s4iv"]
+[sub_resource type="Resource" id="Resource_m1whs"]
 resource_local_to_scene = true
 script = ExtResource("3_whduv")
 effectName = "Block!"
@@ -50,7 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9697075, 0, -0.019)
 frame = 5
 frame_progress = 0.24486433
 encounter = NodePath("..")
-baseBlock = SubResource("Resource_4s4iv")
+baseBlock = SubResource("Resource_m1whs")
 maxHp = 90
 damageNumberManager = NodePath("../DamageNumberManager")
 

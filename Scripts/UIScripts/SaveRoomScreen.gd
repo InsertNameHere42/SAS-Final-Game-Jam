@@ -6,6 +6,8 @@ const CARD_SCENE := preload("res://Scenes/UI/upgrade_card.tscn")
 @export var environment: Node3D
 @export var emptySlotTexture: Texture2D
 @export var maxSlots: int = 6
+@export var saveRoomId: String
+@export var spawnPosition: Vector3
 
 @onready var slotsRow: HBoxContainer = $HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer/SlotsRow
 @onready var inventoryList: VBoxContainer = $HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/InventoryList
@@ -38,10 +40,12 @@ func open() -> void:
 	_buildInventory()
 	_updateSelection()
 	show()
+	PlayerData.save(self)
 	
 func close() -> void:
 	closed.emit()
 	hide()
+	PlayerData.save(self)
 	
 func navigateUp() -> void:
 	if inventoryCards.size() == 0:

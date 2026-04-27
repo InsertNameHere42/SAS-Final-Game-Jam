@@ -1,7 +1,0 @@
-res://Shaders/Sky.gdshader
-res://Shaders/VHS.gdshader
-res://railing.tscn
-res://Scenes/roaming.tscn
-res://Scenes/Meshes/railing.tscn
-res://Shaders/Water.gdshader
-res://Scripts/UIScripts/saveRoomItem.gd

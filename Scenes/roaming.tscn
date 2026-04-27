@@ -528,6 +528,16 @@ stateMachine = NodePath("../../StateMachine")
 visible = false
 availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug")])
 
+[node name="VanSaveSpot" parent="POIs" unique_id=141963415 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.039001)
+stateMachine = NodePath("../../StateMachine")
+saveRoomScreen = NodePath("SaveRoomScreen")
+
+[node name="SaveRoomScreen" parent="POIs/VanSaveSpot" unique_id=231300043 node_paths=PackedStringArray("environment") instance=ExtResource("28_dtn4b")]
+visible = false
+environment = NodePath("../../..")
+saveRoomId = "TestSaveRoom"
+
 [node name="StateMachine" type="Node" parent="." unique_id=954152002 node_paths=PackedStringArray("initialState")]
 script = ExtResource("17_3xqub")
 initialState = NodePath("RoamingState")
@@ -552,15 +562,6 @@ environment = NodePath("../..")
 [node name="PlayerRoaming" parent="." unique_id=183741771 node_paths=PackedStringArray("camera") instance=ExtResource("25_4iuui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7769718, 0.84274244, -22.60845)
 camera = NodePath("../RoamingCamera")
-
-[node name="VanSaveSpot" parent="." unique_id=141963415 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.039001)
-stateMachine = NodePath("../StateMachine")
-saveRoomScreen = NodePath("SaveRoomScreen")
-
-[node name="SaveRoomScreen" parent="VanSaveSpot" unique_id=231300043 node_paths=PackedStringArray("environment") instance=ExtResource("28_dtn4b")]
-visible = false
-environment = NodePath("../..")
 
 [node name="RoamingCamera" type="Camera3D" parent="." unique_id=386789011 node_paths=PackedStringArray("player")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.493655, 2.4538345, -23.648527)

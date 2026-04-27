@@ -49,6 +49,9 @@ func takeDamage(damage: int, type: String = "normal") -> int:
 func die() -> void:
 	print("Player Died")
 	emit_signal("playerDied")
+	await ScreenFade.fadeOut()
+	PlayerData.loadFromFile()
+	
 	
 #this will play an attack animation and calculate the damage done
 func attack() -> AttackContext: 
