@@ -1,6 +1,6 @@
 class_name LimiterUpgrade extends Upgrade
 
-@export var blockGainMult: float = 2.0
+@export var blockDamageDecrease: int = 2
 
 func modifyDefend(_context: DefendContext) -> void:
-	_context.blockAmount = int(_context.blockAmount*blockGainMult)
+	_context.blockEffect.flatDamageDecrease = blockDamageDecrease

@@ -1,10 +1,11 @@
 @abstract
 class_name Damagable extends AnimatedSprite3D
 
+@onready var hpAmount: Label = $HealthViewPort/VBoxContainer/PanelContainer/HpAmount
 @onready var vBox: VBoxContainer = $HealthViewPort/VBoxContainer
 @onready var statusEffectComponent: StatusEffectComponent = $StatusEffectComponent
 @onready var statusEffectRow: HBoxContainer = $HealthViewPort/VBoxContainer/StatusEffectRow
-@onready var healthBar: ProgressBar = $HealthViewPort/VBoxContainer/ProgressBar
+@onready var healthBar: ProgressBar = $HealthViewPort/VBoxContainer/PanelContainer/ProgressBar
 @export var maxHp: int
 @export var damageNumberManager: DamageNumberManager
 var currentHp: int
@@ -16,12 +17,14 @@ func startCombat():
 	
 	healthBar.max_value = maxHp
 	healthBar.value = currentHp
+	hpAmount.text = str(currentHp) + "/" + str(maxHp)
 	
 	healthBar.custom_minimum_size = Vector2 (0, 20)
 	
 	statusEffectRow.custom_minimum_size = Vector2(0, 20)
 	
 	statusEffectComponent.effectsChanged.connect(updateStatusEffects)
+	
 
 func _ready() -> void:
 	pass
@@ -31,6 +34,7 @@ func takeDamage(damage: int, type: String = "normal") -> int: #returns damage ta
 	damageNumberManager.spawn(damage, type, global_position)
 	currentHp-=damage
 	healthBar.value = currentHp
+	hpAmount.text = str(currentHp) + "/" + str(maxHp)
 	if currentHp<=0:
 		die()
 	return damage

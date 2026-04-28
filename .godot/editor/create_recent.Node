@@ -1,4 +1,6 @@
 RichTextLabel
+VBoxContainer
+Label
 PanelContainer
 MarginContainer
 MeshInstance3D
@@ -7,8 +9,6 @@ StaticBody3D
 AudioStreamPlayer
 Node
 AudioStreamPlayer3D
-Label
-VBoxContainer
 Area3D
 Sprite3D
 AreaCombatTrigger

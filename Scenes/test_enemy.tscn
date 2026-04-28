@@ -138,9 +138,8 @@ animations = [{
 [sub_resource type="Resource" id="Resource_lm5xo"]
 resource_local_to_scene = true
 script = ExtResource("5_yojx0")
-atkDmg = 15
 actionName = "Attack!"
-weight = 75
+weight = 70
 animationName = "Attack"
 metadata/_custom_type_script = "uid://37ixs2yas0a2"
 
@@ -156,6 +155,7 @@ resource_local_to_scene = true
 script = ExtResource("6_6kygu")
 statusEffect = SubResource("Resource_3sp1v")
 actionName = "Block!"
+weight = 30
 metadata/_custom_type_script = "uid://b4l7koanb5qxc"
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_cvapq"]
@@ -199,10 +199,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort/VBoxContainer" unique_id=80013772]
+[node name="PanelContainer" type="PanelContainer" parent="HealthViewPort/VBoxContainer" unique_id=811833815]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=80013772]
+layout_mode = 2
+size_flags_vertical = 4
 value = 50.0
 allow_lesser = true
+show_percentage = false
+
+[node name="HpAmount" type="Label" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=1831818603]
+layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="StatusEffectRow" type="HBoxContainer" parent="HealthViewPort/VBoxContainer" unique_id=1661662862]
 layout_mode = 2

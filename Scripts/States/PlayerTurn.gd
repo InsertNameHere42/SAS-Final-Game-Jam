@@ -17,6 +17,7 @@ func update(_delta: float):
 		environment.player.statusEffectComponent.applyEffect(context.blockEffect) #a bit wonky I know, but since block is the main part of defending. I'm keeping it as it's own variable
 		for effect in context.statusEffectsToApplyPlayer:
 			environment.player.statusEffectComponent.applyEffects(effect)
+		await get_tree().create_timer(0.8).timeout
 		transitioned.emit(self, "enemyturn")
 	if Input.is_action_just_pressed("Modify"):
 		transitioned.emit(self, "modifystate")

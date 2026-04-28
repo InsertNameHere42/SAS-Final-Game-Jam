@@ -43,6 +43,7 @@
 [ext_resource type="Script" uid="uid://ds247js4bk1j6" path="res://Scripts/Upgrades/Reverb.gd" id="31_bhyo4"]
 [ext_resource type="PackedScene" uid="uid://bqwqxi3atc7sc" path="res://Scenes/test_enemy.tscn" id="32_2qdxi"]
 [ext_resource type="Script" uid="uid://c5imh7qsgm7va" path="res://Scripts/RoamingScripts/RoamingCamera.gd" id="32_5k7bd"]
+[ext_resource type="Script" uid="uid://f4fsxcpgrcj2" path="res://Scripts/Upgrades/Limiter.gd" id="32_bhyo4"]
 [ext_resource type="PackedScene" uid="uid://dansr6dmqv388" path="res://Scenes/Combat/combat_encounter.tscn" id="33_5k7bd"]
 [ext_resource type="Script" uid="uid://bsfjo7hkmht7v" path="res://Scripts/RoamingScripts/CameraZone.gd" id="33_f668u"]
 [ext_resource type="PackedScene" uid="uid://dk6puebsqpa03" path="res://Scenes/Meshes/railing.tscn" id="46_vqfcb"]
@@ -173,6 +174,23 @@ offSprite = ExtResource("29_njlu1")
 onSprite = ExtResource("30_vqfcb")
 cost = 10
 metadata/_custom_type_script = "uid://ds247js4bk1j6"
+
+[sub_resource type="Resource" id="Resource_2g8bb"]
+script = ExtResource("32_bhyo4")
+upgradeName = "Sound Limited"
+description = "Block reduces incoming damage by 2"
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
+metadata/_custom_type_script = "uid://f4fsxcpgrcj2"
+
+[sub_resource type="Resource" id="Resource_bhyo4"]
+script = ExtResource("24_a2iyh")
+damageBoostPercent = 0.25
+additionalHits = 19
+upgradeName = "yayyy"
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
+metadata/_custom_type_script = "uid://bhkc0g15m8xn2"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2iyh"]
 size = Vector3(11.702637, 10.669434, 60.130493)
@@ -526,7 +544,7 @@ stateMachine = NodePath("../../StateMachine")
 
 [node name="ShopScreen" parent="POIs/MusicShop" unique_id=1474026120 instance=ExtResource("18_4dv2k")]
 visible = false
-availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug")])
+availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug"), SubResource("Resource_2g8bb"), SubResource("Resource_bhyo4")])
 
 [node name="VanSaveSpot" parent="POIs" unique_id=141963415 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.039001)

@@ -66,6 +66,8 @@ layout_mode = 2
 size_flags_vertical = 4
 
 [node name="InventoryPanel" type="PanelContainer" parent="HBoxContainer" unique_id=1081730672]
+clip_contents = true
+custom_minimum_size = Vector2(256, 405)
 layout_mode = 2
 size_flags_horizontal = 8
 
@@ -74,6 +76,12 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer" unique_id=1574846083]
 layout_mode = 2
+
+[node name="CashLabel" type="RichTextLabel" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=1835769543]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][color=ffff29][font_size=32][center][tornado radius=7 freq=1] Held Cash: $"
+fit_content = true
 
 [node name="InventoryLabel" type="Label" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=972479483]
 layout_mode = 2
@@ -94,9 +102,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
+offset_left = -37.0
+offset_bottom = 31.0
 grow_horizontal = 0
+text = "Exit"
 
 [node name="TooltipPanel" type="PanelContainer" parent="." unique_id=737149447]
 layout_mode = 0

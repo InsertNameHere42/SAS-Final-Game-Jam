@@ -9,6 +9,7 @@ const CARD_SCENE := preload("res://Scenes/UI/upgrade_card.tscn")
 @export var saveRoomId: String
 @export var spawnPosition: Vector3
 
+@onready var cashLabel: RichTextLabel = $HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/CashLabel
 @onready var slotsRow: HBoxContainer = $HBoxContainer/EquippedPanel/MarginContainer/VBoxContainer/SlotsRow
 @onready var inventoryList: VBoxContainer = $HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/InventoryList
 @onready var tooltipPanel: PanelContainer = $TooltipPanel
@@ -28,6 +29,7 @@ var inventoryCards: Array[SaveRoomItem] = []
 signal closed
 
 func open() -> void:
+	cashLabel.text = "[b][color=ffff29][font_size=32][center][tornado radius=7 freq=1] Held Cash: $" + str(PlayerData.doubloons)
 	environment.resetCombat()
 	PlayerData.restoreHp()
 	print("Inventory: " + str(PlayerData.inventory))

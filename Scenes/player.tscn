@@ -234,10 +234,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort/VBoxContainer" unique_id=1755686815]
+[node name="PanelContainer" type="PanelContainer" parent="HealthViewPort/VBoxContainer" unique_id=1438495230]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+
+[node name="HpAmount" type="Label" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=84852793]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "50/100
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=1351844261]
+layout_mode = 2
+size_flags_vertical = 4
 value = 50.0
 allow_lesser = true
+show_percentage = false
 
 [node name="StatusEffectRow" type="HBoxContainer" parent="HealthViewPort/VBoxContainer" unique_id=1824165989]
 layout_mode = 2

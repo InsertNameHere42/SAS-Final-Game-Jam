@@ -49,6 +49,23 @@ func save(saveRoom: SaveRoomScreen):
 
 func _writeToFile() -> void:
 	DirAccess.make_dir_recursive_absolute("user://saves")
+	DirAccess.make_dir_recursive_absolute("user://saves/upgrades")
+	
+	var inventoryPaths: Array = []
+	for u in inventory:
+		var path := "user://saves/upgrades/" + u.upgradeName + ".tres"
+		ResourceSaver.save(u, path)
+		inventoryPaths.append(path)
+	
+	var equippedPaths: Array = []
+	for u in equippedUpgrades:
+		if u:
+			var path := "user://saves/upgrades/" + u.upgradeName + ".tres"
+			ResourceSaver.save(u, path)
+			equippedPaths.append(path)
+		else:
+			equippedPaths.append("")
+	
 	var data := {
 		"currentHp": currentHp,
 		"maxHp": maxHp,
@@ -57,8 +74,8 @@ func _writeToFile() -> void:
 		"lastSaveRoomId": lastSaveRoomId,
 		"lastSpawnPosition": { "x": lastSpawnPosition.x, "y": lastSpawnPosition.y, "z": lastSpawnPosition.z },
 		"lastScenePath": lastScenePath,
-		"inventory": inventory.map(func(u): return u.resource_path),
-		"equippedUpgrades": equippedUpgrades.map(func(u): return u.resource_path if u else "")
+		"inventory": inventoryPaths,
+		"equippedUpgrades": equippedPaths
 	}
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))

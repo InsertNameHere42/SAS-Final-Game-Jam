@@ -11,6 +11,7 @@ class_name CombatEncounter extends Node3D
 @onready var songMain: AudioStreamPlayer = $Music/SongMain
 
 
+@export var goldReward: int = 5
 @export var enemyStepX: float = 10.0
 @export var enemyStepZ: float = 10.0
 @export var environment: Node
@@ -62,6 +63,8 @@ func endCombat(win: bool) -> void:
 	environment.roamingCamera.make_current()
 	gameStateMachine.onChildTransition(gameStateMachine.currentState, "roamingstate")
 	await ScreenFade.fadeIn()
+	if win:
+		PlayerData.doubloons += goldReward
 
 func shakeCamera(strength: float = 0.15, duration: float = 0.05) -> void:
 	combatCamera.shake(strength, duration)

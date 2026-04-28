@@ -11,5 +11,5 @@ func onTurnEnd(_target): pass
 func onTurnStart(_target): pass
 func onRemove(_target): pass
 func onDamageTaken(_target, _damage: int) -> int: return _damage
-func onAttack(_target): pass
+func onAttack(_target, attackContext: AttackContext): return attackContext
 func onUtility(_target): pass #blocking for player, non-attack for enemies

@@ -25,10 +25,11 @@ func triggerDamageTaken(damage: int) -> int:
 	return damage
 	
 
-func triggerAttack():
+func modifyAttack(attackContext: AttackContext) -> AttackContext:
 	for effect in activeEffects:
-		effect.onAttack(owner)
+		effect.onAttack(owner, attackContext)
 	effectsChanged.emit()
+	return attackContext
 
 func _findEffect(searchName: String) -> StatusEffect:
 	for effect in activeEffects: if effect.effectName == searchName: return effect
