@@ -46,6 +46,7 @@ func updateStatusEffects() -> void:
 		var icon := statusEffectIcon.instantiate()
 		statusEffectRow.add_child(icon)
 		icon.setup(effect, effect.stacks)
-		
+
+
 @abstract 
 func die()

@@ -65,6 +65,7 @@ func endCombat(win: bool) -> void:
 	await ScreenFade.fadeIn()
 	if win:
 		PlayerData.doubloons += goldReward
+		PlayerData.currentHp = player.currentHp
 
 func shakeCamera(strength: float = 0.15, duration: float = 0.05) -> void:
 	combatCamera.shake(strength, duration)

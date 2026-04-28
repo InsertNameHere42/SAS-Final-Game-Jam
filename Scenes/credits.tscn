@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://yg3twa8mbxr3"]
+
+[ext_resource type="Script" uid="uid://bekfsptpoc6v" path="res://Scripts/UIScripts/credits.gd" id="1_1bamb"]
+[ext_resource type="PackedScene" uid="uid://d0pe2qxfpjolf" path="res://Scenes/roaming.tscn" id="2_xelri"]
+[ext_resource type="Texture2D" uid="uid://clil2isw4w0d0" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_up.png" id="3_uah1q"]
+[ext_resource type="FontFile" uid="uid://dw5fxu6x67b30" path="res://Assets/Fonts/Pinkend.ttf" id="4_7emq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xelri"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uah1q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7emq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_803yc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1wbrc"]
+
+[node name="Credits" type="CanvasLayer" unique_id=2110431524]
+script = ExtResource("1_1bamb")
+
+[node name="Background" type="Node3D" parent="." unique_id=1220923446]
+
+[node name="Background Scene" parent="Background" unique_id=1428682443 instance=ExtResource("2_xelri")]
+
+[node name="Sprite3D" type="Sprite3D" parent="Background/Background Scene" unique_id=131482648]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 70.25255, 0.9183774, 52.0971)
+pixel_size = 0.04
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 2
+texture = ExtResource("3_uah1q")
+hframes = 8
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Background" unique_id=599850797]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stretch = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer" unique_id=1019900030]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport" unique_id=1533965979]
+transform = Transform3D(0.19236767, -0.78398335, -0.59022444, 0.11106349, 0.614987, -0.78067666, 0.9750178, 0.08462455, 0.20537555, 150.27219, 319.29993, 106.55232)
+fov = 60.0
+
+[node name="Control" type="Control" parent="." unique_id=527829041]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=466490673]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=547315049]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/VBoxContainer" unique_id=983492413]
+custom_minimum_size = Vector2(500, 125)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("4_7emq5")
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[pulse freq=0.3][center]Credits"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="HamLabel" type="RichTextLabel" parent="Control/MarginContainer/VBoxContainer" unique_id=1580053677]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("4_7emq5")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "
+[center]animation & spritework - [shake]Ethan Ham
+
+"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="CoppelLabel" type="RichTextLabel" parent="Control/MarginContainer/VBoxContainer" unique_id=192777355]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("4_7emq5")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "
+[center]Music & SFX - [wave]Clay Coppell
+
+"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MeLabel" type="RichTextLabel" parent="Control/MarginContainer/VBoxContainer" unique_id=223233613]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("4_7emq5")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "
+[center]Programming - [tornado]Billy Steckler
+
+"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MiscCredits" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=136025180]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_7emq5")
+theme_override_font_sizes/font_size = 32
+text = "Misc Credits:
+Pinkend Font - khurasan on 1001fonts
+Toon water shader - pindra on GodotShaders
+misc assets - kenny
+Step2 sfx - EvaMusik on freesound.org
+
+I'm sorry but I can't find the webpage for the placeholder player or buildings"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="Control/MarginContainer" unique_id=681811620]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_pressed_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_hover_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("4_7emq5")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xelri")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uah1q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7emq5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_803yc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1wbrc")
+text = "Back to menu"
+
+[connection signal="pressed" from="Control/MarginContainer/BackButton" to="." method="_on_back_button_pressed"]

@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="6_6kygu"]
 [ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="7_0hxvo"]
 [ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="8_cvapq"]
-[ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="8_ngp1l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gdc5"]
 atlas = ExtResource("1_ymh8f")
@@ -138,6 +137,7 @@ animations = [{
 [sub_resource type="Resource" id="Resource_lm5xo"]
 resource_local_to_scene = true
 script = ExtResource("5_yojx0")
+atkDmg = 20
 actionName = "Attack!"
 weight = 70
 animationName = "Attack"
@@ -147,7 +147,6 @@ metadata/_custom_type_script = "uid://37ixs2yas0a2"
 script = ExtResource("7_0hxvo")
 effectName = "Block"
 stacks = 4
-texture = ExtResource("8_ngp1l")
 metadata/_custom_type_script = "uid://djxhiomxyr7hq"
 
 [sub_resource type="Resource" id="Resource_yn0oc"]

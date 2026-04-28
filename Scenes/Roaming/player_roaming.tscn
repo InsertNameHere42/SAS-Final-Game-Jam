@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://da1mvouxf57jg" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_left.png" id="7_ymgvg"]
 [ext_resource type="Texture2D" uid="uid://by4u6ysbvjnhi" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_right.png" id="8_ngute"]
 [ext_resource type="Texture2D" uid="uid://b7ge2q0mt8c7t" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png" id="9_qrfnl"]
+[ext_resource type="AudioStream" uid="uid://dtjf1swhn7j21" path="res://Assets/SFX/832741__evamusik__step2.wav" id="10_klcwy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5e70b"]
 height = 1.2587891
@@ -525,7 +526,8 @@ shaded = true
 alpha_cut = 2
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_kkrb6")
-animation = &"RunLeft"
+animation = &"RunUp"
+frame = 7
 
 [node name="InteractArea" type="Area3D" parent="." unique_id=1008179527]
 collision_layer = 0
@@ -533,3 +535,9 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea" unique_id=1946835007]
 shape = SubResource("BoxShape3D_5e70b")
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=1570398750]
+stream = ExtResource("10_klcwy")
+volume_db = -12.596
+
+[connection signal="frame_changed" from="AnimatedSprite3D" to="." method="_on_animated_sprite_3d_frame_changed"]

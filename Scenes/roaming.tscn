@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bdtf2u6a6c6f8" path="res://Scenes/Meshes/3dCityPack/street_lamp.tscn" id="5_2pn50"]
 [ext_resource type="PackedScene" uid="uid://bftv7557bqaoo" path="res://Scenes/Meshes/3dCityPack/TrashCan.tscn" id="6_6nsrk"]
 [ext_resource type="Shader" uid="uid://i0fv8prgv58o" path="res://Shaders/Sky.gdshader" id="8_4dv2k"]
+[ext_resource type="Shader" uid="uid://cjjupyt23towc" path="res://Shaders/Water.gdshader" id="12_ylcug"]
 [ext_resource type="Texture2D" uid="uid://c0kivst236swk" path="res://Assets/Pedals/BossDistortionOff.png" id="14_6bxja"]
 [ext_resource type="Texture2D" uid="uid://b7ie0eyv27abs" path="res://Assets/Pedals/BossDistortionOn.png" id="15_gy0pf"]
 [ext_resource type="PackedScene" uid="uid://ccy3vgufakxi6" path="res://Scenes/Meshes/music_shop.tscn" id="16_qwyxc"]
@@ -46,7 +47,17 @@
 [ext_resource type="Script" uid="uid://f4fsxcpgrcj2" path="res://Scripts/Upgrades/Limiter.gd" id="32_bhyo4"]
 [ext_resource type="PackedScene" uid="uid://dansr6dmqv388" path="res://Scenes/Combat/combat_encounter.tscn" id="33_5k7bd"]
 [ext_resource type="Script" uid="uid://bsfjo7hkmht7v" path="res://Scripts/RoamingScripts/CameraZone.gd" id="33_f668u"]
+[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="38_vggl3"]
+[ext_resource type="Script" uid="uid://cjyhun28mgftu" path="res://Scripts/Upgrades/NoiseGate.gd" id="40_tysw2"]
+[ext_resource type="Script" uid="uid://dxl66dv5mtw1b" path="res://Scripts/Upgrades/Fuzz.gd" id="40_vyu8l"]
 [ext_resource type="PackedScene" uid="uid://dk6puebsqpa03" path="res://Scenes/Meshes/railing.tscn" id="46_vqfcb"]
+[ext_resource type="Texture2D" uid="uid://co044it4tq73x" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png" id="52_nnkj5"]
+[ext_resource type="Texture2D" uid="uid://fwip6kyjf64t" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png" id="52_vggl3"]
+[ext_resource type="Script" uid="uid://bhxe5kxxjl2wi" path="res://Scripts/CombatScripts/Enemy.gd" id="54_llj1i"]
+[ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="55_xaxh8"]
+[ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="56_xyvg4"]
+[ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="57_rfc6k"]
+[ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="58_fv4kp"]
 
 [sub_resource type="Curve" id="Curve_3h328"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.08719346, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8134481), 0.0, 0.0, 0, 0]
@@ -117,6 +128,33 @@ volumetric_fog_emission = Color(0.12298488, 0.12298488, 0.12298488, 1)
 adjustment_enabled = true
 adjustment_saturation = 1.5
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2g8bb"]
+render_priority = 0
+shader = ExtResource("12_ylcug")
+shader_parameter/R = Vector2(0.8, 0.6)
+shader_parameter/scale = 15.0
+shader_parameter/speed = 0.4
+shader_parameter/direction = Vector3(1, 1, 0)
+shader_parameter/distortion = 0.5
+shader_parameter/layers = 2.0
+shader_parameter/shades = 3.0
+shader_parameter/steps = 6
+shader_parameter/tint = Vector3(0.724, 0.265, 0.51)
+shader_parameter/wave1_dir = Vector2(1, 0.3)
+shader_parameter/wave1_amp = 3.0
+shader_parameter/wave1_len = 8.0
+shader_parameter/wave1_steep = 0.6
+shader_parameter/wave1_speed = 0.7
+shader_parameter/wave2_dir = Vector2(0.3, 1)
+shader_parameter/wave2_amp = 1.0
+shader_parameter/wave2_len = 3.5
+shader_parameter/wave2_steep = 0.7
+shader_parameter/wave2_speed = 1.6
+shader_parameter/time_scale = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tswwu"]
+size = Vector2(600, 800)
+
 [sub_resource type="Resource" id="Resource_4dv2k"]
 script = ExtResource("22_5k7bd")
 upgradeName = "Boss DS-2"
@@ -177,30 +215,376 @@ metadata/_custom_type_script = "uid://ds247js4bk1j6"
 
 [sub_resource type="Resource" id="Resource_2g8bb"]
 script = ExtResource("32_bhyo4")
-upgradeName = "Sound Limited"
+upgradeName = "Sound Limiter"
 description = "Block reduces incoming damage by 2"
 offSprite = ExtResource("26_gy0pf")
 onSprite = ExtResource("27_0cqas")
 metadata/_custom_type_script = "uid://f4fsxcpgrcj2"
 
-[sub_resource type="Resource" id="Resource_bhyo4"]
-script = ExtResource("24_a2iyh")
-damageBoostPercent = 0.25
-additionalHits = 19
-upgradeName = "yayyy"
+[sub_resource type="Resource" id="Resource_tswwu"]
+script = ExtResource("38_vggl3")
+percentDamageTaken = 3.0
+effectName = "Block"
+texture = ExtResource("20_3h328")
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_vyu8l"]
+script = ExtResource("40_tysw2")
+blockModifier = SubResource("Resource_tswwu")
+upgradeName = "Sketchy Noise Gate"
+description = "Hitting an enemy with block up cause subsequent hits to deal 300% damage to the block"
 offSprite = ExtResource("26_gy0pf")
 onSprite = ExtResource("27_0cqas")
-metadata/_custom_type_script = "uid://bhkc0g15m8xn2"
+energyCost = 2
+metadata/_custom_type_script = "uid://cjyhun28mgftu"
+
+[sub_resource type="Resource" id="Resource_vggl3"]
+script = ExtResource("40_vyu8l")
+metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2iyh"]
 size = Vector3(11.702637, 10.669434, 60.130493)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f668u"]
-size = Vector3(11.702637, 10.669434, 49.421204)
+size = Vector3(11.702637, 10.669434, 28.838043)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6va1x"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ylcug"]
+size = Vector3(38.64198, 10.7677, 12.014282)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5k7bd"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhyo4"]
+size = Vector3(11.589918, 10.7677, 32.239815)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gdc5"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35bf0"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w08t"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drxrn"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8j30"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(384, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w134b"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(480, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tgui"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(576, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5p76"]
+atlas = ExtResource("52_nnkj5")
+region = Rect2(672, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmbcg"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uajly"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyaa0"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnibh"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ithbu"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(384, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf01m"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(480, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_macjn"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(576, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndehm"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(672, 0, 96, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccakx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gdc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35bf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w08t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drxrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8j30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w134b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tgui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5p76")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmbcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uajly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyaa0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnibh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ithbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf01m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_macjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndehm")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[sub_resource type="Resource" id="Resource_lm5xo"]
+resource_local_to_scene = true
+script = ExtResource("56_xyvg4")
+atkDmg = 20
+actionName = "Attack!"
+weight = 70
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_3sp1v"]
+script = ExtResource("38_vggl3")
+effectName = "Block"
+stacks = 4
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_yn0oc"]
+resource_local_to_scene = true
+script = ExtResource("57_rfc6k")
+statusEffect = SubResource("Resource_3sp1v")
+actionName = "Block!"
+weight = 30
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cvapq"]
+viewport_path = NodePath("HealthViewPort")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngp1l"]
+size = Vector3(0.9682007, 1.3206787, 1)
+
+[sub_resource type="PackedScene" id="PackedScene_6yfru"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
+"node_count": 12,
+"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
+"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
+"version": 3
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nnkj5"]
+size = Vector3(1.6162109, 1.2143555, 1.5537109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vggl3"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tysw2"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nvl4"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jutt0"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w32v"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(384, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yfru"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(480, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnkj5"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(576, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llj1i"]
+atlas = ExtResource("52_vggl3")
+region = Rect2(672, 0, 96, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xaxh8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vggl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tysw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nvl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jutt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w32v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yfru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnkj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llj1i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="PackedScene" id="PackedScene_xyvg4"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
+"node_count": 12,
+"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
+"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_rfc6k"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
+"node_count": 12,
+"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
+"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_fv4kp"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
+"node_count": 12,
+"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
+"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
+"version": 3
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_llj1i"]
+size = Vector3(3.447754, 1.2143555, 2.4125977)
+
+[sub_resource type="PackedScene" id="PackedScene_nnkj5"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
+"node_count": 12,
+"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
+"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_llj1i"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
+"node_count": 12,
+"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
+"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_xaxh8"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
+"node_count": 12,
+"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
+"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
+"version": 3
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xyvg4"]
+size = Vector3(5.7419434, 1.2143555, 6.0180664)
 
 [node name="Roaming" type="Node3D" unique_id=1428682443]
 script = ExtResource("1_3nnlx")
@@ -283,6 +667,60 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.8
 [node name="RoadStraight26" parent="MapMesh" unique_id=241071621 instance=ExtResource("1_x3wg5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.818687, 0, 27)
 
+[node name="RoadStraight27" parent="MapMesh" unique_id=1346140692 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 35.914455)
+
+[node name="RoadStraight28" parent="MapMesh" unique_id=242284795 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 41.914455)
+
+[node name="RoadStraight29" parent="MapMesh" unique_id=377673646 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 47.914455)
+
+[node name="RoadStraight30" parent="MapMesh" unique_id=206859491 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 53.733135)
+
+[node name="RoadStraight31" parent="MapMesh" unique_id=1843747991 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 59.427494)
+
+[node name="RoadStraight32" parent="MapMesh" unique_id=1332057121 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 65.4275)
+
+[node name="RoadStraight33" parent="MapMesh" unique_id=768816855 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 71.4275)
+
+[node name="RoadStraight34" parent="MapMesh" unique_id=1470719388 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 77.24618)
+
+[node name="RoadStraight35" parent="MapMesh" unique_id=1062428383 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 82.969894)
+
+[node name="RoadStraight36" parent="MapMesh" unique_id=530286792 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 88.788574)
+
+[node name="RoadStraight37" parent="MapMesh" unique_id=1662854480 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 94.60623)
+
+[node name="RoadStraight38" parent="MapMesh" unique_id=1052172238 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 100.40402)
+
+[node name="RoadStraight39" parent="MapMesh" unique_id=919137376 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 106.205025)
+
+[node name="RoadStraight40" parent="MapMesh" unique_id=1271352323 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 112.02268)
+
+[node name="RoadStraight41" parent="MapMesh" unique_id=1122595981 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 117.82047)
+
+[node name="RoadStraight42" parent="MapMesh" unique_id=1826178088 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 123.37209)
+
+[node name="RoadStraight43" parent="MapMesh" unique_id=423057392 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 129.18976)
+
+[node name="RoadStraight44" parent="MapMesh" unique_id=109463810 instance=ExtResource("1_x3wg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.69013, 0, 134.98755)
+
 [node name="RoadStraight13" parent="MapMesh" unique_id=1011932152 instance=ExtResource("1_x3wg5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, 27)
 
@@ -299,7 +737,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 27)
 
 [node name="RoadAngled2" parent="MapMesh" unique_id=1653435950 instance=ExtResource("2_eh23o")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 69.86863, 0, 27)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 65.70623, 0, 27)
 
 [node name="ShortHouse" parent="MapMesh" unique_id=2104847026 instance=ExtResource("3_abxf0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 18)
@@ -308,19 +746,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 18)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 19)
 
 [node name="TallHouse2" parent="MapMesh" unique_id=1397701177 instance=ExtResource("4_0s272")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 19)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 23.297852, 0, 18.529982)
 
 [node name="ShortHouse2" parent="MapMesh" unique_id=444022697 instance=ExtResource("3_abxf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 18)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 30.23814, 0, 18.194572)
 
 [node name="ShortHouse3" parent="MapMesh" unique_id=2580380 instance=ExtResource("3_abxf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 18)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 37.213547, 0, 17.577696)
 
 [node name="TallHouse3" parent="MapMesh" unique_id=1939298248 instance=ExtResource("4_0s272")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 19)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 44.928215, 0, 18.642044)
+
+[node name="TallHouse23" parent="MapMesh" unique_id=1448549364 instance=ExtResource("4_0s272")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 67.66693, 0, 18.336046)
+
+[node name="TallHouse24" parent="MapMesh" unique_id=1264002460 instance=ExtResource("4_0s272")]
+transform = Transform3D(-5.2453665e-08, 0, -1.1999999, 0, 1.1999999, 0, 1.1999999, 0, -5.2453665e-08, 74.279686, 0, 25.31805)
+
+[node name="TallHouse25" parent="MapMesh" unique_id=92257155 instance=ExtResource("4_0s272")]
+transform = Transform3D(-5.2453665e-08, 0, -1.1999999, 0, 1.1999999, 0, 1.1999999, 0, -5.2453665e-08, 74.345314, 0, 97.99315)
+
+[node name="TallHouse26" parent="MapMesh" unique_id=734476518 instance=ExtResource("4_0s272")]
+transform = Transform3D(-5.2453665e-08, 0, -1.1999999, 0, 1.1999999, 0, 1.1999999, 0, -5.2453665e-08, 74.345314, 0, 106.71898)
+
+[node name="TallHouse27" parent="MapMesh" unique_id=701414443 instance=ExtResource("4_0s272")]
+transform = Transform3D(-5.2453665e-08, 0, -1.1999999, 0, 1.1999999, 0, 1.1999999, 0, -5.2453665e-08, 74.345314, 0, 115.16465)
+
+[node name="TallHouse28" parent="MapMesh" unique_id=564483932 instance=ExtResource("4_0s272")]
+transform = Transform3D(-5.2453665e-08, 0, -1.1999999, 0, 1.1999999, 0, 1.1999999, 0, -5.2453665e-08, 74.345314, 0, 123.59002)
 
 [node name="ShortHouse4" parent="MapMesh" unique_id=1974389570 instance=ExtResource("3_abxf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 18)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 51.511112, 0, 18.891485)
 
 [node name="ShortHouse5" parent="MapMesh" unique_id=190530912 instance=ExtResource("3_abxf0")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, 11)
@@ -329,16 +785,16 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, 4)
 
 [node name="ShortHouse8" parent="MapMesh" unique_id=1230387571 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -51.943398)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -54.07821)
 
 [node name="ShortHouse9" parent="MapMesh" unique_id=489971922 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -58.943398)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -61.07821)
 
 [node name="ShortHouse10" parent="MapMesh" unique_id=5971505 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -66.00186)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -68.13667)
 
 [node name="ShortHouse11" parent="MapMesh" unique_id=1310302972 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -73.00186)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -75.13667)
 
 [node name="TallHouse4" parent="MapMesh" unique_id=214199335 instance=ExtResource("4_0s272")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -3)
@@ -365,16 +821,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.2
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.224607, 0, 29.445194)
 
 [node name="ShortHouse21" parent="MapMesh" unique_id=583368485 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.775393, 0, 36.079136)
-
-[node name="ShortHouse22" parent="MapMesh" unique_id=1047569640 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 39.67556, 0, 36.079136)
-
-[node name="ShortHouse23" parent="MapMesh" unique_id=533592402 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 46.67556, 0, 36.079136)
-
-[node name="ShortHouse24" parent="MapMesh" unique_id=2106152122 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 53.67556, 0, 36.079136)
+transform = Transform3D(-1.1, 0, -1.6609539e-07, 0, 1.1, 0, 1.6609539e-07, 0, -1.1, 19.061117, 0, 36.70003)
 
 [node name="TallHouse9" parent="MapMesh" unique_id=2032854957 instance=ExtResource("4_0s272")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, 8.445194)
@@ -406,6 +853,45 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.2
 [node name="TallHouse16" parent="MapMesh" unique_id=982417608 instance=ExtResource("4_0s272")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.224606, 0, 22.445194)
 
+[node name="ShortHouse22" parent="MapMesh" unique_id=1684627808 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.20057, 0, 54.618732)
+
+[node name="ShortHouse25" parent="MapMesh" unique_id=80812466 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.20057, 0, 89.59944)
+
+[node name="ShortHouse23" parent="MapMesh" unique_id=1223402046 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.20057, 0, 47.626793)
+
+[node name="ShortHouse24" parent="MapMesh" unique_id=2082189308 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.20057, 0, 61.618732)
+
+[node name="TallHouse32" parent="MapMesh" unique_id=362333830 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 68.61873)
+
+[node name="TallHouse33" parent="MapMesh" unique_id=856760463 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 40.723087)
+
+[node name="TallHouse34" parent="MapMesh" unique_id=1279592716 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 75.61873)
+
+[node name="ShortHouse26" parent="MapMesh" unique_id=1251283154 instance=ExtResource("3_abxf0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56.20057, 0, 110.483536)
+
+[node name="TallHouse38" parent="MapMesh" unique_id=1477885506 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 117.483536)
+
+[node name="TallHouse39" parent="MapMesh" unique_id=902267273 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 124.483536)
+
+[node name="TallHouse35" parent="MapMesh" unique_id=600894768 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 82.61873)
+
+[node name="TallHouse36" parent="MapMesh" unique_id=1909850003 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 96.485275)
+
+[node name="TallHouse37" parent="MapMesh" unique_id=1166718339 instance=ExtResource("4_0s272")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.200573, 0, 103.485275)
+
 [node name="TallHouse17" parent="MapMesh" unique_id=860712020 instance=ExtResource("4_0s272")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.2246056, 0, 35.445194)
 
@@ -416,25 +902,34 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.77
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.775394, 0, 35.445194)
 
 [node name="TallHouse20" parent="MapMesh" unique_id=296872243 instance=ExtResource("4_0s272")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 25.748058, 0, 35.445194)
+transform = Transform3D(-0.7, 0, -1.0569706e-07, 0, 0.7, 0, 1.0569706e-07, 0, -0.7, 25.570566, 0, 34.856045)
 
 [node name="TallHouse21" parent="MapMesh" unique_id=1808192756 instance=ExtResource("4_0s272")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 32.748055, 0, 35.445194)
+transform = Transform3D(-0.9, 0, -1.3589622e-07, 0, 0.9, 0, 1.3589622e-07, 0, -0.9, 31.256344, 0, 35.242844)
 
 [node name="TallHouse22" parent="MapMesh" unique_id=1904722595 instance=ExtResource("4_0s272")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 60.514023, 0, 35.445194)
+transform = Transform3D(-0.9, 0, -1.3589622e-07, 0, 0.9, 0, 1.3589622e-07, 0, -0.9, 56.516518, 0, 34.97436)
+
+[node name="TallHouse29" parent="MapMesh" unique_id=619542620 instance=ExtResource("4_0s272")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 49.882114, 0, 35.09838)
+
+[node name="TallHouse30" parent="MapMesh" unique_id=1110737115 instance=ExtResource("4_0s272")]
+transform = Transform3D(-0.85, 0, -1.2834644e-07, 0, 0.85, 0, 1.2834644e-07, 0, -0.85, 43.611225, 0, 34.97436)
+
+[node name="TallHouse31" parent="MapMesh" unique_id=331100403 instance=ExtResource("4_0s272")]
+transform = Transform3D(-0.9, 0, -1.3589622e-07, 0, 0.9, 0, 1.3589622e-07, 0, -0.9, 37.54162, 0, 34.97436)
 
 [node name="ShortHouse7" parent="MapMesh" unique_id=2098610223 instance=ExtResource("3_abxf0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -31.046951)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, -33.181763)
 
 [node name="TallHouse7" parent="MapMesh" unique_id=483643115 instance=ExtResource("4_0s272")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -38.04695)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -40.181763)
 
 [node name="TallHouse8" parent="MapMesh" unique_id=974534278 instance=ExtResource("4_0s272")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -45.04695)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -47.181763)
 
 [node name="TallHouse6" parent="MapMesh" unique_id=532831999 instance=ExtResource("4_0s272")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -24)
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 8.831444, 0, -25.266146)
 
 [node name="StreetLamp" parent="MapMesh" unique_id=2094136402 instance=ExtResource("5_2pn50")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -24)
@@ -453,6 +948,24 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 
 
 [node name="StreetLamp6" parent="MapMesh" unique_id=987238904 instance=ExtResource("5_2pn50")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, 15)
+
+[node name="StreetLamp19" parent="MapMesh" unique_id=565394742 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.971539, 0, 6.8903513)
+
+[node name="StreetLamp20" parent="MapMesh" unique_id=272718016 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.971539, 0, 6.8903513)
+
+[node name="StreetLamp21" parent="MapMesh" unique_id=1787435235 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.971538, 0, -4.1096497)
+
+[node name="StreetLamp22" parent="MapMesh" unique_id=22636736 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.971537, 0, -13.10965)
+
+[node name="StreetLamp23" parent="MapMesh" unique_id=1569674019 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.9715362, 0, -24.10965)
+
+[node name="StreetLamp24" parent="MapMesh" unique_id=1362782592 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.9715357, 0, -30.3502)
 
 [node name="StreetLamp7" parent="MapMesh" unique_id=232428479 instance=ExtResource("5_2pn50")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, 26)
@@ -486,6 +999,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 31)
 
 [node name="TrashCan9" parent="MapMesh" unique_id=1711276606 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 18, 0, 31)
+
+[node name="StreetLamp28" parent="MapMesh" unique_id=76834211 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 50.930763, 0, 23.031612)
+
+[node name="StreetLamp29" parent="MapMesh" unique_id=1073159087 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 39.93178, 0, 23.031614)
+
+[node name="StreetLamp30" parent="MapMesh" unique_id=203722522 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 32.001053, 0, 23.031614)
+
+[node name="StreetLamp31" parent="MapMesh" unique_id=1570656339 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 21.001053, 0, 23.031618)
+
+[node name="StreetLamp32" parent="MapMesh" unique_id=688035897 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 13.001055, 0, 23.03162)
 
 [node name="TrashCan10" parent="MapMesh" unique_id=1283466883 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 15, 0, 22)
@@ -532,8 +1060,179 @@ transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -4, 
 [node name="TrashCan16" parent="MapMesh" unique_id=735281523 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -4, 0, -42.59812)
 
+[node name="StreetLamp25" parent="MapMesh" unique_id=1378777542 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9982033, 0, -55.616043)
+
+[node name="StreetLamp26" parent="MapMesh" unique_id=39464487 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9982018, 0, -39.6486)
+
+[node name="StreetLamp27" parent="MapMesh" unique_id=1884113662 instance=ExtResource("5_2pn50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9982023, 0, -46.361988)
+
 [node name="TrashCan7" parent="MapMesh" unique_id=616010184 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(-2.1855693e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855693e-07, -4, 0, 22)
+
+[node name="Railing" parent="MapMesh" unique_id=173950096 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.645326, 0.17355296, -27.209717)
+
+[node name="Railing2" parent="MapMesh" unique_id=819170436 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5039208, 0.17339069, -27.209717)
+
+[node name="Railing3" parent="MapMesh" unique_id=48658976 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.4326873, -0.009051919, -27.209717)
+
+[node name="Railing4" parent="MapMesh" unique_id=482071991 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5884685, -0.009051919, -27.209717)
+
+[node name="Railing5" parent="MapMesh" unique_id=930385928 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.4731152, -0.009051919, -27.209717)
+
+[node name="Railing6" parent="MapMesh" unique_id=624235385 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0.1325678, 0.9911739, -5.7947225e-09, 0.9911739, -0.1325678, -4.332559e-08, 69.95531, 0.17258567, 94.7572)
+
+[node name="Railing7" parent="MapMesh" unique_id=240835973 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0.1325678, 0.9911739, -5.7947225e-09, 0.9911739, -0.1325678, -4.332559e-08, 61.806065, 0.17242482, 94.75722)
+
+[node name="Railing8" parent="MapMesh" unique_id=1080339647 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0.1325678, 0.9911739, -5.7947225e-09, 0.9911739, -0.1325678, -4.332559e-08, 63.8773, -0.008407533, 94.78141)
+
+[node name="Railing9" parent="MapMesh" unique_id=2023365054 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0.1325678, 0.9911739, -5.7947225e-09, 0.9911739, -0.1325678, -4.332559e-08, 65.89845, -0.008407533, 94.78141)
+
+[node name="Railing10" parent="MapMesh" unique_id=1110379353 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0.1325678, 0.9911739, -5.7947225e-09, 0.9911739, -0.1325678, -4.332559e-08, 67.7831, -0.008407533, 94.78141)
+
+[node name="Water" type="MeshInstance3D" parent="MapMesh" unique_id=941182724]
+transform = Transform3D(0.99619466, -0.08715573, 0, 0.08715573, 0.99619466, 0, 0, 0, 1, 218.82286, -4.6041393, 62.423637)
+material_override = SubResource("ShaderMaterial_2g8bb")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_tswwu")
+
+[node name="Railing11" parent="MapMesh" unique_id=1259051467 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 30.292505)
+
+[node name="Railing12" parent="MapMesh" unique_id=406561698 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 32.292503)
+
+[node name="Railing13" parent="MapMesh" unique_id=1172591273 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 34.292503)
+
+[node name="Railing14" parent="MapMesh" unique_id=838638068 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 36.292503)
+
+[node name="Railing15" parent="MapMesh" unique_id=1824434565 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 38.292503)
+
+[node name="Railing16" parent="MapMesh" unique_id=2128633109 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 40.292503)
+
+[node name="Railing17" parent="MapMesh" unique_id=942857443 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 42.292503)
+
+[node name="Railing18" parent="MapMesh" unique_id=1815115096 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 44.292503)
+
+[node name="Railing19" parent="MapMesh" unique_id=1294564291 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 46.292503)
+
+[node name="Railing20" parent="MapMesh" unique_id=219951068 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 48.292503)
+
+[node name="Railing21" parent="MapMesh" unique_id=381167027 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 50.292503)
+
+[node name="Railing22" parent="MapMesh" unique_id=21830430 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 52.292503)
+
+[node name="Railing23" parent="MapMesh" unique_id=814483377 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 54.292503)
+
+[node name="Railing24" parent="MapMesh" unique_id=1287777312 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 56.292503)
+
+[node name="Railing25" parent="MapMesh" unique_id=1210161364 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 58.292503)
+
+[node name="Railing26" parent="MapMesh" unique_id=245154854 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 60.292503)
+
+[node name="Railing27" parent="MapMesh" unique_id=1865737646 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 62.292503)
+
+[node name="Railing28" parent="MapMesh" unique_id=1189503290 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 64.2925)
+
+[node name="Railing29" parent="MapMesh" unique_id=472321822 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 66.2925)
+
+[node name="Railing30" parent="MapMesh" unique_id=685741037 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 68.2925)
+
+[node name="Railing31" parent="MapMesh" unique_id=638607639 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 70.2925)
+
+[node name="Railing32" parent="MapMesh" unique_id=842652624 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 72.2925)
+
+[node name="Railing33" parent="MapMesh" unique_id=1989869609 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 74.2925)
+
+[node name="Railing34" parent="MapMesh" unique_id=211014444 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 76.2925)
+
+[node name="Railing35" parent="MapMesh" unique_id=1702985956 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 78.2925)
+
+[node name="Railing36" parent="MapMesh" unique_id=656438189 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 80.2925)
+
+[node name="Railing37" parent="MapMesh" unique_id=2029499194 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 82.2925)
+
+[node name="Railing38" parent="MapMesh" unique_id=910802598 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 84.2925)
+
+[node name="Railing39" parent="MapMesh" unique_id=1914211334 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 86.29008)
+
+[node name="Railing40" parent="MapMesh" unique_id=1341067822 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 88.2925)
+
+[node name="Railing41" parent="MapMesh" unique_id=661823015 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 90.2925)
+
+[node name="Railing42" parent="MapMesh" unique_id=648123080 instance=ExtResource("46_vqfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.29198, 0.079352856, 92.2925)
+
+[node name="TrashCan20" parent="MapMesh" unique_id=1608449049 instance=ExtResource("6_6nsrk")]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, 71.17313, 0.225647, 35.927868)
+
+[node name="TrashCan21" parent="MapMesh" unique_id=756090395 instance=ExtResource("6_6nsrk")]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, 71.17313, 0.225647, 59.924004)
+
+[node name="StreetLamp33" parent="MapMesh" unique_id=593861203 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 35.83712)
+
+[node name="StreetLamp34" parent="MapMesh" unique_id=478875055 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 44.88923)
+
+[node name="StreetLamp35" parent="MapMesh" unique_id=1058108833 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 51.409676)
+
+[node name="StreetLamp36" parent="MapMesh" unique_id=1626825532 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 60.461784)
+
+[node name="StreetLamp37" parent="MapMesh" unique_id=2056278109 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 70.48233)
+
+[node name="StreetLamp38" parent="MapMesh" unique_id=126162885 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 79.53444)
+
+[node name="StreetLamp39" parent="MapMesh" unique_id=1905911721 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 86.054886)
+
+[node name="StreetLamp40" parent="MapMesh" unique_id=1634726926 instance=ExtResource("5_2pn50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.7193, 0.16596532, 95.106995)
 
 [node name="POIs" type="Node3D" parent="." unique_id=388906221]
 
@@ -544,7 +1243,7 @@ stateMachine = NodePath("../../StateMachine")
 
 [node name="ShopScreen" parent="POIs/MusicShop" unique_id=1474026120 instance=ExtResource("18_4dv2k")]
 visible = false
-availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug"), SubResource("Resource_2g8bb"), SubResource("Resource_bhyo4")])
+availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug"), SubResource("Resource_2g8bb")])
 
 [node name="VanSaveSpot" parent="POIs" unique_id=141963415 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.039001)
@@ -556,6 +1255,25 @@ visible = false
 environment = NodePath("../../..")
 saveRoomId = "TestSaveRoom"
 spawnPosition = Vector3(0.5, 0.8, -20.4)
+
+[node name="VanSaveSpot2" parent="POIs" unique_id=479997947 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
+transform = Transform3D(0.81914204, 0, 0.57359076, 0, 1, 0, -0.57359076, 0, 0.81914204, 67.30322, 0.20558032, 25.729136)
+stateMachine = NodePath("../../StateMachine")
+saveRoomScreen = NodePath("SaveRoomScreen")
+
+[node name="SaveRoomScreen" parent="POIs/VanSaveSpot2" unique_id=338144961 node_paths=PackedStringArray("environment") instance=ExtResource("28_dtn4b")]
+visible = false
+environment = NodePath("../../..")
+saveRoomId = "SaveRoom2"
+
+[node name="MusicShop2" parent="POIs" unique_id=181557918 node_paths=PackedStringArray("shopScreen", "stateMachine") instance=ExtResource("16_qwyxc")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 58.960163, 0, 18.37948)
+shopScreen = NodePath("ShopScreen")
+stateMachine = NodePath("../../StateMachine")
+
+[node name="ShopScreen" parent="POIs/MusicShop2" unique_id=30817077 instance=ExtResource("18_4dv2k")]
+visible = false
+availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_vyu8l"), SubResource("Resource_vggl3")])
 
 [node name="StateMachine" type="Node" parent="." unique_id=954152002 node_paths=PackedStringArray("initialState")]
 script = ExtResource("17_3xqub")
@@ -579,7 +1297,8 @@ script = ExtResource("22_hkv6x")
 environment = NodePath("../..")
 
 [node name="PlayerRoaming" parent="." unique_id=183741771 node_paths=PackedStringArray("camera") instance=ExtResource("25_4iuui")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7769718, 0.84274244, -22.60845)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041867256, 0.84274244, -25.598982)
+moveSpeed = 6.5
 camera = NodePath("../RoamingCamera")
 
 [node name="RoamingCamera" type="Camera3D" parent="." unique_id=386789011 node_paths=PackedStringArray("player")]
@@ -607,83 +1326,193 @@ script = ExtResource("33_f668u")
 camera = NodePath("../RoamingCamera")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraZone2" unique_id=360576177]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.174082, 2.9458866, 30.164492)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1740837, 2.9458866, 19.872908)
 shape = SubResource("BoxShape3D_f668u")
 
-[node name="AreaCombatTrigger3" type="Node3D" parent="." unique_id=1865204546 node_paths=PackedStringArray("encounter", "stateMachine")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.0312757, 0.78571737, -7.737125)
-script = ExtResource("31_3h328")
-encounter = NodePath("CombatEncounter")
-stateMachine = NodePath("../StateMachine")
-enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi"), ExtResource("32_2qdxi")])
-metadata/_custom_type_script = "uid://ct8120htle6mr"
+[node name="CameraZone3" type="Area3D" parent="." unique_id=1586144762 node_paths=PackedStringArray("camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.165997, 5.0207005, 26.900743)
+script = ExtResource("33_f668u")
+camera = NodePath("../RoamingCamera")
+followOffset = Vector3(-6, 0, 0)
+lookOffset = Vector3(0, 1, 0)
+metadata/_custom_type_script = "uid://bsfjo7hkmht7v"
 
-[node name="Sprite3D" type="Sprite3D" parent="AreaCombatTrigger3" unique_id=1719930555]
-texture = ExtResource("20_3h328")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraZone3" unique_id=560691753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.66095, 0.466362, 0.38848877)
+shape = SubResource("BoxShape3D_ylcug")
 
-[node name="Area3D" type="Area3D" parent="AreaCombatTrigger3" unique_id=1983133018]
+[node name="CameraZone4" type="Area3D" parent="." unique_id=1761133389 node_paths=PackedStringArray("camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.720715, 4.8417664, 26.900743)
+script = ExtResource("33_f668u")
+followAxis = Vector3(0, 0, 1)
+camera = NodePath("../RoamingCamera")
+lookOffset = Vector3(0, 3, 0)
+metadata/_custom_type_script = "uid://bsfjo7hkmht7v"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCombatTrigger3/Area3D" unique_id=1789210740]
-shape = SubResource("BoxShape3D_6va1x")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraZone4" unique_id=390772269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063667, 0.61821747, 22.361673)
+shape = SubResource("BoxShape3D_bhyo4")
 
-[node name="CombatEncounter" parent="AreaCombatTrigger3" unique_id=204261947 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
-environment = NodePath("../..")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraZone4" unique_id=87119109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063667, 0.61821747, 71.22649)
+shape = SubResource("BoxShape3D_bhyo4")
 
 [node name="EnemyCombatTriggers" type="Node" parent="." unique_id=906386666]
 
-[node name="AreaCombatTrigger" type="Node3D" parent="EnemyCombatTriggers" unique_id=398848777 node_paths=PackedStringArray("encounter", "stateMachine")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72312903, -17.449348)
+[node name="AreaCombatTrigger" type="Node3D" parent="EnemyCombatTriggers" unique_id=669103872 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6866565, 0.7231295, -12.590083)
 script = ExtResource("31_3h328")
+sprites = NodePath("Sprites")
 encounter = NodePath("CombatEncounter")
 stateMachine = NodePath("../../StateMachine")
-enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi"), ExtResource("32_2qdxi"), ExtResource("32_2qdxi"), ExtResource("32_2qdxi")])
+enemyScenes = Array[PackedScene]([SubResource("PackedScene_6yfru")])
 metadata/_custom_type_script = "uid://ct8120htle6mr"
 
-[node name="Sprite3D" type="Sprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=532928888]
-billboard = 2
-texture = ExtResource("20_3h328")
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=745929115]
 
-[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=2115431899]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger/Area3D" unique_id=1510732430]
+shape = SubResource("BoxShape3D_nnkj5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger/Area3D" unique_id=456530825]
-shape = SubResource("BoxShape3D_5k7bd")
-
-[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=1662274057 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=804076589 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
 environment = NodePath("../../..")
 
-[node name="AreaCombatTrigger2" type="Node3D" parent="EnemyCombatTriggers" unique_id=669103872 node_paths=PackedStringArray("encounter", "stateMachine")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3872871, 0.72312903, -19.715061)
+[node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=476675100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.28540993)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger/Sprites" unique_id=1214709703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -0.12669563)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
+
+[node name="AreaCombatTrigger2" type="Node3D" parent="EnemyCombatTriggers" unique_id=1386841267 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, -6.6771297)
 script = ExtResource("31_3h328")
+sprites = NodePath("Sprites")
 encounter = NodePath("CombatEncounter")
 stateMachine = NodePath("../../StateMachine")
-enemyScenes = Array[PackedScene]([ExtResource("32_2qdxi")])
+enemyScenes = Array[PackedScene]([SubResource("PackedScene_xyvg4")])
 metadata/_custom_type_script = "uid://ct8120htle6mr"
 
-[node name="Sprite3D" type="Sprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=1123358555]
-billboard = 2
-texture = ExtResource("20_3h328")
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=2072854025]
 
-[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=745929115]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger2/Area3D" unique_id=184598842]
+shape = SubResource("BoxShape3D_nnkj5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger2/Area3D" unique_id=1510732430]
-shape = SubResource("BoxShape3D_5k7bd")
-
-[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=804076589 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=1662274057 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
 environment = NodePath("../../..")
 
-[node name="Railing" parent="." unique_id=173950096 instance=ExtResource("46_vqfcb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.645326, 0.17355296, -27.209717)
+[node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=54870273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.28540993)
 
-[node name="Railing2" parent="." unique_id=819170436 instance=ExtResource("46_vqfcb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5039208, 0.17339069, -27.209717)
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger2/Sprites" unique_id=1616887416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -0.12669563)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
 
-[node name="Railing3" parent="." unique_id=48658976 instance=ExtResource("46_vqfcb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.4326873, -0.009051919, -27.209717)
+[node name="AreaCombatTrigger3" type="Node3D" parent="EnemyCombatTriggers" unique_id=1840287090 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, 7.970356)
+script = ExtResource("31_3h328")
+sprites = NodePath("Sprites")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../../StateMachine")
+enemyScenes = Array[PackedScene]([SubResource("PackedScene_rfc6k"), SubResource("PackedScene_fv4kp")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
 
-[node name="Railing4" parent="." unique_id=482071991 instance=ExtResource("46_vqfcb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5884685, -0.009051919, -27.209717)
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger3" unique_id=1863520815]
 
-[node name="Railing5" parent="." unique_id=930385928 instance=ExtResource("46_vqfcb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.4731152, -0.009051919, -27.209717)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger3/Area3D" unique_id=1881563106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9157715, 0, -0.42944336)
+shape = SubResource("BoxShape3D_llj1i")
+
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger3" unique_id=1575425463 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
+goldReward = 15
+environment = NodePath("../../..")
+
+[node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger3" unique_id=1035467787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.28540993)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger3/Sprites" unique_id=367619689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -0.12669563)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger3/Sprites" unique_id=1097842298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2354875, 0, -1.4099035)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
+
+[node name="AreaCombatTrigger4" type="Node3D" parent="EnemyCombatTriggers" unique_id=1483870913 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, 27.814075)
+script = ExtResource("31_3h328")
+sprites = NodePath("Sprites")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../../StateMachine")
+enemyScenes = Array[PackedScene]([SubResource("PackedScene_nnkj5"), SubResource("PackedScene_llj1i"), SubResource("PackedScene_xaxh8"), ExtResource("32_2qdxi")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
+
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger4" unique_id=2025755460]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Area3D" unique_id=92749810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0628662, 0, -0.98095703)
+shape = SubResource("BoxShape3D_xyvg4")
+
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger4" unique_id=1348748916 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
+goldReward = 30
+environment = NodePath("../../..")
+
+[node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger4" unique_id=879808851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.28540993)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=35277969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3631451, 0, 0.6996498)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=553664843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9007356, 0, -1.4099026)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
+
+[node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=1082353770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -2.3202286)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
+
+[node name="AnimatedSprite3D4" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=527658566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2354875, 0, -3.6034355)
+pixel_size = 0.04
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_xaxh8")
+autoplay = "default"
+
+[node name="End Of Demo Label" type="Label3D" parent="." unique_id=1698724887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.80051, 1.8953539, 94.27648)
+billboard = 1
+text = "End of Demo :("
+font_size = 64

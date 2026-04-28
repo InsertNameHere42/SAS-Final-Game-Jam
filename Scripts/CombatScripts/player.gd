@@ -14,9 +14,12 @@ var usedEnergy: int = 0
 
 @onready var attackSFX: AudioStreamPlayer3D = $SoundEffects/Attack
 @onready var takeDamageSFX: AudioStreamPlayer3D = $SoundEffects/TakeDamage
+@onready var lossSFX: AudioStreamPlayer3D = $SoundEffects/Loss
 
+var alive: bool = true
 
 func startCombat():
+	alive = true
 	super.startCombat()
 	print("Combat Started Player")
 	maxHp = PlayerData.maxHp
@@ -40,6 +43,7 @@ func _ready() -> void:
 	
 
 func takeDamage(damage: int, type: String = "normal") -> int:
+	takeDamageSFX.pitch_scale = randf_range(0.9, 1.1)
 	takeDamageSFX.play()
 	var damageTaken: int = super(damage, type)
 	encounter.shakeCamera(damageTaken * 0.005, 0.04*pow(damageTaken, 0.5)) #strength, duration
@@ -49,10 +53,14 @@ func takeDamage(damage: int, type: String = "normal") -> int:
 
 		
 func die() -> void:
-	print("Player Died")
-	emit_signal("playerDied")
-	await ScreenFade.fadeOut()
-	PlayerData.loadFromFile()
+	if alive:
+		alive = false
+		print("Player Died")
+		if not lossSFX.playing:
+			lossSFX.play()
+		emit_signal("playerDied")
+		await ScreenFade.fadeOut()
+		PlayerData.loadFromFile()
 	
 	
 #this will play an attack animation and calculate the damage done
@@ -65,6 +73,7 @@ func attack() -> AttackContext:
 	return context
 
 func attackAnim() -> void:
+	attackSFX.pitch_scale = randf_range(0.9, 1.1)
 	attackSFX.play()
 	if animation == "Attack" and is_playing():
 		frame = 1

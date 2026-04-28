@@ -15,6 +15,7 @@ const CARD_SCENE := preload("res://Scenes/UI/upgrade_card.tscn")
 @onready var tooltipPanel: PanelContainer = $TooltipPanel
 @onready var tooltipName: Label = $TooltipPanel/VBoxContainer/NameLabel
 @onready var tooltipDesc: Label = $TooltipPanel/VBoxContainer/DescLabel
+@onready var tooltipEnergy: Label = $TooltipPanel/VBoxContainer/EnergyLabel
 @onready var exitButton: Button = $ExitButton
 
 enum Mode {INVENTORY, SLOT_SELECT}
@@ -190,6 +191,7 @@ func _updateTooltip() -> void:
 	
 	tooltipName.text = upgrade.upgradeName
 	tooltipDesc.text = upgrade.description
+	tooltipEnergy.text = "Costs " + str(upgrade.energyCost) + " energy to activate"
 	tooltipPanel.show()
 	await get_tree().process_frame
 	_positionTooltip()

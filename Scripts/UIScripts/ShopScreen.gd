@@ -11,6 +11,7 @@ const ITEM_SCENE := preload("res://Scenes/UI/shop_item.tscn")
 @onready var buyButton: Button = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/BuyButton
 @onready var moneyLeftLabel: Label = $HBoxContainer/VBoxContainer/PanelContainer/MoneyLeftLabel
 @onready var shopMusic: AudioStreamPlayer = $ShopMusic
+@onready var tooltipEnergyCost: Label = $HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer/TooltipEnergyCost
 
 var items: Array[ShopItem] = []
 var currentIndex: int = 0
@@ -61,6 +62,7 @@ func _updateTooltip() -> void:
 	
 	tooltipName.text = upgrade.upgradeName
 	tooltipDesc.text = upgrade.description
+	tooltipEnergyCost.text = "Costs " + str(upgrade.energyCost) + " energy to activate"
 	tooltipCost.text = "%d gold" % upgrade.cost
 	var owned: bool = PlayerData.ownsUpgrade(upgrade)
 	buyButton.disabled = owned or PlayerData.doubloons < upgrade.cost

@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://boq3i8ja1vnbf"]
+
+[ext_resource type="Script" uid="uid://bt4fq5lwt68cm" path="res://Scripts/UIScripts/menu.gd" id="1_158mb"]
+[ext_resource type="PackedScene" uid="uid://d0pe2qxfpjolf" path="res://Scenes/roaming.tscn" id="1_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://clil2isw4w0d0" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_up.png" id="2_cayip"]
+[ext_resource type="FontFile" uid="uid://dw5fxu6x67b30" path="res://Assets/Fonts/Pinkend.ttf" id="3_cayip"]
+[ext_resource type="AudioStream" uid="uid://dbxbwhh0t270v" path="res://Assets/SFX/AMBUrbn_CityAmbience17_InMotionAudio_ManchesterAmbience.wav" id="5_wwsa2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_158mb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwsa2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jsrd8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbdvm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q3rjx"]
+
+[node name="Menu" type="CanvasLayer" unique_id=2110431524]
+script = ExtResource("1_158mb")
+
+[node name="Background" type="Node3D" parent="." unique_id=1220923446]
+
+[node name="Background Scene" parent="Background" unique_id=1428682443 instance=ExtResource("1_xhh6f")]
+
+[node name="Sprite3D" type="Sprite3D" parent="Background/Background Scene" unique_id=131482648]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 70.25255, 0.9183774, 52.0971)
+pixel_size = 0.04
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 2
+texture = ExtResource("2_cayip")
+hframes = 8
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Background" unique_id=599850797]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stretch = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer" unique_id=1019900030]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport" unique_id=1533965979]
+transform = Transform3D(-4.3616797e-08, 0.06575143, -0.99783605, 2.8740859e-09, 0.99783605, 0.06575143, 1, 4.440892e-16, -4.371139e-08, 61.185505, 5.249498, 55.229313)
+fov = 60.0
+
+[node name="Control" type="Control" parent="." unique_id=527829041]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=466490673]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=547315049]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/VBoxContainer" unique_id=983492413]
+custom_minimum_size = Vector2(500, 125)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("3_cayip")
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[wave]Soundstage"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Spacer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=2055166720]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=1926313529]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_pressed_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_hover_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("3_cayip")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_158mb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wwsa2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jsrd8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wbdvm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q3rjx")
+text = "Start"
+
+[node name="CreditsButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=1412260045]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_pressed_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_hover_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("3_cayip")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_158mb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wwsa2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jsrd8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wbdvm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q3rjx")
+text = "Credits
+"
+
+[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=1144112960]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_pressed_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_hover_color = Color(0.30588236, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("3_cayip")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_158mb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wwsa2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jsrd8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wbdvm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q3rjx")
+text = "Another Day~"
+
+[node name="CityAmbience" type="AudioStreamPlayer" parent="." unique_id=25863940]
+stream = ExtResource("5_wwsa2")
+volume_db = -28.889
+autoplay = true
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="finished" from="CityAmbience" to="." method="_on_city_ambience_finished"]

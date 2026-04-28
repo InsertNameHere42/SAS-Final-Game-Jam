@@ -8,10 +8,10 @@ extends Node3D
 
 
 func _ready() -> void:
-	await ScreenFade.fadeIn()
 	stateMachine.start()
 	PlayerData.loaded.connect(_onSaveLoaded)
 	_onSaveLoaded()
+	await ScreenFade.fadeIn()
 	
 
 func resetCombat() -> void:

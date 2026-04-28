@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bk0w0p62oxhsu"]
 
-[ext_resource type="Texture2D" uid="uid://dhcy5so7c7fpt" path="res://Assets/Placeholders/texass.png" id="1_j6nlc"]
+[ext_resource type="Texture2D" uid="uid://kphblhpv3h40" path="res://Assets/Placeholders/texass.png" id="1_j6nlc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ln2ig"]
 resource_name = "body"

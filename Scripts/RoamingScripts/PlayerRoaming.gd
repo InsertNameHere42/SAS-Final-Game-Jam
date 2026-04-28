@@ -3,11 +3,13 @@ class_name PlayerRoaming extends CharacterBody3D
 @onready var playerSprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var interactArea: Area3D = $InteractArea
 
+@onready var footsteps: AudioStreamPlayer3D = $Footsteps
 @export var interactOffset: float = 1.0
 @export var moveSpeed: float = 5.0
 @export var camera: RoamingCamera
 
 var lastDirection: Vector2 = Vector2.RIGHT
+var footstepFrames: Array[int] = [3, 7]
 
 func handleMovement(delta: float) -> void:
 
@@ -16,14 +18,11 @@ func handleMovement(delta: float) -> void:
 
 	var input_dir := Input.get_vector("RoamLeft", "RoamRight", "RoamUp", "RoamDown")
 	
-	var camRight := camera.followAxis
-	var camForward := camera.followAxis.cross(Vector3.UP).normalized()
-	camRight.y = 0
-	camForward.y = 0
-	camRight = camRight.normalized()
-	camForward = camForward.normalized()
+	var axes = camera.getMovementAxes()
+	var camRight: Vector3 = axes[0]
+	var camForward: Vector3 = axes[1]
 	
-	var direction := (camRight * input_dir.x + camForward * input_dir.y).normalized()
+	var direction := (camRight * input_dir.x + camForward * -input_dir.y).normalized()
 	if direction:
 		velocity.x = direction.x * moveSpeed
 		velocity.z = direction.z * moveSpeed
@@ -69,3 +68,11 @@ func playIdleAnimation(lastDir: Vector2) -> void:
 			playerSprite.play("IdleUp")
 		else:
 			playerSprite.play("IdleDown")
+
+
+
+func _on_animated_sprite_3d_frame_changed() -> void:
+	if not velocity==Vector3.ZERO:
+		if footstepFrames.has(playerSprite.frame):
+			footsteps.pitch_scale = randf_range(0.9, 1.1)
+			footsteps.play()

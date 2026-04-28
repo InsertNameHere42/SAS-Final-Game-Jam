@@ -48,12 +48,14 @@ func _rebuildCards() -> void:
 	updateEnergy()
 
 func navigateLeft() -> void:
-	currentIndex = (currentIndex - 1 + cards.size()) % cards.size()
-	_updateTooltip()
+	if cards.size() > 0:
+		currentIndex = (currentIndex - 1 + cards.size()) % cards.size()
+		_updateTooltip()
 
 func navigateRight() -> void:
-	currentIndex = (currentIndex + 1) % cards.size()
-	_updateTooltip()
+	if cards.size() > 0:
+		currentIndex = (currentIndex + 1) % cards.size()
+		_updateTooltip()
 
 func toggleCurrent() -> void:
 	if cards.is_empty(): return

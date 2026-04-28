@@ -6,6 +6,7 @@ class_name BlockEffect extends StatusEffect
 
 
 func _init() -> void:
+	texture = load("res://Assets/UI/blockeffect (3).png")
 	effectName = "Block"
 	maxStacks = -1
 

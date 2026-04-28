@@ -2,6 +2,8 @@ class_name CameraZone extends Area3D
 
 @export var followAxis: Vector3 = Vector3.RIGHT
 @export var camera: RoamingCamera
+@export var followOffset: Vector3 = Vector3.ZERO
+@export var lookOffset: Vector3 = Vector3.ZERO
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)

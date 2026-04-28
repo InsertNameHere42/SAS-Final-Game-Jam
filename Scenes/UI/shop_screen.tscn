@@ -14,9 +14,12 @@ grow_vertical = 2
 script = ExtResource("1_vrl6t")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1249613352]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_45h0x")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=659140389]
@@ -87,6 +90,11 @@ layout_mode = 2
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="TooltipEnergyCost" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=1793951577]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.16078432, 1)
+horizontal_alignment = 1
+
 [node name="TooltipCost" type="Label" parent="HBoxContainer/RightPanel/TooltipPanel/MarginContainer/VBoxContainer" unique_id=73064155]
 layout_mode = 2
 horizontal_alignment = 1
@@ -96,4 +104,6 @@ layout_mode = 2
 
 [node name="ShopMusic" type="AudioStreamPlayer" parent="." unique_id=1519043891]
 stream = ExtResource("3_c604k")
+volume_db = -19.097
+bus = &"Music"
 parameters/looping = true

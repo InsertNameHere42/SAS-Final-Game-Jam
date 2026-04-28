@@ -15,8 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="SAS Final Jam"
+run/main_scene="uid://boq3i8ja1vnbf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://q8u5is82hwxk"
 
 [autoload]
 
@@ -26,8 +31,8 @@ ScreenFreeze="*uid://dnqdgmufgqsdd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [editor_plugins]
 

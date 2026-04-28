@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://l1luvgct8ln6" path="res://Scenes/player.tscn" id="2_hsurt"]
 [ext_resource type="Script" uid="uid://c8jblcdnte5jc" path="res://Scripts/CombatScripts/combat_camera.gd" id="2_y4nrt"]
 [ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="3_whduv"]
-[ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="4_p7r7d"]
 [ext_resource type="Script" uid="uid://cq6mc27rx1ktw" path="res://Scripts/States/state_machine.gd" id="5_g0ooy"]
 [ext_resource type="Script" uid="uid://c2b41aqxdkkuu" path="res://Scripts/States/PlayerTurn.gd" id="6_gqhqx"]
 [ext_resource type="Script" uid="uid://8l3l6bf2nrs6" path="res://Scripts/States/EnemyTurn.gd" id="7_2qd3w"]
@@ -16,12 +15,11 @@
 [ext_resource type="AudioStream" uid="uid://be3ec24gjf30j" path="res://Assets/Music/CombatMusic.mp3" id="15_tt4gc"]
 [ext_resource type="PackedScene" uid="uid://dnejqew27q7ns" path="res://Scenes/UI/upgrade_toggle_screen.tscn" id="16_kgebq"]
 
-[sub_resource type="Resource" id="Resource_m1whs"]
+[sub_resource type="Resource" id="Resource_m3gt7"]
 resource_local_to_scene = true
 script = ExtResource("3_whduv")
 effectName = "Block!"
 stacks = 7
-texture = ExtResource("4_p7r7d")
 metadata/_custom_type_script = "uid://djxhiomxyr7hq"
 
 [node name="CombatEncounter" type="Node3D" unique_id=1662274057]
@@ -50,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9697075, 0, -0.019)
 frame = 5
 frame_progress = 0.24486433
 encounter = NodePath("..")
-baseBlock = SubResource("Resource_m1whs")
+baseBlock = SubResource("Resource_m3gt7")
 maxHp = 90
 damageNumberManager = NodePath("../DamageNumberManager")
 
@@ -88,9 +86,13 @@ encounter = NodePath("..")
 
 [node name="SongIntro" type="AudioStreamPlayer" parent="Music" unique_id=274613008]
 stream = ExtResource("14_m1whs")
+volume_db = -8.222
+bus = &"Music"
 
 [node name="SongMain" type="AudioStreamPlayer" parent="Music" unique_id=557401311]
 stream = ExtResource("15_tt4gc")
+volume_db = -9.333
+bus = &"Music"
 
 [connection signal="playerDied" from="Player" to="." method="_on_player_player_died"]
 [connection signal="finished" from="Music/SongIntro" to="." method="_on_song_intro_finished"]
