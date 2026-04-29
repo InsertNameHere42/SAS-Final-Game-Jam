@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dafdogbys6isq"]
+
+[ext_resource type="Texture2D" uid="uid://lis4nh8k46ps" path="res://Assets/Animations/jam enemy idle/frame_01.png" id="1_tlfa1"]
+[ext_resource type="Texture2D" uid="uid://dlik066pwll2d" path="res://Assets/Animations/jam enemy idle/frame_02.png" id="2_la7yi"]
+[ext_resource type="Texture2D" uid="uid://dd58klqi06vrw" path="res://Assets/Animations/jam enemy idle/frame_03.png" id="3_rebp1"]
+[ext_resource type="Texture2D" uid="uid://bjb3d1y7kjec0" path="res://Assets/Animations/jam enemy idle/frame_04.png" id="4_ehhdf"]
+[ext_resource type="Texture2D" uid="uid://cuyqylfeonpfa" path="res://Assets/Animations/jam enemy idle/frame_05.png" id="5_f7d18"]
+[ext_resource type="Texture2D" uid="uid://bu1w0f5ipv3i2" path="res://Assets/Animations/jam enemy idle/frame_06.png" id="6_514jf"]
+[ext_resource type="Texture2D" uid="uid://cyuk8uwx22uev" path="res://Assets/Animations/jam enemy idle/frame_07.png" id="7_1glq7"]
+[ext_resource type="Texture2D" uid="uid://87ifjyr3yqu8" path="res://Assets/Animations/jam enemy idle/frame_08.png" id="8_wm0kb"]
+[ext_resource type="Texture2D" uid="uid://xlfnpe86kbey" path="res://Assets/Animations/jam enemy idle/frame_09.png" id="9_ptlcf"]
+[ext_resource type="Texture2D" uid="uid://bxh15dd6bppeu" path="res://Assets/Animations/jam enemy idle/frame_10.png" id="10_8tcoa"]
+[ext_resource type="Texture2D" uid="uid://c6gkipoq43bqw" path="res://Assets/Animations/jam enemy idle/frame_11.png" id="11_26vva"]
+[ext_resource type="Texture2D" uid="uid://b48jrivhmbqn8" path="res://Assets/Animations/jam enemy idle/frame_12.png" id="12_82u8u"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tlfa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_la7yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rebp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ehhdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f7d18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_514jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1glq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wm0kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ptlcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8tcoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_26vva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_82u8u")
+}],
+"loop": true,
+"name": &"EnemyIdle",
+"speed": 12.0
+}]

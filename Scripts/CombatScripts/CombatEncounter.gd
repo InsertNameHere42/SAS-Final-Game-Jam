@@ -48,7 +48,7 @@ func _placeEnemies() -> void:
 		if child is Enemy:
 			var x := (i+1) * enemyStepX
 			var z := enemyStepZ * (1 if i % 2 == 0 else -1)
-			child.global_position = to_global(Vector3(x, 0, z))
+			child.global_position = to_global(Vector3(x, child.verticalOffset, z))
 			i += 1
 	print("total enemies placed: ", i)
 

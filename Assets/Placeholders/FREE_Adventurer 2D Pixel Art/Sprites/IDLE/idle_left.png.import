@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fwip6kyjf64t"
 path.s3tc="res://.godot/imported/idle_left.png-e7e4c3b3a21fff8280a7fbc1dc2e5330.s3tc.ctex"
+path.etc2="res://.godot/imported/idle_left.png-e7e4c3b3a21fff8280a7fbc1dc2e5330.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png"
-dest_files=["res://.godot/imported/idle_left.png-e7e4c3b3a21fff8280a7fbc1dc2e5330.s3tc.ctex"]
+dest_files=["res://.godot/imported/idle_left.png-e7e4c3b3a21fff8280a7fbc1dc2e5330.s3tc.ctex", "res://.godot/imported/idle_left.png-e7e4c3b3a21fff8280a7fbc1dc2e5330.etc2.ctex"]
 
 [params]
 

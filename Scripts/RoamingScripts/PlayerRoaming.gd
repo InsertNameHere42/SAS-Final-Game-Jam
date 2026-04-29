@@ -9,7 +9,7 @@ class_name PlayerRoaming extends CharacterBody3D
 @export var camera: RoamingCamera
 
 var lastDirection: Vector2 = Vector2.RIGHT
-var footstepFrames: Array[int] = [3, 7]
+var footstepFrames: Array[int] = [3, 9]
 
 func handleMovement(delta: float) -> void:
 

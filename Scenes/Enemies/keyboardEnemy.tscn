@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://d3wuqfbj5jwwg"]
+
+[ext_resource type="Texture2D" uid="uid://d3ctonnjogvbt" path="res://Assets/Animations/jam enemy attack/frame_01.png" id="1_8kyga"]
+[ext_resource type="Texture2D" uid="uid://c53lnkto8n0wx" path="res://Assets/Animations/jam enemy attack/frame_02.png" id="2_w6ure"]
+[ext_resource type="Texture2D" uid="uid://ccwsmkne3cubv" path="res://Assets/Animations/jam enemy attack/frame_03.png" id="3_1r24p"]
+[ext_resource type="Script" uid="uid://bhxe5kxxjl2wi" path="res://Scripts/CombatScripts/Enemy.gd" id="3_gp6ho"]
+[ext_resource type="Texture2D" uid="uid://crd5fv8sdrddr" path="res://Assets/Animations/jam enemy attack/frame_04.png" id="4_47si3"]
+[ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="4_uy7ef"]
+[ext_resource type="Texture2D" uid="uid://dstmsk6uelpgd" path="res://Assets/Animations/jam enemy attack/frame_05.png" id="5_hdmm5"]
+[ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="5_uonob"]
+[ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="6_4hxkq"]
+[ext_resource type="Texture2D" uid="uid://dq0j0546roxkg" path="res://Assets/Animations/jam enemy attack/frame_06.png" id="6_axg28"]
+[ext_resource type="Texture2D" uid="uid://dgcka3kgm42wq" path="res://Assets/Animations/jam enemy attack/frame_07.png" id="7_1be7e"]
+[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="7_2w8yr"]
+[ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="8_06bpp"]
+[ext_resource type="Texture2D" uid="uid://btfytsvhslri3" path="res://Assets/Animations/jam enemy attack/frame_08.png" id="8_8pxg3"]
+[ext_resource type="Texture2D" uid="uid://ds42bng8r8s4i" path="res://Assets/Animations/jam enemy attack/frame_09.png" id="9_6ehk3"]
+[ext_resource type="Texture2D" uid="uid://d24d3c1divcmf" path="res://Assets/Animations/jam enemy attack/frame_10.png" id="10_kxniq"]
+[ext_resource type="Texture2D" uid="uid://pa2yof2pv1nl" path="res://Assets/Animations/jam enemy attack/frame_11.png" id="11_qpadg"]
+[ext_resource type="Texture2D" uid="uid://b7x5gmtvp65go" path="res://Assets/Animations/jam enemy attack/frame_12.png" id="12_kvcle"]
+[ext_resource type="Texture2D" uid="uid://bq8rluc8xqbja" path="res://Assets/Animations/jam enemy defense/frame_01.png" id="13_u45nj"]
+[ext_resource type="Texture2D" uid="uid://djuget8tx4gje" path="res://Assets/Animations/jam enemy defense/frame_02.png" id="14_eele7"]
+[ext_resource type="Texture2D" uid="uid://deokemn8nmqyg" path="res://Assets/Animations/jam enemy defense/frame_03.png" id="15_2xx30"]
+[ext_resource type="Texture2D" uid="uid://c8l4wetgx847m" path="res://Assets/Animations/jam enemy defense/frame_04.png" id="16_srab0"]
+[ext_resource type="Texture2D" uid="uid://54bjq2y4s5sh" path="res://Assets/Animations/jam enemy defense/frame_05.png" id="17_htesv"]
+[ext_resource type="Texture2D" uid="uid://8ms3hubtbje3" path="res://Assets/Animations/jam enemy defense/frame_06.png" id="18_vn75c"]
+[ext_resource type="Texture2D" uid="uid://6gqqs75tyx71" path="res://Assets/Animations/jam enemy defense/frame_07.png" id="19_ogpn5"]
+[ext_resource type="Texture2D" uid="uid://dn53tq6l5eboa" path="res://Assets/Animations/jam enemy defense/frame_08.png" id="20_yfkjf"]
+[ext_resource type="Texture2D" uid="uid://dkaeucashj53k" path="res://Assets/Animations/jam enemy defense/frame_09.png" id="21_q66wq"]
+[ext_resource type="Texture2D" uid="uid://byhxd2tnl10qi" path="res://Assets/Animations/jam enemy defense/frame_10.png" id="22_56sv4"]
+[ext_resource type="Texture2D" uid="uid://wqmswf8rju38" path="res://Assets/Animations/jam enemy defense/frame_11.png" id="23_uk2y5"]
+[ext_resource type="Texture2D" uid="uid://crxyluph4qpbq" path="res://Assets/Animations/jam enemy defense/frame_12.png" id="24_tp835"]
+[ext_resource type="Texture2D" uid="uid://lis4nh8k46ps" path="res://Assets/Animations/jam enemy idle/frame_01.png" id="25_nvrmq"]
+[ext_resource type="Texture2D" uid="uid://dlik066pwll2d" path="res://Assets/Animations/jam enemy idle/frame_02.png" id="26_shqlu"]
+[ext_resource type="Texture2D" uid="uid://dd58klqi06vrw" path="res://Assets/Animations/jam enemy idle/frame_03.png" id="27_o6hfd"]
+[ext_resource type="Texture2D" uid="uid://bjb3d1y7kjec0" path="res://Assets/Animations/jam enemy idle/frame_04.png" id="28_lb4sv"]
+[ext_resource type="Texture2D" uid="uid://cuyqylfeonpfa" path="res://Assets/Animations/jam enemy idle/frame_05.png" id="29_u2kra"]
+[ext_resource type="Texture2D" uid="uid://bu1w0f5ipv3i2" path="res://Assets/Animations/jam enemy idle/frame_06.png" id="30_mp1l5"]
+[ext_resource type="Texture2D" uid="uid://cyuk8uwx22uev" path="res://Assets/Animations/jam enemy idle/frame_07.png" id="31_pqk4u"]
+[ext_resource type="Texture2D" uid="uid://87ifjyr3yqu8" path="res://Assets/Animations/jam enemy idle/frame_08.png" id="32_kq6mk"]
+[ext_resource type="Texture2D" uid="uid://xlfnpe86kbey" path="res://Assets/Animations/jam enemy idle/frame_09.png" id="33_qqw8a"]
+[ext_resource type="Texture2D" uid="uid://bxh15dd6bppeu" path="res://Assets/Animations/jam enemy idle/frame_10.png" id="34_q3g6s"]
+[ext_resource type="Texture2D" uid="uid://c6gkipoq43bqw" path="res://Assets/Animations/jam enemy idle/frame_11.png" id="35_58yvg"]
+[ext_resource type="Texture2D" uid="uid://b48jrivhmbqn8" path="res://Assets/Animations/jam enemy idle/frame_12.png" id="36_rnw2p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oeufm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8kyga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w6ure")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1r24p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_47si3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hdmm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_axg28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1be7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8pxg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6ehk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kxniq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qpadg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kvcle")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_u45nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_eele7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2xx30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_srab0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_htesv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vn75c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ogpn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yfkjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q66wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_56sv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uk2y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_tp835")
+}],
+"loop": true,
+"name": &"Defend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_nvrmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_shqlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_o6hfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lb4sv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_u2kra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_mp1l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_pqk4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_kq6mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qqw8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_q3g6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_58yvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_rnw2p")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[sub_resource type="Resource" id="Resource_lm5xo"]
+resource_local_to_scene = true
+script = ExtResource("5_uonob")
+actionName = "Play an aggresive melody"
+weight = 50
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_3sp1v"]
+script = ExtResource("7_2w8yr")
+effectName = "Block"
+stacks = 4
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_yn0oc"]
+resource_local_to_scene = true
+script = ExtResource("6_4hxkq")
+statusEffect = SubResource("Resource_3sp1v")
+actionName = "Play a calming melody"
+weight = 30
+animationName = "Defend"
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cvapq"]
+viewport_path = NodePath("HealthViewPort")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngp1l"]
+size = Vector3(0.9682007, 1.3206787, 1)
+
+[node name="KeyboardEnemy" type="AnimatedSprite3D" unique_id=249674596]
+pixel_size = 0.0015
+billboard = 2
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_oeufm")
+animation = &"Attack"
+autoplay = "Idle"
+script = ExtResource("3_gp6ho")
+possibleActions = Array[ExtResource("4_uy7ef")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")])
+maxHp = 50
+metadata/_custom_type_script = "uid://bhxe5kxxjl2wi"
+
+[node name="StatusEffectComponent" type="Node" parent="." unique_id=1498906395]
+script = ExtResource("8_06bpp")
+metadata/_custom_type_script = "uid://dgseikyr6yiej"
+
+[node name="HealthBarSprite" type="Sprite3D" parent="." unique_id=1374277308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_cvapq")
+
+[node name="HealthViewPort" type="SubViewport" parent="." unique_id=1808302160]
+transparent_bg = true
+size = Vector2i(200, 60)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HealthViewPort" unique_id=961998303]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HealthViewPort/VBoxContainer" unique_id=811833815]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=80013772]
+layout_mode = 2
+size_flags_vertical = 4
+value = 50.0
+allow_lesser = true
+show_percentage = false
+
+[node name="HpAmount" type="Label" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=1831818603]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StatusEffectRow" type="HBoxContainer" parent="HealthViewPort/VBoxContainer" unique_id=1661662862]
+layout_mode = 2
+
+[node name="HoverDetector" type="Area3D" parent="." unique_id=1152561922]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HoverDetector" unique_id=1942544340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008744299, -0.0040042996, 0)
+shape = SubResource("BoxShape3D_ngp1l")
+
+[node name="NextActionTooltip" type="Label3D" parent="." unique_id=298325944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0)
+billboard = 1
+no_depth_test = true
+texture_filter = 2
+render_priority = 5
+outline_modulate = Color(0.5058824, 0, 0, 1)
+text = "This Enemy Intends To"
+font_size = 48
+outline_size = 4
+autowrap_mode = 2
+width = 600.0

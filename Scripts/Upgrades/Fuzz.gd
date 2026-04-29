@@ -6,3 +6,4 @@ class_name FuzzUpgrade extends Upgrade
 func modifyAttack(_context: AttackContext) -> void:
 	_context.finalDamage = int(_context.finalDamage*damageBoostPercent)
 	_context.critChance -= critChanceDecrease
+	print(_context.critChance)

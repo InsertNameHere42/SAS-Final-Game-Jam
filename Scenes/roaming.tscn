@@ -21,7 +21,6 @@
 [ext_resource type="Script" uid="uid://cuy7dhd4kencs" path="res://Scripts/States/RoamingState.gd" id="18_fkogr"]
 [ext_resource type="Script" uid="uid://cmtdgooj582ks" path="res://Scripts/States/ShopState.gd" id="19_boewr"]
 [ext_resource type="Script" uid="uid://bd5knqm4ul66" path="res://Scripts/Upgrades/Upgrade.gd" id="19_yyx54"]
-[ext_resource type="Texture2D" uid="uid://clvx0dtjjh6xd" path="res://icon.svg" id="20_3h328"]
 [ext_resource type="Texture2D" uid="uid://c1bmkpsoy6luj" path="res://Assets/Pedals/BossDelayOff.png" id="20_njlu1"]
 [ext_resource type="Texture2D" uid="uid://ejnblj570sxg" path="res://Assets/Pedals/BossDelayOn.png" id="21_vqfcb"]
 [ext_resource type="Script" uid="uid://cwwg52uumuvu8" path="res://Scripts/Upgrades/Distortion.gd" id="22_5k7bd"]
@@ -42,22 +41,31 @@
 [ext_resource type="Script" uid="uid://hmv5fvdvkdvs" path="res://Scripts/States/combat_state.gd" id="30_yyx54"]
 [ext_resource type="Script" uid="uid://ct8120htle6mr" path="res://Scripts/RoamingScripts/AreaCombatTrigger.gd" id="31_3h328"]
 [ext_resource type="Script" uid="uid://ds247js4bk1j6" path="res://Scripts/Upgrades/Reverb.gd" id="31_bhyo4"]
-[ext_resource type="PackedScene" uid="uid://bqwqxi3atc7sc" path="res://Scenes/test_enemy.tscn" id="32_2qdxi"]
 [ext_resource type="Script" uid="uid://c5imh7qsgm7va" path="res://Scripts/RoamingScripts/RoamingCamera.gd" id="32_5k7bd"]
 [ext_resource type="Script" uid="uid://f4fsxcpgrcj2" path="res://Scripts/Upgrades/Limiter.gd" id="32_bhyo4"]
 [ext_resource type="PackedScene" uid="uid://dansr6dmqv388" path="res://Scenes/Combat/combat_encounter.tscn" id="33_5k7bd"]
 [ext_resource type="Script" uid="uid://bsfjo7hkmht7v" path="res://Scripts/RoamingScripts/CameraZone.gd" id="33_f668u"]
-[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="38_vggl3"]
-[ext_resource type="Script" uid="uid://cjyhun28mgftu" path="res://Scripts/Upgrades/NoiseGate.gd" id="40_tysw2"]
+[ext_resource type="Script" uid="uid://c5n6a1sk1jfq8" path="res://Scripts/Upgrades/PreAmpUpgrade.gd" id="35_wx18t"]
+[ext_resource type="Script" uid="uid://ls5ryq2oq2o6" path="res://Scripts/Upgrades/ChorusUpgrade.gd" id="39_7gov3"]
+[ext_resource type="Script" uid="uid://cbdnrmeoovned" path="res://Scripts/Upgrades/Feedback.gd" id="40_tsdb8"]
 [ext_resource type="Script" uid="uid://dxl66dv5mtw1b" path="res://Scripts/Upgrades/Fuzz.gd" id="40_vyu8l"]
 [ext_resource type="PackedScene" uid="uid://dk6puebsqpa03" path="res://Scenes/Meshes/railing.tscn" id="46_vqfcb"]
-[ext_resource type="Texture2D" uid="uid://co044it4tq73x" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png" id="52_nnkj5"]
-[ext_resource type="Texture2D" uid="uid://fwip6kyjf64t" path="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png" id="52_vggl3"]
-[ext_resource type="Script" uid="uid://bhxe5kxxjl2wi" path="res://Scripts/CombatScripts/Enemy.gd" id="54_llj1i"]
-[ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="55_xaxh8"]
-[ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="56_xyvg4"]
-[ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="57_rfc6k"]
-[ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="58_fv4kp"]
+[ext_resource type="PackedScene" uid="uid://d3wuqfbj5jwwg" path="res://Scenes/Enemies/keyboardEnemy.tscn" id="50_llj1i"]
+[ext_resource type="SpriteFrames" uid="uid://dafdogbys6isq" path="res://SpriteFrames/KeyboardEnemyRoaming.tres" id="52_tysw2"]
+[ext_resource type="PackedScene" uid="uid://b4c47jiynvdcc" path="res://Scenes/Enemies/boss_enemy.tscn" id="53_tsdb8"]
+[ext_resource type="Texture2D" uid="uid://dww8sqt05suwp" path="res://Assets/Animations/jam boss idle/frame_01.png" id="54_7gov3"]
+[ext_resource type="Texture2D" uid="uid://cexnx8eprwm1a" path="res://Assets/Animations/jam boss idle/frame_02.png" id="55_wx18t"]
+[ext_resource type="Texture2D" uid="uid://bwgkgmgneddnq" path="res://Assets/Animations/jam boss idle/frame_03.png" id="56_0yjys"]
+[ext_resource type="Texture2D" uid="uid://c7lrkpwpifxo1" path="res://Assets/Animations/jam boss idle/frame_04.png" id="57_fs8f3"]
+[ext_resource type="Texture2D" uid="uid://chtwa6aiih5fh" path="res://Assets/Animations/jam boss idle/frame_05.png" id="58_ne2lb"]
+[ext_resource type="Texture2D" uid="uid://wcjnfxchlrpy" path="res://Assets/Animations/jam boss idle/frame_06.png" id="59_itjem"]
+[ext_resource type="Texture2D" uid="uid://dyexeu6qmrv6" path="res://Assets/Animations/jam boss idle/frame_07.png" id="60_nr3cw"]
+[ext_resource type="Texture2D" uid="uid://dp3e1a8d5ximv" path="res://Assets/Animations/jam boss idle/frame_08.png" id="61_vg7lj"]
+[ext_resource type="Texture2D" uid="uid://cywpto2k78a8i" path="res://Assets/Animations/jam boss idle/frame_09.png" id="62_jshhd"]
+[ext_resource type="Texture2D" uid="uid://bv48rjc3dg4u3" path="res://Assets/Animations/jam boss idle/frame_10.png" id="63_0dvbe"]
+[ext_resource type="Texture2D" uid="uid://dmlvmkjofhnmg" path="res://Assets/Animations/jam boss idle/frame_11.png" id="64_4fr68"]
+[ext_resource type="Texture2D" uid="uid://bilpdn7ma8680" path="res://Assets/Animations/jam boss idle/frame_12.png" id="65_sndjf"]
+[ext_resource type="AudioStream" uid="uid://bk17v35d03ol0" path="res://Assets/Music/ShopReal.mp3" id="106_tsdb8"]
 
 [sub_resource type="Curve" id="Curve_3h328"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.08719346, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8134481), 0.0, 0.0, 0, 0]
@@ -158,28 +166,31 @@ size = Vector2(600, 800)
 [sub_resource type="Resource" id="Resource_4dv2k"]
 script = ExtResource("22_5k7bd")
 upgradeName = "Boss DS-2"
-description = "A distortion pedal increasing damage by 50%"
+description = "Increases damage dealt by 50%"
 offSprite = ExtResource("14_6bxja")
 onSprite = ExtResource("15_gy0pf")
+energyCost = 2
 metadata/_custom_type_script = "uid://cwwg52uumuvu8"
 
 [sub_resource type="Resource" id="Resource_yyx54"]
 script = ExtResource("23_f668u")
 critDamageBoost = 2.0
 upgradeName = "Boss OD-3"
-description = "An overdrive pedal increasing crit damage by 200%"
+description = "Increases crit damage by 200%"
 offSprite = ExtResource("17_0cqas")
 onSprite = ExtResource("18_28xxc")
+energyCost = 2
 metadata/_custom_type_script = "uid://cih5gvuu7jr0t"
 
 [sub_resource type="Resource" id="Resource_3h328"]
 script = ExtResource("24_a2iyh")
 damageBoostPercent = 0.5
 additionalHits = 3
-upgradeName = "BossDD-3"
-description = "A delay pedal which increases the number of hits in an attack by 3, but decreases damage by 50%"
+upgradeName = "Boss DD-3"
+description = "Increases the number of hits in an attack by 3, but decreases damage by 50%"
 offSprite = ExtResource("20_njlu1")
 onSprite = ExtResource("21_vqfcb")
+energyCost = 3
 cost = 15
 metadata/_custom_type_script = "uid://bhkc0g15m8xn2"
 
@@ -187,9 +198,10 @@ metadata/_custom_type_script = "uid://bhkc0g15m8xn2"
 script = ExtResource("25_6va1x")
 damageBoostAmount = 4
 upgradeName = "Boss BP-1W"
-description = "A Boost pedal increasing damage by 4"
+description = "Increases damage dealt by 4"
 offSprite = ExtResource("23_bhyo4")
 onSprite = ExtResource("24_ylcug")
+energyCost = 2
 cost = 10
 metadata/_custom_type_script = "uid://cook4pbgv2f3u"
 
@@ -197,7 +209,7 @@ metadata/_custom_type_script = "uid://cook4pbgv2f3u"
 script = ExtResource("26_dbvsx")
 critChanceBoost = 0.3
 upgradeName = "Unbranded EQ"
-description = "An EQ pedal increasing crit chance by 30%"
+description = "Increases crit chance by 30%"
 offSprite = ExtResource("26_gy0pf")
 onSprite = ExtResource("27_0cqas")
 cost = 7
@@ -207,7 +219,7 @@ metadata/_custom_type_script = "uid://dqwgxh6gfsb15"
 script = ExtResource("31_bhyo4")
 blockKept = 0.5
 upgradeName = "Boss RV-6"
-description = "A Reverb pedal causing 50% of block to be kept at the start of a turn"
+description = "Keep 50% of block at the start of your turn"
 offSprite = ExtResource("29_njlu1")
 onSprite = ExtResource("30_vqfcb")
 cost = 10
@@ -221,26 +233,91 @@ offSprite = ExtResource("26_gy0pf")
 onSprite = ExtResource("27_0cqas")
 metadata/_custom_type_script = "uid://f4fsxcpgrcj2"
 
-[sub_resource type="Resource" id="Resource_tswwu"]
-script = ExtResource("38_vggl3")
-percentDamageTaken = 3.0
-effectName = "Block"
-texture = ExtResource("20_3h328")
-metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+[sub_resource type="Resource" id="Resource_va8a4"]
+script = ExtResource("35_wx18t")
+upgradeName = "Sketchy Preamp Pedal"
+description = "Increases energy by 2"
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
+energyCost = -2
+cost = 10
+metadata/_custom_type_script = "uid://c5n6a1sk1jfq8"
 
-[sub_resource type="Resource" id="Resource_vyu8l"]
-script = ExtResource("40_tysw2")
-blockModifier = SubResource("Resource_tswwu")
-upgradeName = "Sketchy Noise Gate"
-description = "Hitting an enemy with block up cause subsequent hits to deal 300% damage to the block"
+[sub_resource type="Resource" id="Resource_7gov3"]
+script = ExtResource("40_tsdb8")
+upgradeName = "Sketchy Feedback Pedal"
+description = "Every hit heals you 3hp"
 offSprite = ExtResource("26_gy0pf")
 onSprite = ExtResource("27_0cqas")
 energyCost = 2
-metadata/_custom_type_script = "uid://cjyhun28mgftu"
+cost = 15
+metadata/_custom_type_script = "uid://cbdnrmeoovned"
 
-[sub_resource type="Resource" id="Resource_vggl3"]
+[sub_resource type="Resource" id="Resource_ec2qq"]
+script = ExtResource("22_5k7bd")
+damageBoostPercent = 2.0
+upgradeName = "Modified Boss DS-2"
+description = "Increases damage by 100%"
+offSprite = ExtResource("14_6bxja")
+onSprite = ExtResource("15_gy0pf")
+energyCost = 4
+cost = 25
+metadata/_custom_type_script = "uid://cwwg52uumuvu8"
+
+[sub_resource type="Resource" id="Resource_tsdb8"]
 script = ExtResource("40_vyu8l")
+damageBoostPercent = 3.0
+critChanceDecrease = 0.3
+upgradeName = "Unbranded Fuzz Pedal"
+description = "Increases damage by 200%, but decreases crit chance by 30%"
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
+energyCost = 4
+cost = 20
 metadata/_custom_type_script = "uid://dxl66dv5mtw1b"
+
+[sub_resource type="Resource" id="Resource_wx18t"]
+script = ExtResource("31_bhyo4")
+blockKept = 100.0
+upgradeName = "Modified Boss RV-6"
+description = "Keep 100% of block at the start of your turn"
+offSprite = ExtResource("29_njlu1")
+onSprite = ExtResource("30_vqfcb")
+energyCost = 2
+cost = 20
+metadata/_custom_type_script = "uid://ds247js4bk1j6"
+
+[sub_resource type="Resource" id="Resource_0yjys"]
+script = ExtResource("26_dbvsx")
+critChanceBoost = 0.4
+upgradeName = "Another Unbranded EQ Pedal"
+description = "Increases crit chance by 40%"
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
+energyCost = 2
+cost = 15
+metadata/_custom_type_script = "uid://dqwgxh6gfsb15"
+
+[sub_resource type="Resource" id="Resource_fs8f3"]
+script = ExtResource("39_7gov3")
+healAmount = 0.5
+upgradeName = "Unbranded Chorus Pedal"
+description = "Heals you for 50% of damage dealt"
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
+energyCost = 4
+cost = 15
+metadata/_custom_type_script = "uid://ls5ryq2oq2o6"
+
+[sub_resource type="Resource" id="Resource_ne2lb"]
+script = ExtResource("35_wx18t")
+upgradeName = "Another Preamp Pedal"
+description = "Increases energy by 2"
+offSprite = ExtResource("26_gy0pf")
+onSprite = ExtResource("27_0cqas")
+energyCost = -2
+cost = 10
+metadata/_custom_type_script = "uid://c5n6a1sk1jfq8"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2iyh"]
 size = Vector3(11.702637, 10.669434, 60.130493)
@@ -252,339 +329,66 @@ size = Vector3(11.702637, 10.669434, 28.838043)
 size = Vector3(38.64198, 10.7677, 12.014282)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bhyo4"]
-size = Vector3(11.589918, 10.7677, 32.239815)
+size = Vector3(11.589918, 10.7677, 66.727325)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5gdc5"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(0, 0, 96, 80)
+[sub_resource type="BoxShape3D" id="BoxShape3D_nnkj5"]
+size = Vector3(1.6162109, 1.2143555, 1.5537109)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_35bf0"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(96, 0, 96, 80)
+[sub_resource type="BoxShape3D" id="BoxShape3D_llj1i"]
+size = Vector3(3.447754, 1.2143555, 2.4125977)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1w08t"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(192, 0, 96, 80)
+[sub_resource type="BoxShape3D" id="BoxShape3D_xyvg4"]
+size = Vector3(5.7419434, 1.2143555, 6.0180664)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_drxrn"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(288, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f8j30"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(384, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w134b"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(480, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tgui"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(576, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r5p76"]
-atlas = ExtResource("52_nnkj5")
-region = Rect2(672, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mmbcg"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(0, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uajly"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(96, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kyaa0"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(192, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rnibh"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(288, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ithbu"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(384, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pf01m"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(480, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_macjn"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(576, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ndehm"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(672, 0, 96, 80)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ccakx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_077vb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5gdc5")
+"texture": ExtResource("54_7gov3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_35bf0")
+"texture": ExtResource("55_wx18t")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1w08t")
+"texture": ExtResource("56_0yjys")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_drxrn")
+"texture": ExtResource("57_fs8f3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f8j30")
+"texture": ExtResource("58_ne2lb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w134b")
+"texture": ExtResource("59_itjem")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5tgui")
+"texture": ExtResource("60_nr3cw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r5p76")
-}],
-"loop": false,
-"name": &"Attack",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mmbcg")
+"texture": ExtResource("61_vg7lj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uajly")
+"texture": ExtResource("62_jshhd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kyaa0")
+"texture": ExtResource("63_0dvbe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rnibh")
+"texture": ExtResource("64_4fr68")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ithbu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pf01m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_macjn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ndehm")
+"texture": ExtResource("65_sndjf")
 }],
 "loop": true,
 "name": &"Idle",
 "speed": 12.0
 }]
 
-[sub_resource type="Resource" id="Resource_lm5xo"]
-resource_local_to_scene = true
-script = ExtResource("56_xyvg4")
-atkDmg = 20
-actionName = "Attack!"
-weight = 70
-animationName = "Attack"
-metadata/_custom_type_script = "uid://37ixs2yas0a2"
+[sub_resource type="BoxShape3D" id="BoxShape3D_tsdb8"]
+size = Vector3(1.2167969, 7.204529, 61.22644)
 
-[sub_resource type="Resource" id="Resource_3sp1v"]
-script = ExtResource("38_vggl3")
-effectName = "Block"
-stacks = 4
-metadata/_custom_type_script = "uid://djxhiomxyr7hq"
-
-[sub_resource type="Resource" id="Resource_yn0oc"]
-resource_local_to_scene = true
-script = ExtResource("57_rfc6k")
-statusEffect = SubResource("Resource_3sp1v")
-actionName = "Block!"
-weight = 30
-metadata/_custom_type_script = "uid://b4l7koanb5qxc"
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_cvapq"]
-viewport_path = NodePath("HealthViewPort")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ngp1l"]
-size = Vector3(0.9682007, 1.3206787, 1)
-
-[sub_resource type="PackedScene" id="PackedScene_6yfru"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [],
-"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
-"node_count": 12,
-"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
-"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
-"version": 3
-}
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_nnkj5"]
-size = Vector3(1.6162109, 1.2143555, 1.5537109)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vggl3"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(0, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tysw2"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(96, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5nvl4"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(192, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jutt0"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(288, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4w32v"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(384, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6yfru"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(480, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnkj5"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(576, 0, 96, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_llj1i"]
-atlas = ExtResource("52_vggl3")
-region = Rect2(672, 0, 96, 80)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xaxh8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vggl3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tysw2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5nvl4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jutt0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4w32v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6yfru")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nnkj5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_llj1i")
-}],
-"loop": true,
-"name": &"default",
-"speed": 12.0
-}]
-
-[sub_resource type="PackedScene" id="PackedScene_xyvg4"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [],
-"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
-"node_count": 12,
-"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
-"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
-"version": 3
-}
-
-[sub_resource type="PackedScene" id="PackedScene_rfc6k"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [],
-"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
-"node_count": 12,
-"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
-"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
-"version": 3
-}
-
-[sub_resource type="PackedScene" id="PackedScene_fv4kp"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [],
-"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
-"node_count": 12,
-"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
-"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
-"version": 3
-}
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_llj1i"]
-size = Vector3(3.447754, 1.2143555, 2.4125977)
-
-[sub_resource type="PackedScene" id="PackedScene_nnkj5"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [],
-"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
-"node_count": 12,
-"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
-"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
-"version": 3
-}
-
-[sub_resource type="PackedScene" id="PackedScene_llj1i"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [],
-"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
-"node_count": 12,
-"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
-"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
-"version": 3
-}
-
-[sub_resource type="PackedScene" id="PackedScene_xaxh8"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [],
-"names": PackedStringArray("TestEnemy", "pixel_size", "billboard", "alpha_cut", "texture_filter", "sprite_frames", "animation", "autoplay", "script", "possibleActions", "maxHp", "metadata/_custom_type_script", "AnimatedSprite3D", "StatusEffectComponent", "Node", "HealthBarSprite", "transform", "texture", "Sprite3D", "HealthViewPort", "transparent_bg", "size", "SubViewport", "VBoxContainer", "clip_contents", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "PanelContainer", "self_modulate", "layout_mode", "ProgressBar", "size_flags_vertical", "value", "allow_lesser", "show_percentage", "HpAmount", "size_flags_horizontal", "Label", "StatusEffectRow", "HBoxContainer", "HoverDetector", "Area3D", "CollisionShape3D", "shape", "NextActionTooltip", "no_depth_test", "outline_modulate", "text", "font_size", "outline_size", "autowrap_mode", "width", "Label3D"),
-"node_count": 12,
-"node_ids": PackedInt32Array(249674596, 1498906395, 1374277308, 1808302160, 961998303, 811833815, 80013772, 1831818603, 1661662862, 1152561922, 1942544340, 298325944),
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 12, 0, -1, 11, 1, 0, 2, 1, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 0, 0, 14, 13, -1, 2, 8, 10, 11, 11, 0, 0, 0, 18, 15, -1, 3, 16, 12, 2, 1, 17, 13, 0, 0, 0, 22, 19, -1, 2, 20, 14, 21, 15, 0, 3, 0, 23, 23, -1, 7, 24, 14, 25, 16, 26, 17, 27, 17, 28, 1, 29, 1, 30, 2, 0, 4, 0, 31, 31, -1, 2, 32, 18, 33, 1, 0, 5, 0, 34, 34, -1, 5, 33, 1, 35, 19, 36, 20, 37, 14, 38, 21, 0, 5, 0, 41, 39, -1, 2, 33, 1, 40, 19, 0, 4, 0, 43, 42, -1, 1, 33, 1, 0, 0, 0, 45, 44, -1, 0, 0, 9, 0, 46, 46, -1, 2, 16, 22, 47, 23, 0, 0, 0, 56, 48, -1, 10, 16, 24, 2, 25, 49, 14, 4, 1, 50, 26, 51, 27, 52, 28, 53, 19, 54, 1, 55, 29, 0),
-"variants": [0.04, 2, 0, SubResource("SpriteFrames_ccakx"), &"Attack", "Idle", ExtResource("54_llj1i"), Array[ExtResource("55_xaxh8")]([SubResource("Resource_lm5xo"), SubResource("Resource_yn0oc")]), 25, "uid://bhxe5kxxjl2wi", ExtResource("58_fv4kp"), "uid://dgseikyr6yiej", Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0), SubResource("ViewportTexture_cvapq"), true, Vector2i(200, 60), 15, 1.0, Color(1, 1, 1, 0), 4, 50.0, false, Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09408569, -0.12789306, 0), SubResource("BoxShape3D_ngp1l"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0), 1, Color(0.5058824, 0, 0, 1), "This Enemy Intends To", 48, 600.0],
-"version": 3
-}
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xyvg4"]
-size = Vector3(5.7419434, 1.2143555, 6.0180664)
+[sub_resource type="BoxShape3D" id="BoxShape3D_7gov3"]
+size = Vector3(1.2167969, 7.204529, 39.102753)
 
 [node name="Roaming" type="Node3D" unique_id=1428682443]
 script = ExtResource("1_3nnlx")
@@ -1021,9 +825,6 @@ transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 15, 
 [node name="TrashCan11" parent="MapMesh" unique_id=468550438 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 31, 0, 22)
 
-[node name="TrashCan12" parent="MapMesh" unique_id=1615602331 instance=ExtResource("6_6nsrk")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 45, 0, 22)
-
 [node name="TrashCan2" parent="MapMesh" unique_id=923895160 instance=ExtResource("6_6nsrk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, 10)
 
@@ -1243,7 +1044,7 @@ stateMachine = NodePath("../../StateMachine")
 
 [node name="ShopScreen" parent="POIs/MusicShop" unique_id=1474026120 instance=ExtResource("18_4dv2k")]
 visible = false
-availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug"), SubResource("Resource_2g8bb")])
+availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_4dv2k"), SubResource("Resource_yyx54"), SubResource("Resource_3h328"), SubResource("Resource_2qdxi"), SubResource("Resource_5k7bd"), SubResource("Resource_ylcug"), SubResource("Resource_2g8bb"), SubResource("Resource_va8a4")])
 
 [node name="VanSaveSpot" parent="POIs" unique_id=141963415 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0863159, 0.20948657, -21.039001)
@@ -1265,6 +1066,7 @@ saveRoomScreen = NodePath("SaveRoomScreen")
 visible = false
 environment = NodePath("../../..")
 saveRoomId = "SaveRoom2"
+spawnPosition = Vector3(68.303, 1.3, 26.729)
 
 [node name="MusicShop2" parent="POIs" unique_id=181557918 node_paths=PackedStringArray("shopScreen", "stateMachine") instance=ExtResource("16_qwyxc")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 58.960163, 0, 18.37948)
@@ -1273,7 +1075,7 @@ stateMachine = NodePath("../../StateMachine")
 
 [node name="ShopScreen" parent="POIs/MusicShop2" unique_id=30817077 instance=ExtResource("18_4dv2k")]
 visible = false
-availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_vyu8l"), SubResource("Resource_vggl3")])
+availableUpgrades = Array[ExtResource("19_yyx54")]([SubResource("Resource_7gov3"), SubResource("Resource_ec2qq"), SubResource("Resource_tsdb8"), SubResource("Resource_wx18t"), SubResource("Resource_0yjys"), SubResource("Resource_fs8f3"), SubResource("Resource_ne2lb")])
 
 [node name="StateMachine" type="Node" parent="." unique_id=954152002 node_paths=PackedStringArray("initialState")]
 script = ExtResource("17_3xqub")
@@ -1297,7 +1099,7 @@ script = ExtResource("22_hkv6x")
 environment = NodePath("../..")
 
 [node name="PlayerRoaming" parent="." unique_id=183741771 node_paths=PackedStringArray("camera") instance=ExtResource("25_4iuui")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041867256, 0.84274244, -25.598982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.109705, 1.2370194, -25.78421)
 moveSpeed = 6.5
 camera = NodePath("../RoamingCamera")
 
@@ -1350,11 +1152,7 @@ lookOffset = Vector3(0, 3, 0)
 metadata/_custom_type_script = "uid://bsfjo7hkmht7v"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraZone4" unique_id=390772269]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063667, 0.61821747, 22.361673)
-shape = SubResource("BoxShape3D_bhyo4")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraZone4" unique_id=87119109]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063667, 0.61821747, 71.22649)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063667, 0.61821747, 39.60543)
 shape = SubResource("BoxShape3D_bhyo4")
 
 [node name="EnemyCombatTriggers" type="Node" parent="." unique_id=906386666]
@@ -1365,7 +1163,7 @@ script = ExtResource("31_3h328")
 sprites = NodePath("Sprites")
 encounter = NodePath("CombatEncounter")
 stateMachine = NodePath("../../StateMachine")
-enemyScenes = Array[PackedScene]([SubResource("PackedScene_6yfru")])
+enemyScenes = Array[PackedScene]([ExtResource("50_llj1i")])
 metadata/_custom_type_script = "uid://ct8120htle6mr"
 
 [node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger" unique_id=745929115]
@@ -1382,19 +1180,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.2
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger/Sprites" unique_id=1214709703]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -0.12669563)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+frame_progress = 0.5836926
 
 [node name="AreaCombatTrigger2" type="Node3D" parent="EnemyCombatTriggers" unique_id=1386841267 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, -6.6771297)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, -4.4720583)
 script = ExtResource("31_3h328")
 sprites = NodePath("Sprites")
 encounter = NodePath("CombatEncounter")
 stateMachine = NodePath("../../StateMachine")
-enemyScenes = Array[PackedScene]([SubResource("PackedScene_xyvg4")])
+enemyScenes = Array[PackedScene]([ExtResource("50_llj1i")])
 metadata/_custom_type_script = "uid://ct8120htle6mr"
 
 [node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger2" unique_id=2072854025]
@@ -1411,11 +1211,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.2
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger2/Sprites" unique_id=1616887416]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -0.12669563)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+frame_progress = 0.60281396
 
 [node name="AreaCombatTrigger3" type="Node3D" parent="EnemyCombatTriggers" unique_id=1840287090 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, 7.970356)
@@ -1423,7 +1225,7 @@ script = ExtResource("31_3h328")
 sprites = NodePath("Sprites")
 encounter = NodePath("CombatEncounter")
 stateMachine = NodePath("../../StateMachine")
-enemyScenes = Array[PackedScene]([SubResource("PackedScene_rfc6k"), SubResource("PackedScene_fv4kp")])
+enemyScenes = Array[PackedScene]([ExtResource("50_llj1i"), ExtResource("50_llj1i")])
 metadata/_custom_type_script = "uid://ct8120htle6mr"
 
 [node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger3" unique_id=1863520815]
@@ -1442,27 +1244,70 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.2
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger3/Sprites" unique_id=367619689]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -0.12669563)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger3/Sprites" unique_id=1097842298]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2354875, 0, -1.4099035)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
 
-[node name="AreaCombatTrigger4" type="Node3D" parent="EnemyCombatTriggers" unique_id=1483870913 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, 27.814075)
+[node name="AreaCombatTrigger6" type="Node3D" parent="EnemyCombatTriggers" unique_id=1140233839 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.65546, 0.72312903, 25.29324)
 script = ExtResource("31_3h328")
 sprites = NodePath("Sprites")
 encounter = NodePath("CombatEncounter")
 stateMachine = NodePath("../../StateMachine")
-enemyScenes = Array[PackedScene]([SubResource("PackedScene_nnkj5"), SubResource("PackedScene_llj1i"), SubResource("PackedScene_xaxh8"), ExtResource("32_2qdxi")])
+enemyScenes = Array[PackedScene]([ExtResource("50_llj1i"), ExtResource("50_llj1i")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
+
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger6" unique_id=448451904]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger6/Area3D" unique_id=1330131128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9157715, 0, -0.42944336)
+shape = SubResource("BoxShape3D_llj1i")
+
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger6" unique_id=717973785 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
+goldReward = 15
+environment = NodePath("../../..")
+
+[node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger6" unique_id=1656616857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.28540993)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger6/Sprites" unique_id=1602367059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -0.12669563)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger6/Sprites" unique_id=1389318616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2354875, 0, -1.4099035)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AreaCombatTrigger4" type="Node3D" parent="EnemyCombatTriggers" unique_id=1483870913 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0780034, 0.72312903, 25.62162)
+script = ExtResource("31_3h328")
+sprites = NodePath("Sprites")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../../StateMachine")
+enemyScenes = Array[PackedScene]([ExtResource("50_llj1i"), ExtResource("50_llj1i"), ExtResource("50_llj1i"), ExtResource("50_llj1i")])
 metadata/_custom_type_script = "uid://ct8120htle6mr"
 
 [node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger4" unique_id=2025755460]
@@ -1474,6 +1319,7 @@ shape = SubResource("BoxShape3D_xyvg4")
 [node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger4" unique_id=1348748916 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
 goldReward = 30
+enemyStepX = 1.0
 environment = NodePath("../../..")
 
 [node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger4" unique_id=879808851]
@@ -1481,38 +1327,176 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.2
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=35277969]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3631451, 0, 0.6996498)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=553664843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9007356, 0, -1.4099026)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
 
 [node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=1082353770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -2.3202286)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
 
 [node name="AnimatedSprite3D4" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger4/Sprites" unique_id=527658566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2354875, 0, -3.6034355)
-pixel_size = 0.04
+pixel_size = 0.0015
 billboard = 2
 texture_filter = 2
-sprite_frames = SubResource("SpriteFrames_xaxh8")
-autoplay = "default"
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AreaCombatTrigger7" type="Node3D" parent="EnemyCombatTriggers" unique_id=935524115 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.847, 0.735, 78.681)
+script = ExtResource("31_3h328")
+sprites = NodePath("Sprites")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../../StateMachine")
+enemyScenes = Array[PackedScene]([ExtResource("53_tsdb8"), ExtResource("50_llj1i"), ExtResource("50_llj1i"), ExtResource("50_llj1i")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
+
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger7" unique_id=1459489732]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger7/Area3D" unique_id=1571310326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0628662, 0, -0.98095703)
+shape = SubResource("BoxShape3D_xyvg4")
+
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger7" unique_id=809327307 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
+goldReward = 60
+enemyStepX = 1.0
+environment = NodePath("../../..")
+
+[node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger7" unique_id=299996443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230557, -0.021852612, 0.28540993)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger7/Sprites" unique_id=1331104560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3631439, 0, 0.07097626)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger7/Sprites" unique_id=1870584340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9007356, 0, -1.4099026)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger7/Sprites" unique_id=483727598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -2.3202286)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AnimatedSprite3D4" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger7/Sprites" unique_id=540133457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.235489, 0.28793383, -3.6034393)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_077vb")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="AreaCombatTrigger5" type="Node3D" parent="EnemyCombatTriggers" unique_id=1206860932 node_paths=PackedStringArray("sprites", "encounter", "stateMachine")]
+transform = Transform3D(0.6625939, 0, 0.74897885, 0, 1, 0, -0.74897885, 0, 0.6625939, 46.343033, 0.9097502, 27.49525)
+script = ExtResource("31_3h328")
+sprites = NodePath("Sprites")
+encounter = NodePath("CombatEncounter")
+stateMachine = NodePath("../../StateMachine")
+enemyScenes = Array[PackedScene]([ExtResource("50_llj1i"), ExtResource("50_llj1i"), ExtResource("50_llj1i"), ExtResource("50_llj1i")])
+metadata/_custom_type_script = "uid://ct8120htle6mr"
+
+[node name="Area3D" type="Area3D" parent="EnemyCombatTriggers/AreaCombatTrigger5" unique_id=246417576]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyCombatTriggers/AreaCombatTrigger5/Area3D" unique_id=1100262525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0628662, 0, -0.98095703)
+shape = SubResource("BoxShape3D_xyvg4")
+
+[node name="CombatEncounter" parent="EnemyCombatTriggers/AreaCombatTrigger5" unique_id=870719720 node_paths=PackedStringArray("environment") instance=ExtResource("33_5k7bd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2052846, -0.076155424, 2.2331214)
+goldReward = 30
+enemyStepX = 1.0
+environment = NodePath("../../..")
+
+[node name="Sprites" type="Node3D" parent="EnemyCombatTriggers/AreaCombatTrigger5" unique_id=1682365516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18230438, -0.19442761, 0.28540993)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger5/Sprites" unique_id=29699415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3631451, 0, 0.6996498)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger5/Sprites" unique_id=1201723551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9007356, 0, -1.4099026)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger5/Sprites" unique_id=236593664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11358714, 0, -2.3202286)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
+
+[node name="AnimatedSprite3D4" type="AnimatedSprite3D" parent="EnemyCombatTriggers/AreaCombatTrigger5/Sprites" unique_id=1704073415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2354875, 0, -3.6034355)
+pixel_size = 0.0015
+billboard = 2
+texture_filter = 2
+sprite_frames = ExtResource("52_tysw2")
+animation = &"EnemyIdle"
+autoplay = "EnemyIdle"
 
 [node name="End Of Demo Label" type="Label3D" parent="." unique_id=1698724887]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.80051, 1.8953539, 94.27648)
 billboard = 1
 text = "End of Demo :("
 font_size = 64
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=219907922]
+stream = ExtResource("106_tsdb8")
+volume_db = -35.434
+
+[node name="InvisibleWalls" type="StaticBody3D" parent="." unique_id=663254645]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWalls" unique_id=1000127143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2211165, 3.1022644, 2.5253296)
+shape = SubResource("BoxShape3D_tsdb8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="InvisibleWalls" unique_id=2007910839]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.78647, 3.1022644, 32.673527)
+shape = SubResource("BoxShape3D_7gov3")

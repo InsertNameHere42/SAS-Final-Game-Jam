@@ -4,6 +4,7 @@ class_name Enemy extends Damagable
 @onready var hoverDetector: Area3D = $HoverDetector
 @onready var status_effect_component: StatusEffectComponent = $StatusEffectComponent
 @export var possibleActions: Array[EnemyAction]
+@export var verticalOffset: float = 0
 var nextAction: EnemyAction
 var hovered: bool = false
 

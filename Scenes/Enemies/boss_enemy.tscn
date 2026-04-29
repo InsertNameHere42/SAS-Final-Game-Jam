@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://b4c47jiynvdcc"]
+
+[ext_resource type="Texture2D" uid="uid://b4tg48rax18sp" path="res://Assets/Animations/jam boss attack 1/frame_01.png" id="1_vth47"]
+[ext_resource type="Texture2D" uid="uid://c4a42561kskun" path="res://Assets/Animations/jam boss attack 1/frame_02.png" id="2_isatl"]
+[ext_resource type="Texture2D" uid="uid://d2wtejc7mnam4" path="res://Assets/Animations/jam boss attack 1/frame_03.png" id="3_l4m2q"]
+[ext_resource type="Texture2D" uid="uid://pns2qk7d853a" path="res://Assets/Animations/jam boss attack 1/frame_04.png" id="4_vsydm"]
+[ext_resource type="Texture2D" uid="uid://ddsupxn4n088n" path="res://Assets/Animations/jam boss attack 1/frame_05.png" id="5_7afhn"]
+[ext_resource type="Texture2D" uid="uid://c32dyb3pn3voi" path="res://Assets/Animations/jam boss attack 1/frame_06.png" id="6_1r4xx"]
+[ext_resource type="Texture2D" uid="uid://8um2i1tqqdxc" path="res://Assets/Animations/jam boss attack 1/frame_07.png" id="7_d4w6n"]
+[ext_resource type="Texture2D" uid="uid://bdlkaefauff5m" path="res://Assets/Animations/jam boss attack 1/frame_08.png" id="8_nkmsw"]
+[ext_resource type="Texture2D" uid="uid://bbqubsb3tcjdw" path="res://Assets/Animations/jam boss attack 1/frame_09.png" id="9_bp74e"]
+[ext_resource type="Texture2D" uid="uid://cejjj3txgc5kj" path="res://Assets/Animations/jam boss attack 1/frame_10.png" id="10_b7m6x"]
+[ext_resource type="Texture2D" uid="uid://cu3pomfb3ix1x" path="res://Assets/Animations/jam boss attack 1/frame_11.png" id="11_7ujx7"]
+[ext_resource type="Texture2D" uid="uid://da6gdkesj7i0v" path="res://Assets/Animations/jam boss attack 1/frame_12.png" id="12_vfav4"]
+[ext_resource type="Texture2D" uid="uid://dll4gsppb1ymv" path="res://Assets/Animations/jam boss attack 2/frame_01.png" id="13_usqs2"]
+[ext_resource type="Texture2D" uid="uid://csq0ifjj56x3v" path="res://Assets/Animations/jam boss attack 2/frame_02.png" id="14_vkco8"]
+[ext_resource type="Texture2D" uid="uid://pu04s3wggw2d" path="res://Assets/Animations/jam boss attack 2/frame_03.png" id="15_iv7ks"]
+[ext_resource type="Texture2D" uid="uid://b2f7fh7331udx" path="res://Assets/Animations/jam boss attack 2/frame_04.png" id="16_uaj8v"]
+[ext_resource type="Texture2D" uid="uid://d7rv54roworl" path="res://Assets/Animations/jam boss attack 2/frame_05.png" id="17_5c8th"]
+[ext_resource type="Texture2D" uid="uid://c6gn8jnx8o8ws" path="res://Assets/Animations/jam boss attack 2/frame_06.png" id="18_3vnb4"]
+[ext_resource type="Texture2D" uid="uid://brt450qo78lsq" path="res://Assets/Animations/jam boss attack 2/frame_07.png" id="19_1cm1h"]
+[ext_resource type="Texture2D" uid="uid://bvic61u4gtcj7" path="res://Assets/Animations/jam boss attack 2/frame_08.png" id="20_l5g3e"]
+[ext_resource type="Texture2D" uid="uid://dx13kyyhhqovc" path="res://Assets/Animations/jam boss attack 2/frame_09.png" id="21_i146x"]
+[ext_resource type="Texture2D" uid="uid://c81x6t0gqwfcu" path="res://Assets/Animations/jam boss attack 2/frame_10.png" id="22_a0hy7"]
+[ext_resource type="Texture2D" uid="uid://cp0ao5v7xofx6" path="res://Assets/Animations/jam boss attack 2/frame_11.png" id="23_y0oco"]
+[ext_resource type="Texture2D" uid="uid://c47bs4p8eog06" path="res://Assets/Animations/jam boss attack 2/frame_12.png" id="24_s5ux5"]
+[ext_resource type="Texture2D" uid="uid://bih4uhdltkp6p" path="res://Assets/Animations/jam boss defense/frame_1.png" id="25_q34sr"]
+[ext_resource type="Texture2D" uid="uid://dww8sqt05suwp" path="res://Assets/Animations/jam boss idle/frame_01.png" id="25_qkdm7"]
+[ext_resource type="Texture2D" uid="uid://cexnx8eprwm1a" path="res://Assets/Animations/jam boss idle/frame_02.png" id="26_dk8j3"]
+[ext_resource type="Texture2D" uid="uid://bm4ptb37dt152" path="res://Assets/Animations/jam boss defense/frame_2.png" id="26_lfrcq"]
+[ext_resource type="Texture2D" uid="uid://c7i88r54esocr" path="res://Assets/Animations/jam boss defense/frame_3.png" id="27_pw2jm"]
+[ext_resource type="Texture2D" uid="uid://bwgkgmgneddnq" path="res://Assets/Animations/jam boss idle/frame_03.png" id="27_tykrx"]
+[ext_resource type="Texture2D" uid="uid://c7lrkpwpifxo1" path="res://Assets/Animations/jam boss idle/frame_04.png" id="28_vth47"]
+[ext_resource type="Texture2D" uid="uid://chtwa6aiih5fh" path="res://Assets/Animations/jam boss idle/frame_05.png" id="29_isatl"]
+[ext_resource type="Texture2D" uid="uid://wcjnfxchlrpy" path="res://Assets/Animations/jam boss idle/frame_06.png" id="30_l4m2q"]
+[ext_resource type="Texture2D" uid="uid://dyexeu6qmrv6" path="res://Assets/Animations/jam boss idle/frame_07.png" id="31_vsydm"]
+[ext_resource type="Texture2D" uid="uid://dp3e1a8d5ximv" path="res://Assets/Animations/jam boss idle/frame_08.png" id="32_7afhn"]
+[ext_resource type="Texture2D" uid="uid://cywpto2k78a8i" path="res://Assets/Animations/jam boss idle/frame_09.png" id="33_1r4xx"]
+[ext_resource type="Texture2D" uid="uid://bv48rjc3dg4u3" path="res://Assets/Animations/jam boss idle/frame_10.png" id="34_d4w6n"]
+[ext_resource type="Texture2D" uid="uid://dmlvmkjofhnmg" path="res://Assets/Animations/jam boss idle/frame_11.png" id="35_nkmsw"]
+[ext_resource type="Texture2D" uid="uid://bilpdn7ma8680" path="res://Assets/Animations/jam boss idle/frame_12.png" id="36_bp74e"]
+[ext_resource type="Script" uid="uid://bhxe5kxxjl2wi" path="res://Scripts/CombatScripts/Enemy.gd" id="37_on0xc"]
+[ext_resource type="Script" uid="uid://v135sl4epsue" path="res://Scripts/Actions/EnemyAction.gd" id="38_i783s"]
+[ext_resource type="Script" uid="uid://37ixs2yas0a2" path="res://Scripts/Actions/BasicAttackAction.gd" id="39_7765m"]
+[ext_resource type="Script" uid="uid://b4l7koanb5qxc" path="res://Scripts/Actions/BasicStatusAction.gd" id="40_x4ujv"]
+[ext_resource type="Script" uid="uid://djxhiomxyr7hq" path="res://Scripts/StatusEffects/BlockEffect.gd" id="41_yrmqy"]
+[ext_resource type="Script" uid="uid://dgseikyr6yiej" path="res://Scripts/StatusEffects/StatusEffectComponent.gd" id="42_turpa"]
+[ext_resource type="Script" uid="uid://bnrkqfwtyr6wg" path="res://Scripts/Actions/StatusAndAttackAction.gd" id="45_isatl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccakx"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vth47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_isatl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l4m2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vsydm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7afhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1r4xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d4w6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nkmsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bp74e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b7m6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7ujx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vfav4")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_usqs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vkco8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_iv7ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uaj8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5c8th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3vnb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1cm1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_l5g3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_i146x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_a0hy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_y0oco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_s5ux5")
+}],
+"loop": false,
+"name": &"Attack2",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_q34sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_lfrcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pw2jm")
+}],
+"loop": true,
+"name": &"Defend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_qkdm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_dk8j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tykrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vth47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_isatl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_l4m2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_vsydm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_7afhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_1r4xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_d4w6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_nkmsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_bp74e")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[sub_resource type="Resource" id="Resource_l4m2q"]
+script = ExtResource("39_7765m")
+atkDmg = 10
+actionName = "Do a swaggy kick"
+weight = 50
+animationName = "Attack"
+metadata/_custom_type_script = "uid://37ixs2yas0a2"
+
+[sub_resource type="Resource" id="Resource_vsydm"]
+script = ExtResource("41_yrmqy")
+flatDamageDecrease = 2
+effectName = "Block"
+stacks = 10
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_7afhn"]
+script = ExtResource("40_x4ujv")
+statusEffect = SubResource("Resource_vsydm")
+actionName = "Defend"
+weight = 35
+animationName = "Defend"
+metadata/_custom_type_script = "uid://b4l7koanb5qxc"
+
+[sub_resource type="Resource" id="Resource_1r4xx"]
+script = ExtResource("41_yrmqy")
+flatDamageDecrease = 2
+effectName = "Block"
+stacks = 7
+metadata/_custom_type_script = "uid://djxhiomxyr7hq"
+
+[sub_resource type="Resource" id="Resource_d4w6n"]
+script = ExtResource("45_isatl")
+statusEffect = SubResource("Resource_1r4xx")
+atkDmg = 15
+actionName = "Throw a hat into the ring"
+weight = 15
+animationName = "Attack2"
+metadata/_custom_type_script = "uid://bnrkqfwtyr6wg"
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cvapq"]
+viewport_path = NodePath("HealthViewPort")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngp1l"]
+size = Vector3(0.9682007, 1.3206787, 1)
+
+[node name="BossEnemy" type="AnimatedSprite3D" unique_id=249674596]
+pixel_size = 0.0015
+billboard = 2
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ccakx")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.36623612
+script = ExtResource("37_on0xc")
+possibleActions = Array[ExtResource("38_i783s")]([SubResource("Resource_l4m2q"), SubResource("Resource_7afhn"), SubResource("Resource_d4w6n")])
+verticalOffset = 0.26
+maxHp = 250
+metadata/_custom_type_script = "uid://bhxe5kxxjl2wi"
+
+[node name="StatusEffectComponent" type="Node" parent="." unique_id=1498906395]
+script = ExtResource("42_turpa")
+metadata/_custom_type_script = "uid://dgseikyr6yiej"
+
+[node name="HealthBarSprite" type="Sprite3D" parent="." unique_id=1374277308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66332436, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_cvapq")
+
+[node name="HealthViewPort" type="SubViewport" parent="." unique_id=1808302160]
+transparent_bg = true
+size = Vector2i(200, 60)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HealthViewPort" unique_id=961998303]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HealthViewPort/VBoxContainer" unique_id=811833815]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=80013772]
+layout_mode = 2
+size_flags_vertical = 4
+value = 50.0
+allow_lesser = true
+show_percentage = false
+
+[node name="HpAmount" type="Label" parent="HealthViewPort/VBoxContainer/PanelContainer" unique_id=1831818603]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StatusEffectRow" type="HBoxContainer" parent="HealthViewPort/VBoxContainer" unique_id=1661662862]
+layout_mode = 2
+
+[node name="HoverDetector" type="Area3D" parent="." unique_id=1152561922]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HoverDetector" unique_id=1942544340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008744299, -0.0040042996, 0)
+shape = SubResource("BoxShape3D_ngp1l")
+
+[node name="NextActionTooltip" type="Label3D" parent="." unique_id=298325944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0254357, 0)
+billboard = 1
+no_depth_test = true
+texture_filter = 2
+render_priority = 5
+outline_modulate = Color(0.5058824, 0, 0, 1)
+text = "This Enemy Intends To"
+font_size = 48
+outline_size = 4
+autowrap_mode = 2
+width = 600.0

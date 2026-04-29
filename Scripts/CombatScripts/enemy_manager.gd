@@ -16,6 +16,7 @@ func start() -> void:
 				child.queue_free() #if there's too many enemies, just remove them
 
 func enemiesTakeTurn() -> void:
+	await get_tree().create_timer(0.5).timeout
 	for enemy in enemies.duplicate():
 		if not is_instance_valid(enemy):
 			continue

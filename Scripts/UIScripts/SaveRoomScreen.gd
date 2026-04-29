@@ -17,6 +17,7 @@ const CARD_SCENE := preload("res://Scenes/UI/upgrade_card.tscn")
 @onready var tooltipDesc: Label = $TooltipPanel/VBoxContainer/DescLabel
 @onready var tooltipEnergy: Label = $TooltipPanel/VBoxContainer/EnergyLabel
 @onready var exitButton: Button = $ExitButton
+@onready var scrollContainer: ScrollContainer = $HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer
 
 enum Mode {INVENTORY, SLOT_SELECT}
 var currentMode: Mode = Mode.INVENTORY
@@ -171,6 +172,8 @@ func _updateSelection() -> void: #not sure if this allows empty slots to be repl
 		var equipped := PlayerData.isEquipped(inventoryCards[i].upgrade)
 		var selected := currentMode == Mode.INVENTORY and i == inventoryIndex
 		inventoryCards[i].refresh(equipped, selected)
+		if selected:
+			scrollContainer.ensure_control_visible(inventoryCards[i])
 	
 	_updateTooltip()
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://co044it4tq73x"
 path.s3tc="res://.godot/imported/attack2_left.png-8c667a3b8a2d5a8116e986ba436b15ba.s3tc.ctex"
+path.etc2="res://.godot/imported/attack2_left.png-8c667a3b8a2d5a8116e986ba436b15ba.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png"
-dest_files=["res://.godot/imported/attack2_left.png-8c667a3b8a2d5a8116e986ba436b15ba.s3tc.ctex"]
+dest_files=["res://.godot/imported/attack2_left.png-8c667a3b8a2d5a8116e986ba436b15ba.s3tc.ctex", "res://.godot/imported/attack2_left.png-8c667a3b8a2d5a8116e986ba436b15ba.etc2.ctex"]
 
 [params]
 

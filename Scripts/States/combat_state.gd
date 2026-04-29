@@ -7,6 +7,7 @@ func setEncounter(encounter: CombatEncounter) -> void:
 
 func enter() -> void:
 	if currentEncounter:
+		environment.music.stop()
 		environment.playerRoaming.hide()
 		currentEncounter.show()
 		

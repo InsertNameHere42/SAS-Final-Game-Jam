@@ -52,7 +52,7 @@ func focusEnemy(enemy: Enemy) -> void:
 
 func focusPlayer() -> void:
 	_targetFOV = 65
-	var offset: Vector3 = encounter.global_transform.basis * Vector3(0.5, 0.5, 1) #behind the player facing enemies hopefully?
+	var offset: Vector3 = encounter.global_transform.basis * Vector3(2, 0.5, 1)
 	var lookOffset := Vector3(5, 0, -1)
 	_targetPosition = playerTarget.global_position + offset
 	_targetLookAt = playerTarget.global_position + lookOffset

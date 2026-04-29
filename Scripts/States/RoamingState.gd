@@ -1,6 +1,7 @@
 class_name RoamingState extends State
 
 func enter():
+	environment.music.play()
 	print("Roaming State Entered")
 
 func exit():

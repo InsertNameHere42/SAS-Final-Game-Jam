@@ -6,6 +6,7 @@ var critDamageMultiplier: float
 var hitCount: int = 1
 var effectsToApplyEnemy: Array[StatusEffect] = []
 var effectsToApplyPlayer: Array[StatusEffect] = []
+var amountHealed: int = 0
 
 func _init(damage: int, inpCritChance: float, inpCritDamage: float) -> void:
 	finalDamage = damage

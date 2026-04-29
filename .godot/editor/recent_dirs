@@ -1,17 +1,24 @@
+res://Assets/Animations/jam back idle/
+res://Assets/Animations/jam boss idle/
+res://Assets/Animations/jam back walk/
+res://Assets/Animations/jam front walk/
+res://Assets/Animations/jam front idle/
+res://Scenes/Enemies/
+res://SpriteFrames/
+res://Assets/Animations/jam enemy idle/
+res://Assets/Animations/jam enemy defense/
+res://Assets/Animations/jam enemy attack/
+res://Assets/Animations/jam boss attack 2/
+res://Assets/Animations/jam boss attack 1/
+res://Assets/Animations/jam boss defense/
+res://Assets/Animations/jam walk side/
+res://Assets/Animations/WalkLeft/
+res://Assets/Animations/IdleLeft/
+res://Assets/Animations/jam side idle/
+res://Assets/Animations/jam attack ready/
+res://Assets/Animations/jam idle/
+res://Assets/Animations/jam defense/
+res://Assets/Animations/jam attack/
+C:/Users/vince/Documents/sas-final-jam/Exports/
+C:/Users/vince/Documents/sas-final-jam/
 res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/
-res://Scenes/
-res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/
-res://Scripts/UIScripts/
-res://
-res://Scripts/
-res://Scenes/Autoload/
-res://Scripts/RoamingScripts/
-res://Scenes/UI/
-res://Scenes/Roaming/
-res://Scripts/States/
-res://Scripts/CombatScripts/
-res://Scenes/Meshes/
-res://Scenes/Meshes/3dCityPack/
-res://Assets/Placeholders/
-res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/
-res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/

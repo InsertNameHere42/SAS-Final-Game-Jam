@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://da1mvouxf57jg"
 path.s3tc="res://.godot/imported/run_left.png-2a106da86de15605657e92a9d8fe8fee.s3tc.ctex"
+path.etc2="res://.godot/imported/run_left.png-2a106da86de15605657e92a9d8fe8fee.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_left.png"
-dest_files=["res://.godot/imported/run_left.png-2a106da86de15605657e92a9d8fe8fee.s3tc.ctex"]
+dest_files=["res://.godot/imported/run_left.png-2a106da86de15605657e92a9d8fe8fee.s3tc.ctex", "res://.godot/imported/run_left.png-2a106da86de15605657e92a9d8fe8fee.etc2.ctex"]
 
 [params]
 

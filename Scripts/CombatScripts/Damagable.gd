@@ -33,8 +33,7 @@ func takeDamage(damage: int, type: String = "normal") -> int: #returns damage ta
 	damage = $StatusEffectComponent.triggerDamageTaken(damage)
 	damageNumberManager.spawn(damage, type, global_position)
 	currentHp-=damage
-	healthBar.value = currentHp
-	hpAmount.text = str(currentHp) + "/" + str(maxHp)
+	updateHp()
 	if currentHp<=0:
 		die()
 	return damage
@@ -47,6 +46,9 @@ func updateStatusEffects() -> void:
 		statusEffectRow.add_child(icon)
 		icon.setup(effect, effect.stacks)
 
+func updateHp():
+	healthBar.value = currentHp
+	hpAmount.text = str(currentHp) + "/" + str(maxHp)
 
 @abstract 
 func die()

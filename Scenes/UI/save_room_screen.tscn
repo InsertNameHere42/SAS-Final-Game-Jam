@@ -93,8 +93,11 @@ horizontal_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=2016026511]
 clip_contents = false
-custom_minimum_size = Vector2(256, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 8
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 2
 
 [node name="InventoryList" type="VBoxContainer" parent="HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=214651332]
 layout_mode = 2

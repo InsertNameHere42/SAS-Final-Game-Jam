@@ -44,8 +44,7 @@ defaultLookAt = NodePath("../DefaultCameraLookAt")
 playerTarget = NodePath("../Player")
 
 [node name="Player" parent="." unique_id=1364375232 node_paths=PackedStringArray("encounter", "damageNumberManager") instance=ExtResource("2_hsurt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9697075, 0, -0.019)
-frame = 5
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97, 0.35529196, -0.019)
 frame_progress = 0.24486433
 encounter = NodePath("..")
 baseBlock = SubResource("Resource_m3gt7")

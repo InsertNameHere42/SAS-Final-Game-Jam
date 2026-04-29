@@ -15,6 +15,7 @@ var usedEnergy: int = 0
 @onready var attackSFX: AudioStreamPlayer3D = $SoundEffects/Attack
 @onready var takeDamageSFX: AudioStreamPlayer3D = $SoundEffects/TakeDamage
 @onready var lossSFX: AudioStreamPlayer3D = $SoundEffects/Loss
+@onready var defendSFX: AudioStreamPlayer3D = $SoundEffects/Defend
 
 var alive: bool = true
 
@@ -32,6 +33,7 @@ func startCombat():
 		if upgrade and upgrade.isOn:
 			upgrade.isOn = false
 			print("Upgrade disabled")
+	updateHp()
 	turnStart()
 
 func _process(_delta: float) -> void:
@@ -50,6 +52,10 @@ func takeDamage(damage: int, type: String = "normal") -> int:
 	encounter.screenFreeze(0.02*pow(damageTaken, 0.5))
 	return damageTaken
 	
+func heal(amount: int):
+	currentHp = min(currentHp+amount, maxHp)
+	#print("healing " + str(amount) + "HP")
+	updateHp()
 
 		
 func die() -> void:
@@ -62,7 +68,10 @@ func die() -> void:
 		await ScreenFade.fadeOut()
 		PlayerData.loadFromFile()
 	
-	
+
+func readyAttack() -> void:
+	play("AttackReady")
+
 #this will play an attack animation and calculate the damage done
 func attack() -> AttackContext: 
 	turnEnd()
@@ -70,7 +79,9 @@ func attack() -> AttackContext:
 	for upgrade in upgradeSlots:
 		if upgrade and upgrade.isOn:
 			upgrade.modifyAttack(context)
+			heal(context.amountHealed)
 	return context
+
 
 func attackAnim() -> void:
 	attackSFX.pitch_scale = randf_range(0.9, 1.1)
@@ -83,6 +94,7 @@ func attackAnim() -> void:
 func defend() -> DefendContext:
 	print(baseBlock.stacks)
 	play("Block")
+	defendSFX.play()
 	turnEnd()
 	var context := DefendContext.new(baseBlockAmount, baseBlock)
 	for upgrade in upgradeSlots:

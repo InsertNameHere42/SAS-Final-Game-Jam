@@ -4,6 +4,7 @@ extends Node3D
 @onready var stateMachine: StateMachine = $StateMachine
 @onready var roamingCamera: RoamingCamera = $RoamingCamera
 @onready var enemyCombatTriggers: Node = $EnemyCombatTriggers
+@onready var music: AudioStreamPlayer = $Music
 
 
 
@@ -12,7 +13,7 @@ func _ready() -> void:
 	PlayerData.loaded.connect(_onSaveLoaded)
 	_onSaveLoaded()
 	await ScreenFade.fadeIn()
-	
+
 
 func resetCombat() -> void:
 	for child in enemyCombatTriggers.get_children():

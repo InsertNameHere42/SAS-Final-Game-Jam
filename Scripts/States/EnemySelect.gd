@@ -6,6 +6,7 @@ var currentIndex: int = 0
 var attacking: bool = false
 
 func enter() -> void:
+	environment.player.readyAttack()
 	attacking = false
 	_highlightTarget()
 

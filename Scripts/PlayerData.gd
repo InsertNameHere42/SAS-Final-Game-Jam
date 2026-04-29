@@ -7,12 +7,12 @@ var lastSaveRoomId: String = ""
 var lastSpawnPosition: Vector3 = Vector3.ZERO
 var lastScenePath: String = ""
 
-var maxHp: int = 90
-var currentHp: int = 90
+var maxHp: int = 100
+var currentHp: int = 100
 var inventory: Array[Upgrade] = []
 var equippedUpgrades: Array[Upgrade] = []
 var maxUpgrades: int = 6
-var doubloons: int = 50
+var doubloons: int = 1000
 var startingMaxEnergy: int = 1
 
 signal loaded

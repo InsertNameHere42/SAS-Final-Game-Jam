@@ -16,10 +16,13 @@ const ITEM_SCENE := preload("res://Scenes/UI/shop_item.tscn")
 var items: Array[ShopItem] = []
 var currentIndex: int = 0
 
+#currently walking around music and shop music is the same
 func startMusic() -> void:
-	shopMusic.play()
+	pass
+	#shopMusic.play()
 func stopMusic() -> void:
-	shopMusic.stop()
+	pass
+	#shopMusic.stop()
 
 
 func _ready() -> void:
