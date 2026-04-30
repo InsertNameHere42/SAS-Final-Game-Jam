@@ -36,6 +36,7 @@ func update(_delta: float) -> void:
 		await get_tree().create_timer(1, true, false, true).timeout
 		for i in attackContext.hitCount:
 			if selectedTarget and is_instance_valid(selectedTarget):
+				environment.player.heal(attackContext.amountHealed)
 				var result := attackContext.calculateDamage()
 				
 				

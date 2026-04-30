@@ -79,7 +79,6 @@ func attack() -> AttackContext:
 	for upgrade in upgradeSlots:
 		if upgrade and upgrade.isOn:
 			upgrade.modifyAttack(context)
-			heal(context.amountHealed)
 	return context
 
 

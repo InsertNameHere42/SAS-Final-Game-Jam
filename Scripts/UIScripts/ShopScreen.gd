@@ -26,10 +26,15 @@ func stopMusic() -> void:
 
 
 func _ready() -> void:
+	pass
+
+func open() -> void:
 	moneyLeftLabel.text = "Cash Left: $" + str(PlayerData.doubloons)
 	buyButton.pressed.connect(_buySelected)
 	_buildList()
 	_updateTooltip()
+	startMusic()
+	show()
 	
 func _buildList() -> void:
 	for child in itemList.get_children():
@@ -70,6 +75,7 @@ func _updateTooltip() -> void:
 	var owned: bool = PlayerData.ownsUpgrade(upgrade)
 	buyButton.disabled = owned or PlayerData.doubloons < upgrade.cost
 	buyButton.text = "owned" if owned else "buy"
+	moneyLeftLabel.text = "Cash Left: $" + str(PlayerData.doubloons)
 
 func _buySelected() -> void:
 	var upgrade: Upgrade = items[currentIndex].upgrade
@@ -77,7 +83,6 @@ func _buySelected() -> void:
 		print("Invalid Purchase")
 		return
 	PlayerData.doubloons -= upgrade.cost
-	moneyLeftLabel.text = "Cash Left: $" + str(PlayerData.doubloons)
 	PlayerData.inventory.append(upgrade)
 	print("Inventory: " + str(PlayerData.inventory))
 	items[currentIndex]._refresh()

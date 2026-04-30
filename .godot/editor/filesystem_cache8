@@ -1,27 +1,29 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1776833318
-icon.svg::CompressedTexture2D::5589711903263656629::1774854903::1776833318::1::::<><>::
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1777510536
+default_bus_layout.tres::AudioBusLayout::1192414327293998968::1777510515::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1777510515::0::1::::<><>::
+icon.svg::CompressedTexture2D::5589711903263656629::1774854903::1777510579::1::::<><>::
 LICENSE.md::TextFile::-1::1774854902::0::1::::<><>::
 ::res://addons/::1774854902
-::res://addons/ridiculous_coding/::1776833318
+::res://addons/ridiculous_coding/::1776833379
 font.tres::FontFile::3906615943650166882::1774854902::0::1::::<><>::uid://coiaqb8xwuaic::::res://addons/ridiculous_coding/gravity_bold_8.ttf
-gravity_bold_8.ttf::FontFile::5772028877630708402::1774854902::1776833318::1::::<><>::
+gravity_bold_8.ttf::FontFile::5772028877630708402::1774854902::1777510571::1::::<><>::
 plugin.cfg::TextFile::-1::1774854902::0::1::::<><>::
 plugin.gd::GDScript::-1::1774854902::0::1::::<>EditorPlugin<>::
 stats.gd::GDScript::-1::1774854903::0::1::::StatsDataRC<>Resource<>::
 themes.gd::GDScript::-1::1774854903::0::1::::ThemeDataRc<>Resource<>::
-::res://addons/ridiculous_coding/images/::1776833319
-blip.png::CompressedTexture2D::9023907321475517740::1774854902::1776833318::1::::<><>::
-boom.png::CompressedTexture2D::7999229798388025044::1774854902::1776833318::1::::<><>::
-chat-info.png::CompressedTexture2D::5113465995450136220::1774854902::1776833318::1::::<><>::
-information-sign.png::CompressedTexture2D::4889017631624759097::1774854902::1776833318::1::::<><>::
-levelUp.png::CompressedTexture2D::4106552702831304868::1774854902::1776833318::1::::<><>::
-newline.png::CompressedTexture2D::4255520078947183939::1774854902::1776833318::1::::<><>::
-progress.png::CompressedTexture2D::8314659574235486316::1774854902::1776833318::1::::<><>::
-reset.png::CompressedTexture2D::2931469271038709955::1774854902::1776833318::1::::<><>::
-settings.png::CompressedTexture2D::3749993350802175966::1774854902::1776833318::1::::<><>::
-under.png::CompressedTexture2D::7586647404456456032::1774854902::1776833318::1::::<><>::
-undo.png::CompressedTexture2D::4568792092947957512::1774854902::1776833318::1::::<><>::
+::res://addons/ridiculous_coding/images/::1776833380
+blip.png::CompressedTexture2D::9023907321475517740::1774854902::1777510590::1::::<><>::
+boom.png::CompressedTexture2D::7999229798388025044::1774854902::1777510590::1::::<><>::
+chat-info.png::CompressedTexture2D::5113465995450136220::1774854902::1777510590::1::::<><>::
+information-sign.png::CompressedTexture2D::4889017631624759097::1774854902::1777510590::1::::<><>::
+levelUp.png::CompressedTexture2D::4106552702831304868::1774854902::1777510590::1::::<><>::
+newline.png::CompressedTexture2D::4255520078947183939::1774854902::1777510590::1::::<><>::
+progress.png::CompressedTexture2D::8314659574235486316::1774854902::1777510590::1::::<><>::
+reset.png::CompressedTexture2D::2931469271038709955::1774854902::1777510590::1::::<><>::
+settings.png::CompressedTexture2D::3749993350802175966::1774854902::1777510590::1::::<><>::
+under.png::CompressedTexture2D::7586647404456456032::1774854902::1777510590::1::::<><>::
+undo.png::CompressedTexture2D::4568792092947957512::1774854902::1777510590::1::::<><>::
 ::res://addons/ridiculous_coding/resources/::1774854903
 ::res://addons/ridiculous_coding/resources/effects/::1774854902
 base_effect.gd::GDScript::-1::1774854902::0::1::::RcBaseEffect<>Node2D<>::
@@ -52,126 +54,556 @@ fireworks.wav::AudioStreamWAV::8862151449780033529::1774854903::1776833319::1:::
 ::res://addons/ridiculous_coding/sounds/typing/::1776833319
 blip.wav::AudioStreamWAV::4311277633861190701::1774854903::1776833319::1::::<><>::
 typewriter.wav::AudioStreamWAV::1929326941576686422::1774854903::1776833319::1::::<><>::
-::res://Assets/::1775538361
-::res://Assets/GoodAssets/::1775538361
-::res://Assets/Placeholders/::1776833332
-assmobile.fbx::PackedScene::3321910542493559711::1776747151::1776833322::1::::<><>::uid://kphblhpv3h40::::res://Assets/Placeholders/texass.png
-button UI.png::CompressedTexture2D::3428185660686014926::1774854902::1776833318::1::::<><>::
-shopPlaceholderImage.jpeg::CompressedTexture2D::195868707789586564::1776497636::1776833319::1::::<><>::
-texass.png::CompressedTexture2D::733281496715677151::1776747202::1776833333::1::::<><>::
-::res://Assets/Placeholders/3d city pack/::1776833332
-BG.fbx::PackedScene::1243180311459412116::1775538361::1776833320::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-Car_03.fbx::PackedScene::7486950446414138077::1775538361::1776833321::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-House_01.fbx::PackedScene::8559073131307913958::1775538361::1776833321::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-House_16.fbx::PackedScene::525158049101292601::1775538361::1776833322::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-Light_01.fbx::PackedScene::8355117661037539952::1775538361::1776833324::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-Road_02.fbx::PackedScene::1678673126380441694::1775538361::1776833325::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-Road_10.fbx::PackedScene::5070080326370159913::1775538361::1776833324::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-Texture_01.png::CompressedTexture2D::5705397850951956414::1775538361::1776833333::1::::<><>::
-Trash_01.fbx::PackedScene::6512335885839503429::1775538361::1776833323::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
-Wheel_01.fbx::PackedScene::926401544698451103::1775538361::1776833323::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+::res://Assets/::1777510515
+shooting_star_sampler.png::CompressedTexture2D::8998491701720159451::1777263462::1777510579::1::::<><>::
+::res://Assets/Animations/::1777510513
+::res://Assets/Animations/IdleLeft/::1777510512
+Pi7_frame_01.png::CompressedTexture2D::1318052850859462106::1777510512::1777510591::1::::<><>::
+Pi7_frame_02.png::CompressedTexture2D::5725125284797204239::1777510512::1777510591::1::::<><>::
+Pi7_frame_03.png::CompressedTexture2D::417443605227763973::1777510512::1777510591::1::::<><>::
+Pi7_frame_04.png::CompressedTexture2D::8637410535645212950::1777510512::1777510590::1::::<><>::
+Pi7_frame_05.png::CompressedTexture2D::1130834454721011459::1777510512::1777510590::1::::<><>::
+Pi7_frame_06.png::CompressedTexture2D::4758366803019572084::1777510512::1777510590::1::::<><>::
+Pi7_frame_07.png::CompressedTexture2D::4859627347957969264::1777510512::1777510590::1::::<><>::
+Pi7_frame_08.png::CompressedTexture2D::524433319452277789::1777510512::1777510590::1::::<><>::
+Pi7_frame_09.png::CompressedTexture2D::1023113803452664891::1777510512::1777510590::1::::<><>::
+Pi7_frame_10.png::CompressedTexture2D::8833338816935717985::1777510512::1777510590::1::::<><>::
+Pi7_frame_11.png::CompressedTexture2D::8235769885857364827::1777510512::1777510590::1::::<><>::
+Pi7_frame_12.png::CompressedTexture2D::3196551725526064254::1777510512::1777510590::1::::<><>::
+Pi7_frame_13.png::CompressedTexture2D::5938357200992595326::1777510512::1777510590::1::::<><>::
+::res://Assets/Animations/jam attack/::1777510513
+frame_01.png::CompressedTexture2D::4850024394014015580::1777510513::1777510589::1::::<><>::
+frame_02.png::CompressedTexture2D::8546113650308750717::1777510513::1777510595::1::::<><>::
+frame_03.png::CompressedTexture2D::7879602295075768306::1777510513::1777510594::1::::<><>::
+frame_04.png::CompressedTexture2D::6834687064308325539::1777510513::1777510594::1::::<><>::
+frame_05.png::CompressedTexture2D::1158808286552395962::1777510513::1777510594::1::::<><>::
+frame_06.png::CompressedTexture2D::6499258848331589777::1777510513::1777510594::1::::<><>::
+frame_07.png::CompressedTexture2D::6043807090845470669::1777510513::1777510594::1::::<><>::
+frame_08.png::CompressedTexture2D::5629923149187154292::1777510513::1777510594::1::::<><>::
+frame_09.png::CompressedTexture2D::2265482496599910268::1777510513::1777510594::1::::<><>::
+frame_10.png::CompressedTexture2D::5597548974345189432::1777510513::1777510594::1::::<><>::
+frame_11.png::CompressedTexture2D::5488584314745089116::1777510513::1777510594::1::::<><>::
+frame_12.png::CompressedTexture2D::3617244322405932522::1777510513::1777510593::1::::<><>::
+frame_13.png::CompressedTexture2D::1746605658261694911::1777510513::1777510593::1::::<><>::
+::res://Assets/Animations/jam attack ready/::1777510513
+frame_01.png::CompressedTexture2D::96995043259617846::1777510513::1777510593::1::::<><>::
+frame_02.png::CompressedTexture2D::3911275719191779613::1777510513::1777510593::1::::<><>::
+frame_03.png::CompressedTexture2D::7076691970631500816::1777510513::1777510593::1::::<><>::
+frame_04.png::CompressedTexture2D::4629953680275869925::1777510513::1777510593::1::::<><>::
+frame_05.png::CompressedTexture2D::6930986259724433701::1777510513::1777510592::1::::<><>::
+frame_06.png::CompressedTexture2D::6694873698319924574::1777510513::1777510592::1::::<><>::
+frame_07.png::CompressedTexture2D::7140763871238879315::1777510513::1777510592::1::::<><>::
+frame_08.png::CompressedTexture2D::7530853106869324502::1777510513::1777510592::1::::<><>::
+frame_09.png::CompressedTexture2D::8600949996655688269::1777510513::1777510592::1::::<><>::
+frame_10.png::CompressedTexture2D::5917698926559682168::1777510513::1777510592::1::::<><>::
+frame_11.png::CompressedTexture2D::9222941169788793469::1777510513::1777510592::1::::<><>::
+frame_12.png::CompressedTexture2D::9101308815530301512::1777510513::1777510592::1::::<><>::
+frame_13.png::CompressedTexture2D::5638979431648980650::1777510513::1777510592::1::::<><>::
+::res://Assets/Animations/jam back idle/::1777510513
+frame_01.png::CompressedTexture2D::5240686984631512334::1777510513::1777510585::1::::<><>::
+frame_02.png::CompressedTexture2D::6023195093230439676::1777510513::1777510585::1::::<><>::
+frame_03.png::CompressedTexture2D::8837684559516925497::1777510513::1777510585::1::::<><>::
+frame_04.png::CompressedTexture2D::1706847100618422736::1777510513::1777510585::1::::<><>::
+frame_05.png::CompressedTexture2D::752647026050112129::1777510513::1777510585::1::::<><>::
+frame_06.png::CompressedTexture2D::7086252117776510599::1777510513::1777510584::1::::<><>::
+frame_07.png::CompressedTexture2D::2622995315638536625::1777510513::1777510584::1::::<><>::
+frame_08.png::CompressedTexture2D::6993531242091037080::1777510513::1777510585::1::::<><>::
+frame_09.png::CompressedTexture2D::3346985818586587131::1777510513::1777510585::1::::<><>::
+frame_10.png::CompressedTexture2D::5789282820067350267::1777510513::1777510585::1::::<><>::
+frame_11.png::CompressedTexture2D::8403767751277617413::1777510513::1777510585::1::::<><>::
+frame_12.png::CompressedTexture2D::4788070169227615113::1777510513::1777510584::1::::<><>::
+::res://Assets/Animations/jam back walk/::1777510513
+frame_01.png::CompressedTexture2D::2826422777401031698::1777510513::1777510583::1::::<><>::
+frame_02.png::CompressedTexture2D::4614834183610417382::1777510513::1777510582::1::::<><>::
+frame_03.png::CompressedTexture2D::3996672172559098725::1777510513::1777510582::1::::<><>::
+frame_04.png::CompressedTexture2D::3366244100018704960::1777510513::1777510582::1::::<><>::
+frame_05.png::CompressedTexture2D::6315476666295737871::1777510513::1777510582::1::::<><>::
+frame_06.png::CompressedTexture2D::6413365165407776209::1777510513::1777510582::1::::<><>::
+frame_07.png::CompressedTexture2D::9203287888760369638::1777510513::1777510582::1::::<><>::
+frame_08.png::CompressedTexture2D::2015115655532831353::1777510513::1777510582::1::::<><>::
+frame_09.png::CompressedTexture2D::4160868126957599576::1777510513::1777510582::1::::<><>::
+frame_10.png::CompressedTexture2D::6648416487949953139::1777510513::1777510582::1::::<><>::
+frame_11.png::CompressedTexture2D::3735519346095253483::1777510513::1777510582::1::::<><>::
+frame_12.png::CompressedTexture2D::5215865244555281719::1777510513::1777510582::1::::<><>::
+::res://Assets/Animations/jam boss attack 1/::1777510513
+frame_01.png::CompressedTexture2D::4461538176067042935::1777510513::1777510582::1::::<><>::
+frame_02.png::CompressedTexture2D::6810128466899646221::1777510513::1777510589::1::::<><>::
+frame_03.png::CompressedTexture2D::9100938383203916125::1777510513::1777510588::1::::<><>::
+frame_04.png::CompressedTexture2D::1080811544959413096::1777510513::1777510588::1::::<><>::
+frame_05.png::CompressedTexture2D::7408229737785911275::1777510513::1777510588::1::::<><>::
+frame_06.png::CompressedTexture2D::6794092295120642504::1777510513::1777510588::1::::<><>::
+frame_07.png::CompressedTexture2D::2358296676721897468::1777510513::1777510588::1::::<><>::
+frame_08.png::CompressedTexture2D::2620302757673873092::1777510513::1777510588::1::::<><>::
+frame_09.png::CompressedTexture2D::2490856645308102432::1777510513::1777510588::1::::<><>::
+frame_10.png::CompressedTexture2D::5072740167863146213::1777510513::1777510588::1::::<><>::
+frame_11.png::CompressedTexture2D::6235357211354107591::1777510513::1777510588::1::::<><>::
+frame_12.png::CompressedTexture2D::7223627953037321303::1777510513::1777510588::1::::<><>::
+::res://Assets/Animations/jam boss attack 2/::1777510513
+frame_01.png::CompressedTexture2D::7955819963222260365::1777510513::1777510588::1::::<><>::
+frame_02.png::CompressedTexture2D::6070803085076387553::1777510513::1777510588::1::::<><>::
+frame_03.png::CompressedTexture2D::1095690912176770625::1777510513::1777510587::1::::<><>::
+frame_04.png::CompressedTexture2D::4293793641836172381::1777510513::1777510586::1::::<><>::
+frame_05.png::CompressedTexture2D::277697930884867445::1777510513::1777510586::1::::<><>::
+frame_06.png::CompressedTexture2D::6961930532676701986::1777510513::1777510586::1::::<><>::
+frame_07.png::CompressedTexture2D::3620669907954954984::1777510513::1777510586::1::::<><>::
+frame_08.png::CompressedTexture2D::3877079613550430834::1777510513::1777510586::1::::<><>::
+frame_09.png::CompressedTexture2D::8828998508059869652::1777510513::1777510586::1::::<><>::
+frame_10.png::CompressedTexture2D::7144199916350133020::1777510513::1777510586::1::::<><>::
+frame_11.png::CompressedTexture2D::5877310076549474017::1777510513::1777510586::1::::<><>::
+frame_12.png::CompressedTexture2D::6874472330156601497::1777510513::1777510586::1::::<><>::
+::res://Assets/Animations/jam boss defense/::1777510513
+frame_1.png::CompressedTexture2D::2964178958567559689::1777510513::1777510586::1::::<><>::
+frame_2.png::CompressedTexture2D::3289498544429507399::1777510513::1777510586::1::::<><>::
+frame_3.png::CompressedTexture2D::7037462918360652797::1777510513::1777510606::1::::<><>::
+::res://Assets/Animations/jam boss idle/::1777510513
+frame_01.png::CompressedTexture2D::8750869597658505371::1777510513::1777510606::1::::<><>::
+frame_02.png::CompressedTexture2D::5101909564602384068::1777510513::1777510606::1::::<><>::
+frame_03.png::CompressedTexture2D::3943580035090422094::1777510513::1777510606::1::::<><>::
+frame_04.png::CompressedTexture2D::7042643388442369754::1777510513::1777510605::1::::<><>::
+frame_05.png::CompressedTexture2D::5304723852618765281::1777510513::1777510605::1::::<><>::
+frame_06.png::CompressedTexture2D::1548853282048423842::1777510513::1777510605::1::::<><>::
+frame_07.png::CompressedTexture2D::260395780662270701::1777510513::1777510605::1::::<><>::
+frame_08.png::CompressedTexture2D::8270186632531911557::1777510513::1777510604::1::::<><>::
+frame_09.png::CompressedTexture2D::6503735387799020786::1777510513::1777510604::1::::<><>::
+frame_10.png::CompressedTexture2D::3922287851293422232::1777510513::1777510604::1::::<><>::
+frame_11.png::CompressedTexture2D::8025533356185113178::1777510513::1777510604::1::::<><>::
+frame_12.png::CompressedTexture2D::2971556433149081599::1777510513::1777510604::1::::<><>::
+::res://Assets/Animations/jam defense/::1777510513
+frame_01.png::CompressedTexture2D::3917028191020393800::1777510513::1777510604::1::::<><>::
+frame_02.png::CompressedTexture2D::97606577309904907::1777510513::1777510604::1::::<><>::
+frame_03.png::CompressedTexture2D::4722480689479728074::1777510513::1777510604::1::::<><>::
+frame_04.png::CompressedTexture2D::1234227049371868933::1777510513::1777510604::1::::<><>::
+frame_05.png::CompressedTexture2D::1312758464142541103::1777510513::1777510603::1::::<><>::
+frame_06.png::CompressedTexture2D::3233064260489671465::1777510513::1777510603::1::::<><>::
+frame_07.png::CompressedTexture2D::708535603890484448::1777510513::1777510603::1::::<><>::
+frame_08.png::CompressedTexture2D::8704822570283040476::1777510513::1777510603::1::::<><>::
+frame_09.png::CompressedTexture2D::3711237682063367882::1777510513::1777510603::1::::<><>::
+frame_10.png::CompressedTexture2D::6411814278580180429::1777510513::1777510603::1::::<><>::
+frame_11.png::CompressedTexture2D::2528224566337369752::1777510513::1777510603::1::::<><>::
+frame_12.png::CompressedTexture2D::8889006294629645893::1777510513::1777510603::1::::<><>::
+::res://Assets/Animations/jam enemy attack/::1777510513
+frame_01.png::CompressedTexture2D::9129857755743457785::1777510513::1777510603::1::::<><>::
+frame_02.png::CompressedTexture2D::6937000911147563103::1777510513::1777510603::1::::<><>::
+frame_03.png::CompressedTexture2D::4959750246183456791::1777510513::1777510603::1::::<><>::
+frame_04.png::CompressedTexture2D::5974076436038867515::1777510513::1777510602::1::::<><>::
+frame_05.png::CompressedTexture2D::8462645736131449571::1777510513::1777510602::1::::<><>::
+frame_06.png::CompressedTexture2D::8334485712853461718::1777510513::1777510607::1::::<><>::
+frame_07.png::CompressedTexture2D::7585132524734950224::1777510513::1777510607::1::::<><>::
+frame_08.png::CompressedTexture2D::3731822717700353032::1777510513::1777510607::1::::<><>::
+frame_09.png::CompressedTexture2D::8484170029626002914::1777510513::1777510607::1::::<><>::
+frame_10.png::CompressedTexture2D::9114460082740987693::1777510513::1777510608::1::::<><>::
+frame_11.png::CompressedTexture2D::1054515616727479269::1777510513::1777510608::1::::<><>::
+frame_12.png::CompressedTexture2D::4681777253606863386::1777510513::1777510608::1::::<><>::
+::res://Assets/Animations/jam enemy defense/::1777510513
+frame_01.png::CompressedTexture2D::3578619535482922310::1777510513::1777510608::1::::<><>::
+frame_02.png::CompressedTexture2D::7832621693852362822::1777510513::1777510607::1::::<><>::
+frame_03.png::CompressedTexture2D::7469533679171445254::1777510513::1777510607::1::::<><>::
+frame_04.png::CompressedTexture2D::7113581682741427896::1777510513::1777510607::1::::<><>::
+frame_05.png::CompressedTexture2D::2165609936359883779::1777510513::1777510608::1::::<><>::
+frame_06.png::CompressedTexture2D::2342147679833334432::1777510513::1777510607::1::::<><>::
+frame_07.png::CompressedTexture2D::2189241460133572326::1777510513::1777510607::1::::<><>::
+frame_08.png::CompressedTexture2D::8135383245679749248::1777510513::1777510606::1::::<><>::
+frame_09.png::CompressedTexture2D::7861429177183072434::1777510513::1777510606::1::::<><>::
+frame_10.png::CompressedTexture2D::4086806871587789420::1777510513::1777510606::1::::<><>::
+frame_11.png::CompressedTexture2D::1577946517065344353::1777510513::1777510606::1::::<><>::
+frame_12.png::CompressedTexture2D::6015010323131993566::1777510513::1777510606::1::::<><>::
+::res://Assets/Animations/jam enemy idle/::1777510513
+frame_01.png::CompressedTexture2D::789737691074964084::1777510513::1777510606::1::::<><>::
+frame_02.png::CompressedTexture2D::7948507844729592733::1777510513::1777510598::1::::<><>::
+frame_03.png::CompressedTexture2D::7433782036187393204::1777510513::1777510598::1::::<><>::
+frame_04.png::CompressedTexture2D::3021891491518693077::1777510513::1777510598::1::::<><>::
+frame_05.png::CompressedTexture2D::6227178222864117870::1777510513::1777510597::1::::<><>::
+frame_06.png::CompressedTexture2D::3845252106093057203::1777510513::1777510597::1::::<><>::
+frame_07.png::CompressedTexture2D::6499328356441581397::1777510513::1777510597::1::::<><>::
+frame_08.png::CompressedTexture2D::2382787103692877097::1777510513::1777510597::1::::<><>::
+frame_09.png::CompressedTexture2D::1637379154824657924::1777510513::1777510597::1::::<><>::
+frame_10.png::CompressedTexture2D::4016847110890244480::1777510513::1777510597::1::::<><>::
+frame_11.png::CompressedTexture2D::6961704053212805226::1777510513::1777510597::1::::<><>::
+frame_12.png::CompressedTexture2D::4490598879473130371::1777510513::1777510597::1::::<><>::
+::res://Assets/Animations/jam front idle/::1777510513
+frame_01.png::CompressedTexture2D::8676475008640777155::1777510513::1777510597::1::::<><>::
+frame_02.png::CompressedTexture2D::3979176930467621245::1777510513::1777510597::1::::<><>::
+frame_03.png::CompressedTexture2D::8817299296287926632::1777510513::1777510596::1::::<><>::
+frame_04.png::CompressedTexture2D::1737211170522147666::1777510513::1777510596::1::::<><>::
+frame_05.png::CompressedTexture2D::4728887626481290510::1777510513::1777510596::1::::<><>::
+frame_06.png::CompressedTexture2D::2765727883972737124::1777510513::1777510596::1::::<><>::
+frame_07.png::CompressedTexture2D::6150158412151132760::1777510513::1777510596::1::::<><>::
+frame_08.png::CompressedTexture2D::848081845071922452::1777510513::1777510596::1::::<><>::
+frame_09.png::CompressedTexture2D::8840942784480812453::1777510513::1777510596::1::::<><>::
+frame_10.png::CompressedTexture2D::1721097097636551769::1777510513::1777510596::1::::<><>::
+frame_11.png::CompressedTexture2D::3756202365569939345::1777510513::1777510596::1::::<><>::
+frame_12.png::CompressedTexture2D::4253411466247630677::1777510513::1777510596::1::::<><>::
+::res://Assets/Animations/jam front walk/::1777510513
+frame_01.png::CompressedTexture2D::2422474259190961534::1777510513::1777510595::1::::<><>::
+frame_02.png::CompressedTexture2D::4069028822059254068::1777510513::1777510602::1::::<><>::
+frame_03.png::CompressedTexture2D::1514948296449997303::1777510513::1777510602::1::::<><>::
+frame_04.png::CompressedTexture2D::5004178045830777345::1777510513::1777510601::1::::<><>::
+frame_05.png::CompressedTexture2D::828554806269642001::1777510513::1777510601::1::::<><>::
+frame_06.png::CompressedTexture2D::8511117812979243927::1777510513::1777510601::1::::<><>::
+frame_07.png::CompressedTexture2D::7932705936994475656::1777510513::1777510601::1::::<><>::
+frame_08.png::CompressedTexture2D::1943079927179845710::1777510513::1777510601::1::::<><>::
+frame_09.png::CompressedTexture2D::4130509656506379155::1777510513::1777510601::1::::<><>::
+frame_10.png::CompressedTexture2D::563794331390490034::1777510513::1777510601::1::::<><>::
+frame_11.png::CompressedTexture2D::4261641770157881213::1777510513::1777510601::1::::<><>::
+frame_12.png::CompressedTexture2D::1244595973927868840::1777510513::1777510601::1::::<><>::
+::res://Assets/Animations/jam idle/::1777510513
+frame_01.png::CompressedTexture2D::1408255451262142460::1777510513::1777510600::1::::<><>::
+frame_02.png::CompressedTexture2D::3918158011253456492::1777510513::1777510600::1::::<><>::
+frame_03.png::CompressedTexture2D::218319950658573832::1777510513::1777510600::1::::<><>::
+frame_04.png::CompressedTexture2D::1592656414395561691::1777510513::1777510599::1::::<><>::
+frame_05.png::CompressedTexture2D::6275084341138746063::1777510513::1777510599::1::::<><>::
+frame_06.png::CompressedTexture2D::4982109872388941228::1777510513::1777510599::1::::<><>::
+frame_07.png::CompressedTexture2D::6491538151156878921::1777510513::1777510599::1::::<><>::
+frame_08.png::CompressedTexture2D::2774796230480130626::1777510513::1777510599::1::::<><>::
+frame_09.png::CompressedTexture2D::8812382316853524294::1777510513::1777510599::1::::<><>::
+frame_10.png::CompressedTexture2D::1930366329709441339::1777510513::1777510599::1::::<><>::
+frame_11.png::CompressedTexture2D::3090160911340214038::1777510513::1777510599::1::::<><>::
+frame_12.png::CompressedTexture2D::7850873408151594036::1777510513::1777510599::1::::<><>::
+frame_13.png::CompressedTexture2D::8858153131058807846::1777510513::1777510599::1::::<><>::
+::res://Assets/Animations/jam side idle/::1777510513
+frame_01.png::CompressedTexture2D::7184484909019522694::1777510513::1777510598::1::::<><>::
+frame_02.png::CompressedTexture2D::2551882705461901434::1777510513::1777510577::1::::<><>::
+frame_03.png::CompressedTexture2D::826974104000326405::1777510513::1777510576::1::::<><>::
+frame_04.png::CompressedTexture2D::6969785437676522552::1777510513::1777510576::1::::<><>::
+frame_05.png::CompressedTexture2D::814699099684974402::1777510513::1777510576::1::::<><>::
+frame_06.png::CompressedTexture2D::5271379845315575390::1777510513::1777510575::1::::<><>::
+frame_07.png::CompressedTexture2D::354268286347886632::1777510513::1777510575::1::::<><>::
+frame_08.png::CompressedTexture2D::8690224270421504481::1777510513::1777510576::1::::<><>::
+frame_09.png::CompressedTexture2D::8164300043943900361::1777510513::1777510576::1::::<><>::
+frame_10.png::CompressedTexture2D::1782793604540291447::1777510513::1777510575::1::::<><>::
+frame_11.png::CompressedTexture2D::9014569310437606710::1777510513::1777510576::1::::<><>::
+frame_12.png::CompressedTexture2D::473307375609498775::1777510513::1777510576::1::::<><>::
+frame_13.png::CompressedTexture2D::5528584557173907968::1777510513::1777510575::1::::<><>::
+::res://Assets/Animations/jam walk side/::1777510514
+frame_01.png::CompressedTexture2D::7611537879321827484::1777510513::1777510575::1::::<><>::
+frame_02.png::CompressedTexture2D::2760519558705341672::1777510513::1777510574::1::::<><>::
+frame_03.png::CompressedTexture2D::4628011573700575223::1777510513::1777510574::1::::<><>::
+frame_04.png::CompressedTexture2D::7745637012609627445::1777510514::1777510574::1::::<><>::
+frame_05.png::CompressedTexture2D::2636979146646346056::1777510514::1777510574::1::::<><>::
+frame_06.png::CompressedTexture2D::6739118582857458137::1777510514::1777510574::1::::<><>::
+frame_07.png::CompressedTexture2D::46748189092128522::1777510514::1777510574::1::::<><>::
+frame_08.png::CompressedTexture2D::837042087410782533::1777510514::1777510574::1::::<><>::
+frame_09.png::CompressedTexture2D::4339440291874931207::1777510514::1777510574::1::::<><>::
+frame_10.png::CompressedTexture2D::6213961367837689743::1777510514::1777510574::1::::<><>::
+frame_11.png::CompressedTexture2D::3001213272535694440::1777510514::1777510574::1::::<><>::
+frame_12.png::CompressedTexture2D::6646248144166656902::1777510514::1777510574::1::::<><>::
+frame_13.png::CompressedTexture2D::8992822139282614307::1777510514::1777510574::1::::<><>::
+::res://Assets/Animations/WalkLeft/::1777510513
+Pi7_frame_01.png::CompressedTexture2D::5652460955916266070::1777510512::1777510580::1::::<><>::
+Pi7_frame_02.png::CompressedTexture2D::7547929210543081148::1777510512::1777510579::1::::<><>::
+Pi7_frame_03.png::CompressedTexture2D::6536264374311928917::1777510512::1777510578::1::::<><>::
+Pi7_frame_04.png::CompressedTexture2D::178446654767373477::1777510512::1777510578::1::::<><>::
+Pi7_frame_05.png::CompressedTexture2D::3556136958304354782::1777510512::1777510578::1::::<><>::
+Pi7_frame_06.png::CompressedTexture2D::5809654795275539151::1777510512::1777510578::1::::<><>::
+Pi7_frame_07.png::CompressedTexture2D::3693073460070232340::1777510513::1777510578::1::::<><>::
+Pi7_frame_08.png::CompressedTexture2D::5879325779753572485::1777510513::1777510578::1::::<><>::
+Pi7_frame_09.png::CompressedTexture2D::341057059567981061::1777510513::1777510578::1::::<><>::
+Pi7_frame_10.png::CompressedTexture2D::2695677545507445148::1777510513::1777510578::1::::<><>::
+Pi7_frame_11.png::CompressedTexture2D::5209584492477290686::1777510513::1777510578::1::::<><>::
+Pi7_frame_12.png::CompressedTexture2D::7133685968164037597::1777510513::1777510578::1::::<><>::
+Pi7_frame_13.png::CompressedTexture2D::695104395396994079::1777510513::1777510578::1::::<><>::
+::res://Assets/Fonts/::1777510514
+Pinkend.ttf::FontFile::8765693701405094629::1777510514::1777510571::1::::<><>::
+::res://Assets/GoodAssets/::1777510514
+MusicShop2.glb::PackedScene::770657870576862420::1777510514::1777510616::1::::<><>::
+Railing.glb::PackedScene::4471315956662092891::1777263461::1777510615::1::::<><>::
+::res://Assets/Kenny Particle Pack/::1777510514
+circle_01.png::CompressedTexture2D::161368310754638919::1777263461::1777510572::1::::<><>::
+circle_02.png::CompressedTexture2D::6678085894240633610::1777263461::1777510572::1::::<><>::
+circle_03.png::CompressedTexture2D::8285390633927617641::1777263461::1777510572::1::::<><>::
+circle_04.png::CompressedTexture2D::4666563614449544154::1777263461::1777510572::1::::<><>::
+circle_05.png::CompressedTexture2D::8717620038690606583::1777263461::1777510572::1::::<><>::
+dirt_01.png::CompressedTexture2D::8154093322978507013::1777263461::1777510572::1::::<><>::
+dirt_02.png::CompressedTexture2D::4660491918750772720::1777263461::1777510572::1::::<><>::
+dirt_03.png::CompressedTexture2D::5510244151763421942::1777263461::1777510572::1::::<><>::
+fire_01.png::CompressedTexture2D::849536043714135415::1777263461::1777510572::1::::<><>::
+fire_02.png::CompressedTexture2D::3728777389239766493::1777263461::1777510572::1::::<><>::
+flame_01.png::CompressedTexture2D::5608793722162263874::1777263461::1777510572::1::::<><>::
+flame_02.png::CompressedTexture2D::1830059448124206211::1777263461::1777510572::1::::<><>::
+flame_03.png::CompressedTexture2D::2700814279897327178::1777263461::1777510572::1::::<><>::
+flame_04.png::CompressedTexture2D::8588535672558749106::1777263461::1777510572::1::::<><>::
+flame_05.png::CompressedTexture2D::890324356605490991::1777263461::1777510572::1::::<><>::
+flame_06.png::CompressedTexture2D::8921238057907871158::1777263461::1777510572::1::::<><>::
+flare_01.png::CompressedTexture2D::6487163578306416316::1777263461::1777510572::1::::<><>::
+light_01.png::CompressedTexture2D::8521837948628785859::1777263461::1777510572::1::::<><>::
+light_02.png::CompressedTexture2D::8378374820036673232::1777263461::1777510572::1::::<><>::
+light_03.png::CompressedTexture2D::3033660217295595801::1777263461::1777510572::1::::<><>::
+magic_01.png::CompressedTexture2D::8558720386208706003::1777263461::1777510572::1::::<><>::
+magic_02.png::CompressedTexture2D::5839399316156369372::1777263461::1777510572::1::::<><>::
+magic_03.png::CompressedTexture2D::3957668302876013873::1777263461::1777510572::1::::<><>::
+magic_04.png::CompressedTexture2D::3316075822090067047::1777263461::1777510572::1::::<><>::
+magic_05.png::CompressedTexture2D::4784755894259140239::1777263461::1777510572::1::::<><>::
+muzzle_01.png::CompressedTexture2D::4025377250933955274::1777263461::1777510572::1::::<><>::
+muzzle_02.png::CompressedTexture2D::2551333681498982957::1777263461::1777510572::1::::<><>::
+muzzle_03.png::CompressedTexture2D::995506917975731146::1777263461::1777510572::1::::<><>::
+muzzle_04.png::CompressedTexture2D::510402744407340889::1777263461::1777510572::1::::<><>::
+muzzle_05.png::CompressedTexture2D::3279467344381995499::1777263461::1777510572::1::::<><>::
+scorch_01.png::CompressedTexture2D::9123362496903943726::1777263462::1777510572::1::::<><>::
+scorch_02.png::CompressedTexture2D::5320166445999294619::1777263462::1777510572::1::::<><>::
+scorch_03.png::CompressedTexture2D::7419894110274858951::1777263462::1777510572::1::::<><>::
+scratch_01.png::CompressedTexture2D::7494308544826778805::1777263462::1777510572::1::::<><>::
+slash_01.png::CompressedTexture2D::8886601519219352590::1777263462::1777510572::1::::<><>::
+slash_02.png::CompressedTexture2D::159382644583719864::1777263462::1777510572::1::::<><>::
+slash_03.png::CompressedTexture2D::2516971477380445245::1777263462::1777510572::1::::<><>::
+slash_04.png::CompressedTexture2D::7019210952235994180::1777263462::1777510572::1::::<><>::
+smoke_01.png::CompressedTexture2D::8560561870502398257::1777263462::1777510572::1::::<><>::
+smoke_02.png::CompressedTexture2D::8061592871926019457::1777263462::1777510572::1::::<><>::
+smoke_03.png::CompressedTexture2D::6702416979959068936::1777263462::1777510580::1::::<><>::
+smoke_04.png::CompressedTexture2D::5588052302365853175::1777263462::1777510580::1::::<><>::
+smoke_05.png::CompressedTexture2D::4078176089273301737::1777263462::1777510580::1::::<><>::
+smoke_06.png::CompressedTexture2D::6518646848620765906::1777263462::1777510580::1::::<><>::
+smoke_07.png::CompressedTexture2D::2749414619202342599::1777263462::1777510580::1::::<><>::
+smoke_08.png::CompressedTexture2D::5738363038906803525::1777263462::1777510580::1::::<><>::
+smoke_09.png::CompressedTexture2D::7340226188618224275::1777263462::1777510580::1::::<><>::
+smoke_10.png::CompressedTexture2D::3132899045727359813::1777263462::1777510580::1::::<><>::
+spark_01.png::CompressedTexture2D::2565669760709493255::1777263462::1777510580::1::::<><>::
+spark_02.png::CompressedTexture2D::4386832127174955013::1777263462::1777510580::1::::<><>::
+spark_03.png::CompressedTexture2D::4417337479490547081::1777263462::1777510580::1::::<><>::
+spark_04.png::CompressedTexture2D::3942763736353094385::1777263462::1777510580::1::::<><>::
+spark_05.png::CompressedTexture2D::3670145512600123303::1777263462::1777510579::1::::<><>::
+spark_06.png::CompressedTexture2D::470336049778375586::1777263462::1777510579::1::::<><>::
+spark_07.png::CompressedTexture2D::1813172332634244869::1777263462::1777510579::1::::<><>::
+star_01.png::CompressedTexture2D::1921816988085655004::1777263462::1777510579::1::::<><>::
+star_02.png::CompressedTexture2D::5839465637894629482::1777263462::1777510579::1::::<><>::
+star_03.png::CompressedTexture2D::2929240466943386167::1777263462::1777510579::1::::<><>::
+star_04.png::CompressedTexture2D::5428712373705889947::1777263462::1777510579::1::::<><>::
+star_05.png::CompressedTexture2D::2035932838502007294::1777263462::1777510579::1::::<><>::
+star_06.png::CompressedTexture2D::2286036540332226230::1777263462::1777510579::1::::<><>::
+star_07.png::CompressedTexture2D::8542011026691938177::1777263462::1777510579::1::::<><>::
+star_08.png::CompressedTexture2D::3739152460533899453::1777263462::1777510579::1::::<><>::
+star_09.png::CompressedTexture2D::224458598670491792::1777263462::1777510579::1::::<><>::
+symbol_01.png::CompressedTexture2D::5366098836627441655::1777263462::1777510580::1::::<><>::
+symbol_02.png::CompressedTexture2D::8168493507200460642::1777263462::1777510580::1::::<><>::
+trace_01.png::CompressedTexture2D::6438276773293930451::1777263462::1777510580::1::::<><>::
+trace_02.png::CompressedTexture2D::7242246923338916070::1777263462::1777510580::1::::<><>::
+trace_03.png::CompressedTexture2D::3374761092508568904::1777263462::1777510580::1::::<><>::
+trace_04.png::CompressedTexture2D::7517843527469896578::1777263462::1777510580::1::::<><>::
+trace_05.png::CompressedTexture2D::2894609564706804744::1777263462::1777510580::1::::<><>::
+trace_06.png::CompressedTexture2D::9189267506610487740::1777263462::1777510580::1::::<><>::
+trace_07.png::CompressedTexture2D::8254460144420394928::1777263462::1777510580::1::::<><>::
+twirl_01.png::CompressedTexture2D::2997987321544940260::1777263462::1777510580::1::::<><>::
+twirl_02.png::CompressedTexture2D::4558341916547857486::1777263462::1777510580::1::::<><>::
+twirl_03.png::CompressedTexture2D::8162468137645462727::1777263462::1777510580::1::::<><>::
+window_01.png::CompressedTexture2D::4385127347299869731::1777263462::1777510580::1::::<><>::
+window_02.png::CompressedTexture2D::216602794555912254::1777263462::1777510580::1::::<><>::
+window_03.png::CompressedTexture2D::1414125544298294059::1777263462::1777510580::1::::<><>::
+window_04.png::CompressedTexture2D::2820559798612445629::1777263462::1777510580::1::::<><>::
+::res://Assets/Kenny Particle Pack/Rotated/::1777263634
+flame_05_rotated.png::CompressedTexture2D::6802425472573292607::1777263461::1777510576::1::::<><>::
+flame_06_rotated.png::CompressedTexture2D::1507387588644086163::1777263461::1777510576::1::::<><>::
+muzzle_01_rotated.png::CompressedTexture2D::9214490012529545877::1777263461::1777510576::1::::<><>::
+muzzle_02_rotated.png::CompressedTexture2D::3721084676455932155::1777263461::1777510576::1::::<><>::
+muzzle_03_rotated.png::CompressedTexture2D::2350250577789437902::1777263461::1777510576::1::::<><>::
+muzzle_04_rotated.png::CompressedTexture2D::447421634138267698::1777263461::1777510576::1::::<><>::
+muzzle_05_rotated.png::CompressedTexture2D::3534806051838901093::1777263461::1777510576::1::::<><>::
+spark_05_rotated.png::CompressedTexture2D::3856388243097932483::1777263461::1777510576::1::::<><>::
+spark_06_rotated.png::CompressedTexture2D::1127438145933146157::1777263461::1777510576::1::::<><>::
+trace_01_rotated.png::CompressedTexture2D::7353742201069529290::1777263461::1777510576::1::::<><>::
+trace_02_rotated.png::CompressedTexture2D::5941664573976314678::1777263461::1777510576::1::::<><>::
+trace_03_rotated.png::CompressedTexture2D::6772833052369661873::1777263461::1777510576::1::::<><>::
+trace_04_rotated.png::CompressedTexture2D::7400251795619822297::1777263461::1777510572::1::::<><>::
+trace_05_rotated.png::CompressedTexture2D::4186594112370248061::1777263461::1777510572::1::::<><>::
+trace_06_rotated.png::CompressedTexture2D::3560364719016099039::1777263461::1777510572::1::::<><>::
+trace_07_rotated.png::CompressedTexture2D::8281755070281781312::1777263461::1777510572::1::::<><>::
+::res://Assets/Music/::1777510514
+battle intro.mp3::AudioStreamMP3::5369599035592978845::1777263462::1777510571::1::::<><>::
+billy game shop - 25_4_26, 10.39 AM.mp3::AudioStreamMP3::2787841054621575619::1777263462::1777510571::1::::<><>::
+CombatIntro.mp3::AudioStreamMP3::2881006049358954370::1777263462::1777510571::1::::<><>::
+CombatMusic.mp3::AudioStreamMP3::2725226538132431235::1777263462::1777510571::1::::<><>::
+ShopReal.mp3::AudioStreamMP3::3143964904288277015::1777263462::1777510571::1::::<><>::
+::res://Assets/Pedals/::1777300273
+blankpedalOff.png::CompressedTexture2D::5911020058116656754::1777263462::1777510580::1::::<><>::
+blankpedalOn.png::CompressedTexture2D::3283469019392421419::1777263462::1777510580::1::::<><>::
+BossBoosterOff.png::CompressedTexture2D::6262492812740924472::1777263462::1777510580::1::::<><>::
+BossBoosterOn.png::CompressedTexture2D::8480386606606490693::1777263462::1777510580::1::::<><>::
+BossDelayOff.png::CompressedTexture2D::6600562957907481877::1777263462::1777510580::1::::<><>::
+BossDelayOn.png::CompressedTexture2D::300126474105457444::1777263462::1777510580::1::::<><>::
+BossDistortionOff.png::CompressedTexture2D::6548730449528744342::1777263462::1777510580::1::::<><>::
+BossDistortionOn.png::CompressedTexture2D::4649266463121493124::1777263462::1777510580::1::::<><>::
+BossOverdriveOff.png::CompressedTexture2D::6216423944161585802::1777263462::1777510579::1::::<><>::
+BossOverdriveOn.png::CompressedTexture2D::3790278083468932653::1777263462::1777510579::1::::<><>::
+BossReverbOff.png::CompressedTexture2D::1574210597035630210::1777263462::1777510579::1::::<><>::
+BossReverbOn.png::CompressedTexture2D::7557520507344253842::1777300272::1777510579::1::::<><>::
+PedalPlaceholder.png::CompressedTexture2D::8139246262670330740::1777263462::1777510579::1::::<><>::
+::res://Assets/Placeholders/::1777510514
+assmobile.fbx::PackedScene::3321910542493559711::1776747151::1777510616::1::::<><>::uid://bcvrjvsi6mrpr::::res://Assets/Placeholders/texass.png
+button UI.png::CompressedTexture2D::3428185660686014926::1774854902::1777510579::1::::<><>::
+pedalboard.png::CompressedTexture2D::5649352124387962312::1776994533::1777510579::1::::<><>::
+shopPlaceholderImage.jpeg::CompressedTexture2D::195868707789586564::1776497636::1777510580::1::::<><>::
+texass.png::CompressedTexture2D::2571199696028829219::1776747202::1777510631::1::::<><>::
+vaninside.jpg::CompressedTexture2D::7731738221600061857::1776994533::1777510579::1::::<><>::
+::res://Assets/Placeholders/3d city pack/::1777510514
+BG.fbx::PackedScene::1243180311459412116::1775538361::1777510614::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Car_03.fbx::PackedScene::7486950446414138077::1775538361::1777510615::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+House_01.fbx::PackedScene::8559073131307913958::1775538361::1777510615::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+House_16.fbx::PackedScene::525158049101292601::1775538361::1777510615::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Light_01.fbx::PackedScene::8355117661037539952::1775538361::1777510615::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Road_02.fbx::PackedScene::1678673126380441694::1775538361::1777510616::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Road_10.fbx::PackedScene::5070080326370159913::1775538361::1777510616::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Texture_01.png::CompressedTexture2D::5705397850951956414::1775538361::1777510579::1::::<><>::
+Trash_01.fbx::PackedScene::6512335885839503429::1775538361::1777510615::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+Wheel_01.fbx::PackedScene::926401544698451103::1775538361::1777510614::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
 ::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/::1774854902
 License.txt::TextFile::-1::1774854902::0::1::::<><>::
 ::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/::1774854902
-::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/::1776833318
-attack1_down.png::CompressedTexture2D::2829689274635892656::1774854902::1776833318::1::::<><>::
-attack1_left.png::CompressedTexture2D::4617111514532699523::1774854902::1776833318::1::::<><>::
-attack1_right.png::CompressedTexture2D::6709192772066391736::1774854902::1776833318::1::::<><>::
-attack1_up.png::CompressedTexture2D::1024622191582545353::1774854902::1776833318::1::::<><>::
-::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/::1776833318
-attack2_down.png::CompressedTexture2D::8417021744764643304::1774854902::1776833318::1::::<><>::
-attack2_left.png::CompressedTexture2D::5808907653865388895::1774854902::1776833318::1::::<><>::
-attack2_right.png::CompressedTexture2D::3266677615417910185::1774854902::1776833318::1::::<><>::
-attack2_up.png::CompressedTexture2D::5304238155624681075::1774854902::1776833318::1::::<><>::
-::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/::1776833318
-idle_down.png::CompressedTexture2D::8487136397927577748::1774854902::1776833318::1::::<><>::
-idle_left.png::CompressedTexture2D::396874696404791329::1774854902::1776833318::1::::<><>::
-idle_right.png::CompressedTexture2D::7797315826728838824::1774854902::1776833318::1::::<><>::
-idle_up.png::CompressedTexture2D::5562150221825407267::1774854902::1776833318::1::::<><>::
-::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/::1776833318
-run_down.png::CompressedTexture2D::1912367101208958902::1774854902::1776833318::1::::<><>::
-run_left.png::CompressedTexture2D::7213702745545960920::1774854902::1776833318::1::::<><>::
-run_right.png::CompressedTexture2D::4132090873780743266::1774854902::1776833318::1::::<><>::
-run_up.png::CompressedTexture2D::4645141910606622675::1774854902::1776833318::1::::<><>::
-::res://Scenes/::1776833276
-damage_number.tscn::PackedScene::6591976427705737248::1774854902::0::1::::<><>::uid://52u0foyg56u7::::res://Scripts/UIScripts/DamageNumber.gd
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/::1777510514
+attack1_down.png::CompressedTexture2D::2829689274635892656::1774854902::1777510578::1::::<><>::
+attack1_left.png::CompressedTexture2D::4617111514532699523::1774854902::1777510578::1::::<><>::
+attack1_right.png::CompressedTexture2D::6709192772066391736::1774854902::1777510578::1::::<><>::
+attack1_up.png::CompressedTexture2D::1024622191582545353::1774854902::1777510578::1::::<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/::1777510514
+attack2_down.png::CompressedTexture2D::8417021744764643304::1774854902::1777510578::1::::<><>::
+attack2_left.png::CompressedTexture2D::5808907653865388895::1774854902::1777510578::1::::<><>::
+attack2_right.png::CompressedTexture2D::3266677615417910185::1774854902::1777510578::1::::<><>::
+attack2_up.png::CompressedTexture2D::5304238155624681075::1774854902::1777510578::1::::<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/::1777510514
+idle_down.png::CompressedTexture2D::8487136397927577748::1774854902::1777510579::1::::<><>::
+idle_left.png::CompressedTexture2D::396874696404791329::1774854902::1777510579::1::::<><>::
+idle_right.png::CompressedTexture2D::7797315826728838824::1774854902::1777510579::1::::<><>::
+idle_up.png::CompressedTexture2D::5562150221825407267::1774854902::1777510579::1::::<><>::
+::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/::1777510514
+run_down.png::CompressedTexture2D::1912367101208958902::1774854902::1777510579::1::::<><>::
+run_left.png::CompressedTexture2D::7213702745545960920::1774854902::1777510579::1::::<><>::
+run_right.png::CompressedTexture2D::4132090873780743266::1774854902::1777510579::1::::<><>::
+run_up.png::CompressedTexture2D::4645141910606622675::1774854902::1777510579::1::::<><>::
+::res://Assets/SFX/::1777510515
+832741__evamusik__step2.wav::AudioStreamWAV::8511780475336505220::1777510514::1777510608::1::::<><>::
+AMBUrbn_CityAmbience17_InMotionAudio_ManchesterAmbience.wav::AudioStreamWAV::7277031967158841551::1777510515::1777510614::1::::<><>::
+Attack.wav::AudioStreamWAV::8026568166315792339::1777263462::1777510608::1::::<><>::
+AttackMultiple.wav::AudioStreamWAV::8900591001575362177::1777263462::1777510608::1::::<><>::
+Defend.mp3::AudioStreamMP3::6422998390533217359::1777510515::1777510571::1::::<><>::
+footstep.mp3::AudioStreamMP3::8190622242222809118::1777510515::1777510571::1::::<><>::
+TakeDamage.wav::AudioStreamWAV::6265586309797754223::1777263462::1777510608::1::::<><>::
+[trimmed] billy game combat loss.mp3::AudioStreamMP3::4973743022763507950::1777510515::1777510571::1::::<><>::
+::res://Assets/UI/::1777510515
+attack.png::CompressedTexture2D::7665579361515814988::1777298726::1777510579::1::::<><>::
+blockeffect (3).png::CompressedTexture2D::1894321869962621142::1777510515::1777510579::1::::<><>::
+defend.png::CompressedTexture2D::8884101727172623499::1777298743::1777510579::1::::<><>::
+pedalboard.png::CompressedTexture2D::8155192468670827320::1777300650::1777510579::1::::<><>::
+pedalstext.png::CompressedTexture2D::4641818782108367430::1777298738::1777510579::1::::<><>::
+::res://Exports/::1777510515
+index.apple-touch-icon.png::CompressedTexture2D::3508248978863808873::1777510515::1777510579::1::::<><>::
+index.icon.png::CompressedTexture2D::949908085682387746::1777510515::1777510579::1::::<><>::
+index.png::CompressedTexture2D::3825128218069871324::1777510515::1777510579::1::::<><>::
+::res://Scenes/::1777510515
+credits.tscn::PackedScene::1698653676747964578::1777510515::0::1::::<><>::uid://bekfsptpoc6v::::res://Scripts/UIScripts/credits.gd<>uid://d0pe2qxfpjolf::::res://Scenes/roaming.tscn<>uid://clil2isw4w0d0::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_up.png<>uid://dw5fxu6x67b30::::res://Assets/Fonts/Pinkend.ttf
+damage_number.tscn::PackedScene::6591976427705737248::1777263462::0::1::::<><>::uid://52u0foyg56u7::::res://Scripts/UIScripts/DamageNumber.gd
 damage_number_manager.tscn::PackedScene::1177140537215376864::1774854902::0::1::::<><>::uid://dl4k4fv081oqs::::res://Scripts/UIScripts/DamageNumberManager.gd
-player.tscn::PackedScene::826455816799190397::1776833276::0::1::::<><>::uid://c2t8oo8u18ram::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/attack1_right.png<>uid://djdcwgipke6h5::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_right.png<>uid://dcwsl1unn7brr::::res://Scripts/CombatScripts/player.gd<>uid://chtoa60ppvq1h::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_up.png<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
-roaming.tscn::PackedScene::8945240768899203787::1776833276::0::1::::<><>::uid://5sdmx7e2rmkv::::res://Scripts/RoamingScripts/Roaming.gd<>uid://c82hfjooscae4::::res://Scenes/Meshes/3dCityPack/road_straight.tscn<>uid://csypadqcwlgjm::::res://Scenes/Meshes/3dCityPack/road_angled.tscn<>uid://c4eclxtb6jatw::::res://Scenes/Meshes/3dCityPack/short_house.tscn<>uid://dvdd5shsgxksp::::res://Scenes/Meshes/3dCityPack/tall_house.tscn<>uid://bdtf2u6a6c6f8::::res://Scenes/Meshes/3dCityPack/street_lamp.tscn<>uid://bftv7557bqaoo::::res://Scenes/Meshes/3dCityPack/TrashCan.tscn<>uid://1msrtxr0667l::::res://Scripts/RoamingScripts/PlayerRoaming.gd<>uid://ds6h5qls2yl1e::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_down.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://djdcwgipke6h5::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_right.png<>uid://clil2isw4w0d0::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_up.png<>uid://2imn3hfp0exa::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_down.png<>uid://da1mvouxf57jg::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_left.png<>uid://by4u6ysbvjnhi::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_right.png<>uid://b7ge2q0mt8c7t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png<>uid://ccy3vgufakxi6::::res://Scenes/Meshes/music_shop.tscn<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://bjkpjpmrri65g::::res://Scenes/UI/shop_screen.tscn<>uid://cuy7dhd4kencs::::res://Scripts/States/RoamingState.gd<>uid://cmtdgooj582ks::::res://Scripts/States/ShopState.gd<>uid://bd5knqm4ul66::::res://Scripts/Upgrades/Upgrade.gd<>uid://clvx0dtjjh6xd::::res://icon.svg<>uid://bo3vym2xhrnhu::::res://Assets/Placeholders/button UI.png<>uid://cwwg52uumuvu8::::res://Scripts/Upgrades/Distortion.gd<>uid://cih5gvuu7jr0t::::res://Scripts/Upgrades/Overdrive.gd<>uid://bhkc0g15m8xn2::::res://Scripts/Upgrades/Delay.gd<>uid://cook4pbgv2f3u::::res://Scripts/Upgrades/Boost.gd<>uid://dqwgxh6gfsb15::::res://Scripts/Upgrades/EQ.gd<>uid://hmv5fvdvkdvs::::res://Scripts/States/combat_state.gd<>uid://ct8120htle6mr::::res://Scripts/RoamingScripts/AreaCombatTrigger.gd<>uid://bqwqxi3atc7sc::::res://Scenes/test_enemy.tscn<>uid://dansr6dmqv388::::res://Scenes/Combat/combat_encounter.tscn
-test_enemy.tscn::PackedScene::3555871501101841702::1776833276::0::1::::<><>::uid://co044it4tq73x::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://bhxe5kxxjl2wi::::res://Scripts/CombatScripts/Enemy.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
-::res://Scenes/Combat/::1776833276
+menu.tscn::PackedScene::3403810648048590691::1777510515::0::1::::<><>::uid://bt4fq5lwt68cm::::res://Scripts/UIScripts/menu.gd<>uid://i0fv8prgv58o::::res://Shaders/Sky.gdshader<>uid://cgwvl4nvyxrbq::::res://Assets/Animations/jam back idle/frame_01.png<>uid://dw5fxu6x67b30::::res://Assets/Fonts/Pinkend.ttf<>uid://dwg46tg6u61o2::::res://Assets/Kenny Particle Pack/circle_05.png<>uid://d1g63xic2c80f::::res://Assets/shooting_star_sampler.png<>uid://cr2xe4r1gqx7a::::res://Assets/Animations/jam back idle/frame_02.png<>uid://c82hfjooscae4::::res://Scenes/Meshes/3dCityPack/road_straight.tscn<>uid://dx6bmx01vvwsf::::res://Assets/Animations/jam back idle/frame_03.png<>uid://dbxbwhh0t270v::::res://Assets/SFX/AMBUrbn_CityAmbience17_InMotionAudio_ManchesterAmbience.wav<>uid://yk2r04m1xmtc::::res://Assets/Animations/jam back idle/frame_04.png<>uid://csypadqcwlgjm::::res://Scenes/Meshes/3dCityPack/road_angled.tscn<>uid://kyt8spuhmwp2::::res://Assets/Animations/jam back idle/frame_05.png<>uid://c4eclxtb6jatw::::res://Scenes/Meshes/3dCityPack/short_house.tscn<>uid://c77vsi322uxo6::::res://Assets/Animations/jam back idle/frame_06.png<>uid://dvdd5shsgxksp::::res://Scenes/Meshes/3dCityPack/tall_house.tscn<>uid://bdmul5fvlyvlx::::res://Assets/Animations/jam back idle/frame_07.png<>uid://bdtf2u6a6c6f8::::res://Scenes/Meshes/3dCityPack/street_lamp.tscn<>uid://c6vyo5c46i1vw::::res://Assets/Animations/jam back idle/frame_08.png<>uid://bftv7557bqaoo::::res://Scenes/Meshes/3dCityPack/TrashCan.tscn<>uid://dk6puebsqpa03::::res://Scenes/Meshes/railing.tscn<>uid://bnxkmq0r1h20f::::res://Assets/Animations/jam back idle/frame_09.png<>uid://cjjupyt23towc::::res://Shaders/Water.gdshader<>uid://coqmv3n48n86b::::res://Assets/Animations/jam back idle/frame_10.png<>uid://dry33ecw8vpnx::::res://Assets/Animations/jam back idle/frame_11.png<>uid://cahm20pvdj8fd::::res://Assets/Animations/jam back idle/frame_12.png
+player.tscn::PackedScene::826455816799190397::1777510515::0::1::::<><>::uid://cbdngtkow04aa::::res://Assets/Animations/jam attack/frame_01.png<>uid://dcwsl1unn7brr::::res://Scripts/CombatScripts/player.gd<>uid://dt02ijfov2jfh::::res://Assets/Animations/jam attack/frame_02.png<>uid://dki65s0u6fj43::::res://Assets/Animations/jam attack/frame_03.png<>uid://c4m1kd1tp5x1t::::res://Assets/Animations/jam attack/frame_04.png<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://qrlnycn7f5du::::res://Assets/Animations/jam attack/frame_05.png<>uid://cyuj3xj63yyar::::res://Assets/Animations/jam attack/frame_06.png<>uid://csdwvcpvuadt2::::res://Assets/Animations/jam attack/frame_07.png<>uid://dmmen1giadthb::::res://Assets/SFX/Attack.wav<>uid://cmhgans3upf6k::::res://Assets/Animations/jam attack/frame_08.png<>uid://7jofvt1d3lyq::::res://Assets/Animations/jam attack/frame_09.png<>uid://cvjdj5r0du1n4::::res://Assets/SFX/TakeDamage.wav<>uid://cc4k258ehgy6q::::res://Assets/SFX/[trimmed] billy game combat loss.mp3<>uid://cl0q2w0n8wc13::::res://Assets/Animations/jam attack/frame_10.png<>uid://ckgyggel843pw::::res://Assets/Animations/jam attack/frame_11.png<>uid://brshqriiq3hha::::res://Assets/Animations/jam attack/frame_12.png<>uid://y5cltbywioix::::res://Assets/Animations/jam attack/frame_13.png<>uid://bm8q2jxw0fkg::::res://Assets/Animations/jam attack ready/frame_01.png<>uid://bv2o48u7t17jw::::res://Assets/Animations/jam defense/frame_01.png<>uid://bvywe0o3cfe3n::::res://Assets/Animations/jam attack ready/frame_02.png<>uid://bnjtimy1jbip::::res://Assets/Animations/jam defense/frame_02.png<>uid://b8jutjpcyiuby::::res://Assets/Animations/jam defense/frame_03.png<>uid://c73ac205j3vci::::res://Assets/Animations/jam attack ready/frame_03.png<>uid://rt4slj7cyww8::::res://Assets/Animations/jam defense/frame_04.png<>uid://b671wpy7mmow8::::res://Assets/Animations/jam attack ready/frame_04.png<>uid://sx5671agkgg2::::res://Assets/Animations/jam defense/frame_05.png<>uid://c50oliyj7hpej::::res://Assets/Animations/jam attack ready/frame_05.png<>uid://bmcedi8yrtro8::::res://Assets/Animations/jam defense/frame_06.png<>uid://c2nbud8kwv2g5::::res://Assets/Animations/jam attack ready/frame_06.png<>uid://kdhqiorhidhw::::res://Assets/Animations/jam defense/frame_07.png<>uid://c80blqmg2lk4j::::res://Assets/Animations/jam attack ready/frame_07.png<>uid://dfkabyi4vvb63::::res://Assets/Animations/jam attack ready/frame_08.png<>uid://dwaxfkje872xs::::res://Assets/Animations/jam defense/frame_08.png<>uid://bs40spaxj5x5s::::res://Assets/Animations/jam defense/frame_09.png<>uid://dusmniv5nosf2::::res://Assets/Animations/jam attack ready/frame_09.png<>uid://cqktvwcgkm8ye::::res://Assets/Animations/jam attack ready/frame_10.png<>uid://cxl6v56eehidp::::res://Assets/Animations/jam defense/frame_10.png<>uid://d4nwq1tt4aqrl::::res://Assets/Animations/jam attack ready/frame_11.png<>uid://bcaxqvsw1x6pg::::res://Assets/Animations/jam defense/frame_11.png<>uid://dyv5vua7t0dq8::::res://Assets/Animations/jam defense/frame_12.png<>uid://d2w0hx2li18cq::::res://Assets/Animations/jam attack ready/frame_12.png<>uid://ucf05lk0uqlw::::res://Assets/Animations/jam idle/frame_01.png<>uid://cmltfxqp8ckpe::::res://Assets/Animations/jam attack ready/frame_13.png<>uid://bv28qwo1l8gcy::::res://Assets/Animations/jam idle/frame_02.png<>uid://dd0xysa2jewu::::res://Assets/Animations/jam idle/frame_03.png<>uid://wxq23es8u4wl::::res://Assets/Animations/jam idle/frame_04.png<>uid://cvnxys8f3htud::::res://Assets/Animations/jam idle/frame_05.png<>uid://cc8mvexn7eqg7::::res://Assets/Animations/jam idle/frame_06.png<>uid://cyqsxj1issucf::::res://Assets/Animations/jam idle/frame_07.png<>uid://bfsequyr1ue31::::res://Assets/Animations/jam idle/frame_08.png<>uid://dxs1wcsix4wl7::::res://Assets/Animations/jam idle/frame_09.png<>uid://2rc37ihsx5ed::::res://Assets/Animations/jam idle/frame_10.png<>uid://bka5q7sfalugc::::res://Assets/Animations/jam idle/frame_11.png<>uid://dj4a0detbtqwa::::res://Assets/Animations/jam idle/frame_12.png<>uid://dyg7qt8qqu10m::::res://Assets/Animations/jam idle/frame_13.png<>uid://cxrl3y6bgru28::::res://Assets/SFX/Defend.mp3
+roaming.tscn::PackedScene::8945240768899203787::1777510515::0::1::::<><>::uid://5sdmx7e2rmkv::::res://Scripts/RoamingScripts/Roaming.gd<>uid://c82hfjooscae4::::res://Scenes/Meshes/3dCityPack/road_straight.tscn<>uid://csypadqcwlgjm::::res://Scenes/Meshes/3dCityPack/road_angled.tscn<>uid://c4eclxtb6jatw::::res://Scenes/Meshes/3dCityPack/short_house.tscn<>uid://dwg46tg6u61o2::::res://Assets/Kenny Particle Pack/circle_05.png<>uid://dvdd5shsgxksp::::res://Scenes/Meshes/3dCityPack/tall_house.tscn<>uid://d1g63xic2c80f::::res://Assets/shooting_star_sampler.png<>uid://bdtf2u6a6c6f8::::res://Scenes/Meshes/3dCityPack/street_lamp.tscn<>uid://bftv7557bqaoo::::res://Scenes/Meshes/3dCityPack/TrashCan.tscn<>uid://i0fv8prgv58o::::res://Shaders/Sky.gdshader<>uid://cjjupyt23towc::::res://Shaders/Water.gdshader<>uid://c0kivst236swk::::res://Assets/Pedals/BossDistortionOff.png<>uid://b7ie0eyv27abs::::res://Assets/Pedals/BossDistortionOn.png<>uid://ccy3vgufakxi6::::res://Scenes/Meshes/music_shop.tscn<>uid://cutjug2ws4joc::::res://Assets/Pedals/BossOverdriveOff.png<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://bjkpjpmrri65g::::res://Scenes/UI/shop_screen.tscn<>uid://buabldfv54o7n::::res://Assets/Pedals/BossOverdriveOn.png<>uid://cuy7dhd4kencs::::res://Scripts/States/RoamingState.gd<>uid://cmtdgooj582ks::::res://Scripts/States/ShopState.gd<>uid://bd5knqm4ul66::::res://Scripts/Upgrades/Upgrade.gd<>uid://c1bmkpsoy6luj::::res://Assets/Pedals/BossDelayOff.png<>uid://ejnblj570sxg::::res://Assets/Pedals/BossDelayOn.png<>uid://cwwg52uumuvu8::::res://Scripts/Upgrades/Distortion.gd<>uid://jbt8nk1iqjyi::::res://Scripts/States/save_room_state.gd<>uid://cvhulu71fpdxw::::res://Assets/Pedals/BossBoosterOff.png<>uid://cih5gvuu7jr0t::::res://Scripts/Upgrades/Overdrive.gd<>uid://bhkc0g15m8xn2::::res://Scripts/Upgrades/Delay.gd<>uid://ds27y1bpuo014::::res://Assets/Pedals/BossBoosterOn.png<>uid://1b3mx7conklb::::res://Scenes/Roaming/player_roaming.tscn<>uid://cook4pbgv2f3u::::res://Scripts/Upgrades/Boost.gd<>uid://dqwgxh6gfsb15::::res://Scripts/Upgrades/EQ.gd<>uid://cqhlvwcxccfj3::::res://Assets/Pedals/blankpedalOff.png<>uid://bm1siw2v4atbn::::res://Assets/Pedals/blankpedalOn.png<>uid://dkrmnheblry4i::::res://Scenes/Roaming/van_save_spot.tscn<>uid://cpluxdg1cxgl0::::res://Scenes/UI/save_room_screen.tscn<>uid://wotavovf2ohu::::res://Assets/Pedals/BossReverbOff.png<>uid://dfw6i16s8mvy5::::res://Assets/Pedals/BossReverbOn.png<>uid://hmv5fvdvkdvs::::res://Scripts/States/combat_state.gd<>uid://ct8120htle6mr::::res://Scripts/RoamingScripts/AreaCombatTrigger.gd<>uid://ds247js4bk1j6::::res://Scripts/Upgrades/Reverb.gd<>uid://c5imh7qsgm7va::::res://Scripts/RoamingScripts/RoamingCamera.gd<>uid://f4fsxcpgrcj2::::res://Scripts/Upgrades/Limiter.gd<>uid://dansr6dmqv388::::res://Scenes/Combat/combat_encounter.tscn<>uid://bsfjo7hkmht7v::::res://Scripts/RoamingScripts/CameraZone.gd<>uid://c5n6a1sk1jfq8::::res://Scripts/Upgrades/PreAmpUpgrade.gd<>uid://ls5ryq2oq2o6::::res://Scripts/Upgrades/ChorusUpgrade.gd<>uid://cbdnrmeoovned::::res://Scripts/Upgrades/Feedback.gd<>uid://dxl66dv5mtw1b::::res://Scripts/Upgrades/Fuzz.gd<>uid://dk6puebsqpa03::::res://Scenes/Meshes/railing.tscn<>uid://d3wuqfbj5jwwg::::res://Scenes/Enemies/keyboardEnemy.tscn<>uid://dafdogbys6isq::::res://SpriteFrames/KeyboardEnemyRoaming.tres<>uid://b4c47jiynvdcc::::res://Scenes/Enemies/boss_enemy.tscn<>uid://dww8sqt05suwp::::res://Assets/Animations/jam boss idle/frame_01.png<>uid://cexnx8eprwm1a::::res://Assets/Animations/jam boss idle/frame_02.png<>uid://bwgkgmgneddnq::::res://Assets/Animations/jam boss idle/frame_03.png<>uid://c7lrkpwpifxo1::::res://Assets/Animations/jam boss idle/frame_04.png<>uid://chtwa6aiih5fh::::res://Assets/Animations/jam boss idle/frame_05.png<>uid://wcjnfxchlrpy::::res://Assets/Animations/jam boss idle/frame_06.png<>uid://dyexeu6qmrv6::::res://Assets/Animations/jam boss idle/frame_07.png<>uid://dp3e1a8d5ximv::::res://Assets/Animations/jam boss idle/frame_08.png<>uid://cywpto2k78a8i::::res://Assets/Animations/jam boss idle/frame_09.png<>uid://bv48rjc3dg4u3::::res://Assets/Animations/jam boss idle/frame_10.png<>uid://dmlvmkjofhnmg::::res://Assets/Animations/jam boss idle/frame_11.png<>uid://bilpdn7ma8680::::res://Assets/Animations/jam boss idle/frame_12.png<>uid://bk17v35d03ol0::::res://Assets/Music/ShopReal.mp3
+settings.tscn::PackedScene::3407662697370820572::1777510515::0::1::::<><>::uid://bekfsptpoc6v::::res://Scripts/UIScripts/credits.gd<>uid://d0pe2qxfpjolf::::res://Scenes/roaming.tscn<>uid://clil2isw4w0d0::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_up.png<>uid://dw5fxu6x67b30::::res://Assets/Fonts/Pinkend.ttf
+test_enemy.tscn::PackedScene::3555871501101841702::1777510515::0::1::::<><>::uid://co044it4tq73x::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 2/attack2_left.png<>uid://fwip6kyjf64t::::res://Assets/Placeholders/FREE_Adventurer 2D Pixel Art/Sprites/IDLE/idle_left.png<>uid://bhxe5kxxjl2wi::::res://Scripts/CombatScripts/Enemy.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd
+::res://Scenes/Autoload/::1777510515
+screen_fade.tscn::PackedScene::6108226017555201207::1777510515::0::1::::<><>::uid://bliidduw1oiie::::res://Scripts/ScreenFade.gd
+::res://Scenes/Combat/::1777510515
 combat_camera.tscn::PackedScene::3639050613360105251::1776833276::0::1::::<><>::uid://c8jblcdnte5jc::::res://Scripts/CombatScripts/combat_camera.gd
-combat_encounter.tscn::PackedScene::7187223859673992923::1776833276::0::1::::<><>::uid://c3cvy2ns2b3la::::res://Scripts/CombatScripts/CombatEncounter.gd<>uid://l1luvgct8ln6::::res://Scenes/player.tscn<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://clvx0dtjjh6xd::::res://icon.svg<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://c2b41aqxdkkuu::::res://Scripts/States/PlayerTurn.gd<>uid://8l3l6bf2nrs6::::res://Scripts/States/EnemyTurn.gd<>uid://dpnurkj20dddp::::res://Scripts/States/EnemySelect.gd<>uid://s3ox4l2p2476::::res://Scripts/States/ModifyState.gd<>uid://dy82oouww6sgr::::res://Scripts/CombatScripts/enemy_manager.gd<>uid://q1hlktc7oobw::::res://Scenes/damage_number_manager.tscn<>uid://dnejqew27q7ns::::res://Scenes/UI/upgrade_toggle_screen.tscn
-::res://Scenes/Meshes/::1776833276
-music_shop.tscn::PackedScene::4964502044492951547::1776833276::0::1::::<><>::uid://d1puerho1u7id::::res://Assets/GoodAssets/MusicShop2.blend<>uid://iywjbeiing0l::::res://Scripts/RoamingScripts/MusicShop.gd
-van.tscn::PackedScene::3141299819598970828::1776748110::0::1::::<><>::uid://dhcy5so7c7fpt::::res://Assets/Placeholders/texass.png
-::res://Scenes/Meshes/3dCityPack/::1775538361
-road_angled.tscn::PackedScene::6086696556267347534::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
-road_straight.tscn::PackedScene::7145245849717416341::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+combat_encounter.tscn::PackedScene::7187223859673992923::1777510515::0::1::::<><>::uid://c3cvy2ns2b3la::::res://Scripts/CombatScripts/CombatEncounter.gd<>uid://l1luvgct8ln6::::res://Scenes/player.tscn<>uid://c8jblcdnte5jc::::res://Scripts/CombatScripts/combat_camera.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://cq6mc27rx1ktw::::res://Scripts/States/state_machine.gd<>uid://c2b41aqxdkkuu::::res://Scripts/States/PlayerTurn.gd<>uid://8l3l6bf2nrs6::::res://Scripts/States/EnemyTurn.gd<>uid://dpnurkj20dddp::::res://Scripts/States/EnemySelect.gd<>uid://s3ox4l2p2476::::res://Scripts/States/ModifyState.gd<>uid://dy82oouww6sgr::::res://Scripts/CombatScripts/enemy_manager.gd<>uid://bhbt0prnysmog::::res://Assets/Music/CombatIntro.mp3<>uid://q1hlktc7oobw::::res://Scenes/damage_number_manager.tscn<>uid://be3ec24gjf30j::::res://Assets/Music/CombatMusic.mp3<>uid://dnejqew27q7ns::::res://Scenes/UI/upgrade_toggle_screen.tscn
+::res://Scenes/Enemies/::1777510515
+boss_enemy.tscn::PackedScene::4427844329076581962::1777510515::0::1::::<><>::uid://b4tg48rax18sp::::res://Assets/Animations/jam boss attack 1/frame_01.png<>uid://c4a42561kskun::::res://Assets/Animations/jam boss attack 1/frame_02.png<>uid://d2wtejc7mnam4::::res://Assets/Animations/jam boss attack 1/frame_03.png<>uid://pns2qk7d853a::::res://Assets/Animations/jam boss attack 1/frame_04.png<>uid://ddsupxn4n088n::::res://Assets/Animations/jam boss attack 1/frame_05.png<>uid://c32dyb3pn3voi::::res://Assets/Animations/jam boss attack 1/frame_06.png<>uid://8um2i1tqqdxc::::res://Assets/Animations/jam boss attack 1/frame_07.png<>uid://bdlkaefauff5m::::res://Assets/Animations/jam boss attack 1/frame_08.png<>uid://bbqubsb3tcjdw::::res://Assets/Animations/jam boss attack 1/frame_09.png<>uid://cejjj3txgc5kj::::res://Assets/Animations/jam boss attack 1/frame_10.png<>uid://cu3pomfb3ix1x::::res://Assets/Animations/jam boss attack 1/frame_11.png<>uid://da6gdkesj7i0v::::res://Assets/Animations/jam boss attack 1/frame_12.png<>uid://dll4gsppb1ymv::::res://Assets/Animations/jam boss attack 2/frame_01.png<>uid://csq0ifjj56x3v::::res://Assets/Animations/jam boss attack 2/frame_02.png<>uid://pu04s3wggw2d::::res://Assets/Animations/jam boss attack 2/frame_03.png<>uid://b2f7fh7331udx::::res://Assets/Animations/jam boss attack 2/frame_04.png<>uid://d7rv54roworl::::res://Assets/Animations/jam boss attack 2/frame_05.png<>uid://c6gn8jnx8o8ws::::res://Assets/Animations/jam boss attack 2/frame_06.png<>uid://brt450qo78lsq::::res://Assets/Animations/jam boss attack 2/frame_07.png<>uid://bvic61u4gtcj7::::res://Assets/Animations/jam boss attack 2/frame_08.png<>uid://dx13kyyhhqovc::::res://Assets/Animations/jam boss attack 2/frame_09.png<>uid://c81x6t0gqwfcu::::res://Assets/Animations/jam boss attack 2/frame_10.png<>uid://cp0ao5v7xofx6::::res://Assets/Animations/jam boss attack 2/frame_11.png<>uid://c47bs4p8eog06::::res://Assets/Animations/jam boss attack 2/frame_12.png<>uid://bih4uhdltkp6p::::res://Assets/Animations/jam boss defense/frame_1.png<>uid://dww8sqt05suwp::::res://Assets/Animations/jam boss idle/frame_01.png<>uid://cexnx8eprwm1a::::res://Assets/Animations/jam boss idle/frame_02.png<>uid://bm4ptb37dt152::::res://Assets/Animations/jam boss defense/frame_2.png<>uid://c7i88r54esocr::::res://Assets/Animations/jam boss defense/frame_3.png<>uid://bwgkgmgneddnq::::res://Assets/Animations/jam boss idle/frame_03.png<>uid://c7lrkpwpifxo1::::res://Assets/Animations/jam boss idle/frame_04.png<>uid://chtwa6aiih5fh::::res://Assets/Animations/jam boss idle/frame_05.png<>uid://wcjnfxchlrpy::::res://Assets/Animations/jam boss idle/frame_06.png<>uid://dyexeu6qmrv6::::res://Assets/Animations/jam boss idle/frame_07.png<>uid://dp3e1a8d5ximv::::res://Assets/Animations/jam boss idle/frame_08.png<>uid://cywpto2k78a8i::::res://Assets/Animations/jam boss idle/frame_09.png<>uid://bv48rjc3dg4u3::::res://Assets/Animations/jam boss idle/frame_10.png<>uid://dmlvmkjofhnmg::::res://Assets/Animations/jam boss idle/frame_11.png<>uid://bilpdn7ma8680::::res://Assets/Animations/jam boss idle/frame_12.png<>uid://bhxe5kxxjl2wi::::res://Scripts/CombatScripts/Enemy.gd<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://bnrkqfwtyr6wg::::res://Scripts/Actions/StatusAndAttackAction.gd
+keyboardEnemy.tscn::PackedScene::9171209160702276562::1777510515::0::1::::<><>::uid://d3ctonnjogvbt::::res://Assets/Animations/jam enemy attack/frame_01.png<>uid://c53lnkto8n0wx::::res://Assets/Animations/jam enemy attack/frame_02.png<>uid://ccwsmkne3cubv::::res://Assets/Animations/jam enemy attack/frame_03.png<>uid://bhxe5kxxjl2wi::::res://Scripts/CombatScripts/Enemy.gd<>uid://crd5fv8sdrddr::::res://Assets/Animations/jam enemy attack/frame_04.png<>uid://v135sl4epsue::::res://Scripts/Actions/EnemyAction.gd<>uid://dstmsk6uelpgd::::res://Assets/Animations/jam enemy attack/frame_05.png<>uid://37ixs2yas0a2::::res://Scripts/Actions/BasicAttackAction.gd<>uid://b4l7koanb5qxc::::res://Scripts/Actions/BasicStatusAction.gd<>uid://dq0j0546roxkg::::res://Assets/Animations/jam enemy attack/frame_06.png<>uid://dgcka3kgm42wq::::res://Assets/Animations/jam enemy attack/frame_07.png<>uid://djxhiomxyr7hq::::res://Scripts/StatusEffects/BlockEffect.gd<>uid://dgseikyr6yiej::::res://Scripts/StatusEffects/StatusEffectComponent.gd<>uid://btfytsvhslri3::::res://Assets/Animations/jam enemy attack/frame_08.png<>uid://ds42bng8r8s4i::::res://Assets/Animations/jam enemy attack/frame_09.png<>uid://d24d3c1divcmf::::res://Assets/Animations/jam enemy attack/frame_10.png<>uid://pa2yof2pv1nl::::res://Assets/Animations/jam enemy attack/frame_11.png<>uid://b7x5gmtvp65go::::res://Assets/Animations/jam enemy attack/frame_12.png<>uid://bq8rluc8xqbja::::res://Assets/Animations/jam enemy defense/frame_01.png<>uid://djuget8tx4gje::::res://Assets/Animations/jam enemy defense/frame_02.png<>uid://deokemn8nmqyg::::res://Assets/Animations/jam enemy defense/frame_03.png<>uid://c8l4wetgx847m::::res://Assets/Animations/jam enemy defense/frame_04.png<>uid://54bjq2y4s5sh::::res://Assets/Animations/jam enemy defense/frame_05.png<>uid://8ms3hubtbje3::::res://Assets/Animations/jam enemy defense/frame_06.png<>uid://6gqqs75tyx71::::res://Assets/Animations/jam enemy defense/frame_07.png<>uid://dn53tq6l5eboa::::res://Assets/Animations/jam enemy defense/frame_08.png<>uid://dkaeucashj53k::::res://Assets/Animations/jam enemy defense/frame_09.png<>uid://byhxd2tnl10qi::::res://Assets/Animations/jam enemy defense/frame_10.png<>uid://wqmswf8rju38::::res://Assets/Animations/jam enemy defense/frame_11.png<>uid://crxyluph4qpbq::::res://Assets/Animations/jam enemy defense/frame_12.png<>uid://lis4nh8k46ps::::res://Assets/Animations/jam enemy idle/frame_01.png<>uid://dlik066pwll2d::::res://Assets/Animations/jam enemy idle/frame_02.png<>uid://dd58klqi06vrw::::res://Assets/Animations/jam enemy idle/frame_03.png<>uid://bjb3d1y7kjec0::::res://Assets/Animations/jam enemy idle/frame_04.png<>uid://cuyqylfeonpfa::::res://Assets/Animations/jam enemy idle/frame_05.png<>uid://bu1w0f5ipv3i2::::res://Assets/Animations/jam enemy idle/frame_06.png<>uid://cyuk8uwx22uev::::res://Assets/Animations/jam enemy idle/frame_07.png<>uid://87ifjyr3yqu8::::res://Assets/Animations/jam enemy idle/frame_08.png<>uid://xlfnpe86kbey::::res://Assets/Animations/jam enemy idle/frame_09.png<>uid://bxh15dd6bppeu::::res://Assets/Animations/jam enemy idle/frame_10.png<>uid://c6gkipoq43bqw::::res://Assets/Animations/jam enemy idle/frame_11.png<>uid://b48jrivhmbqn8::::res://Assets/Animations/jam enemy idle/frame_12.png
+::res://Scenes/Meshes/::1777510515
+music_shop.tscn::PackedScene::4964502044492951547::1777510515::0::1::::<><>::uid://iywjbeiing0l::::res://Scripts/RoamingScripts/MusicShop.gd<>uid://k8kvfwcowfsm::::res://Assets/GoodAssets/MusicShop2.glb
+railing.tscn::PackedScene::7926092881083089382::1777263462::0::1::::<><>::uid://b4x66ke4eeoqd::::res://Assets/GoodAssets/Railing.glb
+van.tscn::PackedScene::3141299819598970828::1777510515::0::1::::<><>::uid://kphblhpv3h40::::res://Assets/Placeholders/texass.png
+::res://Scenes/Meshes/3dCityPack/::1777510515
+road_angled.tscn::PackedScene::6086696556267347534::1777510515::0::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+road_straight.tscn::PackedScene::7145245849717416341::1777263462::0::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
 short_house.tscn::PackedScene::6816717659099420596::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
-street_lamp.tscn::PackedScene::2636563291731079303::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
-tall_house.tscn::PackedScene::8639657582596314163::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
+street_lamp.tscn::PackedScene::2636563291731079303::1777263462::0::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
+tall_house.tscn::PackedScene::8639657582596314163::1777510515::0::1::::<><>::uid://cnj0cl2npn6w5::::res://Assets/Placeholders/3d city pack/Texture_01.png
 TrashCan.tscn::PackedScene::2777921904963987194::1775538361::0::1::::<><>::uid://bgwjmfkg348aj::::res://Assets/Placeholders/3d city pack/Texture_01.png
-::res://Scenes/UI/::1776503950
+::res://Scenes/Roaming/::1777510515
+player_roaming.tscn::PackedScene::1828697075248118567::1777510515::0::1::::<><>::uid://1msrtxr0667l::::res://Scripts/RoamingScripts/PlayerRoaming.gd<>uid://dvu7jm025ttc2::::res://Assets/Animations/jam front idle/frame_01.png<>uid://s1qexnm8ppgk::::res://Assets/Animations/IdleLeft/Pi7_frame_01.png<>uid://bwxspy4fv21ef::::res://Assets/Animations/jam front idle/frame_02.png<>uid://damhof2la50xe::::res://Assets/Animations/jam side idle/frame_01.png<>uid://dxvfvpwe80noa::::res://Assets/Animations/jam front idle/frame_03.png<>uid://cntj8hnua2gr4::::res://Assets/Animations/IdleLeft/Pi7_frame_02.png<>uid://bcmfeuo1vxl1s::::res://Assets/Animations/jam side idle/frame_02.png<>uid://f7hh844kc7sr::::res://Assets/Animations/IdleLeft/Pi7_frame_03.png<>uid://y0ru48j3seas::::res://Assets/Animations/jam front idle/frame_04.png<>uid://b8mydac5rxalq::::res://Assets/Animations/jam front idle/frame_05.png<>uid://dvca5imct60ri::::res://Assets/Animations/IdleLeft/Pi7_frame_04.png<>uid://l1ue36rwxr3r::::res://Assets/Animations/jam side idle/frame_03.png<>uid://bfn0etdpygjhc::::res://Assets/Animations/jam front idle/frame_06.png<>uid://qd1xcca6vkyt::::res://Assets/Animations/IdleLeft/Pi7_frame_05.png<>uid://c6khl3eka1bt5::::res://Assets/Animations/jam side idle/frame_04.png<>uid://b818uut1udd5u::::res://Assets/Animations/IdleLeft/Pi7_frame_06.png<>uid://ctvghflpbq17a::::res://Assets/Animations/jam front idle/frame_07.png<>uid://luv8fjan3by5::::res://Assets/Animations/jam side idle/frame_05.png<>uid://mc21wntbk0qq::::res://Assets/Animations/jam front idle/frame_08.png<>uid://cbibl8nsdriay::::res://Assets/Animations/IdleLeft/Pi7_frame_07.png<>uid://chdq4docd7knm::::res://Assets/Animations/jam side idle/frame_06.png<>uid://hqblthjv3hhd::::res://Assets/Animations/IdleLeft/Pi7_frame_08.png<>uid://fbu0no27jxbc::::res://Assets/Animations/jam side idle/frame_07.png<>uid://dx7vbhuix22dl::::res://Assets/Animations/jam front idle/frame_09.png<>uid://dtjf1swhn7j21::::res://Assets/SFX/832741__evamusik__step2.wav<>uid://dv2uyvbdcson6::::res://Assets/Animations/jam side idle/frame_08.png<>uid://yryhnyflhqtl::::res://Assets/Animations/jam front idle/frame_10.png<>uid://otusgkkdyf44::::res://Assets/Animations/IdleLeft/Pi7_frame_09.png<>uid://dok33ghjbtml2::::res://Assets/Animations/jam side idle/frame_09.png<>uid://dx362grkareu8::::res://Assets/Animations/IdleLeft/Pi7_frame_10.png<>uid://btrsdsooaa5vp::::res://Assets/Animations/jam front idle/frame_11.png<>uid://dplp6rllpsw4j::::res://Assets/Animations/IdleLeft/Pi7_frame_11.png<>uid://0nul53fmeue6::::res://Assets/Animations/jam side idle/frame_10.png<>uid://b1unchvgkke34::::res://Assets/Animations/jam front idle/frame_12.png<>uid://blso0fk6qm20a::::res://Assets/Animations/IdleLeft/Pi7_frame_12.png<>uid://d1oyv0i285cy5::::res://Assets/Animations/jam side idle/frame_11.png<>uid://cqut41cqfncne::::res://Assets/Animations/IdleLeft/Pi7_frame_13.png<>uid://g0jkkv5n1kgd::::res://Assets/Animations/jam side idle/frame_12.png<>uid://ck1c8k113hdb1::::res://Assets/Animations/jam side idle/frame_13.png<>uid://cmsdhai57r615::::res://Assets/Animations/WalkLeft/Pi7_frame_01.png<>uid://dfsjj51qvbijs::::res://Assets/Animations/WalkLeft/Pi7_frame_02.png<>uid://c0ehk4dfxt64x::::res://Assets/Animations/WalkLeft/Pi7_frame_03.png<>uid://cso8w3bfhsyf::::res://Assets/Animations/WalkLeft/Pi7_frame_04.png<>uid://bqwvb55y2gn3s::::res://Assets/Animations/WalkLeft/Pi7_frame_05.png<>uid://co1ifvr1ey50f::::res://Assets/Animations/WalkLeft/Pi7_frame_06.png<>uid://bsu7m6wg0kbou::::res://Assets/Animations/WalkLeft/Pi7_frame_07.png<>uid://cp08vv6n6siph::::res://Assets/Animations/WalkLeft/Pi7_frame_08.png<>uid://e4hfo5mjx7uv::::res://Assets/Animations/WalkLeft/Pi7_frame_09.png<>uid://cgwvl4nvyxrbq::::res://Assets/Animations/jam back idle/frame_01.png<>uid://ben2oeef5e2ps::::res://Assets/Animations/WalkLeft/Pi7_frame_10.png<>uid://cghtdimal1tso::::res://Assets/Animations/WalkLeft/Pi7_frame_11.png<>uid://cr2xe4r1gqx7a::::res://Assets/Animations/jam back idle/frame_02.png<>uid://c8vu1bdfejnjp::::res://Assets/Animations/WalkLeft/Pi7_frame_12.png<>uid://dx6bmx01vvwsf::::res://Assets/Animations/jam back idle/frame_03.png<>uid://yk2r04m1xmtc::::res://Assets/Animations/jam back idle/frame_04.png<>uid://j5yjdvbdy87l::::res://Assets/Animations/WalkLeft/Pi7_frame_13.png<>uid://dgpc6f3n8uy01::::res://Assets/Animations/jam walk side/frame_01.png<>uid://kyt8spuhmwp2::::res://Assets/Animations/jam back idle/frame_05.png<>uid://bflhmbalu84ci::::res://Assets/Animations/jam walk side/frame_02.png<>uid://c77vsi322uxo6::::res://Assets/Animations/jam back idle/frame_06.png<>uid://b663w6w5mphoh::::res://Assets/Animations/jam walk side/frame_03.png<>uid://bdmul5fvlyvlx::::res://Assets/Animations/jam back idle/frame_07.png<>uid://dimbrlq6eqdeb::::res://Assets/Animations/jam walk side/frame_04.png<>uid://c6vyo5c46i1vw::::res://Assets/Animations/jam back idle/frame_08.png<>uid://bnxkmq0r1h20f::::res://Assets/Animations/jam back idle/frame_09.png<>uid://bdtmwqo4k11cm::::res://Assets/Animations/jam walk side/frame_05.png<>uid://coqmv3n48n86b::::res://Assets/Animations/jam back idle/frame_10.png<>uid://c3aqkfa0w0qcn::::res://Assets/Animations/jam walk side/frame_06.png<>uid://dry33ecw8vpnx::::res://Assets/Animations/jam back idle/frame_11.png<>uid://wv623oq52wc::::res://Assets/Animations/jam walk side/frame_07.png<>uid://l6p7w1w6mu8d::::res://Assets/Animations/jam walk side/frame_08.png<>uid://cahm20pvdj8fd::::res://Assets/Animations/jam back idle/frame_12.png<>uid://barp2dqbovvhu::::res://Assets/Animations/jam front walk/frame_01.png<>uid://b23b7ho0mxrx4::::res://Assets/Animations/jam walk side/frame_09.png<>uid://bx8cksump5lx1::::res://Assets/Animations/jam front walk/frame_02.png<>uid://cusdbhplhw4gp::::res://Assets/Animations/jam walk side/frame_10.png<>uid://vt38hsfxanqt::::res://Assets/Animations/jam front walk/frame_03.png<>uid://bi02sq86xmdg7::::res://Assets/Animations/jam walk side/frame_11.png<>uid://c1xq0aya5ylby::::res://Assets/Animations/jam walk side/frame_12.png<>uid://cdkcc08h2c1q0::::res://Assets/Animations/jam front walk/frame_04.png<>uid://d1egp4t1ro1ut::::res://Assets/Animations/jam walk side/frame_13.png<>uid://l2mgafk2o7hd::::res://Assets/Animations/jam front walk/frame_05.png<>uid://dti34qeif4q2j::::res://Assets/Animations/jam front walk/frame_06.png<>uid://dlawrjasxvr8k::::res://Assets/Animations/jam front walk/frame_07.png<>uid://2xiiil0artes::::res://Assets/Animations/jam front walk/frame_08.png<>uid://by335jq4uvprn::::res://Assets/Animations/jam front walk/frame_09.png<>uid://ibdu0p6itp67::::res://Assets/Animations/jam front walk/frame_10.png<>uid://b1ymu8vgcmdhd::::res://Assets/Animations/jam front walk/frame_11.png<>uid://ry5kw2w4cf25::::res://Assets/Animations/jam front walk/frame_12.png<>uid://bgje1gl4wqagg::::res://Assets/Animations/jam back walk/frame_01.png<>uid://b60pv6l8foml7::::res://Assets/Animations/jam back walk/frame_02.png<>uid://bw7auvoeqnwe4::::res://Assets/Animations/jam back walk/frame_03.png<>uid://bn7vswc0ryx41::::res://Assets/Animations/jam back walk/frame_04.png<>uid://cv8i8is737anv::::res://Assets/Animations/jam back walk/frame_05.png<>uid://cxmxgmqpq2gs4::::res://Assets/Animations/jam back walk/frame_06.png<>uid://d4ee2o122sysc::::res://Assets/Animations/jam back walk/frame_07.png<>uid://3yewppypr47n::::res://Assets/Animations/jam back walk/frame_08.png<>uid://b0js5jac4k8sq::::res://Assets/Animations/jam back walk/frame_09.png<>uid://c1yspieqetxjn::::res://Assets/Animations/jam back walk/frame_10.png<>uid://bthrptj5efp3p::::res://Assets/Animations/jam back walk/frame_11.png<>uid://cgkusksnr8mcl::::res://Assets/Animations/jam back walk/frame_12.png
+van_save_spot.tscn::PackedScene::7896997102416105114::1777510515::0::1::::<><>::uid://ctsj4woyayc1x::::res://Scripts/RoamingScripts/SaveRoomInteractable.gd<>uid://vi823a0ew467::::res://Scripts/RoamingScripts/VanSaveSpot.gd<>uid://bnlfm71r2cgx0::::res://Assets/Placeholders/assmobile.fbx
+::res://Scenes/UI/::1777510515
 gui.tscn::PackedScene::1932075196831170212::1775109746::0::1::::<><>::uid://cgwhdkaydlhv8::::res://Scripts/UIScripts/MainGUI.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
+save_room_item.tscn::PackedScene::1884683503101873287::1777263462::0::1::::<><>::uid://cywpau6tqrua0::::res://Scripts/UIScripts/saveRoomItem.gd<>uid://clvx0dtjjh6xd::::res://icon.svg
+save_room_screen.tscn::PackedScene::5849637758390269247::1777510515::0::1::::<><>::uid://00qnrg2np8op::::res://Scripts/UIScripts/SaveRoomScreen.gd<>uid://dn7ygxqsd27mu::::res://Assets/Pedals/PedalPlaceholder.png<>uid://difkumkyqjgb6::::res://Assets/Placeholders/vaninside.jpg<>uid://dogo3fyg6n72k::::res://Assets/UI/pedalboard.png
 shop_item.tscn::PackedScene::6952079623624217692::1776503023::0::1::::<><>::uid://dccaug0lplah5::::res://Scripts/UIScripts/ShopItem.gd
-shop_screen.tscn::PackedScene::3039691688196007662::1776503950::0::1::::<><>::uid://b8aa78rggssag::::res://Scripts/UIScripts/ShopScreen.gd<>uid://c146t6o3o5oa::::res://Assets/Placeholders/shopPlaceholderImage.jpeg
+shop_screen.tscn::PackedScene::3039691688196007662::1777510515::0::1::::<><>::uid://b8aa78rggssag::::res://Scripts/UIScripts/ShopScreen.gd<>uid://c146t6o3o5oa::::res://Assets/Placeholders/shopPlaceholderImage.jpeg<>uid://bk17v35d03ol0::::res://Assets/Music/ShopReal.mp3
+slot_card.tscn::PackedScene::3220878391175076967::1776924528::0::1::::<><>::
 status_effect_icon.tscn::PackedScene::562773551360972798::1774854902::0::1::::<><>::uid://cv7xefiekcxkv::::res://Scripts/UIScripts/status_effect_icon.gd
-upgrade_card.tscn::PackedScene::3727997698816184166::1774854902::0::1::::<><>::uid://3f6wpqhioje1::::res://Scripts/UIScripts/UpgradeCard.gd
-upgrade_toggle_screen.tscn::PackedScene::8080549800376623020::1774854902::0::1::::<><>::uid://c5o8rssnq6475::::res://Scripts/UIScripts/UpgradeToggleScreen.gd
-::res://Scripts/::1776833276
-PlayerData.gd::GDScript::-1::1776833276::0::1::::<>Node<>::
-::res://Scripts/Actions/::1774854902
+upgrade_card.tscn::PackedScene::3727997698816184166::1776925914::0::1::::<><>::uid://3f6wpqhioje1::::res://Scripts/UIScripts/UpgradeCard.gd
+upgrade_toggle_screen.tscn::PackedScene::8080549800376623020::1777302019::0::1::::<><>::uid://c5o8rssnq6475::::res://Scripts/UIScripts/UpgradeToggleScreen.gd<>uid://dogo3fyg6n72k::::res://Assets/UI/pedalboard.png
+::res://Scripts/::1777510515
+PlayerData.gd::GDScript::-1::1777510515::0::1::::<>Node<>::
+ScreenFade.gd::GDScript::-1::1777263462::0::1::::<>CanvasLayer<>::
+ScreenFreeze.gd::GDScript::-1::1777263462::0::1::::<>Node<>::
+::res://Scripts/Actions/::1777510515
 BasicAttackAction.gd::GDScript::-1::1774854902::0::1::::BasicAttackAction<>EnemyAction<>::
-BasicStatusAction.gd::GDScript::-1::1774854902::0::1::::BasicStatusAction<>EnemyAction<>::
+BasicStatusAction.gd::GDScript::-1::1777510515::0::1::::BasicStatusAction<>EnemyAction<>::
 EnemyAction.gd::GDScript::-1::1774854902::0::1::::EnemyAction<>Resource<>::
-::res://Scripts/CombatScripts/::1776833276
-CombatEncounter.gd::GDScript::-1::1776833276::0::1::::CombatEncounter<>Node3D<>::
-combat_camera.gd::GDScript::-1::1776833276::0::1::::CombatCamera<>Camera3D<>::
-Damagable.gd::GDScript::-1::1776833276::0::1::::Damagable<>AnimatedSprite3D<>::
-Enemy.gd::GDScript::-1::1776833276::0::1::::Enemy<>Damagable<>::
-enemy_manager.gd::GDScript::-1::1776833276::0::1::::EnemyManager<>Node<>::
-player.gd::GDScript::-1::1776833276::0::1::::Player<>Damagable<>::
-::res://Scripts/RoamingScripts/::1776833276
-AreaCombatTrigger.gd::GDScript::-1::1776833276::0::1::::AreaCombatTrigger<>CombatTrigger<>::
-CombatTrigger.gd::GDScript::-1::1776833276::0::1::::CombatTrigger<>Node3D<>::
+StatusAndAttackAction.gd::GDScript::-1::1777510515::0::1::::StatusAndAttackAction<>EnemyAction<>::
+::res://Scripts/CombatScripts/::1777510515
+CombatEncounter.gd::GDScript::-1::1777510515::0::1::::CombatEncounter<>Node3D<>::
+combat_camera.gd::GDScript::-1::1777510515::0::1::::CombatCamera<>Camera3D<>::
+Damagable.gd::GDScript::-1::1777510515::0::1::::Damagable<>AnimatedSprite3D<>::
+Enemy.gd::GDScript::-1::1777510515::0::1::::Enemy<>Damagable<>::
+enemy_manager.gd::GDScript::-1::1777510515::0::1::::EnemyManager<>Node<>::
+player.gd::GDScript::-1::1777510515::0::1::::Player<>Damagable<>::
+::res://Scripts/RoamingScripts/::1777510515
+AreaCombatTrigger.gd::GDScript::-1::1777510515::0::1::::AreaCombatTrigger<>CombatTrigger<>::
+CameraZone.gd::GDScript::-1::1777510515::0::1::::CameraZone<>Area3D<>::
+CombatTrigger.gd::GDScript::-1::1777263462::0::1::::CombatTrigger<>Node3D<>::
+Interactable.gd::GDScript::-1::1776834152::0::1::::Interactable<>Area3D<>::
 MusicShop.gd::GDScript::-1::1776500002::0::1::::MusicShop<>StaticBody3D<>::
-PlayerRoaming.gd::GDScript::-1::1776501091::0::1::::PlayerRoaming<>CharacterBody3D<>::
-Roaming.gd::GDScript::-1::1776833276::0::1::::<>Node3D<>::
+PlayerRoaming.gd::GDScript::-1::1777510515::0::1::::PlayerRoaming<>CharacterBody3D<>::
+Roaming.gd::GDScript::-1::1777510515::0::1::::<>Node3D<>::
+RoamingCamera.gd::GDScript::-1::1777510515::0::1::::RoamingCamera<>Camera3D<>::
+SaveRoomInteractable.gd::GDScript::-1::1776994533::0::1::::SaveRoomInteractable<>Interactable<>::
 van.gd::GDScript::-1::1776747612::0::1::::<>MeshInstance3D<>::
-::res://Scripts/States/::1776833276
-combat_state.gd::GDScript::-1::1776833276::0::1::::CombatState<>State<>::
-EnemySelect.gd::GDScript::-1::1776833276::0::1::::EnemySelect<>State<>::
-EnemyTurn.gd::GDScript::-1::1776833276::0::1::::EnemyTurn<>State<>::
-ModifyState.gd::GDScript::-1::1776501222::0::1::::ModifyState<>State<>::
-PlayerTurn.gd::GDScript::-1::1776498650::0::1::::PlayerTurn<>State<>::
-RoamingState.gd::GDScript::-1::1776501918::0::1::::RoamingState<>State<>::
-ShopState.gd::GDScript::-1::1776502663::0::1::::ShopState<>State<>::
+VanSaveSpot.gd::GDScript::-1::1776994533::0::1::::<>StaticBody3D<>::
+::res://Scripts/States/::1777510515
+combat_state.gd::GDScript::-1::1777510515::0::1::::CombatState<>State<>::
+EnemySelect.gd::GDScript::-1::1777510515::0::1::::EnemySelect<>State<>::
+EnemyTurn.gd::GDScript::-1::1777290591::0::1::::EnemyTurn<>State<>::
+ModifyState.gd::GDScript::-1::1777263462::0::1::::ModifyState<>State<>::
+PlayerTurn.gd::GDScript::-1::1777355714::0::1::::PlayerTurn<>State<>::
+RoamingState.gd::GDScript::-1::1777510515::0::1::::RoamingState<>State<>::
+save_room_state.gd::GDScript::-1::1776994533::0::1::::SaveRoomState<>State<>::
+ShopState.gd::GDScript::-1::1777263462::0::1::::ShopState<>State<>::
 State.gd::GDScript::-1::1776498426::0::1::::State<>Node<>::
-state_machine.gd::GDScript::-1::1776833276::0::1::::StateMachine<>Node<>::
-::res://Scripts/StatusEffects/::1774854902
-BlockEffect.gd::GDScript::-1::1774854902::0::1::::BlockEffect<>StatusEffect<>::
-StatusEffect.gd::GDScript::-1::1774854902::0::1::::StatusEffect<>Resource<>::
-StatusEffectComponent.gd::GDScript::-1::1774854902::0::1::::StatusEffectComponent<>Node<>::
-::res://Scripts/UIScripts/::1776833276
-DamageNumber.gd::GDScript::-1::1774854902::0::1::::DamageNumber<>Label3D<>::
+state_machine.gd::GDScript::-1::1777263462::0::1::::StateMachine<>Node<>::
+::res://Scripts/StatusEffects/::1777510515
+BlockEffect.gd::GDScript::-1::1777510515::0::1::::BlockEffect<>StatusEffect<>::
+SingleHitDmgBoost.gd::GDScript::-1::1777353831::0::1::::SingleHitDmgBoost<>StatusEffect<>::
+StatusEffect.gd::GDScript::-1::1777353266::0::1::::StatusEffect<>Resource<>::
+StatusEffectComponent.gd::GDScript::-1::1777353618::0::1::::StatusEffectComponent<>Node<>::
+::res://Scripts/UIScripts/::1777510515
+credits.gd::GDScript::-1::1777510515::0::1::::<>CanvasLayer<>::
+DamageNumber.gd::GDScript::-1::1777263462::0::1::::DamageNumber<>Label3D<>::
 DamageNumberManager.gd::GDScript::-1::1774854902::0::1::::DamageNumberManager<>Node<>::
 MainGUI.gd::GDScript::-1::1775109746::0::1::::<>CanvasLayer<>::
+menu.gd::GDScript::-1::1777510515::0::1::::<>CanvasLayer<>::
+saveRoomItem.gd::GDScript::-1::1777263462::0::1::::SaveRoomItem<>PanelContainer<>::
+SaveRoomScreen.gd::GDScript::-1::1777510515::0::1::::SaveRoomScreen<>Control<>::
 ShopItem.gd::GDScript::-1::1776833276::0::1::::ShopItem<>PanelContainer<>::
-ShopScreen.gd::GDScript::-1::1776503950::0::1::::ShopScreen<>Control<>::
+ShopScreen.gd::GDScript::-1::1777510515::0::1::::ShopScreen<>Control<>::
 status_effect_icon.gd::GDScript::-1::1774854902::0::1::::StatusEffectIcon<>HBoxContainer<>::
-UpgradeCard.gd::GDScript::-1::1774854902::0::1::::UpgradeCard<>TextureButton<>::
-UpgradeToggleScreen.gd::GDScript::-1::1775538358::0::1::::UpgradeToggleScreen<>CanvasLayer<>::
-::res://Scripts/Upgrades/::1776496977
-AttackContext.gd::GDScript::-1::1774854902::0::1::::AttackContext<>RefCounted<>::
+UpgradeCard.gd::GDScript::-1::1777263462::0::1::::UpgradeCard<>TextureButton<>::
+UpgradeToggleScreen.gd::GDScript::-1::1777510515::0::1::::UpgradeToggleScreen<>CanvasLayer<>::
+::res://Scripts/Upgrades/::1777510515
+AttackContext.gd::GDScript::-1::1777510515::0::1::::AttackContext<>RefCounted<>::
 Boost.gd::GDScript::-1::1774854902::0::1::::BoostUpgrade<>Upgrade<>::
+ChorusUpgrade.gd::GDScript::-1::1777510515::0::1::::ChorusUpgrade<>Upgrade<>::
 DefendContext.gd::GDScript::-1::1774854902::0::1::::DefendContext<>RefCounted<>::
 Delay.gd::GDScript::-1::1774854902::0::1::::DelayUpgrade<>Upgrade<>::
 Distortion.gd::GDScript::-1::1774854902::0::1::::DistortionUpgrade<>Upgrade<>::
 EQ.gd::GDScript::-1::1774854902::0::1::::EQUpgrade<>Upgrade<>::
-Fuzz.gd::GDScript::-1::1774854902::0::1::::FuzzUpgrade<>Upgrade<>::
-Limiter.gd::GDScript::-1::1774854902::0::1::::LimiterUpgrade<>Upgrade<>::
+Feedback.gd::GDScript::-1::1777510515::0::1::::Feedback<>Upgrade<>::
+Fuzz.gd::GDScript::-1::1777510515::0::1::::FuzzUpgrade<>Upgrade<>::
+Limiter.gd::GDScript::-1::1777355487::0::1::::LimiterUpgrade<>Upgrade<>::
 NoiseGate.gd::GDScript::-1::1774854902::0::1::::NoiseGateUpgrade<>Upgrade<>::
 Overdrive.gd::GDScript::-1::1774854902::0::1::::OverdriveUpgrade<>Upgrade<>::
+PreAmpUpgrade.gd::GDScript::-1::1777510515::0::1::::PreAmpUpgrade<>Upgrade<>::
 Reverb.gd::GDScript::-1::1774854902::0::1::::ReverbUpgrade<>Upgrade<>::
-Upgrade.gd::GDScript::-1::1776496977::0::1::::Upgrade<>Resource<>::
+Upgrade.gd::GDScript::-1::1777348881::0::1::::Upgrade<>Resource<>::
+::res://Shaders/::1777510515
+flash.gdshader::Shader::-1::1777510515::0::1::::<><>::
+Sky.gdshader::Shader::-1::1777354910::0::1::::<><>::
+VHS.gdshader::Shader::-1::1777354910::0::1::::<><>::
+Water2.gdshader::Shader::-1::1777510515::0::1::::<><>::
+Water.gdshader::Shader::-1::1777510515::0::1::::<><>::
+::res://SpriteFrames/::1777510515
+KeyboardEnemyRoaming.tres::SpriteFrames::7169791409743207788::1777510515::0::1::::<><>::uid://lis4nh8k46ps::::res://Assets/Animations/jam enemy idle/frame_01.png<>uid://dlik066pwll2d::::res://Assets/Animations/jam enemy idle/frame_02.png<>uid://dd58klqi06vrw::::res://Assets/Animations/jam enemy idle/frame_03.png<>uid://bjb3d1y7kjec0::::res://Assets/Animations/jam enemy idle/frame_04.png<>uid://cuyqylfeonpfa::::res://Assets/Animations/jam enemy idle/frame_05.png<>uid://bu1w0f5ipv3i2::::res://Assets/Animations/jam enemy idle/frame_06.png<>uid://cyuk8uwx22uev::::res://Assets/Animations/jam enemy idle/frame_07.png<>uid://87ifjyr3yqu8::::res://Assets/Animations/jam enemy idle/frame_08.png<>uid://xlfnpe86kbey::::res://Assets/Animations/jam enemy idle/frame_09.png<>uid://bxh15dd6bppeu::::res://Assets/Animations/jam enemy idle/frame_10.png<>uid://c6gkipoq43bqw::::res://Assets/Animations/jam enemy idle/frame_11.png<>uid://b48jrivhmbqn8::::res://Assets/Animations/jam enemy idle/frame_12.png

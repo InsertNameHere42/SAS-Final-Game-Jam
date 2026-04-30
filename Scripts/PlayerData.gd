@@ -12,7 +12,7 @@ var currentHp: int = 100
 var inventory: Array[Upgrade] = []
 var equippedUpgrades: Array[Upgrade] = []
 var maxUpgrades: int = 6
-var doubloons: int = 1000
+var doubloons: int = 50
 var startingMaxEnergy: int = 1
 
 signal loaded
