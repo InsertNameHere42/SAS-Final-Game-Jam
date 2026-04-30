@@ -5,7 +5,7 @@ func enter():
 	print("Roaming State Entered")
 
 func exit():
-	pass
+	environment.music.stop()
 
 func update(_delta: float):
 	if Input.is_action_just_pressed("UI Accept"):

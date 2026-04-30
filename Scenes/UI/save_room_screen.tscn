@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dn7ygxqsd27mu" path="res://Assets/Pedals/PedalPlaceholder.png" id="2_bywu2"]
 [ext_resource type="Texture2D" uid="uid://difkumkyqjgb6" path="res://Assets/Placeholders/vaninside.jpg" id="2_st57v"]
 [ext_resource type="Texture2D" uid="uid://dogo3fyg6n72k" path="res://Assets/UI/pedalboard.png" id="4_bywu2"]
+[ext_resource type="AudioStream" uid="uid://bk17v35d03ol0" path="res://Assets/Music/ShopReal.mp3" id="5_cwdor"]
 
 [node name="SaveRoomScreen" type="Control" unique_id=231300043]
 layout_mode = 3
@@ -130,3 +131,7 @@ layout_mode = 2
 [node name="EnergyLabel" type="Label" parent="TooltipPanel/VBoxContainer" unique_id=1005570661]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0.16078432, 1)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1553273797]
+stream = ExtResource("5_cwdor")
+volume_db = -15.0

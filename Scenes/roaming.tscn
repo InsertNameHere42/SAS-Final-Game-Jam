@@ -65,7 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://bv48rjc3dg4u3" path="res://Assets/Animations/jam boss idle/frame_10.png" id="63_0dvbe"]
 [ext_resource type="Texture2D" uid="uid://dmlvmkjofhnmg" path="res://Assets/Animations/jam boss idle/frame_11.png" id="64_4fr68"]
 [ext_resource type="Texture2D" uid="uid://bilpdn7ma8680" path="res://Assets/Animations/jam boss idle/frame_12.png" id="65_sndjf"]
-[ext_resource type="AudioStream" uid="uid://bk17v35d03ol0" path="res://Assets/Music/ShopReal.mp3" id="106_tsdb8"]
+[ext_resource type="AudioStream" uid="uid://d14h51my6jsc1" path="res://Assets/Music/WalkingSong.mp3" id="66_va8a4"]
 
 [sub_resource type="Curve" id="Curve_3h328"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.08719346, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8134481), 0.0, 0.0, 0, 0]
@@ -1053,9 +1053,9 @@ saveRoomScreen = NodePath("SaveRoomScreen")
 
 [node name="SaveRoomScreen" parent="POIs/VanSaveSpot" unique_id=231300043 node_paths=PackedStringArray("environment") instance=ExtResource("28_dtn4b")]
 visible = false
+environment = NodePath("../../..")
 saveRoomId = "TestSaveRoom"
 spawnPosition = Vector3(0.5, 0.8, -20.4)
-environment = NodePath("../../..")
 
 [node name="VanSaveSpot2" parent="POIs" unique_id=479997947 node_paths=PackedStringArray("stateMachine", "saveRoomScreen") instance=ExtResource("27_q72wc")]
 transform = Transform3D(0.81914204, 0, 0.57359076, 0, 1, 0, -0.57359076, 0, 0.81914204, 67.30322, 0.20558032, 25.729136)
@@ -1064,9 +1064,9 @@ saveRoomScreen = NodePath("SaveRoomScreen")
 
 [node name="SaveRoomScreen" parent="POIs/VanSaveSpot2" unique_id=338144961 node_paths=PackedStringArray("environment") instance=ExtResource("28_dtn4b")]
 visible = false
+environment = NodePath("../../..")
 saveRoomId = "SaveRoom2"
 spawnPosition = Vector3(68.303, 1.3, 26.729)
-environment = NodePath("../../..")
 
 [node name="MusicShop2" parent="POIs" unique_id=181557918 node_paths=PackedStringArray("shopScreen", "stateMachine") instance=ExtResource("16_qwyxc")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 58.960163, 0, 18.37948)
@@ -1490,10 +1490,6 @@ billboard = 1
 text = "End of Demo :("
 font_size = 64
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=219907922]
-stream = ExtResource("106_tsdb8")
-volume_db = -35.434
-
 [node name="InvisibleWalls" type="StaticBody3D" parent="." unique_id=663254645]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWalls" unique_id=1000127143]
@@ -1503,3 +1499,7 @@ shape = SubResource("BoxShape3D_tsdb8")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="InvisibleWalls" unique_id=2007910839]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.78647, 3.1022644, 32.673527)
 shape = SubResource("BoxShape3D_7gov3")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=219907922]
+stream = ExtResource("66_va8a4")
+volume_db = -12.0

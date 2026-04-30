@@ -18,6 +18,7 @@ const CARD_SCENE := preload("res://Scenes/UI/upgrade_card.tscn")
 @onready var tooltipEnergy: Label = $TooltipPanel/VBoxContainer/EnergyLabel
 @onready var exitButton: Button = $ExitButton
 @onready var scrollContainer: ScrollContainer = $HBoxContainer/InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer
+@onready var music: AudioStreamPlayer = $Music
 
 enum Mode {INVENTORY, SLOT_SELECT}
 var currentMode: Mode = Mode.INVENTORY
@@ -43,11 +44,13 @@ func open() -> void:
 	_buildSlots()
 	_buildInventory()
 	_updateSelection()
+	music.play()
 	show()
 	PlayerData.save(self)
 	
 func close() -> void:
 	closed.emit()
+	music.stop()
 	hide()
 	PlayerData.save(self)
 	

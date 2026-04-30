@@ -1,7 +1,7 @@
+AudioStreamPlayer
 CollisionShape3D
 StaticBody3D
 Node
-AudioStreamPlayer
 AnimatedSprite3D
 AudioStreamPlayer3D
 Node3D
@@ -12,4 +12,3 @@ VBoxContainer
 HBoxContainer
 MarginContainer
 RichTextLabel
-Control

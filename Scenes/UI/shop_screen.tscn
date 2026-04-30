@@ -104,6 +104,6 @@ layout_mode = 2
 
 [node name="ShopMusic" type="AudioStreamPlayer" parent="." unique_id=1519043891]
 stream = ExtResource("3_c604k")
-volume_db = -19.097
+volume_db = -15.0
 bus = &"Music"
 parameters/looping = true

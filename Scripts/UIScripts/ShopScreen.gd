@@ -18,11 +18,9 @@ var currentIndex: int = 0
 
 #currently walking around music and shop music is the same
 func startMusic() -> void:
-	pass
-	#shopMusic.play()
+	shopMusic.play()
 func stopMusic() -> void:
-	pass
-	#shopMusic.stop()
+	shopMusic.stop()
 
 
 func _ready() -> void:
